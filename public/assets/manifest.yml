@@ -1,11 +1,16 @@
 ---
+admin/logo.png: admin/logo-6a92a1fa042dcc7fa23341921fc23626.png
+body-back.png: body-back-623402c834d2a7239cba51ad8e614bd1.png
+favicon.ico: favicon-e117df2d4fe828c35ad3fcad05af1861.ico
+logo.png: logo-6a92a1fa042dcc7fa23341921fc23626.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
+tin-and-cup.png: tin-and-cup-082c128db21410aa75065369c37cd91c.png
 admin/all.js: admin/all-5a712c0bc50da5274971fbafd534d1d7.js
-application.js: application-0cf930712b1a6914fd32bf10306a1efb.js
-store/all.js: store/all-5a19cb6ce47ee58bfa08c5ac6f223ff6.js
+application.js: application-8db16ce4ca64dc1e7a6645eee1a1eab3.js
+store/all.js: store/all-89b628a969a7534f7d1bd8b10730f679.js
 admin/all.css: admin/all-67699a7368b2fd7f2e93d571c56ac747.css
-application.css: application-371018d41be740ab937ccc0ceb54fccc.css
-store/all.css: store/all-04241476f85303aab5c2c2fcaf608105.css
+application.css: application-cfdc680276ef5692e228fc4778a0bbcd.css
+store/all.css: store/all-ad409115beb9fbf496e98ae4995372a2.css
 analytics_dashboard_preview.png: analytics_dashboard_preview-3d1253db6714aa5cdbf43d5d5621c6df.png
 admin/bg/active-tab.png: admin/bg/active-tab-cf3274bc37a507ef433a2e6a9ff18b4d.png
 admin/bg/admin_tab_back.png: admin/bg/admin_tab_back-08c6a321ba6a5eb1e1340f84bad370d7.png
@@ -108,7 +113,6 @@ creditcards/icons/wirecard.png: creditcards/icons/wirecard-df141815f5d396a4a598c
 creditcards/icons/worldpay.png: creditcards/icons/worldpay-423bad479c9824da040e4beb44bee858.png
 creditcards/master_cid.jpg: creditcards/master_cid-ccf624cf4dabf8721595bec4d528db95.jpg
 creditcards/visa_cid.gif: creditcards/visa_cid-642b561f0012f74300d17ac0df60f750.gif
-favicon.ico: favicon-e117df2d4fe828c35ad3fcad05af1861.ico
 icons/add-to-cart.png: icons/add-to-cart-6dbdcd1daa1f9d3538a903c53aaf5202.png
 icons/checkout.png: icons/checkout-6b458b6acdccc50b5c77ef03798f0c69.png
 icons/delete.png: icons/delete-c2651300ae2e326a9727177155b48bf7.png
