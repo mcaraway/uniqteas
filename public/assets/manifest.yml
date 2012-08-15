@@ -1,5 +1,5 @@
 ---
-admin/logo.png: admin/logo-6a92a1fa042dcc7fa23341921fc23626.png
+admin/bg/spree_50.png: admin/bg/spree_50-6a92a1fa042dcc7fa23341921fc23626.png
 body-back.png: body-back-623402c834d2a7239cba51ad8e614bd1.png
 favicon.ico: favicon-e117df2d4fe828c35ad3fcad05af1861.ico
 logo.png: logo-6a92a1fa042dcc7fa23341921fc23626.png
@@ -30,7 +30,6 @@ admin/bg/header_bg.jpg: admin/bg/header_bg-6768f49a2e9992e062203130c89a5f25.jpg
 admin/bg/menu-current.png: admin/bg/menu-current-3f807b892ffede5ce5a256f70081e552.png
 admin/bg/red-stripes.gif: admin/bg/red-stripes-7b935beaabfb06cfb382e9aa1b3b0082.gif
 admin/bg/red-stripes.png: admin/bg/red-stripes-4910d837cfc1386541844e47335904f4.png
-admin/bg/spree_50.png: admin/bg/spree_50-0bdeea319efa9a67677c206d45daade8.png
 admin/bg/subnav-divider.png: admin/bg/subnav-divider-b502b0f891f4ea8e0aa7fdb46d66520a.png
 admin/bg/subnav.png: admin/bg/subnav-588377cf5e58b7c7e0ec2cc86231dc05.png
 admin/bg/tab-back.png: admin/bg/tab-back-381337418183ef2a4982aa6a6c7243a2.png
