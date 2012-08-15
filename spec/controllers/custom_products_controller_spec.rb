@@ -4,6 +4,9 @@ describe CustomProductsController do
   render_views
   
   describe "GET 'new'" do
+      before(:each) do
+        @prototype = Spree::Prototype.create(:name => "CustomTea")
+      end
     
     it "should be successful" do
       get :new

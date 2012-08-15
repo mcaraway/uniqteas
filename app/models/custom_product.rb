@@ -35,11 +35,16 @@ class CustomProduct < Spree::Product
   end
 
   def update_viewables
-    @tin_image.viewable = master
-    @tin_image.save
+    if @tin_image != nil 
+      @tin_image.viewable = master
+      @tin_image.save
+    end
 
-    @tag_image.viewable = master
-    @tag_image.save
+    
+    if @tag_image != nil 
+      @tag_image.viewable = master
+      @tag_image.save
+    end
   end
   attr_accessible :tin_image, :tag_image, :blend
 end
