@@ -1,0 +1,103 @@
+<%=form_for @custom_product do |f| %>
+	<%= render 'spree/shared/error_messages', :target => f.object %>
+	<div class="title">Choose your teas:</div>
+	<div class="help-me-fields">
+		<%= radio_button_tag 'helpme', 'help', true %>
+		<%= label_tag 'helpme_help', "Help me blend my teas (we'll make sure you don't mix teas that aren't compatible)." %><br />
+		<%= radio_button_tag 'helpme', 'nohelp' %>
+		<%= label_tag 'helpme_nohelp', 'I wanna go wild!' %>
+	</div>
+	<div style="width:910px;height:320px;">
+		<% @flavor_count.times { |i| %>
+			<div id="holder<%= i+1 %>">
+			</div>
+		<% } %>
+	</div>
+	
+	<div class="flavor_fields">
+	<% flavor_count = 0 %>
+	<%= f.fields_for :product_properties do |p| %>
+		<%
+			if p.object.property_name.index("percent") == nil 
+				flavor_count += 1
+				cid = "flavor" + flavor_count.to_s()
+		%>
+			<div class="<%= p.object.property_name %>_field">
+				<%= p.label p.object.property.presentation %><br />
+				<%= p.text_field :value, :id => cid, :readonly => true %>
+				<%= p.hidden_field :property_name  %>
+			</div>	
+		<%
+			end
+		%>
+
+	<% end %> 
+	</div>
+	
+	<div id="sliderbar"></div>
+		
+	<div class="percent_fields">
+	<% percent_count = 0 %>
+	<%= f.fields_for :product_properties do |p| %>
+		<%
+			if p.object.property_name.index("percent") != nil
+				cclass = "percentInput"
+				percent_count += 1
+				cid = "percent" + percent_count.to_s()
+				disabled = percent_count == 3 ? true : false;
+		%>
+			<div class="<%= p.object.property_name %>_field">
+				<%= p.label p.object.property.presentation %><br />
+				<%= p.text_field :value, :style => "width:45px", :id => cid, :readonly => disabled %>
+				<%= p.hidden_field :property_name %>
+			</div>	
+		<%
+			end
+		%>
+	<% end %> 
+	</div>
+	<div class="blend_attributes">
+		<label>Your tea should taste like this:</label><br />
+	</div>
+	
+	<div class="title" style="margin-top: 50px;">Name your blend:</div><br />
+	<div class="name_fields">
+		<div class="field" style="float:left;width:910px;">
+			<%= f.label :name %><br />
+			<%= f.text_field :name %>
+		</div>
+		<div class="field" style="float:left;width:910px;">
+			<%= f.label :description %><br />
+			<%= f.text_area :description %>
+		</div>
+	</div>
+	
+	<div class="title" style="margin-top: 50px;">Add your artwork:</div><br />
+	<div class="image_fields">
+		<div class="small_title">Image for tin:</div>
+		<%= f.fields_for "tin_image", :html => { :multipart => true } do |fi| %>
+			<div class="field" style="float:left;width:910px;">
+				<%= fi.file_field :attachment %>
+			</div>
+		<% end %>
+		<div class="small_title">Image for tag:</div>
+		<%= f.fields_for "tag_image", :html => { :multipart => true } do |fi| %>
+			<div class="field" style="float:left;width:910px;">
+				<%= fi.file_field :attachment %>
+			</div>
+		<% end %>
+	</div>
+	
+	<div class="order_fields">
+		<div class="field" style="float:left;width:910px;margin-bottom:10px;font-size:16px">
+			<%= f.label :price %> : $<%= @custom_product.price %>
+			<%= f.hidden_field :price %>
+		</div>
+		<div class="field" style="float:left;width:910px;margin-bottom:10px">
+			<%= number_field_tag (:quantity), 1, :class => 'title' %>
+		</div>
+		<div class="actions" style="float:left;width:910px;">
+			<%= f.submit "Save My Blend"%>
+		</div>
+	</div>
+<% end %>

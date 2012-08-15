@@ -1,0 +1,5 @@
+<% if @product.name == "Custom Tea" %>
+	<%= render :partial => 'spree/products/custom_show' %>
+<% else %>
+	<%= render :partial => 'spree/products/show' %>
+<% end %>

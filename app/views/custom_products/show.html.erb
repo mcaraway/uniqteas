@@ -1,0 +1,29 @@
+<div data-hook="product_show" itemscope itemtype="http://schema.org/Product">
+	<% @body_id = 'product-details' %>
+
+	<div class="columns fifteen alpha" data-hook="product_left_part">
+		<div class="row" data-hook="product_left_part_wrap">
+
+			<div id="custom-product-images" data-hook="product_images">
+				<div id="main-image" data-hook>
+					<%= render :partial => 'image' %>
+				</div>
+				<div id="thumbnails" data-hook>
+					<%= render :partial => 'thumbnails', :locals => { :product => @custom_product } %>
+				</div>
+			</div>
+
+			<h1 class="product-title" itemprop="name"><%= @custom_product.name %></h1>
+		
+			<div id="custom-product-description" itemprop="description" data-hook="description">
+				<%= @custom_product.description rescue t(:product_has_no_description) %>
+			</div>
+
+			<div data-hook="product_properties">
+				<%= render :partial => 'properties' %>
+			</div>
+
+		</div>
+	</div>
+
+</div>

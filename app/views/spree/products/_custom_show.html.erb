@@ -1,0 +1,71 @@
+<div class="title">Choose your teas:</div>
+<%= javascript_include_tag "raphael-min" %>
+<%= javascript_include_tag "jquery" %>
+<%= javascript_include_tag "categories" %>
+<%= javascript_include_tag "pie" %>
+<form name="teabuilder">
+	<div id="holder"></div>
+	<div id="holder2"></div>
+	<div id="holder3"></div>
+	<div id="slider">
+		<div id="sliderbar"></div>
+		<table style="width:100%;">
+			<tbody>
+				<tr>
+					<td style="width:33%;text-align:center;">
+						<span class="label">First Tea %</span><br>
+						<input type="text" name="percent1" id="percent1" class="percentInput"/>
+					</td>
+					<td style="width:33%;text-align:center;">
+						<span class="label">Second Tea %</span><br>
+						<input type="text" name="percent2" id="percent2" class="percentInput"/>
+					</td>
+					<td style="width:34%;text-align:center;">
+						<span class="label">Third Tea %</span><br>
+						<input type="text" name="percent3" id="percent3"  class="percentInput" disabled/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="width: 950px;float:left;margin:25px;">
+		<table style="width:100%;">
+			<tbody>
+				<tr>
+					<td style="width:20%;">
+						<span class="label">Name your blend</span><br>
+						(Maximum of 25<br>
+						letters)
+					</td>
+					<td>
+						<input type="text" name="teaname" id="teaname" class="input"/>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:20%;">
+						<span class="label">Describe your blend</span><br>
+						(Maximum of 255<br>
+						letters)
+					</td>
+					<td>
+						<input type="textarea" name="teadescription" id="teadescription" class="textarea"/>
+						<%= text_field_tag "",
+                         "",
+                         :id => "test" , :class=>"textarea" %>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:20%;">
+						<span class="label">Upload an image</span><br>
+						for you canister<br>
+						max size 1200 x 800
+					</td>
+					<td>
+						<input type="text" name="teaimage" id="teaimage" class="input"/>
+						<input type="button" value="Browse"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</form>

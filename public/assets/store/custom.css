@@ -1,0 +1,231 @@
+body {
+	background: #bbcad2 url(/assets/body-back.png) top left repeat-x;
+	font-family: Tahoma;
+}
+
+input[type="text"], input[type="file"] {
+	border: 1px solid #BBB;
+	background: white;
+	width: 260px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type="file"] {
+	width: 400px;
+}
+
+textarea {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 200px;
+}
+
+#logo {
+	margin-top: 10px;
+	background-color: white;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	width: 200px;
+	height: 60px;
+	padding: 10px;
+}
+
+.product-listing {
+	list-style: none;
+	margin: 2em 0px 0px 0px;
+	padding: 0px;
+}
+
+.motto {
+	margin-top: 55px;
+	margin-right: 300px;
+	font-size: 36px;
+	font-weight: bold;
+	color: #4d4d4d;
+	float: right;
+}
+
+.motto-2 {
+	margin-top: 10px;
+	font-size: 36px;
+	font-weight: bold;
+	color: #fff;
+	float: left;
+	margin-left: 600px;
+}
+
+.tin-and-cup {
+	position: absolute;
+	left: 520px;
+	top: 30px;
+}
+
+.dark-background {
+	font-family: Tahoma;
+	padding: 15px 350px 15px 15px;
+	background-color: #88c23f;
+}
+
+.instructions {
+	color: black;
+	font-size: 20px;
+	margin-bottom: 1.8em;
+}
+
+.heading {
+	color: white;
+	font-size: x-large;
+	margin-bottom: 2em;
+	font-weight: bold;
+}
+
+.step {
+	color: white;
+	font-size: x-large;
+	font-weight: bold;
+	margin-right: 0.5em;
+}
+
+.centered {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	padding-right: 330px;
+}
+
+/* Round corners */
+.content {
+	background-color: #f7ac38;
+	padding: 15px;
+	position: relative;
+}
+
+.round {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#holder1, #holder2, #holder3 {
+	height: 300px;
+	width: 300px;
+	float: left;
+}
+#slider {
+	height: 120px;
+	width: 950px;
+	float: left;
+}
+
+.flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields{
+	width: 100%;
+	padding: 20px;
+}
+
+.name_fields {
+	height: 220px;
+}
+
+.blend_attributes {
+	float: left;
+	width: 870px;
+	padding: 10px;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 200px;
+	border: 1px solid #BBB;
+	background: #DEE2E2;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.percentInput {
+	width: 80px;
+	height: 25px;
+	text-align: center;
+	border: 1px solid black;
+	font-size: 18px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.header {
+	padding-top: 10px;
+	width: 950px;
+	height: 60px;
+	margin-bottom: 20px;
+}
+
+.container {
+	width: 950px;
+	height: 2000px;
+}
+
+.logo {
+	width: 227px;
+	height: 70px;
+	background: #fff;
+	float: left;
+	margin: 0px 50px 0px 50px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.title {
+	width: 300px;
+	margin: 20px 650px 20px 0px;
+	padding: 10px;
+	color: #0066CC;
+	font-size: 30px;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	float: left;
+}
+
+.small_title {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.label {
+	color: #0066CC;
+	font-size: 18px;
+}
+
+div.field, div.actions {
+	margin-bottom: 10px 0px 10px 0px;
+}
+
+div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
+	width: 250px;
+	margin-left: 50px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+div.flavor1_field, div.flavor1percent_field {
+	margin-left: 0px;
+}
+
+#custom-product-description {
+	width: 600px;
+	padding: 5px;
+	margin: 0px 0px 50px 0px;
+}
+
+#custom-product-images {
+	width: 910px;
+	height: 350px;
+}
+
+#main-image {
+	height: 255px;
+}
