@@ -34,6 +34,12 @@ textarea {
 	padding: 10px;
 }
 
+a.button {
+	width: auto;
+	height: 25px;
+	background: #CCCC33;
+}
+
 .product-listing {
 	list-style: none;
 	margin: 2em 0px 0px 0px;
@@ -41,17 +47,17 @@ textarea {
 }
 
 .motto {
-	margin-top: 55px;
+	margin-top: 35px;
 	margin-right: 300px;
-	font-size: 36px;
+	font-size: 34px;
 	font-weight: bold;
 	color: #4d4d4d;
 	float: right;
 }
 
 .motto-2 {
-	margin-top: 10px;
-	font-size: 36px;
+	margin-top: 0px;
+	font-size: 34px;
 	font-weight: bold;
 	color: #fff;
 	float: left;
@@ -67,7 +73,7 @@ textarea {
 .dark-background {
 	font-family: Tahoma;
 	padding: 15px 350px 15px 15px;
-	background-color: #88c23f;
+	background-color: #bbcad2;
 }
 
 .instructions {
@@ -99,7 +105,7 @@ textarea {
 
 /* Round corners */
 .content {
-	background-color: #f7ac38;
+	background-color: #fff;
 	padding: 15px;
 	position: relative;
 }
@@ -179,7 +185,7 @@ textarea {
 
 .title {
 	width: 300px;
-	margin: 20px 650px 20px 0px;
+	margin: 10px 650px 20px 0px;
 	padding: 10px;
 	color: #0066CC;
 	font-size: 30px;

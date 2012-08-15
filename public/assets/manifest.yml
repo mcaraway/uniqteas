@@ -1,5 +1,5 @@
 ---
-admin/bg/spree_50.png: admin/bg/spree_50-6a92a1fa042dcc7fa23341921fc23626.png
+admin/bg/spree_50.png: admin/bg/spree_50-a435a5dfa1f04e725d5da2ebf0c5d8c1.png
 body-back.png: body-back-623402c834d2a7239cba51ad8e614bd1.png
 favicon.ico: favicon-e117df2d4fe828c35ad3fcad05af1861.ico
 logo.png: logo-6a92a1fa042dcc7fa23341921fc23626.png
@@ -9,8 +9,8 @@ admin/all.js: admin/all-5a712c0bc50da5274971fbafd534d1d7.js
 application.js: application-8db16ce4ca64dc1e7a6645eee1a1eab3.js
 store/all.js: store/all-89b628a969a7534f7d1bd8b10730f679.js
 admin/all.css: admin/all-67699a7368b2fd7f2e93d571c56ac747.css
-application.css: application-cfdc680276ef5692e228fc4778a0bbcd.css
-store/all.css: store/all-ad409115beb9fbf496e98ae4995372a2.css
+application.css: application-01402954b07a6ab4018935ec413815b3.css
+store/all.css: store/all-b4f3ccc68277e9a24d5c0a8962c2d81d.css
 analytics_dashboard_preview.png: analytics_dashboard_preview-3d1253db6714aa5cdbf43d5d5621c6df.png
 admin/bg/active-tab.png: admin/bg/active-tab-cf3274bc37a507ef433a2e6a9ff18b4d.png
 admin/bg/admin_tab_back.png: admin/bg/admin_tab_back-08c6a321ba6a5eb1e1340f84bad370d7.png
