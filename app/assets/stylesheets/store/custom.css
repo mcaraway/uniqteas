@@ -35,8 +35,10 @@ textarea {
 }
 
 a.button {
+	font-size: 14px;
+	vertical-align: middle;
 	width: auto;
-	height: 25px;
+	height: 20px;
 	background: #CCCC33;
 }
 
@@ -116,6 +118,11 @@ a.button {
 	border-radius: 10px;
 }
 
+a.round {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
 #holder1, #holder2, #holder3 {
 	height: 300px;
 	width: 300px;
