@@ -49,7 +49,7 @@ a.button {
 }
 
 .motto {
-	margin-top: 35px;
+	margin-top: 55px;
 	margin-right: 300px;
 	font-size: 34px;
 	font-weight: bold;
@@ -145,7 +145,7 @@ a.round {
 
 .blend_attributes {
 	float: left;
-	width: 870px;
+	width: 890px;
 	padding: 10px;
 	margin-left: 20px;
 	margin-top: 20px;
@@ -191,15 +191,13 @@ a.round {
 }
 
 .title {
-	width: 300px;
+	width: 100%;
 	margin: 10px 650px 20px 0px;
 	padding: 10px;
 	color: #0066CC;
 	font-size: 30px;
-	background: #fff;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
+	background: none;
+	border-bottom: 1px solid #D9D9DB;
 	float: left;
 }
 

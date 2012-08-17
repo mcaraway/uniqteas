@@ -2,7 +2,7 @@
 Raphael.fn.pieChart = function (width, height, cx, cy, r, stroke, font_size, flavor_input_id) {
 	var paper = this, 
 		rad = Math.PI / 180, 
-		outer_rad_mult = 1.7,
+		outer_rad_mult = 1.8,
 		chart = this.set(),
 		outer_pie = [],
 		inner_pie = [],
@@ -330,7 +330,10 @@ Raphael.fn.slider = function(width, height, num_values, font_size) {
 	var paper = this, 
 		slider = this.set(),
 		sliders = [],
-		text_ids = [];
+		text_ids = [],
+		sliderWidth = width - 60,
+		sliderStartX = 20,
+		sliderEndX = sliderStartX + sliderWidth;
 		
 	var dragger = function (x, y, event) {
 			this.ox = this.attr("x");
@@ -340,6 +343,9 @@ Raphael.fn.slider = function(width, height, num_values, font_size) {
 		move = function (dx, dy, x, y, event) {
 			var att = {x: this.ox + dx},
 				orig_att = {x: this.getBBox().x};
+				
+			if (att.x  <= sliderStartX || att.x >= sliderEndX)
+				return;
 				
 			this.attr(att);
 			
@@ -403,15 +409,17 @@ Raphael.fn.slider = function(width, height, num_values, font_size) {
 			}
 		};
 	
-	for (var i = 1; i < 100; i++ ) {
+	var majorTick = 10;
+	var minorTick = 5;
+	for (var i = minorTick; i < 100; i+= minorTick ) {
 		var x = 20+(width-60)/100*i,
-			y = i%5 == 0 ?12: 15,
-			lineheight = i%5 == 0 ? 16 : 11,
-			fill = i%5 ? "#999" : "#666";
+			y = i%majorTick == 0 ?12: 15,
+			lineheight = i%majorTick == 0 ? 16 : 11,
+			fill = i%majorTick ? "#999" : "#666";
 		var tick = paper.rect(x,y,1,lineheight);
 		tick.attr({stroke: fill});
 	}
-	var slider_bar = paper.rect (20,20,width-60,1,4).attr({fill: "#aaa", stroke: "#666", "fill-opacity": 1});
+	var slider_bar = paper.rect (sliderStartX,20,sliderWidth,1,4).attr({fill: "#aaa", stroke: "#666", "fill-opacity": 1});
 	
 	var rect_left = 0,
 		rect_width = 80,

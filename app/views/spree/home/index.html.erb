@@ -1,11 +1,8 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
 <div class="content round" data-hook="homepage_instructions">
     <%= render :partial => 'spree/shared/instructions' %>
 </div>
+
+<div class="title">See what other's have done already!</div>
 
 <div data-hook="homepage_products">
   <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>

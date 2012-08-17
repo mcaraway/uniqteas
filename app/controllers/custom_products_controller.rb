@@ -1,5 +1,4 @@
 class CustomProductsController < ApplicationController
-  layout '/spree/layouts/custom_product_application'
   before_filter :create_custom_product
   before_filter :load_product, :only => :show
     

@@ -9,7 +9,6 @@ Uniqteas::Application.routes.draw do
           # The priority is based upon order of creation:
   # first created -> highest priority.
 
-
   resources :custom_products, :only => [:new ,:show, :create]
   
   match '/blendit', :to=> 'custom_products#new'
