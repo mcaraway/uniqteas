@@ -7,7 +7,7 @@
 		<%= radio_button_tag 'helpme', 'nohelp' %>
 		<%= label_tag 'helpme_nohelp', 'I wanna go wild!' %>
 	</div>
-	<div style="width:910px;height:320px;">
+	<div style="padding-left:20px;width:930px;height:320px;">
 		<% 3.times { |i| %>
 			<div id="holder<%= i+1 %>">
 			</div>
@@ -58,6 +58,13 @@
 	</div>
 	<div class="blend_attributes">
 		<label>Your tea should taste like this:</label><br />
+		<div id="flavor_profile_row" class="flavor_profile">
+			<table id="flavor_profile_table">
+				<tbody>
+					<tr><td>Select teas above to see the flavor profile of your blend.</td></tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	
 	<div class="title" style="margin-top: 50px;">Name your blend:</div><br />

@@ -1,6 +1,7 @@
 body {
 	background: #bbcad2 url(/assets/body-back.png) top left repeat-x;
-	font-family: Tahoma;
+	font-family: 'Abel', sans-serif;
+	font-size: 16px;
 }
 
 input[type="text"], input[type="file"] {
@@ -124,8 +125,8 @@ a.round {
 	border-radius: 5px;
 }
 #holder1, #holder2, #holder3 {
-	height: 300px;
-	width: 300px;
+	height: 310px;
+	width: 310px;
 	float: left;
 }
 #slider {
@@ -143,13 +144,25 @@ a.round {
 	height: 220px;
 }
 
+.flavor_profile {
+    padding: 20px;
+    background-color: #abb; 
+    border: 1px solid black;
+    width: 850px;
+    min-height: 100px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 .blend_attributes {
 	float: left;
 	width: 890px;
 	padding: 10px;
 	margin-left: 20px;
 	margin-top: 20px;
-	height: 200px;
+	height: auto;
+	min-height: 100px;
 	border: 1px solid #BBB;
 	background: #DEE2E2;
 	-webkit-border-radius: 5px;
@@ -216,14 +229,14 @@ div.field, div.actions {
 }
 
 div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
-	width: 250px;
+	width: 260px;
 	margin-left: 50px;
 	float: left;
 	margin-bottom: 10px;
 }
 
 div.flavor1_field, div.flavor1percent_field {
-	margin-left: 0px;
+	margin-left: 10px;
 }
 
 #custom-product-description {
