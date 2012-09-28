@@ -1,38 +1,94 @@
 body {
-	background: #bbcad2 url(/assets/body-back.png) top left repeat-x;
+	padding: 0px;
+	margin: 0px;
+	background: url('/assets/background-brown.png') repeat #562E09;
+	color: #222;
 	font-family: 'Abel', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
+}
+
+table tbody tr, table tfoot tr {
+	border: none;
+}
+table tbody tr td, table tfoot tr td {
+	padding: 5px 5px 5px 0px;
+}
+
+.header {
+	padding: 10px 0px 10px 0px;
+	width: 950px;
+	height: 60px;
+	margin-bottom: 10px;
+}
+
+.container {
+	width: 950px;
+	height: 2000px;
+	background: none repeat scroll 0 0 #D4E5A5;
+	background: -moz-linear-gradient(top,  #D4E5A5 40%, #FFFFFF 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,#D4E5A5), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #D4E5A5 40%,#FFFFFF 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D4E5A5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
+}
+nav #main-nav-bar {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20px;
+	padding-bottom: 6px;
+	font-size: 80%;
+	border: none;
+	color: #06C;
+}
+
+nav #main-nav-bar li:hover{
+	color: #0C6;
+	text-decoration: underline;
+}
+
+#wrapper {
+	padding: 20px;
+}
+
+#content {
+	width: 910px;
+}
+
+#logo {
+	width: 227px;
+	height: 70px;
+	float: left;
+	margin: 10px 50px 0px 50px;
+	background-color: transparent;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+
+#footer {
+	padding: 20px;
 }
 
 input[type="text"], input[type="file"] {
 	border: 1px solid #BBB;
 	background: white;
-	width: 260px;
+	width: 300px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 
 input[type="file"] {
-	width: 400px;
+	width: 300px;
 }
 
 textarea {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	height: 200px;
-}
-
-#logo {
-	margin-top: 10px;
-	background-color: white;
-	-moz-border-radius: 15px;
-	-webkit-border-radius: 15px;
-	border-radius: 15px;
-	width: 200px;
-	height: 60px;
-	padding: 10px;
+	height: 190px;
 }
 
 a.button {
@@ -135,9 +191,21 @@ a.round {
 	float: left;
 }
 
-.flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields{
-	width: 100%;
-	padding: 20px;
+.flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields {
+	width: 910px;
+	padding: 20px 0px 20px 0px;
+}
+
+.image_fields {
+	padding: 0px;
+	position: relative;
+	margin-top: 0px;
+	height: 260px;
+	width: 250px;
+}
+
+.order_fields {
+	margin: 0px 0px 50px 0px;
 }
 
 .name_fields {
@@ -145,21 +213,16 @@ a.round {
 }
 
 .flavor_profile {
-    padding: 20px;
-    background-color: #abb; 
-    border: 1px solid black;
-    width: 850px;
-    min-height: 100px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+	padding: 20px;
+	width: 850px;
+	min-height: 100px;
 }
 
 .blend_attributes {
 	float: left;
 	width: 890px;
-	padding: 10px;
-	margin-left: 20px;
+	padding: 0px 10px 0px 10px;
+	margin-left: 0px;
 	margin-top: 20px;
 	height: auto;
 	min-height: 100px;
@@ -180,29 +243,6 @@ a.round {
 	border-radius: 5px;
 }
 
-.header {
-	padding-top: 10px;
-	width: 950px;
-	height: 60px;
-	margin-bottom: 20px;
-}
-
-.container {
-	width: 950px;
-	height: 2000px;
-}
-
-.logo {
-	width: 227px;
-	height: 70px;
-	background: #fff;
-	float: left;
-	margin: 0px 50px 0px 50px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
-
 .title {
 	width: 100%;
 	margin: 10px 650px 20px 0px;
@@ -216,7 +256,7 @@ a.round {
 
 .small_title {
 	font-size: 18px;
-	margin-bottom: 5px;
+	margin: 10px 0px 5px 0px;
 }
 
 .label {
@@ -239,6 +279,10 @@ div.flavor1_field, div.flavor1percent_field {
 	margin-left: 10px;
 }
 
+#flavor1div, #flavor2div, #flavor3div, #flavor1percentdiv, #flavor2percentdiv, #flavor3percentdiv {
+	margin-bottom: 10px;
+}
+
 #custom-product-description {
 	width: 600px;
 	padding: 5px;
@@ -252,4 +296,117 @@ div.flavor1_field, div.flavor1percent_field {
 
 #main-image {
 	height: 255px;
+}
+
+div.ui-slider-horizontal {
+	height: .6em;
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
+	height: 15px;
+	width: 15px;
+	top: -.1em;
+}
+
+.tea_cups_div, .tea_images_div {
+	width: 910px;
+	padding: 5px 0px 5px 0px;
+}
+
+.tea_images_div {
+	position: relative;
+	float: right;
+	width: 435px;
+}
+
+.tea_builder_divider {
+	border-bottom: 2px solid #f90;
+	margin-bottom: 20px;
+}
+
+td.tea-cup-list {
+	padding-left: 5px;
+	text-align: center;
+}
+
+td.tea-cup-list ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+td.tea-cup-list ul li, td.tea-cup-list ul li:hover, td.tea-cup-list ul li.selected {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #BBCAD2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+}
+
+td.tea-cup-list ul li:hover {
+	background-color: #f90;
+	border: 1px solid white;
+}
+
+td.tea-cup-list ul li.selected {
+	background-color: #09f;
+	border: 1px solid white;
+	position: relative;
+}
+
+td.tea-cup-list ul li.selected div {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	height: 18px;
+	width: 18px;
+}
+
+#percent1div, #percent2div, #percent3div {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.tea-tin {
+	width: 250px;
+	height: 259px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+.tea-tin-image {
+	width: 82px;
+	height: 187px;
+	top: 35px;
+	right: 81px;
+	position: absolute;
+}
+
+.tea-tin-image-fade {
+	width: 250px;
+	height: 259px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+.tea-tag {
+	width: 250px;
+	height: 259px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+}
+
+.tea-tag-image {
+	width: 50px;
+	height: 42px;
+	top: 203px;
+	right: 194px;
+	position: absolute;
 }

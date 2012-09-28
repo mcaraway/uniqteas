@@ -1,0 +1,11 @@
+<div data-hook="account_summary" class="account-summary">
+  <dl id="user-info">
+    <dt><%= t(:email) %></dt>
+    <dd><%= @user.email %> (<%= link_to t(:edit), spree.edit_account_path %>)</dd>
+  </dl>
+</div>
+
+<div data-hook="my_products" class="account-summary">
+	<h3><%= t(:my_products) %></h3>
+	<dd><%= link_to t(:edit), spree.custom_products_path %></dd>
+</div>

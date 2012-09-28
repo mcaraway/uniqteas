@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CustomProductsController do
+describe Spree::CustomProductsController do
   render_views
   
   describe "GET 'new'" do
@@ -26,7 +26,7 @@ describe CustomProductsController do
       it "should not create a custom_product" do
         lambda do
           post :create, :custom_product => @attr
-        end.should_not change(CustomProduct, :count)
+        end.should_not change(Spree::CustomProduct, :count)
       end
       
       it "should render the 'new' page" do
@@ -44,7 +44,7 @@ describe CustomProductsController do
       it "should create a custom product" do
         lambda do
           post :create, :custom_product => @attr
-        end.should change(CustomProduct, :count).by(1)
+        end.should change(Spree::CustomProduct, :count).by(1)
       end
       
       it "should redirect to the custom product show page" do

@@ -1,4 +1,6 @@
-Uniqteas::Application.routes.draw do
+  Uniqteas::Application.routes.draw do
+
+  resources :user_products
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
@@ -9,9 +11,10 @@ Uniqteas::Application.routes.draw do
           # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resources :custom_products, :only => [:new ,:show, :create]
-  
-  match '/blendit', :to=> 'custom_products#new'
+  resources :custom_products, :only => [:new ,:show, :create] 
+  match '/blendit', :to => 'spree/custom_products#new', :as => :blendit
+  match '/blendit2', :to => 'spree/custom_products#new2', :as => :blendit2
+
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
