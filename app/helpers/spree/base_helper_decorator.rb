@@ -4,7 +4,7 @@ Spree::BaseHelper.class_eval do
       if product.is_custom? then
         image_tag "/assets/TeaTin-small.png", options
       else
-        image_tag "noimage/small.jpg", options
+        image_tag "/assets/images/noimage/small.jpg", options
       end
     else
       image_tag product.images.first.attachment.url(:small), options
