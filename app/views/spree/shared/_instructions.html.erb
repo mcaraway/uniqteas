@@ -1,64 +1,67 @@
-<div class="dark-background">
-	<div class="instructions heading">Make your own custom tea in three easy steps.</div>
-	<div class="instructions">
-		<span class="step">Step 1:</span>
-		pick 2 to 3 teas to blend together.
-	</div>
-	<div class="instructions">
-		<span class="step">Step 2:</span>
-		name your blend and tell people all about it.
-	</div>
-	<div class="instructions">
-		<span class="step">Step 3:</span>
-		design your artwork or choose from a template.
-	</div>
-	
-	<div class="instructions">
-		Now order it!
-	</div>
-</div>
-<div class="instructions centered">
-	<button id="create-user">Get started now.</button>
-</div>
-<div class="tin-and-cup">
-	<img src="/assets/tin-and-cup.png"/>
-</div>
+<div class="content round" data-hook="homepage_instructions">
+	<div class="dark-background">
+		<div class="instructions heading">
+			Make your own custom tea in three easy steps.
+		</div>
+		<div class="instructions">
+			<span class="step">Step 1:</span>
+			pick 2 to 3 teas to blend together.
+		</div>
+		<div class="instructions">
+			<span class="step">Step 2:</span>
+			name your blend and tell people all about it.
+		</div>
+		<div class="instructions">
+			<span class="step">Step 3:</span>
+			design your artwork or choose from a template.
+		</div>
 
-<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
-<div id="dialog-form" title="Create new user">
-	<% @body_id = 'login' %>
-	<div id="existing-customer">
-	  <h6><%= t(:login_as_existing) %></h6>
-	  <div data-hook="login">
-	    <%= render :partial => 'spree/shared/login' %>
-	    <%= t(:or) %> <%= link_to t(:create_a_new_account), spree.signup_path %> | <%= link_to t(:forgot_password), spree.new_user_password_path %>
-	  </div>
+		<div class="instructions">
+			Now order it!
+		</div>
+	</div>
+	<div class="instructions centered">
+		<button id="create-user">
+			Get started now.
+		</button>
+	</div>
+	<div class="tin-and-cup">
+		<img src="/assets/tin-and-cup.png"/>
+	</div>
+
+	<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.min.js" type="text/javascript"></script>
+	<div id="dialog-form" title="Create new user">
+		<% @body_id = 'login' %>
+		<div id="existing-customer">
+			<h6><%= t(:login_as_existing) %></h6>
+			<div data-hook="login">
+				<%= render :partial => 'spree/shared/login' %>
+				<%= t(:or) %> <%= link_to t(:create_a_new_account), spree.signup_path %> | <%= link_to t(:forgot_password), spree.new_user_password_path %>
+			</div>
+		</div>
 	</div>
 </div>
-
 <script type="text/javascript">
 	$(function() {
 		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
-		$( "#dialog:ui-dialog" ).dialog( "destroy" );
-		
-		$( "#dialog-form" ).dialog({
-			autoOpen: false,
-			height: 400,
-			width: 450,
-			modal: true
+		$("#dialog:ui-dialog").dialog("destroy");
+
+		$("#dialog-form").dialog({
+			autoOpen : false,
+			height : 400,
+			width : 450,
+			modal : true
 		});
-		
-		$( "#create-user" )
-			.button()
-			.click(function() {
-				window.location.href = "/blendit";
-			});
+
+		$("#create-user").button().click(function() {
+			window.location.href = "/blendit";
+		});
 		/*
-		$( "#create-user" )
-			.button()
-			.click(function() {
-				$( "#dialog-form" ).dialog( "open" );
-			});
-		*/		
-	});
+		 $( "#create-user" )
+		 .button()
+		 .click(function() {
+		 $( "#dialog-form" ).dialog( "open" );
+		 });
+		 */
+	}); 
 </script>

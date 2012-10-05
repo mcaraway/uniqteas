@@ -2,6 +2,9 @@ Spree::ProductsController.class_eval do
   before_filter :create_custom_product, :only => :create
   before_filter :load_product, :only => [:show, :edit, :update]
   def new
+    if current_user == nil
+      redirect_to spree.login_path
+    end
     @prototype = Spree::Prototype.find_by_name("CustomTea")
     @product = Spree::Product.new(:price => 14.95 )
     @flavor_count = 3

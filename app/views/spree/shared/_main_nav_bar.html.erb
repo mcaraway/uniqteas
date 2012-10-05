@@ -1,6 +1,12 @@
 <nav class="columns alpha omega ten">
   <ul id="main-nav-bar" class="inline" style="height:34px;" data-hook>
+  	<% if current_user != nil %>
     <li id="account-link" data-hook><%= link_to t(:my_account), spree.account_path %></li>
+    <li id="account-link" data-hook><%= link_to t(:logout), spree.destroy_user_session_path %></li>
+   
+   	<% else %>
+   	<%= link_to t(:login), spree.login_path %>
+   	<% end %>
     <li id="link-to-cart" style="height:20px;" data-hook><%= link_to t(:cart) , spree.cart_path %></li>
   </ul>
 </nav>

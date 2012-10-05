@@ -1,10 +1,10 @@
-<div class="content round" data-hook="homepage_instructions">
-    <%= render :partial => 'spree/shared/instructions' %>
+<%= render :partial => 'spree/shared/instructions' %>
+
+<div class="title">
+	See what other's have done already!
 </div>
 
-<div class="title">See what other's have done already!</div>
-
 <div data-hook="homepage_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+	<%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
 
