@@ -1,0 +1,90 @@
+<% if @product.has_tin_image? %>
+<div style="float:left;width:50%;">
+	<div class="small_title" style="float:left;width:100%;">
+		Image for tin:
+	</div>
+	<div id="tin_image" class="field" style="float:left;width:180px;height:194px;background-color:#ccc;border:1px solid #aaa;text-align:center;position:relative;">
+		<div style="position: absolute;left:49px;top:4px;">
+			<%= small_tea_tin_image(@product) %>
+		</div>
+		<div class="tea-menu-hidden">
+			<%= link_to image_tag("/assets/edit.png", :size=>"20x20", :class=>"tool"), edit_product_image_url(@product, @product.images[0]), :style => "display:inline;", :title => "Change Tin Image" %>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$("#tin_image").hover(function() {
+		div = $(this).find("div:last").toggleClass("tea-menu", 300);
+	}, function() {
+		$(this).find("div:last").toggleClass("tea-menu", 300);
+	}); 
+</script>
+<% else %>
+<div class="small_title">
+	Image for tin:
+</div>
+<%= f.fields_for "tin_image", :html => { :multipart => true } do |fi| %>
+<div class="field" style="float:left;width:100%;">
+	<%= fi.file_field :attachment %>
+</div>
+<% end %>
+<% end %>
+
+<% if @product.has_tag_image? %>
+<div style="float:left;width:50%;">
+	<div class="small_title">
+		Image for tag:
+	</div>
+	<div id="tag_image" class="field" style="float:left;width:180px;height:194px;position:relative;background-color:#ccc;border:1px solid #aaa;">
+		<div style="position: absolute;left:66px;top:73px;">
+			<%= small_tea_tag_image(@product) %>
+		</div>
+		<div class="tea-menu-hidden">
+			<%= link_to image_tag("/assets/edit.png", :size=>"20x20", :class=>"tool"), edit_product_image_url(@product, @product.images[1]), :style => "display:inline;", :title => "Change Tag Image" %>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$("#tag_image").hover(function() {
+		div = $(this).find("div:last").toggleClass("tea-menu", 300);
+	}, function() {
+		$(this).find("div:last").toggleClass("tea-menu", 300);
+	});
+	$("img.tool").hover(function() {
+		$(this).toggleClass("sizeUp", 100);
+	}, function() {
+		$(this).toggleClass("sizeUp", 100);
+	}); 
+</script>
+<% else %>
+<div class="small_title" style="float:left;width:50%;">
+	Image for tag:
+</div>
+<%= f.fields_for "tag_image", :html => { :multipart => true } do |fi| %>
+<div class="field" style="float:left;width:100%;">
+	<%= fi.file_field :attachment %>
+</div>
+<% end %>
+<% end %>
+
+<style>
+	.tea-menu-hidden {
+		display: none;
+		width: 26px;
+		height: 26px;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.tea-menu {
+		display: inline;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		background-color: #ddd;
+		border: 1px solid #aaa;
+	}
+	.sizeUp {
+		width: 24px;
+		height: 24px;
+	}
+</style>

@@ -1,0 +1,22 @@
+<div data-hook="admin_image_form_fields">
+	<tr data-hook="file">
+		<td><%= t(:filename) %>:</td>
+		<td><%= f.file_field :attachment %></td>
+		<td><%= t(:tin_image_size_instructions)%><br /><%= t(:tag_image_size_instructions)%></td>
+	</tr>
+	<%= hidden_field_tag :product_id, @product.id %>
+</div>
+
+<script type="text/javascript">
+	var _URL = window.URL || window.webkitURL;
+	$("#image_attachment").change(function(e) {
+		var file, img;
+		if (( file = this.files[0])) {
+			img = new Image();
+			img.onload = function() {
+				alert(this.width + " " + this.height);
+			};
+			img.src = _URL.createObjectURL(file);
+		}
+	}); 
+</script>

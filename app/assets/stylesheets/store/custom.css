@@ -194,9 +194,12 @@ a.round {
 .flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields {
 	width: 910px;
 	padding: 20px 0px 20px 0px;
+	
+	border-top: 2px solid #f90;
 }
 
 .image_fields {
+	border: none;
 	padding: 0px;
 	position: relative;
 	margin-top: 0px;
@@ -312,17 +315,19 @@ div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
 
 .tea_cups_div, .tea_images_div {
 	width: 910px;
-	padding: 5px 0px 5px 0px;
+	padding: 20px 0px 5px 0px;
+	border-top: 2px solid #f90;
 }
 
 .tea_images_div {
+	padding: 5px 0px 5px 0px;
 	position: relative;
 	float: right;
 	width: 435px;
+	border: none;
 }
 
 .tea_builder_divider {
-	border-bottom: 2px solid #f90;
 	margin-bottom: 20px;
 }
 
@@ -381,8 +386,8 @@ td.tea-cup-list ul li.selected div {
 
 .tea-tin-image {
 	width: 82px;
-	height: 187px;
-	top: 35px;
+	height: 186px;
+	top: 36px;
 	right: 81px;
 	position: absolute;
 }
@@ -399,7 +404,7 @@ td.tea-cup-list ul li.selected div {
 	width: 250px;
 	height: 259px;
 	top: 0px;
-	right: 0px;
+	right: -20px;
 	position: absolute;
 }
 
@@ -407,6 +412,6 @@ td.tea-cup-list ul li.selected div {
 	width: 50px;
 	height: 42px;
 	top: 203px;
-	right: 194px;
+	right: 174px;
 	position: absolute;
 }

@@ -1,0 +1,42 @@
+<div class="name_fields">
+	<table style="width: 910px;">
+		<tbody>
+			<tr>
+				<td style="width:245px; text-align: right;padding-right: 10px;font-weight:bold;"> <%= f.label :name %>: </td>
+				<td style="width:400px;"> <%= f.text_field :name %> </td>
+				<td style="width:260px;" rowspan="4">
+				<div class="image_fields">
+					<div class="tea-tin">
+						<img src="/assets/TeaTin.png"/>
+					</div>
+					<div class="tea-tin-image" style="height: 187px;">
+						<%= small_tea_tin_image(@product) %>
+					</div>
+					<div class="tea-tin-image-fade">
+						<img src="/assets/TeaTinLabelFade.png"/>
+					</div>
+					<div class="tea-tag">
+						<img src="/assets/Teabag-and-Teatag.png"/>
+					</div>
+					<div class="tea-tag-image">
+						<%= small_tea_tag_image(@product) %>
+					</div>
+				</div></td>
+			</tr>
+			<tr>
+				<td style="text-align: right;padding-right: 10px;font-weight:bold;"> <%= f.label :description %>: </td>
+				<td> <%= f.text_area :description, :style => "width: 300px;" %> </td>
+			</tr>
+			<% if @product.id != nil then %>
+			<tr>
+				<td></td>
+				<td><%= render :partial => 'file_form', :locals => { :f => f } %></td>
+			</tr>
+			<% end %>
+			<tr>
+				<td style="text-align: right;"></td>
+				<td><%= f.submit "Save My Blend"%></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

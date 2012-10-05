@@ -1,0 +1,37 @@
+<div style="min-height: 1100px;">
+	<%=form_for @product do |f| %>
+	<%= render 'spree/shared/error_messages', :target => f.object %>
+
+	<% if @edit_blend %>
+	<%= render :partial => 'tea_selector', :locals => { :f => f } %>
+	<%= render :partial => 'tea_percentages', :locals => { :f => f } %>
+	<script src="http://uniqteas.s3.amazonaws.com/javascript/categories.js" type="text/javascript"></script>
+	<script src="http://uniqteas.s3.amazonaws.com/javascript/raphael-min.js" type="text/javascript"></script>
+	<script src="http://uniqteas.s3.amazonaws.com/javascript/raphael-tea-cups.js" type="text/javascript"></script>
+	<% else %>
+
+	<%= render :partial => 'tea_name_percentages', :locals => { :f => f } %>
+	<div id="tea_selector_div" style="display:none;">
+		<%= render :partial => 'tea_selector', :locals => { :f => f } %>
+		<%= render :partial => 'tea_percentages', :locals => { :f => f } %>
+		<script src="http://uniqteas.s3.amazonaws.com/javascript/categories.js" type="text/javascript"></script>
+		<script src="http://uniqteas.s3.amazonaws.com/javascript/raphael-min.js" type="text/javascript"></script>
+		<script src="http://uniqteas.s3.amazonaws.com/javascript/raphael-tea-cups.js" type="text/javascript"></script>
+	</div>
+	<% end %>
+
+	<%= render :partial => 'form', :locals => { :f => f } %>
+	<% end %>
+
+	<% if @edit_blend %>
+	<script>
+		window.onload = updateStuff;
+	</script>
+	<% else %>
+	<script>
+		window.onload = new function() {
+
+		};
+	</script>
+	<% end %>
+</div>
