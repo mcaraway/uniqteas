@@ -1,12 +1,14 @@
 <nav class="columns alpha omega ten">
-  <ul id="main-nav-bar" class="inline" style="height:34px;" data-hook>
-  	<% if current_user != nil %>
-    <li id="account-link" data-hook><%= link_to t(:my_account), spree.account_path %></li>
-    <li id="account-link" data-hook><%= link_to t(:logout), spree.destroy_user_session_path %></li>
-   
+  <ul id="main-nav-bar" class="inline" style="height:24px;margin-top: 15px;" data-hook>
+  	<% if current_user %>
+    <li><%= link_to current_user.email, spree.account_path %></li>
+    <li><a rel="nofollow" data-method="delete" href="/user/logout">Logout</a></li>
+    <li><%= link_to t(:gallery), spree.products_path %></li>
    	<% else %>
-   	<%= link_to t(:login), spree.login_path %>
+   	<li id="account-link" data-hook><%= link_to t(:login), spree.login_path %></li>
+   	<li id="account-link" data-hook><%= link_to t(:create_a_new_account), spree.signup_path %></li>
    	<% end %>
     <li id="link-to-cart" style="height:20px;" data-hook><%= link_to t(:cart) , spree.cart_path %></li>
   </ul>
+  <div><%= t(:we_share_big_hoop) %> <%= link_to t(:here), pages_bighoop_path %>.</div>
 </nav>

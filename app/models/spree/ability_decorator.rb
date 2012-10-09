@@ -8,8 +8,8 @@ Spree::Ability.class_eval do
     alias_action :new_action, :to => :create
     alias_action :show, :to => :read
 
-    user ||= Spree.user_class.new
-    if user.respond_to?(:has_spree_role?) && user.has_spree_role?('admin')
+    user ||= Spree::User.new
+    if user.has_role? 'admin'
       can :manage, :all
     else
     #############################
@@ -28,7 +28,7 @@ Spree::Ability.class_eval do
       #############################
       can :read, Spree::Taxon
       can :index, Spree::Taxon
-     #############################
+      #############################
       can :read, Spree::User do |resource|
         resource == user
       end
@@ -37,6 +37,12 @@ Spree::Ability.class_eval do
       end
       can :create, Spree::User
     #############################
+    end
+
+    #include any abilities registered by extensions, etc.
+    Spree::Ability.abilities.each do |clazz|
+      ability = clazz.send(:new, user)
+      @rules = rules + ability.send(:rules)
     end
   end
 end

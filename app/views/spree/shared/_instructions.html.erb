@@ -1,29 +1,37 @@
 <div class="content round" data-hook="homepage_instructions">
-	<div class="dark-background">
 		<div class="instructions heading">
-			Make your own custom tea in three easy steps.
+			The most flavorful
+			<br/>
+			healthy teas,
+			<br />
+			and you create your
+			<br />
+			unique blend!
 		</div>
-		<div class="instructions">
-			<span class="step">Step 1:</span>
-			pick 2 to 3 teas to blend together.
+		<div class="instructions" style="padding-left:20px;margin-bottom: 4em">
+			<button id="create-user">
+				Get started now.
+			</button>
+			<br />
+			<div style="width: 232px; text-align: center">
+				Try it out, you'll love it!
+			</div>
 		</div>
-		<div class="instructions">
-			<span class="step">Step 2:</span>
-			name your blend and tell people all about it.
-		</div>
-		<div class="instructions">
-			<span class="step">Step 3:</span>
-			design your artwork or choose from a template.
-		</div>
-
-		<div class="instructions">
-			Now order it!
-		</div>
+	<div >
+		<%= render :partial => '/spree/shared/tea_selector' %>
 	</div>
-	<div class="instructions centered">
-		<button id="create-user">
-			Get started now.
-		</button>
+	<div class="instruction_bullets">
+		<ul>
+			<li>
+				Create your own blend, or choose one created by us, a friend or just someone with great taste!
+			</li>
+			<li>
+				We blend it, add your name and artwork to the cannister, customize the tea tags, and ship it to you.
+			</li>
+			<li style="border: none;">
+				Perfect for a birthday, or Holiday gift and for any other occasion.  Or just because you deserve your own special blend!
+			</li>
+		</ul>
 	</div>
 	<div class="tin-and-cup">
 		<img src="/assets/tin-and-cup.png"/>

@@ -1,10 +1,16 @@
 Uniqteas::Application.routes.draw do
 
-# This line mounts Spree's routes at the root of your application.
-# This means, any requests to URLs such as /products, will go to Spree::ProductsController.
-# If you would like to change where this engine is mounted, simply change the :at option to something different.
-#
-# We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
+  get "pages/bighoop"
+
+  get "pages/contact"
+
+  get "pages/about"
+
+  # This line mounts Spree's routes at the root of your application.
+  # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
+  # If you would like to change where this engine is mounted, simply change the :at option to something different.
+  #
+  # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,14 +70,25 @@ Uniqteas::Application.routes.draw do
 # This is a legacy wild controller route that's not recommended for RESTful applications.
 # Note: This route will make all actions in every controller accessible via GET requests.
 # match ':controller(/:action(/:id))(.:format)'
+
 end
 
-Spree::Core::Engine.routes.draw do
+Spree::Core::Engine.routes.prepend do
+  get "pages/bighoop"
+
+  get "pages/contact"
+
+  get "pages/about"
+
   resources :products do
     resources :images do
       collection do
         post :update_positions
       end
     end
+  end
+
+  devise_scope :user do
+    delete '/logout', :to => "devise/sessions#destroy"
   end
 end

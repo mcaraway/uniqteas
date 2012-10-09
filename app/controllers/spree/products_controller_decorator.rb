@@ -1,10 +1,11 @@
 Spree::ProductsController.class_eval do
   before_filter :create_custom_product, :only => :create
   before_filter :load_product, :only => [:show, :edit, :update]
+  before_filter :verify_login?, :only => [:new]
+  
+  
   def new
-    if current_user == nil
-      redirect_to spree.login_path
-    end
+    @first_flavor = params[:flavor1]
     @prototype = Spree::Prototype.find_by_name("CustomTea")
     @product = Spree::Product.new(:price => 14.95 )
     @flavor_count = 3
@@ -86,6 +87,10 @@ Spree::ProductsController.class_eval do
     image_tag(product.images.first, :item_prop => item_prop)
   end
 
+    def redirect_back_or_default(default)
+      redirect_to(session["user_return_to"] || default)
+      session["user_return_to"] = nil
+    end
   private
 
   def create_custom_product
@@ -105,4 +110,13 @@ Spree::ProductsController.class_eval do
   def load_product
     @product = Spree::Product.active.find_by_permalink!(params[:id])
   end
+  
+  def verify_login?
+    if current_user == nil
+      store_location
+      flash[:notice] = "Please create an account so we can save your blend."
+      redirect_to spree.login_path
+    end
+  end
+
 end
