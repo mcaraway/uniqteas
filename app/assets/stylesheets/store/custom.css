@@ -132,7 +132,7 @@ a.button {
 .dark-background {
 	font-family: Tahoma;
 	padding: 15px;
-	background-color: white;
+	background-color: #bbcad2;
 	height: 432px;
 }
 
@@ -150,13 +150,13 @@ a.button {
 	line-height: 62px;
 	margin-bottom: 1em;
 	font-weight: normal;
-	width: 550px;
+	width: 450px;
 }
 
 .instruction_bullets {
 	width: 200px;
 	position: absolute;
-	left: 680px;
+	left: 670px;
 	top: 10px;
 }
 
@@ -164,9 +164,9 @@ a.button {
 	font-family: 'Abel', sans-serif;
 	color: black;
 	font-size: 20px;
-	padding: .6em 0em .6em 0em;
+	padding: .8em 0em .8em 0em;
 	line-height: normal;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #eee;
 }
 
 .step {
