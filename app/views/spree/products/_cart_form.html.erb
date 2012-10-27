@@ -27,7 +27,7 @@
     <% end%>
 
     <% if @product.price %>
-      <div data-hook="product_price" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
+      <div data-hook="product_price" style="vertical-align: top;" class="columns five <% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
         
         <div id="product-price">
           <h6 class="product-section-title"><%= t(:price) %></h6>
@@ -48,6 +48,6 @@
 
       </div>
     <% end %>    
-
+<%= render :partial => 'spree/products/volume_pricing', :locals => { :product => @product } %>
   </div>
 <% end %>

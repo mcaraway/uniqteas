@@ -1,6 +1,10 @@
 <footer id="footer" class="alpha omega sixteen columns" style="padding: 20px;width:910px;" data-hook>
   <div id="footer-left" class="columns alpha eight" data-hook>
-    <p><%= t :powered_by  %> <%= link_to 'Spree', 'http://spreecommerce.com/' %></p>
+  	<ul>
+  		<li><%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"60x60", :class => "tool"), spree.bighoop_path %></li>
+  		<li><%= link_to t(:about), spree.about_path %></li>
+  		<li><%= link_to t(:contact), spree.contact_path %></li>
+  	</ul>
   </div>
   <div id="footer-right" class="columns omega eight" data-hook></div>
 </footer>

@@ -14,6 +14,21 @@ table tbody tr td, table tfoot tr td {
 	padding: 5px 5px 5px 0px;
 }
 
+table thead tr th {
+	background-color:#9BC3FC;
+	border-left: 1px solid #D4E5A5;
+	border-right: 1px solid #D4E5A5;
+}
+
+h3 {
+	color: #754C24;
+	border-bottom: 1px solid #754C24;
+}
+
+nav #main-nav-bar li a {
+	font-size: 14px;
+}
+
 .header {
 	padding: 10px 0px 10px 0px;
 	width: 950px;
@@ -33,6 +48,7 @@ table tbody tr td, table tfoot tr td {
 	background: linear-gradient(to bottom,  #D4E5A5 40%,#FFFFFF 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D4E5A5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
 }
+
 nav #main-nav-bar {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -57,7 +73,7 @@ nav #main-nav-bar li:hover{
 }
 
 #logo {
-	width: 227px;
+	width: 190px;
 	height: 70px;
 	float: left;
 	margin: 10px 50px 0px 50px;
@@ -67,8 +83,30 @@ nav #main-nav-bar li:hover{
 	border-radius: 0px;
 }
 
-#footer {
+footer#footer {
+	margin-top: 20px;
 	padding: 20px;
+	border-top: 1px solid #754C24;
+}
+
+#footer-left ul li {
+	display: inline-block;
+	padding-right: 15px;	
+}
+
+#footer-left ul li:hover {
+	display: inline-block;
+	padding-right: 15px;
+	text-decoration: underline;
+}
+
+#user-info, #user_addresses, .order-summary {
+	border: none;
+	margin-top: 15px;
+}
+
+#user_addresses {
+	width: 100%;
 }
 
 input[type="text"], input[type="file"] {
@@ -130,7 +168,6 @@ a.button {
 }
 
 .dark-background {
-	font-family: Tahoma;
 	padding: 15px;
 	background-color: #bbcad2;
 	height: 432px;
@@ -233,7 +270,7 @@ a.round {
 }
 
 .name_fields {
-	height: 220px;
+	height: 260px;
 }
 
 .flavor_profile {
@@ -407,7 +444,7 @@ td.tea-cup-list ul li.selected div {
 
 .tea-tin-image {
 	width: 82px;
-	height: 186px;
+	height: 109px;
 	top: 36px;
 	right: 81px;
 	position: absolute;

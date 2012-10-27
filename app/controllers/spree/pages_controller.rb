@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class Spree::PagesController < ApplicationController
   def bighoop
   end
 

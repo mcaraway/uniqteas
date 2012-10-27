@@ -7,13 +7,12 @@
 				<%= f.fields_for :product_properties do |p| %>
 				<%
 				if p.object.property_name.index("percent") == nil
-				flavor_count += 1
-				cid = "flavor" + flavor_count.to_s()
+				flavor_count += (p.object.value == nil || p.object.value == "" ? 0 : 1)
 				%>
 				<div id="<%= p.object.property_name %>editdiv">
-					<%= p.object.value == nil ? "": p.object.value %>
-				</div> <%= p.hidden_field :value, :id => cid %>
-				<%= p.hidden_field :property_name  %>
+					<%= p.object.value == nil || p.object.value == "" ? "": p.object.value %>
+				</div> 
+				
 				<%
 				end
 				%>
@@ -21,16 +20,12 @@
 				<td style="width:15%;"> <% percent_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
-				if p.object.property_name.index("percent") != nil
-				cclass = "percentInput"
+				if p.object.property_name.index("percent") != nil && percent_count < flavor_count
 				percent_count += 1
-				cid = "percent" + percent_count.to_s()
-				disabled = percent_count == 3 ? true : false;
 				%>
 				<div id="<%= p.object.property_name %>editdiv">
-					<%= p.object.value == nil ? "": p.object.value %>
-				</div> <%= p.hidden_field :value, :style => "width:45px", :id => cid, :readonly => disabled %>
-				<%= p.hidden_field :property_name %>
+					<%= p.object.value == nil ? "": p.object.value %>%
+				</div> 
 				<%
 				end
 				%>

@@ -1,10 +1,10 @@
 Uniqteas::Application.routes.draw do
 
-  get "pages/bighoop"
+  get "spree/pages/bighoop"
 
-  get "pages/contact"
+  get "spree/pages/contact"
 
-  get "pages/about"
+  get "spree/pages/about"
 
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
@@ -15,8 +15,12 @@ Uniqteas::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  match '/blendit', :to => 'spree/products#new', :as => :blendit
-
+  match '/blendit', :to => 'spree/products#new'
+  match '/bighoop', :to => 'spree/pages#bighoop'
+  match '/about', :to => 'spree/pages#about'
+  match '/contact', :to => 'spree/pages#contact'
+  match '/myblends', :to => 'spree/users#myblends'
+  
 # Sample of regular route:
 #   match 'products/:id' => 'catalog#view'
 # Keep in mind you can assign values other than :controller and :action
@@ -74,12 +78,16 @@ Uniqteas::Application.routes.draw do
 end
 
 Spree::Core::Engine.routes.prepend do
-  get "pages/bighoop"
+  get "spree/pages/bighoop"
 
-  get "pages/contact"
+  get "spree/pages/contact"
 
-  get "pages/about"
-
+  get "spree/pages/about"
+  match '/blendit', :to => 'products#new'
+  match '/bighoop', :to => 'pages#bighoop'
+  match '/about', :to => 'pages#about'
+  match '/contact', :to => 'pages#contact'
+  match '/myblends', :to => 'users#myblends'
   resources :products do
     resources :images do
       collection do

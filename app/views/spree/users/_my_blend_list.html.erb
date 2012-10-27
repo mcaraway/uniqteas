@@ -1,0 +1,79 @@
+<div data-hook="my_products" style="width:100%;min-height:280px;">
+	<h3><%= t(:my_products) %></h3>
+	<div style="width:100%;float:left;">
+		<div style="width:150px;float:right;margin-top: 5px">
+			<%= link_to t(:add_a_blend), blendit_url %>
+		</div>
+		<% if @myblends.any? %>
+		<ul id="products" class="inline product-listing" data-hook>
+			<% reset_cycle('default') %>
+			<% @myblends.each do |product| %>
+			<li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "", "omega secondary", :name => "classes") %>"  style="position:relative" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+				<div class="product-image" id="product_div<%= product.id %>" onmouseover="toggleClass('<%= product.id %>')" onmouseout="toggleClass('<%= product.id %>')">
+					<%= link_to small_image(product, :itemprop => "image"), product_url(product), :itemprop => 'url', :title => "Order " + product.name %>
+				</div>
+				<%= link_to truncate(product.name, :length => 50), product_url(product), :class => 'info', :itemprop => "name", :title => "Order " + product.name %>
+				<br />
+				<div class="tea-menu-hidden">
+					<%= link_to image_tag("/assets/admin/icons/edit.png", :size=>"14x14", :class => "tool"), edit_product_url(product), :style => "display:inline;width:26px;height:26px;", :title => "Edit " + product.name %>
+					<%= link_to image_tag("/assets/small-cart.png", :size=>"14x14", :class => "tool"), product_url(product), :style => "display:inline;width:26px;height:26px;", :title => "Order " + product.name %>
+				</div>
+			</li>
+			<% end %>
+			<% reset_cycle("classes") %>
+		</ul>
+		<%= paginate @myblends %>
+		<% end %>
+	</div>
+</div>
+
+<style>
+	.add-menu-hidden {
+		display: none;
+		width: 110px;
+		height: 110px;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.add-menu {
+		display: inline;
+		position: absolute;
+		top: 5px;
+		left: 25px;
+		vertical-align: middle;
+	}
+	.tea-menu-hidden {
+		display: none;
+		width: 156px;
+		height: 22px;
+		vertical-align: top;
+		text-align: right;
+	}
+	.tea-menu {
+		display: inline;
+		position: absolute;
+		top: -17px;
+		right: 4px;
+		vertical-align: middle;
+	}
+	.sizeUp {
+		width: 16px;
+		height: 16px;
+	}
+</style>
+<script type="text/javascript">
+	$("li").hover(function() {
+		div = $(this).find("div:last");
+		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 200);
+	}, function() {
+		div = $(this).find("div:last");
+		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 200);
+	});
+
+	$("img.tool").hover(function() {
+		$(this).toggleClass("sizeUp", 100);
+	}, function() {
+		$(this).toggleClass("sizeUp", 100);
+	});
+
+</script>

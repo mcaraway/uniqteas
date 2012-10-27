@@ -1,4 +1,8 @@
-<% unless @product_properties.empty? %>  
+<% unless @product.properties.empty? %>
+	<% if @product.is_custom? %>
 	<h4>Blend</h4>
+	<% else %>
+	<h4>Properties</h4>
+	<% end %>
 	<%= @product.blend %>
 <% end %>

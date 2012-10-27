@@ -1,0 +1,6 @@
+<div class="links columns fifteen alpha omega" data-hook="cart_buttons">
+	<%= button_tag :class => 'primary', :id => 'update-button' do %>
+	<%= t(:update) %>
+	<% end %>
+	<%= link_to t(:checkout), checkout_path, :class => 'button checkout primary', :id => 'checkout-link' %>
+</div>

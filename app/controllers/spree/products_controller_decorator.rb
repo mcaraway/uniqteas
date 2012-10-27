@@ -2,31 +2,38 @@ Spree::ProductsController.class_eval do
   before_filter :create_custom_product, :only => :create
   before_filter :load_product, :only => [:show, :edit, :update]
   before_filter :verify_login?, :only => [:new]
-  
-  
+  def index
+    params[:ispublic] = true
+    logger.debug "****** Prototype is #{params}"
+    @searcher = Spree::Config.searcher_class.new(params)
+    @products = @searcher.retrieve_products
+
+    respond_with(@products)
+  end
+
   def new
     @first_flavor = params[:flavor1]
     @prototype = Spree::Prototype.find_by_name("CustomTea")
     @product = Spree::Product.new(:price => 14.95 )
+    @product.public = false
     @flavor_count = 3
-    logger.debug "*** Prototype is #{@prototype.properties}"
+    logger.debug "****** Prototype is #{@prototype.properties}"
 
     @prototype.properties.each do |property|
-      logger.debug "*** setting property  #{property}"
+      logger.debug "****** setting property  #{property}"
       @product.product_properties.build( :property_name => property.name )
     end
 
-    logger.debug "*** custom_product properties are now #{@product.product_properties}"
+    logger.debug "****** custom_product properties are now #{@product.product_properties}"
   end
 
   def edit
     if @product.is_custom? then
-      logger.debug "*** current_user is #{current_user.email}"
-      logger.debug "*** owner is #{@product.user.email}"
-      @edit_blend = params[:edit_blend] == "true" ? true : false
-      logger.debug "*** @edit_blend is #{@edit_blend}"
+      logger.debug "****** current_user is #{current_user.email}"
+      logger.debug "****** owner is #{@product.user.email}"
+      @edit_blend = true
       if current_user == nil or (current_user != nil and current_user.id != @product.user.id) then
-        redirect_to @product
+        render @product
       end
     end
   end
@@ -36,7 +43,8 @@ Spree::ProductsController.class_eval do
   end
 
   def create
-    logger.debug "*** custom_product name is #{@product.name}"
+    logger.debug "****** custom_product name is #{@product.name}"
+    @product.user = current_user
     @product.sku = get_custom_sku
     @product.shipping_category = Spree::ShippingCategory.find_by_name("Default Shipping")
     @product.tax_category= Spree::TaxCategory.find_by_name("Food")
@@ -44,25 +52,53 @@ Spree::ProductsController.class_eval do
     @product.height = 6
     @product.width = 2.6
     @product.depth = 2.6
-    @product.available_on = Time.now.getutc
     @product.price = 14.95
-
+    @product.available_on = Time.now.getutc
+    @product.final = false
+    @product.public = false
+    
     if @product.save
       @product.update_viewables
-      flash[:success] = "Your product is good to go!"
+      setup_volume_pricing
+      flash[:success] = "Your draft blend is saved."
       redirect_to proc { edit_product_url(@product) }
     else
       render 'new'
     end
   end
 
+  def setup_volume_pricing
+    create_volume_price("Low","1..19",12.95,1,@product.master)
+    create_volume_price("Med","20..49",11.65,2,@product.master)
+    create_volume_price("High","50..99",10.50,3,@product.master)
+    create_volume_price("X High","100..199",9.45,4,@product.master)
+    create_volume_price("XX High","200+",8.50,5,@product.master)     
+  end
+
+  def create_volume_price (name, range, amount, position, variant)
+    volume = Spree::VolumePrice.new
+    volume.name = name
+    volume.range = range
+    volume.amount = amount
+    volume.position = position
+    volume.variant_id = variant.id
+    volume.save
+  end
+
   def update
-    @product.update_viewables
+    @edit_blend = true
     if @product.update_attributes(params[:product])
-      flash[:success] = "Your product is good to go!"
-      redirect_to proc { product_url(@product) }
-    else
+      @product.update_viewables
+
+      if @product.final == false
+        flash[:success] = "Your draft blend is saved."
+      else
+        flash[:success] = "Your blend is good to go!"
+      end
       redirect_to proc { edit_product_url(@product) }
+    else
+      @product.final = @product.final_was
+      respond_with(@product)
     end
   end
 
@@ -87,10 +123,10 @@ Spree::ProductsController.class_eval do
     image_tag(product.images.first, :item_prop => item_prop)
   end
 
-    def redirect_back_or_default(default)
-      redirect_to(session["user_return_to"] || default)
-      session["user_return_to"] = nil
-    end
+  def redirect_back_or_default(default)
+    redirect_to(session["user_return_to"] || default)
+    session["user_return_to"] = nil
+  end
   private
 
   def create_custom_product
@@ -100,17 +136,17 @@ Spree::ProductsController.class_eval do
   def get_custom_sku
     count = Spree::Variant.count_by_sql("select count(*) from spree_variants where sku like 'CUST%'")
 
-    logger.debug "*** count Products with sku CUST% = #{count}"
+    logger.debug "****** count Products with sku CUST% = #{count}"
 
     new_sku = "CUST_"+count.to_s().rjust(8, '0')
 
-    new_sku;
+    new_sku
   end
 
   def load_product
     @product = Spree::Product.active.find_by_permalink!(params[:id])
   end
-  
+
   def verify_login?
     if current_user == nil
       store_location
@@ -118,5 +154,4 @@ Spree::ProductsController.class_eval do
       redirect_to spree.login_path
     end
   end
-
 end
