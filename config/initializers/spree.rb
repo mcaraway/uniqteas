@@ -19,7 +19,5 @@ Spree.config do |config|
   Spree::ActiveShipping::Config.set(:origin_city => "Marlboro")
   Spree::ActiveShipping::Config.set(:origin_state => "NY")
   Spree::ActiveShipping::Config.set(:origin_zip => "12542")
-  
   Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
-  # Spree::PrintInvoice::Config.set(:print_buttons => "invoice,packaging_slip") #comma separated list
 end

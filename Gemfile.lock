@@ -60,6 +60,14 @@ GIT
       spree_core (~> 1.1.0)
 
 GIT
+  remote: git://github.com/spree/spree_social_products.git
+  revision: c32547a6cacd57f632af6a05b6a8e99ecbec1716
+  branch: 1-1-stable
+  specs:
+    spree_social_products (1.1)
+      spree_core (~> 1.1.1)
+
+GIT
   remote: git://github.com/spree/spree_volume_pricing.git
   revision: 8701aa4727a9bd532ebe1ee9096f1da495820222
   specs:
@@ -318,6 +326,7 @@ DEPENDENCIES
   spree_heroku!
   spree_paypal_express!
   spree_print_invoice!
+  spree_social_products!
   spree_volume_pricing!
   sqlite3
   uglifier (>= 1.0.3)
