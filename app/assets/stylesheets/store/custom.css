@@ -109,6 +109,16 @@ footer#footer {
 	width: 100%;
 }
 
+ul#products li a.info{
+	border: none;
+	color: #444;
+	font-size: 13px;
+}
+
+#product-description .product-title {
+	border: none;
+}
+
 input[type="text"], input[type="file"] {
 	border: 1px solid #BBB;
 	background: white;

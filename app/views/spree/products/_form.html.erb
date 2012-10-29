@@ -8,21 +8,7 @@
 				<td style="width:400px;"> <%= f.text_field :name, :maxlength => 40 %> </td>
 				<td style="width:260px;" rowspan="4">
 				<div class="image_fields">
-					<div class="tea-tin">
-						<img src="/assets/TeaTin.png"/>
-					</div>
-					<div class="tea-tin-image" style="height: 187px;">
-						<%= mini_tea_tin_image(@product) %>
-					</div>
-					<div class="tea-tin-image-fade">
-						<img src="/assets/TeaTinLabelFade.png"/>
-					</div>
-					<div class="tea-tag">
-						<img src="/assets/Teabag-and-Teatag.png"/>
-					</div>
-					<div class="tea-tag-image">
-						<%= small_tea_tag_image(@product) %>
-					</div>
+					<%= render :partial => 'tea_tin' %>
 				</div></td>
 			</tr>
 			<tr>

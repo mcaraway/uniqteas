@@ -9,7 +9,6 @@ Spree.config do |config|
 # Example:
 # Uncomment to override the default site name.
   config.site_name = "Uniq Teas"
-  config.products_per_page = 15
 
   Spree::ActiveShipping::Config.set(:ups_login => "caraway tea")
   Spree::ActiveShipping::Config.set(:ups_password => "B4radhur")

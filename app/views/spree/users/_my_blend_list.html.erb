@@ -8,9 +8,17 @@
 		<ul id="products" class="inline product-listing" data-hook>
 			<% reset_cycle('default') %>
 			<% @myblends.each do |product| %>
-			<li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "", "omega secondary", :name => "classes") %>"  style="position:relative" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+			<li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>"  style = "width:212px;height:220px;position:relative" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+				<!--
 				<div class="product-image" id="product_div<%= product.id %>" onmouseover="toggleClass('<%= product.id %>')" onmouseout="toggleClass('<%= product.id %>')">
-					<%= link_to small_image(product, :itemprop => "image"), product_url(product), :itemprop => 'url', :title => "Order " + product.name %>
+				<%= link_to small_image(product, :itemprop => "image"), product_url(product), :itemprop => 'url', :title => "Order " + product.name %>
+				</div> -->
+				<div class="product-image" id="product_div<%= product.id %>" onmouseover="toggleClass('<%= product.id %>')" onmouseout="toggleClass('<%= product.id %>')">
+					<%= link_to (product) do %>
+					<div style="position: relative; width: 190px; height: 200px;">
+						<%= render :partial => "/spree/shared/tea_tin_small", :locals => { :product => product } %>
+					</div>
+					<% end %>
 				</div>
 				<%= link_to truncate(product.name, :length => 50), product_url(product), :class => 'info', :itemprop => "name", :title => "Order " + product.name %>
 				<br />

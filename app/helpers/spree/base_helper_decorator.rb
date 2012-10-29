@@ -8,12 +8,20 @@ Spree::BaseHelper.class_eval do
   
   def small_image(product, options={})
     if product.images.empty?
-      image_tag "/assets/TeaTin-small.png", options
+      image_tag "/assets/TeaTinWithLabel.png", :size => "182x190"
     else
       image_tag product.images.first.attachment.url(:small), options
     end
   end
 
+  def xmini_tea_tin_image (product)
+    if product.images.empty?
+      image_tag "/assets/CustomTeaLabel.png", :size => "60x136"
+    else
+      image_tag product.images.first.attachment.url(:original), :size => "60x136"
+    end
+  end
+  
   def mini_tea_tin_image (product)
     if product.images.empty?
       image_tag "/assets/CustomTeaLabel.png", :size => "82x186"
@@ -38,6 +46,14 @@ Spree::BaseHelper.class_eval do
     end
   end
 
+  def xmini_tea_tag_image (product)
+    if product.images[1] == nil
+      image_tag "/assets/TeaTagLabel.png", :size => "37x31"
+    else
+      image_tag product.images[1].attachment.url(:small), :size => "37x31"
+    end
+  end
+  
   def button(text, icon_name = nil, button_type = 'submit', options={})
     button_tag(content_tag('span', icon(icon_name) + ' ' + text), options.merge(:type => button_type))
   end
