@@ -1,0 +1,7 @@
+  <p data-hook="show_zero_stock">
+    <label>
+      <%= hidden_field_tag 'preferences[track_inventory_levels]', '0' %>
+      <%= check_box_tag('preferences[track_inventory_levels]', "1", Spree::Config[:track_inventory_levels]) %>
+      <%= t(:track_inventory_levels) %>
+    </label>
+  </p>
