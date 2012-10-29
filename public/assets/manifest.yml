@@ -6,8 +6,9 @@ GreenTeaCup.png: GreenTeaCup-deb77bbf692c8814528953a84ab2dbe0.png
 HerbalTeaCup.png: HerbalTeaCup-1e7a816d10622f6765bb9b448daf7072.png
 TeaTagLabel.png: TeaTagLabel-63a25bb1267531afcbaf8b3f7c5a9c76.png
 TeaTin-small.png: TeaTin-small-25eb2e4d87e1ec43fa23ae1812c99a9d.png
-TeaTin.png: TeaTin-5a7da9642b42aede5fc6e5ac8f012bbf.png
+TeaTin.png: TeaTin-521a8d5d99b09fde57060124ea2f6ce5.png
 TeaTinLabelFade.png: TeaTinLabelFade-d88fd03e6be40bf8e891b59e69ff445d.png
+TeaTinWithLabel.png: TeaTinWithLabel-409fc62b3156491b90f68bbc03fe8aa7.png
 Teabag-and-Teatag.png: Teabag-and-Teatag-b6a0e76910b4256d38004d02c4d527a0.png
 WhiteTeaCup.png: WhiteTeaCup-bde01a2c5b6855d7ca8603594d352b06.png
 add-hover.png: add-hover-5d583aaf53edeb8474625cd53f2a7f1c.png
@@ -35,7 +36,7 @@ images/ui-icons_e0fdff_256x240.png: images/ui-icons_e0fdff_256x240-22b6260ec841e
 images/ui-icons_f5e175_256x240.png: images/ui-icons_f5e175_256x240-17ed1b6a3da025fc7a4ff5dee926d8b9.png
 images/ui-icons_f7a50d_256x240.png: images/ui-icons_f7a50d_256x240-f2a74a0274760ee7047fe21a1de3692f.png
 images/ui-icons_fcd113_256x240.png: images/ui-icons_fcd113_256x240-1958340596203b16fe6404c1a8ff1b63.png
-logo.png: logo-eabc56af7c6f17d855e20fe9a554c1ca.png
+logo.png: logo-3af3b05b6dd8186bed98c40683a41df6.png
 noimage/mini.png: noimage/mini-093a2063950f0ddc3ec96eca69e17d9d.png
 noimage/product.png: noimage/product-4489a872fc9df5663f34ed3486a5d395.png
 noimage/small.png: noimage/small-07e7ad6a7e3ba8c86808f2cff6694ef7.png
@@ -89,9 +90,8 @@ admin/all.js: admin/all-18e99200789b827378e46bcae3277f12.js
 application.js: application-4a7921a92dd85b9f13e00316a4d32057.js
 store/all.js: store/all-e56bbbde762e5fb9cc42b028106bac42.js
 admin/all.css: admin/all-306a243fd1aee4c48a43c7011a3f22e1.css
-application.css: application-4553ab9cf697b3ad3f5f50d5f58d6e2f.css
-store/all.css: store/all-50c8919a0e638bd123da37a9004afbe4.css
-analytics_dashboard_preview.png: analytics_dashboard_preview-3d1253db6714aa5cdbf43d5d5621c6df.png
+application.css: application-e2cb45749aa1c31364f37714e4c5fcc7.css
+store/all.css: store/all-d26c0e0ee9beba34f101023d6361880e.css
 social/delicious.png: social/delicious-58f154e070871c32b43c84c54082f1b9.png
 social/delicious_16.png: social/delicious_16-bc91571179d10c76d76dfeb8bf6bc403.png
 social/facebook_16.png: social/facebook_16-73779dd45804c82a530841253aacda9a.png
@@ -101,6 +101,7 @@ social/reddit_16.png: social/reddit_16-825ce5769182888ae6831c85e44b2a3d.png
 social/tumblr_16.png: social/tumblr_16-fedc7b04075de012d6558aeb5e0b7765.png
 social/twitter_16.png: social/twitter_16-4d2d0a7a2919d0b57c1673299445e0ed.png
 paypal.png: paypal-1a0dba3cdf33f542256c1bd1090be786.png
+analytics_dashboard_preview.png: analytics_dashboard_preview-3d1253db6714aa5cdbf43d5d5621c6df.png
 admin/bg/active-tab.png: admin/bg/active-tab-cf3274bc37a507ef433a2e6a9ff18b4d.png
 admin/bg/admin_tab_back.png: admin/bg/admin_tab_back-08c6a321ba6a5eb1e1340f84bad370d7.png
 admin/bg/admin_tab_selected_back.png: admin/bg/admin_tab_selected_back-ca12ccbc38efc94805075dfabaf7abd1.png
