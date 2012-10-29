@@ -9,6 +9,10 @@ gem 'rails', '3.2.7'
 
 gem 'pg'
 
+group :production do
+  gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git', :branch => '1-0-stable'
+end
+
 group :development do
   gem 'sqlite3'  
   gem 'rspec-rails', '2.11.0'
