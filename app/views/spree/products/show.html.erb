@@ -23,7 +23,7 @@
 
 				<h1 class="product-title" itemprop="name"><%= accurate_title %></h1>
 
-				<div itemprop="description" data-hook="description" style="width:<%=@product.is_custom? ? "310px;" : "520px;" %>">
+				<div itemprop="description" data-hook="description" style="width:<%=@product.is_custom? ? "310px;" : "50px;" %>">
 					<%= product_description(@product) rescue t(:product_has_no_description) %>
 				</div>
 

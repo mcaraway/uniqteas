@@ -56,6 +56,7 @@ Spree::ProductsController.class_eval do
     @product.available_on = Time.now.getutc
     @product.final = false
     @product.public = false
+    @product.on_hand = 999999
     
     if @product.save
       @product.update_viewables
