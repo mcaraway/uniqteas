@@ -1,10 +1,5 @@
 <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 <%= form_tag products_path, :method => :get do %>
-  <%= select_tag :taxon,
-        options_for_select([[t(:all_departments), '']] +
-                              @taxons.map {|t| [t.name, t.id]},
-                            @taxon ? @taxon.id : params[:taxon]),
-                            :hidden => true %>
   <%= search_field_tag :keywords, params[:keywords], :placeholder => t(:search), :style => "width: 150px;" %>
   <%= submit_tag t(:search), :name => nil %>
 <% end %>

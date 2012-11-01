@@ -101,6 +101,10 @@ footer#footer {
 	text-decoration: underline;
 }
 
+#footer-right{
+	text-align: right;	
+}
+
 #user-info, #user_addresses, .order-summary {
 	border: none;
 	margin-top: 15px;
@@ -129,7 +133,7 @@ ul#products li a.info{
 	padding: 20px;
 	margin-left: 280px;
 	margin-top: 100px;
-	margin-bottom: 300px;
+	margin-bottom: 200px;
 }
 
 input[type="text"], input[type="file"] {

@@ -3,7 +3,7 @@
   	<% if current_user %>
     <li><%= link_to current_user.email, spree.account_path %></li>
     <li><%= link_to t(:myblends), spree.myblends_path %></li>
-    <li><a rel="nofollow" data-method="delete" href="/user/logout">Logout</a></li>
+   	<li><%= link_to t(:logout), spree.signout_path %></li>
    	<% else %>
    	<li id="account-link" data-hook><%= link_to t(:login), spree.login_path %></li>
    	<li id="account-link" data-hook><%= link_to t(:create_a_new_account), spree.signup_path %></li>

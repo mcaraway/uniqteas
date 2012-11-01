@@ -97,6 +97,6 @@ Spree::Core::Engine.routes.prepend do
   end
 
   devise_scope :user do
-    delete '/logout', :to => "devise/sessions#destroy"
+    get '/signout' => 'user_sessions#destroy'
   end
 end
