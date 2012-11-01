@@ -12,7 +12,7 @@
 				cid = "flavor" + flavor_count.to_s()
 				%>
 				<div id="<%= p.object.property_name %>div">
-					<%= p.object.value == nil ? "Select Above": p.object.value %>
+					<%= p.object.value == nil || p.object.value == "" ? "Select Above": p.object.value %>
 				</div> 
 				<%= p.hidden_field :value, :id => cid %>
 				<%= p.hidden_field :property_name  %>

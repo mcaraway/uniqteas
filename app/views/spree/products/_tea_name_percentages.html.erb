@@ -6,7 +6,7 @@
 				<td style="width:25%;"> <% flavor_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
-				if p.object.property_name.index("percent") == nil
+				if p.object.property_name.index("name") != nil
 				flavor_count += (p.object.value == nil || p.object.value == "" ? 0 : 1)
 				%>
 				<div id="<%= p.object.property_name %>editdiv">
