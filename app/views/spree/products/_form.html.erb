@@ -34,8 +34,8 @@
 				<td style="text-align: right;vertical-align: bottom;height:40px;"></td>
 				<td style="vertical-align: bottom;"> 
 				<% if @product.final == false && @edit_blend %>
-				<%= f.submit "Save Draft Blend"%> 
-				<span style="margin-left: 10px;"><%= button_tag "Finalize for Ordering", :onclick => "submit_final()" %></span> 
+				<%= f.submit t(:save_draft_blend) %> 
+				<span style="margin-left: 10px;"><%= button_tag t(:finalize), :onclick => "submit_final()" %></span> 
 				<%= f.hidden_field :final %>
 				<script type="text/javascript">
 					function submit_final() {
@@ -43,9 +43,12 @@
 						document.forms["edit_product_<%= @product.id %>"].submit();
 					}
 				</script> 
+				<% elsif @edit_blend %>
+				<%= f.submit t(:save_blend) %>
 				<% else %>
-				<%= f.submit "Save My Blend"%>
-				<% end %> <span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span></td>
+				<%= f.submit t(:continue) %>
+				<% end %> 
+				<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span></td>
 			</tr>
 		</tbody>
 	</table>

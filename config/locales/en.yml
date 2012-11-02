@@ -20,3 +20,7 @@ en:
   description_lenght: "(max 240 characters)"
   big_hoop_foundation: "Big Hoop Foundation"
   track_inventory_levels: "Track Inventory Levels"
+  save_blend: "Save My Blend"
+  save_draft_blend: "Save Draft Blend"
+  continue: "Continue"
+  finalize: "Finalize for Ordering"

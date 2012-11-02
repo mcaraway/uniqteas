@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_active_shipping
-  revision: 86d7381d78822d3d3f7b0077cf56c6040e07aa7b
+  revision: c42ea2364ed6723f2b0f814bfb65212f2a6c006f
   specs:
     spree_active_shipping (1.1.0)
       spree_core (~> 1.0)
@@ -69,9 +69,9 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_volume_pricing.git
-  revision: 8701aa4727a9bd532ebe1ee9096f1da495820222
+  revision: 58af9dab6339a87f88d791cfd93d4c9d4598138d
   specs:
-    spree_volume_pricing (3.2.0)
+    spree_volume_pricing (3.3.0)
       spree_core (~> 1.1)
 
 GEM
@@ -122,7 +122,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     braintree (2.19.0)
       builder (>= 2.0.0)
@@ -175,7 +174,6 @@ GEM
     nested_set (1.7.0)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
-    nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.0.7)
     paperclip (2.8.0)
@@ -183,7 +181,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -291,13 +288,12 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.6)
     sqlite3 (1.3.6-x86-mingw32)
     state_machine (1.1.2)
     stringex (1.3.3)
     thor (0.16.0)
     tilt (1.3.3)
-    treetop (1.4.11)
+    treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.34)
