@@ -29,8 +29,17 @@ Spree::Product.class_eval do
 
   def check_final_state
     if final 
-      if name == nil or description == nil or images.length < 2 or !has_flavors?  
-        errors.add :blend, "You blend can not be made final until it has a name, description, at least one flavor, and both images."
+      if name == nil   
+        errors.add :name, "You blend can not be made final until it has a name."
+      end
+      if description == nil  
+        errors.add :description, "You blend can not be made final until it has a description."
+      end
+      if has_tag_image? and has_tin_image?
+        errors.add :images, "You blend can not be made final until it has both images."
+      end
+      if !has_flavors?  
+        errors.add :blend, "You blend can not be made final until it has at least one flavor."
       end
     end
   end

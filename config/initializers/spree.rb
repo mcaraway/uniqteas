@@ -9,7 +9,11 @@ Spree.config do |config|
 # Example:
 # Uncomment to override the default site name.
   config.site_name = "Uniq Teas"
-
+  config.site_url = "www.uniqteas.com"
+  config.default_meta_keywords = "tea, loos tea, custom tea"
+  config.default_meta_description = "The place to make your own custom tea blend."
+  config.auto_capture = true
+  
   Spree::ActiveShipping::Config.set(:ups_login => "caraway tea")
   Spree::ActiveShipping::Config.set(:ups_password => "B4radhur")
   Spree::ActiveShipping::Config.set(:ups_key => "8CA5E782B48C580A")

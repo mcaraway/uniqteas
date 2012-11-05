@@ -52,12 +52,14 @@ Spree::ProductsController.class_eval do
     @product.height = 6
     @product.width = 2.6
     @product.depth = 2.6
-    @product.price = 14.95
+    @product.price = 12.95
     @product.available_on = Time.now.getutc
     @product.final = false
     @product.public = false
     @product.on_hand = 999999
-    
+    @product.meta_keywords = t(:custom_blend_meta_keywords)
+    @product.meta_description = t(:custom_blend_meta_description)
+
     if @product.save
       @product.update_viewables
       setup_volume_pricing
@@ -73,7 +75,7 @@ Spree::ProductsController.class_eval do
     create_volume_price("Med","20..49",11.65,2,@product.master)
     create_volume_price("High","50..99",10.50,3,@product.master)
     create_volume_price("X High","100..199",9.45,4,@product.master)
-    create_volume_price("XX High","200+",8.50,5,@product.master)     
+    create_volume_price("XX High","200+",8.50,5,@product.master)
   end
 
   def create_volume_price (name, range, amount, position, variant)

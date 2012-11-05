@@ -1,3 +1,6 @@
+<% content_for :head do -%>
+  <meta name="title" content="Blend It">
+<% end -%>
 <div style="min-height: 1200px;">
 <%=form_for @product do |f| %>
 <%= render 'spree/shared/error_messages', :target => f.object %>

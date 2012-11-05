@@ -35,8 +35,7 @@ gem 'jquery-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+# To use Jbuilder templates for JSONgit 
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -55,3 +54,4 @@ gem 'spree_volume_pricing', :git => 'git://github.com/spree/spree_volume_pricing
 gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', :branch => '1-1-stable'
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '1-1-stable' # make sure to include after spree
 gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git", :branch => '1-1-stable'
+gem 'spree_contact_us', '~> 1.1.0'
