@@ -13,6 +13,7 @@
 			<%= render :partial => 'spree/shared/header_clean' %>
 			<div id="wrapper" class="row" data-hook>
 				<div id="content" class="main" data-hook>
+					<%= breadcrumbs(@taxon) %>
 					<%= flash_messages %>
 					<%= yield %>
 				</div>

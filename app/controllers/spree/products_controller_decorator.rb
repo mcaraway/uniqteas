@@ -39,7 +39,6 @@ Spree::ProductsController.class_eval do
   end
 
   def show
-
   end
 
   def create
