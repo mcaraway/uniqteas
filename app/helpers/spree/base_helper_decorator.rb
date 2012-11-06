@@ -8,7 +8,7 @@ Spree::BaseHelper.class_eval do
 
   def small_image(product, options={})
     if product.images.empty?
-      image_tag "/assets/TeaTinWithLabel.png", :size => "182x190"
+      image_tag "/assets/TeaTinWithLabel.png", :size => "182x190", :alt => product.name
     else
       image_tag product.images.first.attachment.url(:small), options
     end
@@ -16,25 +16,25 @@ Spree::BaseHelper.class_eval do
 
   def xmini_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "60x136"
+      image_tag "/assets/CustomTeaLabel.png", :size => "60x136", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "60x136"
+      image_tag product.images.first.attachment.url(:original), :size => "60x136", :alt => product.name
     end
   end
 
   def mini_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "82x186"
+      image_tag "/assets/CustomTeaLabel.png", :size => "82x186", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "82x186"
+      image_tag product.images.first.attachment.url(:original), :size => "82x186", :alt => product.name
     end
   end
 
   def small_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "140x186"
+      image_tag "/assets/CustomTeaLabel.png", :size => "140x186", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "140x186"
+      image_tag product.images.first.attachment.url(:original), :size => "140x186", :alt => product.name
     end
   end
 
