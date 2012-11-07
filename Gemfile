@@ -48,7 +48,7 @@ gem 'jquery-rails'
 gem 'spree', '1.1.3'
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
-gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git"
+gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git", :branch => '1-1-stable'
 gem "spree_paypal_express", :git => "git://github.com/spree/spree_paypal_express.git", :branch => '1-1-stable'
 gem 'spree_volume_pricing', :git => 'git://github.com/spree/spree_volume_pricing.git'
 gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', :branch => '1-1-stable'
