@@ -35,8 +35,8 @@ Spree::Product.class_eval do
       if description == nil  
         errors.add :description, "You blend can not be made final until it has a description."
       end
-      if has_tag_image? and has_tin_image?
-        errors.add :images, "You blend can not be made final until it has both images."
+      if has_tin_image?
+        errors.add :images, "You blend can not be made final until it has a tin image."
       end
       if !has_flavors?  
         errors.add :blend, "You blend can not be made final until it has at least one flavor."
