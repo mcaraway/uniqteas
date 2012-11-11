@@ -13,7 +13,7 @@ Spree.config do |config|
   config.default_meta_keywords = "tea, loos tea, custom tea"
   config.default_meta_description = "The place to make your own custom tea blend."
   config.auto_capture = true
-  
+
   Spree::ActiveShipping::Config.set(:ups_login => "caraway tea")
   Spree::ActiveShipping::Config.set(:ups_password => "B4radhur")
   Spree::ActiveShipping::Config.set(:ups_key => "8CA5E782B48C580A")
@@ -23,4 +23,9 @@ Spree.config do |config|
   Spree::ActiveShipping::Config.set(:origin_state => "NY")
   Spree::ActiveShipping::Config.set(:origin_zip => "12542")
   Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
+
+  # Ensure the agent is started using Unicorn
+  # This is needed when using Unicorn and preload_app is not set to true.
+  # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data
+  ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
 end
