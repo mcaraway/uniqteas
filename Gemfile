@@ -10,8 +10,10 @@ gem 'rails', '3.2.7'
 gem 'pg'
 
 group :production do
+  platforms :ruby do # linux
     gem 'unicorn'
-    gem 'dalli'
+  end
+  gem 'dalli'
   gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git', :branch => '1-0-stable'
 end
 
