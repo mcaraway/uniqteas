@@ -67,4 +67,8 @@ Uniqteas::Application.configure do
   
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get(ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'INFO')
+  
+  config.static_cache_control = "public, max-age=2592000"
+    
+  config.cache_store = :dalli_store
 end

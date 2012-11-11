@@ -315,6 +315,7 @@ PLATFORMS
 DEPENDENCIES
   active_shipping!
   coffee-rails (~> 3.2.1)
+  dalli
   pg
   rails (= 3.2.7)
   rspec-rails (= 2.11.0)
