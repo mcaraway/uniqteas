@@ -68,8 +68,6 @@ Uniqteas::Application.configure do
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get(ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'INFO')
 
-  config.static_cache_control = "public, max-age=2592000"
-
   config.cache_store = :dalli_store
 
   config.action_dispatch.rack_cache = {
@@ -77,4 +75,6 @@ Uniqteas::Application.configure do
     :entitystore  => 'file:tmp/cache/rack/body',
     :allow_reload => false
   }
+  
+  config.static_cache_control = "public, max-age=2592000"
 end
