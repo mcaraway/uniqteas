@@ -16,25 +16,25 @@ Spree::BaseHelper.class_eval do
 
   def xmini_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "60x136", :alt => product.name
+      image_tag "/assets/noimage/no-tin-image.png", :size => "71x54", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "60x136", :alt => product.name
+      image_tag product.images.first.attachment.url(:original), :size => "71x54", :alt => product.name
     end
   end
 
   def mini_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "82x186", :alt => product.name
+      image_tag "/assets/noimage/no-tin-image.png", :size => "94x71", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "82x186", :alt => product.name
+      image_tag product.images.first.attachment.url(:original), :size => "94x71", :alt => product.name
     end
   end
 
   def small_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "140x186", :alt => product.name
+      image_tag "/assets/CustomTeaLabel.png", :size => "347x300", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "140x186", :alt => product.name
+      image_tag product.images.first.attachment.url(:original), :size => "347x300", :alt => product.name
     end
   end
 

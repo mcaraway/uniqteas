@@ -8,21 +8,33 @@ Spree::Product.class_eval do
   validate :check_final_state
   
   def validate_minimum_image_size
+    requiredTinImageWidth = 347
+    requiredTinImageHeight = 300
+    requiredTagImageWidth = 120
+    requiredTagImageHeight = 100
     if (! @tin_image.nil?)
-      unless (@tin_image.attachment_width == 450 && @tin_image.attachment_height == 600 )
-        logger.debug "*** Naughty you... the tin image designs should be 450px x 600px."
-        errors.add :tin_image, "Naughty you... the tin image designs should be 450px x 600px."
+      unless (@tin_image.attachment_width == requiredTinImageWidth && @tin_image.attachment_height == requiredTinImageHeight )
+        logger.debug "*** Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
+        errors.add :tin_image, "Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
       end
     end
 
     if (! @tag_image.nil?)
-      unless (@tag_image.attachment_width == 120 && @tag_image.attachment_height == 100 )
-        logger.debug "*** Naughty you... the tag image designs should be 120px x 100px."
-        errors.add :tag_image, "Naughty you... the tag image designs should be 120px x 100px."
+      unless (@tag_image.attachment_width == requiredTagImageWidth && @tag_image.attachment_height == requiredTagImageHeight )
+        logger.debug "*** Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
+        errors.add :tag_image, "Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
       end
     end
   end
 
+  def requiredTinImageWidth
+    347
+  end
+  
+  def requiredTinImageHeight
+    300
+  end
+  
   def is_public?
     public
   end
@@ -35,7 +47,7 @@ Spree::Product.class_eval do
       if description == nil  
         errors.add :description, "You blend can not be made final until it has a description."
       end
-      if has_tin_image?
+      if !(has_tin_image?)
         errors.add :images, "You blend can not be made final until it has a tin image."
       end
       if !has_flavors?  
@@ -84,9 +96,10 @@ Spree::Product.class_eval do
   def blend
     blend = ""
     product_properties.each do |property|
-      if (property.property_name.index("percent") == nil)
+      if (property.property_name.index("name") != nil)
+        prefix = property.property_name[0, 7]
         product_properties.each do |percent_property|
-          if (percent_property.property_name == property.property_name+"percent")
+          if (percent_property.property_name == prefix+"percent")
             blend += percent_property.value + "% " +
             property.value + " / "
           end
@@ -101,7 +114,7 @@ Spree::Product.class_eval do
   end
 
   def has_tin_image?
-    images.empty??false:true
+    !(images.empty?)
   end
 
   def has_tag_image?

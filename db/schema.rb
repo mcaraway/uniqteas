@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121026191723) do
+ActiveRecord::Schema.define(:version => 20121110172514) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -200,8 +200,12 @@ ActiveRecord::Schema.define(:version => 20121026191723) do
     t.string   "name"
     t.string   "presentation"
     t.integer  "option_type_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "spree_option_values_variants", :id => false, :force => true do |t|
@@ -604,6 +608,15 @@ ActiveRecord::Schema.define(:version => 20121026191723) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
+  end
+
+  create_table "store_credits", :force => true do |t|
+    t.integer  "user_id"
+    t.decimal  "amount",           :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.decimal  "remaining_amount", :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.string   "reason"
+    t.datetime "created_at",                                                      :null => false
+    t.datetime "updated_at",                                                      :null => false
   end
 
   create_table "user_products", :force => true do |t|

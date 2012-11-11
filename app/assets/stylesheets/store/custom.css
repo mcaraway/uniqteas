@@ -124,7 +124,7 @@ ul#products li a.info{
 	border: none;
 }
 
-#existing-customer, #new-customer {
+#registration #existing-customer, #new-customer {
 	width: 350px;
 	background-color: #eee;	
 	-webkit-border-radius: 5px;
@@ -170,6 +170,22 @@ a.button {
 	padding: 0px;
 }
 
+.errorExplanation {
+    background: none repeat scroll 0 0 #bbcad2;
+    border: 2px solid #F15700;
+    margin-bottom: 1em;
+    padding: 1em;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.errorExplanation h2 {
+    background: url("/assets/admin/icons/32x32/3.png") no-repeat scroll left center transparent;
+    font-size: 1.75em;
+    padding-left: 40px;
+}
+
 .motto {
 	margin-top: 55px;
 	margin-right: 300px;
@@ -190,8 +206,8 @@ a.button {
 
 .tin-and-cup {
 	position: absolute;
-	left: 270px;
-	top: 30px;
+	left: 340px;
+	top: 105px;
 }
 
 .dark-background {
@@ -465,15 +481,34 @@ td.tea-cup-list ul li.selected div {
 	width: 250px;
 	height: 259px;
 	top: 0px;
-	right: 0px;
+	right: -50px;
 	position: absolute;
 }
 
-.tea-tin-image {
-	width: 82px;
-	height: 109px;
-	top: 36px;
-	right: 81px;
+.tea-tin-name, .tea-tin-description {
+	padding: 2px 5px 5px 5px;
+	position: absolute;
+	width: 93px;
+	top: 43px;
+	right: 23.5px;
+	font-size:10.5px;
+	font-family:"Yanone Kaffeesatz";
+	text-align: center;
+}
+
+.tea-tin-description {
+	width:89px;
+	padding: 2px 7px 5px 7px;
+	top: 139px;
+	text-align: left;
+	font-size:5px;
+}
+
+.tea-tin-image, .tea-tin-template {
+	width: 103px;
+	height: 138px;
+	top: 43px;
+	right: 23.5px;
 	position: absolute;
 }
 
@@ -481,15 +516,15 @@ td.tea-cup-list ul li.selected div {
 	width: 250px;
 	height: 259px;
 	top: 0px;
-	right: 0px;
+	right: -50px;
 	position: absolute;
 }
 
 .tea-tag {
 	width: 250px;
 	height: 259px;
-	top: 0px;
-	right: -20px;
+	top: 200px;
+	right: -35px;
 	position: absolute;
 }
 

@@ -11,8 +11,8 @@ gem 'pg'
 
 group :production do
   gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git', :branch => '1-0-stable'
+  gem 'unicorn'
 end
-
 group :development do
   gem 'sqlite3'  
   gem 'rspec-rails', '2.11.0'
@@ -29,8 +29,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -55,3 +53,4 @@ gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.
 gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '1-1-stable' # make sure to include after spree
 gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git", :branch => '1-1-stable'
 gem 'spree_contact_us', '~> 1.1.0'
+gem 'spree_variant_options', '0.4.1'

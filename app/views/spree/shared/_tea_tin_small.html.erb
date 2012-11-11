@@ -1,9 +1,14 @@
-<div class="tea-tin" style="width:183px;height:190px;">
-	<img src="/assets/TeaTin.png" width="183px" height="190px"/>
+<div class="tea-tin" style="width:190px;height:190px;right:0px;">
+	<img src="/assets/TeaTin.png" width="190px" height="190px"/>
 </div>
-<div class="tea-tin-image" style="height: 136px;top:27px;right:49px;">
+<div class="tea-tin-template" style="width:78px;height:104px;top:33px;right:56px;">
+	<img src="/assets/store/templates/Template-white.png" width="78" height="104"/>
+</div>
+<div class="tea-tin-name" style="width:78px;top:33px;right:54px;font-size:10px;padding:2px;color:black;"><%= product ? product.name : "Your Custom Blend" %></div>
+<div class="tea-tin-image" style="width:71px;height:54px;top:49px;right:59px;">
 	<%= xmini_tea_tin_image(product) %>
 </div>
-<div class="tea-tin-image-fade" style="width:183px;height:190px;">
-	<img src="/assets/TeaTinLabelFade.png" width="183px" height="190px"/>
+<div class="tea-tin-description" style="width:70px;height:20px;text-overflow:clip;top:105px;right:56px;font-size:2.5px;padding:2px;color:black;"><%= product_description(product) rescue t(:product_has_no_description) %></div>
+<div class="tea-tin-image-fade" style="width:190px;height:190px;right:0px;">
+	<img src="/assets/TeaTinLabelFade.png" width="190px" height="190px"/>
 </div> 
