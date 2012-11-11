@@ -10,11 +10,14 @@ gem 'rails', '3.2.7'
 gem 'pg'
 
 group :production do
+  platforms :ruby do # linux
+    gem 'unicorn'
+  end
   gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git', :branch => '1-0-stable'
-  gem 'unicorn'
 end
+
 group :development do
-  gem 'sqlite3'  
+  gem 'sqlite3'
   gem 'rspec-rails', '2.11.0'
 end
 
@@ -33,7 +36,7 @@ end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSONgit 
+# To use Jbuilder templates for JSONgit
 
 # Use unicorn as the app server
 # gem 'unicorn'

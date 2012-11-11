@@ -123,7 +123,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     braintree (2.20.0)
       builder (>= 2.0.0)
@@ -176,7 +175,6 @@ GEM
     nested_set (1.7.0)
       activerecord (>= 3.0.0)
       railties (>= 3.0.0)
-    nokogiri (1.5.5)
     nokogiri (1.5.5-x86-mingw32)
     orm_adapter (0.0.7)
     paperclip (2.8.0)
@@ -184,7 +182,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -196,8 +193,6 @@ GEM
     prawn-core (0.8.4)
     prawn-layout (0.8.4)
     prawn-security (0.8.4)
-    puma (1.6.3)
-      rack (~> 1.2)
     rabl (0.6.5)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
@@ -298,7 +293,6 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.6)
     sqlite3 (1.3.6-x86-mingw32)
     state_machine (1.1.2)
     stringex (1.3.3)
@@ -322,7 +316,6 @@ DEPENDENCIES
   active_shipping!
   coffee-rails (~> 3.2.1)
   pg
-  puma
   rails (= 3.2.7)
   rspec-rails (= 2.11.0)
   sass-rails (~> 3.2.3)
@@ -339,3 +332,4 @@ DEPENDENCIES
   spree_volume_pricing!
   sqlite3
   uglifier (>= 1.0.3)
+  unicorn
