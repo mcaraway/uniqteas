@@ -1,7 +1,7 @@
 Uniqteas::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
+# Settings specified here will take precedence over those in config/application.rb
 
-  # Code is not reloaded between requests
+# Code is not reloaded between requests
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
@@ -9,7 +9,7 @@ Uniqteas::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -64,11 +64,17 @@ Uniqteas::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  
+
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get(ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'INFO')
-  
+
   config.static_cache_control = "public, max-age=2592000"
-    
+
   config.cache_store = :dalli_store
+
+  config.action_dispatch.rack_cache = {
+    :metastore    => Dalli::Client.new,
+    :entitystore  => 'file:tmp/cache/rack/body',
+    :allow_reload => false
+  }
 end
