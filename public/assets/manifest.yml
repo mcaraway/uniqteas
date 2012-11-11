@@ -93,8 +93,8 @@ admin/all.js: admin/all-18e99200789b827378e46bcae3277f12.js
 application.js: application-0d9ccdc2ce7b49f9418522d015193d58.js
 store/all.js: store/all-7d88b5f92abde2434f69df728e58a900.js
 admin/all.css: admin/all-306a243fd1aee4c48a43c7011a3f22e1.css
-application.css: application-8f564df291a8f09ea8cac54627be9c2e.css
-store/all.css: store/all-b2b07773ac736198932ecdb5604bc560.css
+application.css: application-19539bb6aa4b499d3d59862670865f9c.css
+store/all.css: store/all-9fc065a06f54140ebf1a36c0974bdad9.css
 TinTemplate.png: TinTemplate-4c8116b2fa08386a018cbe96593ecd70.png
 store/out-of-stock.png: store/out-of-stock-5e38d2f3705cf824b775a794a15c7c83.png
 social/delicious.png: social/delicious-58f154e070871c32b43c84c54082f1b9.png

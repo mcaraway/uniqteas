@@ -124,7 +124,7 @@ ul#products li a.info{
 	border: none;
 }
 
-#registration #existing-customer, #new-customer {
+#existing-customer, #registration #new-customer {
 	width: 350px;
 	background-color: #eee;	
 	-webkit-border-radius: 5px;
