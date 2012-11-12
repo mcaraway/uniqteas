@@ -332,7 +332,7 @@ DEPENDENCIES
   spree_paypal_express!
   spree_print_invoice!
   spree_social_products!
-  spree_variant_options
+  spree_variant_options (= 0.4.1)
   spree_volume_pricing!
   sqlite3
   uglifier (>= 1.0.3)
