@@ -19,7 +19,7 @@
 <% else %>
 <%= f.fields_for "tin_image", :html => { :multipart => true } do |fi| %>
 <div class="field" style="float:left;width:100%;">
-	<%= fi.file_field :attachment %>
+	<%= link_to image_tag("/assets/admin/icons/add.png", :size=>"20x20", :class=>"tool") + ' ' + t(:add_tin_image), new_product_image_url(@product), :style => "display:inline;" %>
 </div>
 <% end %>
 <% end %>

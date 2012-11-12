@@ -95,7 +95,8 @@ Spree::ProductsController.class_eval do
       if @product.final == false
         flash[:success] = "Your draft blend is saved."
       else
-        flash[:success] = "Your blend is good to go!"
+        link = "<a href=\"#{url_for(@product)}\">order</a>"    
+        flash[:success] = "<h2>Your blend is good to go! Now go #{link} some.</h2>".html_safe
       end
       redirect_to proc { edit_product_url(@product) }
     else

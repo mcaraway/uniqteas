@@ -172,7 +172,7 @@ a.button {
 	padding: 0px;
 }
 
-.errorExplanation {
+.errorExplanation, .flash.success {
     background: none repeat scroll 0 0 #bbcad2;
     border: 2px solid #F15700;
     margin-bottom: 1em;
@@ -182,10 +182,20 @@ a.button {
 	border-radius: 10px;
 }
 
-.errorExplanation h2 {
+.errorExplanation h2{
     background: url("/assets/admin/icons/32x32/3.png") no-repeat scroll left center transparent;
     font-size: 1.75em;
     padding-left: 40px;
+}
+
+.flash.success h2 {
+    background: url("/assets/admin/icons/32x32/4.png") no-repeat scroll left center transparent;
+    font-size: 1.75em;
+    padding-left: 40px;
+}
+
+.flash.success {
+    border: 2px solid #8DBA53;
 }
 
 .motto {

@@ -1,11 +1,11 @@
 <h4><%= t(:new_image) %></h4>
-<%= form_for [:admin, @product, @image], :html => { :multipart => true } do |f| %>
+<%= form_for [@product, @image], :html => { :multipart => true } do |f| %>
   <table class="basic-table" data-hook="new_image">
     <%= render :partial => 'form', :locals => { :f => f } %>
   </table>
   <p class="form-buttons" data-hook="buttons">
     <%= button t(:update) %>
-    <%= t(:or) %> <%= link_to t(:cancel), admin_product_images_url(@product), :id => 'cancel_link' %>
+    <%= t(:or) %> <%= link_to t(:cancel), edit_product_url(@product), :id => 'cancel_link' %>
   </p>
 <% end %>
 
