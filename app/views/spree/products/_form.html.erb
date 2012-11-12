@@ -1,19 +1,18 @@
 <div class="name_fields">
 	<table style="width: 910px;">
 		<tbody>
-			
+			<% if @product.id != nil then %>
 			<tr>
 				<td style="vertical-align: top;width:245px; text-align: right;padding-right: 10px;font-weight:bold;"><%= f.label "Artwork" %>:
 				<br />
-				<span style="font-size: 13px;color:red;font-weight: bold">(required size <%= @product.requiredTinImageWidth %>px x <%= @product.requiredTinImageHeight %>px)</span>
-				</td>
-				<td style="vertical-align: top;"><% if @product.id != nil then %><%= render :partial => 'file_form', :locals => { :f => f } %><% end %></td>
+				<span style="font-size: 13px;color:red;font-weight: bold">(required size <%= @product.requiredTinImageWidth %>px x <%= @product.requiredTinImageHeight %>px)</span></td>
+				<td style="vertical-align: top;"><%= render :partial => 'file_form', :locals => { :f => f } %></td>
 				<td style="width:260px;vertical-align: top;" rowspan="5">
 				<div class="image_fields" style="margin-top: 40px;">
 					<%= render :partial => 'tea_tin' %>
 				</div></td>
 			</tr>
-			
+			<% end %>
 			<tr>
 				<td style="vertical-align: top;width:245px; text-align: right;padding-right: 10px;font-weight:bold;"> <%= f.label :name %>:
 				<br />
@@ -40,11 +39,11 @@
 				<%= f.submit t(:save_draft_blend) %> <span style="margin-left: 10px;"><%= button_tag t(:finalize), :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
 				<script type="text/javascript">
 					function submit_final() {
-document.getElementById("product_final").value = true;
-document.forms["edit_product_<%= @product.id %>
-	"].submit();
-	}
-				</script> <% elsif @edit_blend %>
+					document.getElementById("product_final").value = true;
+					document.forms["edit_product_<%= @product.id %>"].submit();
+						}
+				</script> 
+				<% elsif @edit_blend %>
 				<%= f.submit t(:save_blend) %>
 				<% else %>
 				<%= f.submit t(:continue) %>

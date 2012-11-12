@@ -14,8 +14,8 @@
 
     <div data-hook="admin_login_navigation_bar"></div>
 
-    <%= link_to image_tag(Spree::Config[:admin_interface_logo], :id => 'logo', :style => "width:227px;height:68px;" ), spree.admin_path %>
-    <h1><%= link_to t(:administration), spree.admin_path %></h1>
+    <%= link_to image_tag(Spree::Config[:admin_interface_logo], :id => 'logo', :size => "227x68", :style => "margin:15px;" ), spree.admin_path %>
+    <h1 style="margin-left:65px;"><%= link_to t(:administration), spree.admin_path %></h1>
     <div id="progress"><%= image_tag 'admin/progress.gif' %> <%= t(:loading) %>...</div>
   </div>
 

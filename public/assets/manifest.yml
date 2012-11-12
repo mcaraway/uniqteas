@@ -19,7 +19,7 @@ blue-block.png: blue-block-4c83e3b9d7a2d6ca023622af834e736a.png
 body-back.png: body-back-623402c834d2a7239cba51ad8e614bd1.png
 delete-icon.png: delete-icon-52a1cd0cd9fc5077aae023f631a1ddac.png
 edit.png: edit-81c0abe21488f861ebd57ecb40f24d0c.png
-favicon.ico: favicon-87887a28c9e9e137fd0bfc44bf21fdd6.ico
+favicon.ico: favicon-a6160b82289be72f189a464c1a65398a.ico
 images/ui-bg_flat_55_999999_40x100.png: images/ui-bg_flat_55_999999_40x100-fe88ddbef80ec5788500a309b5f24c4d.png
 images/ui-bg_flat_75_aaaaaa_40x100.png: images/ui-bg_flat_75_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
 images/ui-bg_glass_45_0078ae_1x400.png: images/ui-bg_glass_45_0078ae_1x400-992b0612f3284a5c70924decd28e0070.png
@@ -93,8 +93,8 @@ admin/all.js: admin/all-18e99200789b827378e46bcae3277f12.js
 application.js: application-0d9ccdc2ce7b49f9418522d015193d58.js
 store/all.js: store/all-7d88b5f92abde2434f69df728e58a900.js
 admin/all.css: admin/all-306a243fd1aee4c48a43c7011a3f22e1.css
-application.css: application-19539bb6aa4b499d3d59862670865f9c.css
-store/all.css: store/all-9fc065a06f54140ebf1a36c0974bdad9.css
+application.css: application-89dc68302a9ef2f1bcc5e0a4ce6fbc6c.css
+store/all.css: store/all-ff257aa04d679fccd54b840b730a1b16.css
 TinTemplate.png: TinTemplate-4c8116b2fa08386a018cbe96593ecd70.png
 store/out-of-stock.png: store/out-of-stock-5e38d2f3705cf824b775a794a15c7c83.png
 social/delicious.png: social/delicious-58f154e070871c32b43c84c54082f1b9.png
