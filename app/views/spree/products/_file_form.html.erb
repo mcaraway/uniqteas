@@ -1,10 +1,5 @@
 <% if @product.has_tin_image? %>
 <div style="float:left;width:50%;">
-	<div class="small_title" style="float:left;width:100%;">
-		Image for tin:
-		<br />
-		<span style="font-size: 13px;color:red;font-weight: bold">(required size <%= @product.requiredTinImageWidth %>px x <%= @product.requiredTinImageHeight %>px)</span>
-	</div>
 	<div id="tin_image" class="field" style="float:left;width:347px;height:300px;background-color:#ccc;border:1px solid #aaa;text-align:center;position:relative;">
 		<div style="position: absolute;left:0px;top:0px;">
 			<%= small_tea_tin_image(@product) %>
@@ -22,11 +17,6 @@
 	}); 
 </script>
 <% else %>
-<div class="small_title">
-	Image for tin:
-	<br />
-	<span style="font-size: 13px;color:red;font-weight: bold">(required size <%= @product.requiredTinImageWidth %>px x <%= @product.requiredTinImageHeight %>px)</span>
-</div>
 <%= f.fields_for "tin_image", :html => { :multipart => true } do |fi| %>
 <div class="field" style="float:left;width:100%;">
 	<%= fi.file_field :attachment %>
