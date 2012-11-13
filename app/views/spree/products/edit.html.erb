@@ -1,5 +1,5 @@
 <% content_for :head do -%>
-  <meta name="title" content="Edit My Blend">
+	<meta name="title" content="Edit My Blend">
 <% end -%>
 <h1><%=t(:make_your_own_blend)%></h1>
 <div style="min-height: 1400px;">
@@ -9,10 +9,7 @@
 	<%= render :partial => 'tea_name_percentages', :locals => { :f => f } %>
 	<div id="tea_selector_div" style="display:none;">
 		<%= render :partial => 'tea_selector', :locals => { :f => f } %>
-		<%= render :partial => 'tea_percentages', :locals => { :f => f } %>
-		<script src="https://uniqteas.s3.amazonaws.com/javascript/categories.js" type="text/javascript"></script>
-		<script src="https://uniqteas.s3.amazonaws.com/javascript/raphael-min.js" type="text/javascript"></script>
-		<script src="https://uniqteas.s3.amazonaws.com/javascript/raphael-tea-cups.js" type="text/javascript"></script>
+		<%= render :partial => 'tea_percentages', :locals => { :f => f } %>	
 	</div>
 
 	<%= render :partial => 'form', :locals => { :f => f } %>

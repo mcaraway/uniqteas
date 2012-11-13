@@ -1,10 +1,10 @@
-<div class="tea_cups_div" >
-	<table class="tea_builder_divider" cellpadding="10" style="min-height: 235px; ">
+<div class="tea_cups_div" style="min-height: 235px;">
+	<table class="tea_builder_divider" cellpadding="10" style="height: 235px;">
 		<tbody>
 			<tr>
 				<td style="width:20%;">Your unique blend will taste like this.</td>
 				<td style="width:15%;"> <% flavor_count = 0
-				sku_count = 0 %>
+          sku_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
 				if p.object.property_name.index("name") != nil
@@ -13,13 +13,12 @@
 				%>
 				<div id="<%= p.object.property_name %>div">
 					<%= p.object.value == nil || p.object.value == "" ? "Select Above": p.object.value %>
-				</div> 
-				<%= p.hidden_field :value, :id => cid %>
+				</div> <%= p.hidden_field :value, :id => cid %>
 				<%= p.hidden_field :property_name  %>
 				<%
 				end
 				%>
-				<% end %> 
+				<% end %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
 				if p.object.property_name.index("sku") != nil
@@ -44,14 +43,14 @@
 				%>
 				<div id="<%= p.object.property_name %>div">
 					<%= p.object.value == nil ? "0%": p.object.value + "%" %>
-				</div> 
-				<%= p.hidden_field :value, :style => "width:45px", :id => cid, :readonly => disabled %>
+				</div> <%= p.hidden_field :value, :style => "width:45px", :id => cid, :readonly => disabled %>
 				<%= p.hidden_field :property_name %>
 				<%
 				end
 				%>
 				<% end %> </td>
-				<td style="width:35%;" class="tea-cup-list" id="flavor_profile_row"></td>
+				<td style="width:35%;height:100%;" class="tea-cup-list" id="flavor_profile_row">
+				</td>
 			</tr>
 			<tr>
 				<td colspan="5"> &nbsp; </td>
