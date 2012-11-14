@@ -4,21 +4,24 @@ var selected_teas_count = 0;
 
 var process_category_home = function(category) {
 	var div = document.getElementById(category.name.replace(" ", "_").toLowerCase() + "_cups");
+	
+	var categoryName = document.createElement("h2");
+	categoryName.innerHTML = category.name + "s";
+	div.appendChild(categoryName);
+		
+	var image = document.createElement("div");
+	image.innerHTML = "<img src = '/assets/" + category.name.replace(" ", "") + "Cup.png' width='65' height='65'> <br />";
+	div.appendChild(image);
 
 	var listElement = document.createElement("ul");
+	listElement.setAttribute("style","margin-top:10px;");
+	
 	for (var tea = 0; tea < category.teas.length; tea++) {
 		var listItem = create_listItem_home(category.teas[tea]);
 		listElement.appendChild(listItem);
 	}
 	div.appendChild(listElement);
-	var image = document.createElement("div");
-	image.innerHTML = "<img src = '/assets/" + category.name.replace(" ", "") + "Cup.png' width='90' height='90'> <br />";
-	div.appendChild(image);
 
-	var categoryName = document.createElement("h2");
-	categoryName.innerHTML = category.name + "s";
-
-	div.appendChild(categoryName);
 
 };
 

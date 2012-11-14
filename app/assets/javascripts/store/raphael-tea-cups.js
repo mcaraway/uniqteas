@@ -328,7 +328,7 @@ function setupForEdit(){
 			updateSliderPercentage("percent1");
 		}});
     $("#slider2").slider({
-		value: 30,
+		value: 35,
 		disabled: true,
 		step: 5,
 		slide: function (event, ui) {
@@ -401,7 +401,7 @@ function setup(flavorValue) {
 			updateSliderPercentage("percent1");
 		}});
     $("#slider2").slider({
-		value: 30,
+		value: 35,
 		disabled: true,
 		step: 5,
 		slide: function (event, ui) {
@@ -413,7 +413,7 @@ function setup(flavorValue) {
 		step: 5,
 		disabled: true});
 
- 	selected_teas_percentages = [35,30,30];
+ 	selected_teas_percentages = [35,35,30];
 	document.getElementById("percent1").value = selected_teas_percentages[0];
 	document.getElementById("flavor1percentdiv").innerHTML = selected_teas_percentages[0] + "%";
 	document.getElementById("percent2").value = 33;

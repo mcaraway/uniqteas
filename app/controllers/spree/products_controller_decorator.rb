@@ -54,7 +54,7 @@ Spree::ProductsController.class_eval do
     @product.price = 12.95
     @product.available_on = Time.now.getutc
     @product.final = false
-    @product.public = false
+    @product.public = true
     @product.on_hand = 999999
     @product.meta_keywords = t(:custom_blend_meta_keywords)
     @product.meta_description = t(:custom_blend_meta_description)
