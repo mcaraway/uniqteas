@@ -1,146 +1,17 @@
-body {
-	padding: 0px;
-	margin: 0px;
-	background: url('/assets/background-brown.png') repeat #562E09;
-	color: #222;
-	font-family: 'Abel', sans-serif;
-	font-size: 18px;
-	font: 18px 'Abel', Helmet, Freesans, sans-serif;
-}
 
-table tbody tr, table tfoot tr {
-	border: none;
-}
-table tbody tr td, table tfoot tr td {
-	padding: 5px 5px 5px 0px;
-}
 
-table thead tr th {
-	background-color:#9BC3FC;
-	border-left: 1px solid #D4E5A5;
-	border-right: 1px solid #D4E5A5;
-}
-
-h3 {
-	color: #754C24;
-	border-bottom: 1px solid #754C24;
-}
-
-nav #main-nav-bar li a {
-	font-size: 14px;
-}
-
-.header {
+#header {
 	padding: 10px 0px 10px 0px;
 	width: 950px;
 	height: 60px;
 	margin-bottom: 10px;
 }
 
-.container {
-	width: 950px;
-	height: 2000px;
-	background: none repeat scroll 0 0 #D4E5A5;
-	background: -moz-linear-gradient(top,  #D4E5A5 40%, #FFFFFF 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,#D4E5A5), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #D4E5A5 40%,#FFFFFF 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D4E5A5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
-}
-
-nav #main-nav-bar {
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-top: 20px;
-	padding-bottom: 6px;
-	font-size: 80%;
-	border: none;
-	color: #06C;
-}
-
-nav #main-nav-bar li:hover{
-	color: #0C6;
-	text-decoration: underline;
-}
-
-#wrapper {
-	padding: 20px;
-}
-
-#content {
-	width: 910px;
-}
-
-#logo {
-	width: 190px;
-	height: 70px;
-	float: left;
-	margin: 10px 20px 0px 20px;
-	background-color: transparent;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-}
-
-footer#footer {
-	margin-top: 20px;
-	padding: 20px;
-	border-top: 1px solid #754C24;
-}
-
-#footer-left ul li {
-	display: inline-block;
-	padding-right: 15px;	
-}
-
-#footer-left ul li:hover {
-	display: inline-block;
-	padding-right: 15px;
-	text-decoration: underline;
-}
-
-#footer-right{
-	text-align: right;	
-}
-
-#user-info, #user_addresses, .order-summary {
-	border: none;
-	margin-top: 15px;
-}
-
-#user_addresses {
-	width: 100%;
-}
-
-ul#products li a.info{
-	border: none;
-	color: #444;
-	font-size: 13px;
-}
-
-#product-description .product-title {
-	border: none;
-}
-
-#existing-customer, #registration #new-customer {
-	width: 350px;
-	background-color: #eee;	
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 20px;
-	margin-left: 280px;
-	margin-top: 100px;
-	margin-bottom: 200px;
-}
-
 input[type="text"], input[type="file"] {
 	border: 1px solid #BBB;
 	background: white;
-	width: 300px;
-	height: 35px;
+	/* width: 300px; */
+	height: 30px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -149,6 +20,7 @@ input[type="text"], input[type="file"] {
 
 input[type="file"] {
 	width: 300px;
+	height: 23px;
 }
 
 textarea {
@@ -168,6 +40,14 @@ a.button {
 	background: #CCCC33;
 }
 
+#update-cart .coupon-code-field {
+	margin-top: -51px !important;
+	margin-left: -70px !important;
+}
+
+#empty-cart {
+	margin-top: -42px !important;
+}
 .product-listing {
 	list-style: none;
 	margin: 2em 0px 0px 0px;
@@ -220,7 +100,7 @@ a.button {
 
 .tin-and-cup {
 	position: absolute;
-	left: 340px;
+	left: 245px;
 	top: 105px;
 }
 
@@ -240,9 +120,9 @@ a.button {
 
 .heading {
 	color: black;
-	font-size: 60px;
+	font-size: 55px;
 	line-height: 62px;
-	margin-bottom: 1em;
+	margin-bottom: .5em;
 	font-weight: normal;
 	width: 450px;
 }

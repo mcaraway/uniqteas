@@ -1,4 +1,5 @@
 Spree::Ability.class_eval do
+
   def initialize(user)
     self.clear_aliased_actions
 
@@ -8,12 +9,20 @@ Spree::Ability.class_eval do
     alias_action :new_action, :to => :create
     alias_action :show, :to => :read
 
-    user ||= Spree::User.new
-    if user.has_role? 'admin'
+    user ||= Spree.user_class.new
+    if user.respond_to?(:has_spree_role?) && user.has_spree_role?('admin')
       can :manage, :all
     else
     #############################
       can :manage, Spree::Image
+      #############################
+      can :read, Spree.user_class do |resource|
+        resource == user
+      end
+      can :update, Spree.user_class do |resource|
+        resource == user
+      end
+      can :create, Spree.user_class
       #############################
       can :read, Spree::Order do |order, token|
         order.user == user || order.token && token == order.token
@@ -22,20 +31,17 @@ Spree::Ability.class_eval do
         order.user == user || order.token && token == order.token
       end
       can :create, Spree::Order
+
+      can :read, Spree::Address do |address|
+        address.user == user
+      end
+
       #############################
       can :read, Spree::Product
       can :index, Spree::Product
       #############################
       can :read, Spree::Taxon
       can :index, Spree::Taxon
-      #############################
-      can :read, Spree::User do |resource|
-        resource == user
-      end
-      can :update, Spree::User do |resource|
-        resource == user
-      end
-      can :create, Spree::User
     #############################
     end
 

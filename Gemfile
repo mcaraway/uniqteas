@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.7'
+gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -48,14 +48,15 @@ end
 
 # To use debugger
 # gem 'debugger'
-gem 'spree', '1.1.3'
+gem 'spree', '1.2.0'
+gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
-gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git", :branch => '1-1-stable'
-gem "spree_paypal_express", :git => "git://github.com/spree/spree_paypal_express.git", :branch => '1-1-stable'
-gem 'spree_volume_pricing', :git => 'git://github.com/spree/spree_volume_pricing.git'
-gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', :branch => '1-1-stable'
-gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '1-1-stable' # make sure to include after spree
-gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git", :branch => '1-1-stable'
+gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git"
+gem "spree_paypal_express", :git => "git://github.com/spree/spree_paypal_express.git"
+gem 'spree_volume_pricing', :branch => "1-2-stable", :git => 'git://github.com/spree/spree_volume_pricing.git'
+gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git'
+gem 'spree_gateway', :branch => "1-2-stable", :git => 'git://github.com/spree/spree_gateway.git' # make sure to include after spree
+gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git"
 gem 'spree_contact_us', '~> 1.1.0'
 gem 'spree_variant_options', '0.4.1'

@@ -1,0 +1,1501 @@
+2012-11-19T00:45:11+00:00 app[web.1]: Disconnected from ActiveRecord
+2012-11-19T00:45:12+00:00 heroku[web.1]: State changed from starting to up
+2012-11-19T00:45:12+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:12 +0000 f53f8765-390e-4054-a79a-47974c80907d (32)] INFO : Starting the worker thread in 32 after forking.
+2012-11-19T00:45:12+00:00 app[web.1]: Disconnected from ActiveRecord
+2012-11-19T00:45:12+00:00 app[web.1]: Connected to ActiveRecord
+2012-11-19T00:45:13+00:00 app[web.1]: I, [2012-11-19T00:45:13.064442 #32]  INFO -- : worker=0 ready
+2012-11-19T00:45:13+00:00 app[web.1]: Disconnected from ActiveRecord
+2012-11-19T00:45:13+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:13 +0000 f53f8765-390e-4054-a79a-47974c80907d (36)] INFO : Starting the worker thread in 36 after forking.
+2012-11-19T00:45:13+00:00 app[web.1]: Connected to ActiveRecord
+2012-11-19T00:45:14+00:00 app[web.1]: I, [2012-11-19T00:45:14.084769 #36]  INFO -- : worker=1 ready
+2012-11-19T00:45:14+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:14+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:14+00:00 app[web.1]: 
+2012-11-19T00:45:14+00:00 app[web.1]: 
+2012-11-19T00:45:14+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:45:14 +0000
+2012-11-19T00:45:14+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:45:14+00:00 app[web.1]: mc5.ec2.northscale.net:11211 failed (count: 0)
+2012-11-19T00:45:14+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:14+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:14+00:00 app[web.1]: [1;32mDeface:[0m 3 overrides found for 'spree/layouts/spree_application'
+2012-11-19T00:45:14+00:00 app[web.1]: [1;32mDeface:[0m 'add_analytics_header' matched 1 times with '[data-hook='inside_head']'
+2012-11-19T00:45:14+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_footer' matched 0 times with '#footer-pages ul'
+2012-11-19T00:45:14+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_header' matched 0 times with '#main-nav-bar'
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (9.3ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (2.1ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.5ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (10.5ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (82.4ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (79.1ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (4.2ms)
+2012-11-19T00:45:14+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (2.0ms)
+2012-11-19T00:45:14+00:00 app[web.1]: I, [2012-11-19T00:45:14.954325 #2]  INFO -- : master process ready
+2012-11-19T00:45:14+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:14 +0000 f53f8765-390e-4054-a79a-47974c80907d (40)] INFO : Starting the worker thread in 40 after forking.
+2012-11-19T00:45:14+00:00 app[web.1]: Connected to ActiveRecord
+2012-11-19T00:45:15+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (51.5ms)
+2012-11-19T00:45:15+00:00 app[web.1]: Completed 200 OK in 299ms (Views: 224.8ms | ActiveRecord: 44.2ms)
+2012-11-19T00:45:15+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:15+00:00 app[web.1]: I, [2012-11-19T00:45:15.109582 #40]  INFO -- : worker=2 ready
+2012-11-19T00:45:16+00:00 app[web.1]: 
+2012-11-19T00:45:16+00:00 app[web.1]: 
+2012-11-19T00:45:16+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:45:16 +0000
+2012-11-19T00:45:16+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (12.0ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (7.0ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (9.4ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (3.5ms)
+2012-11-19T00:45:16+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.3ms)
+2012-11-19T00:45:16+00:00 app[web.1]: Completed 200 OK in 45ms (Views: 36.8ms | ActiveRecord: 1.5ms)
+2012-11-19T00:45:16+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:22+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:22+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:22+00:00 app[web.1]: 
+2012-11-19T00:45:22+00:00 app[web.1]: Started GET "/" for 74.64.78.118 at 2012-11-19 00:45:22 +0000
+2012-11-19T00:45:22+00:00 app[web.1]: 
+2012-11-19T00:45:23+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=528ms status=302 bytes=90
+2012-11-19T00:45:23+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:23+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:23+00:00 app[web.1]: Redirected to http://www.uniqteas.com/
+2012-11-19T00:45:23+00:00 app[web.1]: Filter chain halted as :ensure_proper_protocol rendered or redirected
+2012-11-19T00:45:23+00:00 app[web.1]: Completed 302 Found in 25ms (ActiveRecord: 0.0ms)
+2012-11-19T00:45:23+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:23+00:00 app[web.1]: mc5.ec2.northscale.net:11211 failed (count: 0)
+2012-11-19T00:45:23+00:00 app[web.1]: Processing by Spree::HomeController#index as HTML
+2012-11-19T00:45:25+00:00 heroku[router]: at=info method=GET path=/assets/store/cart.png host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=4ms status=304 bytes=0
+2012-11-19T00:45:25+00:00 heroku[router]: at=info method=GET path=/assets/store/images/ui-bg_glass_45_0078ae_1x400.png host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=7ms status=304 bytes=0
+2012-11-19T00:45:25+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=49ms status=200 bytes=8214
+2012-11-19T00:45:25+00:00 app[web.1]: 
+2012-11-19T00:45:25+00:00 app[web.1]: Started GET "/" for 74.64.78.118 at 2012-11-19 00:45:23 +0000
+2012-11-19T00:45:25+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:25+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:25+00:00 app[web.1]: 
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:23 +0000 f53f8765-390e-4054-a79a-47974c80907d (32)] INFO : Using config from server
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:23 +0000 f53f8765-390e-4054-a79a-47974c80907d (32)] INFO : Connected to NewRelic Service at collector-5.newrelic.com
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:23 +0000 f53f8765-390e-4054-a79a-47974c80907d (32)] INFO : Reporting performance data every 60 seconds.
+2012-11-19T00:45:25+00:00 app[web.1]: Processing by Spree::HomeController#index as HTML
+2012-11-19T00:45:25+00:00 app[web.1]: mc5.ec2.northscale.net:11211 failed (count: 0)
+2012-11-19T00:45:25+00:00 app[web.1]: Dalli/SASL authenticating as app6724290%40heroku.com
+2012-11-19T00:45:25+00:00 app[web.1]: Dalli/SASL: Authenticated
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:24 +0000 f53f8765-390e-4054-a79a-47974c80907d (36)] INFO : Using config from server
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:24 +0000 f53f8765-390e-4054-a79a-47974c80907d (36)] INFO : Connected to NewRelic Service at collector-5.newrelic.com
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:24 +0000 f53f8765-390e-4054-a79a-47974c80907d (36)] INFO : Reporting performance data every 60 seconds.
+2012-11-19T00:45:25+00:00 app[web.1]: [1;32mDeface:[0m 'add_analytics_header' matched 1 times with '[data-hook='inside_head']'
+2012-11-19T00:45:25+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_header' matched 0 times with '#main-nav-bar'
+2012-11-19T00:45:25+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_footer' matched 0 times with '#footer-pages ul'
+2012-11-19T00:45:25+00:00 app[web.1]: [1;32mDeface:[0m 3 overrides found for 'spree/layouts/spree_application'
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.7ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (3.3ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (84.8ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.9ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.6ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.9ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (8.8ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.6ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (18.7ms)
+2012-11-19T00:45:25+00:00 app[web.1]: Completed 200 OK in 690ms (Views: 220.9ms | ActiveRecord: 42.1ms)
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:25 +0000 f53f8765-390e-4054-a79a-47974c80907d (40)] INFO : Using config from server
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:25 +0000 f53f8765-390e-4054-a79a-47974c80907d (40)] INFO : Connected to NewRelic Service at collector-5.newrelic.com
+2012-11-19T00:45:25+00:00 app[web.1]: ** [NewRelic][11/19/12 00:45:25 +0000 f53f8765-390e-4054-a79a-47974c80907d (40)] INFO : Reporting performance data every 60 seconds.
+2012-11-19T00:45:25+00:00 app[web.1]: 
+2012-11-19T00:45:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:45:25 +0000
+2012-11-19T00:45:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.3ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.9ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.5ms)
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /assets/background-brown.png] miss
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /assets/store/cart.png] miss
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /assets/store/images/ui-bg_glass_45_0078ae_1x400.png] miss
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.9ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.1ms)
+2012-11-19T00:45:25+00:00 app[web.1]: Completed 200 OK in 37ms (Views: 27.6ms | ActiveRecord: 1.4ms)
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:45:25+00:00 app[web.1]: 
+2012-11-19T00:45:25+00:00 app[web.1]: cache: [GET /assets/favicon-a6160b82289be72f189a464c1a65398a.ico] miss, store
+2012-11-19T00:45:40+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:45:40 +0000
+2012-11-19T00:45:40+00:00 app[web.1]: 
+2012-11-19T00:45:40+00:00 app[web.1]: 
+2012-11-19T00:45:40+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.9ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.7ms)
+2012-11-19T00:45:40+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=0ms service=42ms status=200 bytes=8214
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.6ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:45:40+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.5ms)
+2012-11-19T00:45:40+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 23.8ms | ActiveRecord: 1.4ms)
+2012-11-19T00:45:40+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:45:55+00:00 app[web.1]: 
+2012-11-19T00:45:55+00:00 app[web.1]: 
+2012-11-19T00:45:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:45:55 +0000
+2012-11-19T00:45:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (6.5ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (7.3ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (17.9ms)
+2012-11-19T00:45:55+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=119ms status=200 bytes=8214
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (17.3ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.0ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:45:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (8.0ms)
+2012-11-19T00:45:55+00:00 app[web.1]: Completed 200 OK in 82ms (Views: 61.3ms | ActiveRecord: 6.4ms)
+2012-11-19T00:45:55+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:46:10+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:46:10 +0000
+2012-11-19T00:46:10+00:00 app[web.1]: 
+2012-11-19T00:46:10+00:00 app[web.1]: 
+2012-11-19T00:46:10+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.9ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.6ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.5ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:46:10+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (6.9ms)
+2012-11-19T00:46:10+00:00 app[web.1]: Completed 200 OK in 125ms (Views: 108.3ms | ActiveRecord: 2.4ms)
+2012-11-19T00:46:10+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:46:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:46:25 +0000
+2012-11-19T00:46:25+00:00 app[web.1]: 
+2012-11-19T00:46:25+00:00 app[web.1]: 
+2012-11-19T00:46:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (5.9ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (6.7ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (21.6ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (680.8ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (673.2ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (663.4ms)
+2012-11-19T00:46:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.1ms)
+2012-11-19T00:46:25+00:00 app[web.1]: Completed 200 OK in 763ms (Views: 737.7ms | ActiveRecord: 1.6ms)
+2012-11-19T00:46:25+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:46:25+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=802ms status=200 bytes=8215
+2012-11-19T00:46:40+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:46:40 +0000
+2012-11-19T00:46:40+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:46:40+00:00 app[web.1]: 
+2012-11-19T00:46:40+00:00 app[web.1]: 
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.7ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.9ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:46:40+00:00 app[web.1]: Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 1.7ms)
+2012-11-19T00:46:40+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (4.5ms)
+2012-11-19T00:46:40+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:46:40+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=46ms status=200 bytes=8214
+2012-11-19T00:46:55+00:00 app[web.1]: 
+2012-11-19T00:46:55+00:00 app[web.1]: 
+2012-11-19T00:46:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:46:55 +0000
+2012-11-19T00:46:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:46:55+00:00 app[web.1]: [1;32mDeface:[0m 3 overrides found for 'spree/layouts/spree_application'
+2012-11-19T00:46:55+00:00 app[web.1]: [1;32mDeface:[0m 'add_analytics_header' matched 1 times with '[data-hook='inside_head']'
+2012-11-19T00:46:55+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_header' matched 0 times with '#main-nav-bar'
+2012-11-19T00:46:55+00:00 app[web.1]: [1;32mDeface:[0m 'contact_us_in_footer' matched 0 times with '#footer-pages ul'
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.5ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.9ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (80.3ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.9ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.8ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (6.2ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (11.7ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (2.5ms)
+2012-11-19T00:46:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (34.9ms)
+2012-11-19T00:46:55+00:00 app[web.1]: Completed 200 OK in 264ms (Views: 233.3ms | ActiveRecord: 22.3ms)
+2012-11-19T00:46:55+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:47:10+00:00 app[web.1]: 
+2012-11-19T00:47:10+00:00 app[web.1]: 
+2012-11-19T00:47:10+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:47:10 +0000
+2012-11-19T00:47:10+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.9ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.2ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.1ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.3ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.5ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:47:10+00:00 app[web.1]: Completed 200 OK in 37ms (Views: 29.2ms | ActiveRecord: 1.5ms)
+2012-11-19T00:47:10+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.3ms)
+2012-11-19T00:47:10+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:47:25+00:00 app[web.1]: 
+2012-11-19T00:47:25+00:00 app[web.1]: 
+2012-11-19T00:47:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:47:25 +0000
+2012-11-19T00:47:25+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=59ms status=200 bytes=8214
+2012-11-19T00:47:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.5ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.0ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.3ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (14.4ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.6ms)
+2012-11-19T00:47:25+00:00 app[web.1]: Completed 200 OK in 48ms (Views: 37.8ms | ActiveRecord: 1.5ms)
+2012-11-19T00:47:25+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.3ms)
+2012-11-19T00:47:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.8ms)
+2012-11-19T00:47:40+00:00 app[web.1]: 
+2012-11-19T00:47:40+00:00 app[web.1]: 
+2012-11-19T00:47:40+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:47:40 +0000
+2012-11-19T00:47:40+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.7ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.7ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.9ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (8.4ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:47:40+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.1ms)
+2012-11-19T00:47:40+00:00 app[web.1]: Completed 200 OK in 43ms (Views: 28.9ms | ActiveRecord: 1.5ms)
+2012-11-19T00:47:40+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:47:40+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=56ms status=200 bytes=8214
+2012-11-19T00:47:55+00:00 app[web.1]: 
+2012-11-19T00:47:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:47:55 +0000
+2012-11-19T00:47:55+00:00 app[web.1]: 
+2012-11-19T00:47:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.2ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.6ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.7ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:47:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T00:47:55+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 1.5ms)
+2012-11-19T00:47:55+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:48:10+00:00 app[web.1]: 
+2012-11-19T00:48:10+00:00 app[web.1]: 
+2012-11-19T00:48:10+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:48:10 +0000
+2012-11-19T00:48:10+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.6ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.1ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.7ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.9ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.5ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:48:10+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T00:48:10+00:00 app[web.1]: Completed 200 OK in 40ms (Views: 30.2ms | ActiveRecord: 1.5ms)
+2012-11-19T00:48:10+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T00:48:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:48:25 +0000
+2012-11-19T00:48:25+00:00 app[web.1]: 
+2012-11-19T00:48:25+00:00 app[web.1]: 
+2012-11-19T00:48:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.3ms)
+2012-11-19T00:48:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=46ms status=200 bytes=0
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.2ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.6ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:48:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T00:48:25+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 26.5ms | ActiveRecord: 1.4ms)
+2012-11-19T00:48:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:48:37+00:00 app[web.1]: cache: [GET /assets/store/images/ui-bg_glass_75_79c9ec_1x400.png] miss, store
+2012-11-19T00:48:37+00:00 heroku[router]: at=info method=GET path=/assets/store/images/ui-bg_glass_75_79c9ec_1x400.png host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=11ms status=200 bytes=132
+2012-11-19T00:48:40+00:00 app[web.1]: 
+2012-11-19T00:48:40+00:00 app[web.1]: 
+2012-11-19T00:48:40+00:00 app[web.1]: Started GET "/myblends" for 74.64.78.118 at 2012-11-19 00:48:40 +0000
+2012-11-19T00:48:40+00:00 app[web.1]: Processing by Spree::UsersController#myblends as HTML
+2012-11-19T00:48:40+00:00 app[web.1]: Redirected to https://www.uniqteas.com/myblends
+2012-11-19T00:48:40+00:00 app[web.1]: Filter chain halted as :ensure_proper_protocol rendered or redirected
+2012-11-19T00:48:40+00:00 app[web.1]: Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+2012-11-19T00:48:40+00:00 app[web.1]: cache: [GET /myblends] miss
+2012-11-19T00:48:40+00:00 app[web.1]: Started GET "/myblends" for 74.64.78.118 at 2012-11-19 00:48:40 +0000
+2012-11-19T00:48:40+00:00 app[web.1]: 
+2012-11-19T00:48:40+00:00 app[web.1]: 
+2012-11-19T00:48:40+00:00 app[web.1]: Processing by Spree::UsersController#myblends as HTML
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (2.9ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (3.8ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/users/myblends.html.erb within spree/layouts/spree_application (275.8ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/users/_my_blend_list.html.erb (274.3ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.0ms)
+2012-11-19T00:48:40+00:00 heroku[router]: at=info method=GET path=/myblends host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=376ms status=200 bytes=12043
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.6ms)
+2012-11-19T00:48:40+00:00 app[web.1]: cache: [GET /myblends] miss
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.1ms)
+2012-11-19T00:48:40+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (12.5ms)
+2012-11-19T00:48:40+00:00 app[web.1]: Completed 200 OK in 360ms (Views: 284.8ms | ActiveRecord: 39.3ms)
+2012-11-19T00:48:43+00:00 app[web.1]: 
+2012-11-19T00:48:43+00:00 app[web.1]: 
+2012-11-19T00:48:43+00:00 app[web.1]: Started GET "/products" for 74.64.78.118 at 2012-11-19 00:48:43 +0000
+2012-11-19T00:48:43+00:00 app[web.1]: Processing by Spree::ProductsController#index as HTML
+2012-11-19T00:48:43+00:00 app[web.1]: Redirected to http://www.uniqteas.com/products
+2012-11-19T00:48:43+00:00 app[web.1]: Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+2012-11-19T00:48:43+00:00 app[web.1]: cache: [GET /products] miss
+2012-11-19T00:48:43+00:00 app[web.1]: Filter chain halted as :ensure_proper_protocol rendered or redirected
+2012-11-19T00:48:43+00:00 heroku[router]: at=info method=GET path=/products host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=0ms service=21ms status=302 bytes=98
+2012-11-19T00:48:43+00:00 app[web.1]: 
+2012-11-19T00:48:43+00:00 app[web.1]: 
+2012-11-19T00:48:43+00:00 app[web.1]: Started GET "/products" for 74.64.78.118 at 2012-11-19 00:48:43 +0000
+2012-11-19T00:48:43+00:00 app[web.1]: Processing by Spree::ProductsController#index as HTML
+2012-11-19T00:48:43+00:00 app[web.1]: [1;32mDeface:[0m 1 overrides found for 'spree/products/index'
+2012-11-19T00:48:43+00:00 app[web.1]: [1;32mDeface:[0m 'add_blend_it_20120918' matched 1 times with '[data-hook='homepage_products'], #homepage_products[data-hook]'
+2012-11-19T00:48:43+00:00 app[web.1]: [1;32mDeface: [WARNING][0m No :original defined for 'add_blend_it_20120918', you should change its definition to include:
+2012-11-19T00:48:43+00:00 app[web.1]:  :original => '22097416de0a5851d43c572301779de06ed84d17' 
+2012-11-19T00:48:43+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_taxonomies.html.erb (241.9ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (50.8ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (8.5ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (6.3ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_tea_tin_small.html.erb (7.6ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_products.html.erb (240.9ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/products/index.html.erb within spree/layouts/spree_application (489.9ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.1ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.7ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.4ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:48:44+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T00:48:44+00:00 app[web.1]: Completed 200 OK in 1054ms (Views: 549.2ms | ActiveRecord: 83.4ms)
+2012-11-19T00:48:44+00:00 app[web.1]: cache: [GET /products] miss
+2012-11-19T00:48:55+00:00 app[web.1]: 
+2012-11-19T00:48:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:48:55 +0000
+2012-11-19T00:48:55+00:00 app[web.1]: 
+2012-11-19T00:48:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.0ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.0ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.5ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.6ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.1ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.2ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:48:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.2ms)
+2012-11-19T00:48:55+00:00 app[web.1]: Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 1.6ms)
+2012-11-19T00:48:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:48:55+00:00 app[web.1]: 
+2012-11-19T00:48:55+00:00 app[web.1]: 
+2012-11-19T00:48:55+00:00 app[web.1]: Started GET "/admin/users" for 74.64.78.118 at 2012-11-19 00:48:55 +0000
+2012-11-19T00:48:55+00:00 app[web.1]: Processing by Spree::Admin::UsersController#index as HTML
+2012-11-19T00:48:56+00:00 app[web.1]: [1;32mDeface:[0m 2 overrides found for 'spree/layouts/admin'
+2012-11-19T00:48:56+00:00 app[web.1]: [1;32mDeface:[0m 'auth_admin_login_navigation_bar' matched 1 times with '[data-hook='admin_login_navigation_bar'], #admin_login_navigation_bar[data-hook]'
+2012-11-19T00:48:56+00:00 app[web.1]: [1;32mDeface:[0m 'promo_admin_tabs' matched 1 times with '[data-hook='admin_tabs'], #admin_tabs[data-hook]'
+2012-11-19T00:48:56+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/users/index.html.erb within spree/layouts/admin (152.1ms)
+2012-11-19T00:48:56+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_head.html.erb (3.6ms)
+2012-11-19T00:48:56+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_tabs.html.erb (3.7ms)
+2012-11-19T00:48:56+00:00 app[web.1]: Completed 200 OK in 286ms (Views: 198.3ms | ActiveRecord: 20.4ms)
+2012-11-19T00:48:56+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_alert.html.erb (0.0ms)
+2012-11-19T00:48:56+00:00 app[web.1]: cache: [GET /admin/users] miss
+2012-11-19T00:48:56+00:00 heroku[router]: at=info method=GET path=/admin/users host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=313ms status=200 bytes=12712
+2012-11-19T00:48:59+00:00 app[web.1]: 
+2012-11-19T00:48:59+00:00 app[web.1]: 
+2012-11-19T00:48:59+00:00 app[web.1]: Started GET "/admin/users?page=11" for 74.64.78.118 at 2012-11-19 00:48:59 +0000
+2012-11-19T00:48:59+00:00 app[web.1]: Processing by Spree::Admin::UsersController#index as HTML
+2012-11-19T00:48:59+00:00 app[web.1]:   Parameters: {"page"=>"11"}
+2012-11-19T00:49:00+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/users/index.html.erb within spree/layouts/admin (43.6ms)
+2012-11-19T00:49:00+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_head.html.erb (82.1ms)
+2012-11-19T00:49:00+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_tabs.html.erb (2.1ms)
+2012-11-19T00:49:00+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_alert.html.erb (0.0ms)
+2012-11-19T00:49:00+00:00 app[web.1]: Completed 200 OK in 159ms (Views: 133.4ms | ActiveRecord: 11.1ms)
+2012-11-19T00:49:00+00:00 app[web.1]: cache: [GET /admin/users?page=11] miss
+2012-11-19T00:49:04+00:00 app[web.1]: 
+2012-11-19T00:49:04+00:00 app[web.1]: 
+2012-11-19T00:49:04+00:00 app[web.1]: Started GET "/admin/products" for 74.64.78.118 at 2012-11-19 00:49:04 +0000
+2012-11-19T00:49:04+00:00 app[web.1]: Processing by Spree::Admin::ProductsController#index as HTML
+2012-11-19T00:49:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_product_sub_menu.html.erb (7.0ms)
+2012-11-19T00:49:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/products/index.html.erb within spree/layouts/admin (183.0ms)
+2012-11-19T00:49:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_head.html.erb (3.7ms)
+2012-11-19T00:49:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_tabs.html.erb (6.2ms)
+2012-11-19T00:49:04+00:00 heroku[router]: at=info method=GET path=/admin/products host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=0ms service=269ms status=200 bytes=15868
+2012-11-19T00:49:04+00:00 app[web.1]: cache: [GET /admin/products] miss
+2012-11-19T00:49:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_alert.html.erb (0.0ms)
+2012-11-19T00:49:04+00:00 app[web.1]: Completed 200 OK in 252ms (Views: 196.6ms | ActiveRecord: 23.4ms)
+2012-11-19T00:49:25+00:00 app[web.1]: 
+2012-11-19T00:49:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:49:25 +0000
+2012-11-19T00:49:25+00:00 app[web.1]: 
+2012-11-19T00:49:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.5ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.1ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (2.0ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.8ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.8ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:49:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.5ms)
+2012-11-19T00:49:25+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 1.4ms)
+2012-11-19T00:49:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:49:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=38ms status=200 bytes=0
+2012-11-19T00:49:55+00:00 app[web.1]: 
+2012-11-19T00:49:55+00:00 app[web.1]: 
+2012-11-19T00:49:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:49:55 +0000
+2012-11-19T00:49:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.5ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.1ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.9ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.8ms)
+2012-11-19T00:49:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.1ms)
+2012-11-19T00:49:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:49:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T00:49:55+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 1.7ms)
+2012-11-19T00:50:04+00:00 app[web.1]: 
+2012-11-19T00:50:04+00:00 app[web.1]: 
+2012-11-19T00:50:04+00:00 app[web.1]: Started GET "/admin/products" for 74.64.78.118 at 2012-11-19 00:50:04 +0000
+2012-11-19T00:50:04+00:00 app[web.1]: Processing by Spree::Admin::ProductsController#index as HTML
+2012-11-19T00:50:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_product_sub_menu.html.erb (2.5ms)
+2012-11-19T00:50:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/products/index.html.erb within spree/layouts/admin (63.6ms)
+2012-11-19T00:50:04+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_head.html.erb (2.2ms)
+2012-11-19T00:50:05+00:00 heroku[router]: at=info method=GET path=/admin/products host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=4ms connect=8ms service=247ms status=200 bytes=15868
+2012-11-19T00:50:05+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_tabs.html.erb (86.6ms)
+2012-11-19T00:50:05+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_alert.html.erb (0.0ms)
+2012-11-19T00:50:05+00:00 app[web.1]: Completed 200 OK in 229ms (Views: 155.9ms | ActiveRecord: 21.7ms)
+2012-11-19T00:50:05+00:00 app[web.1]: cache: [GET /admin/products] miss
+2012-11-19T00:50:25+00:00 app[web.1]: 
+2012-11-19T00:50:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:50:25 +0000
+2012-11-19T00:50:25+00:00 app[web.1]: 
+2012-11-19T00:50:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.5ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (2.3ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.9ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (13.6ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (3.3ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (8.2ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (22.1ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:50:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T00:50:25+00:00 app[web.1]: Completed 200 OK in 77ms (Views: 64.7ms | ActiveRecord: 1.5ms)
+2012-11-19T00:50:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:50:49+00:00 app[web.1]: 
+2012-11-19T00:50:49+00:00 app[web.1]: Started GET "/admin/products?utf8=%E2%9C%93&q%5Bname_cont%5D=diana&q%5Bvariants_including_master_sku_cont%5D=&q%5Bdeleted_at_null%5D=1&button=" for 74.64.78.118 at 2012-11-19 00:50:49 +0000
+2012-11-19T00:50:49+00:00 app[web.1]: 
+2012-11-19T00:50:49+00:00 app[web.1]: Processing by Spree::Admin::ProductsController#index as HTML
+2012-11-19T00:50:49+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"diana", "variants_including_master_sku_cont"=>"", "deleted_at_null"=>"1"}, "button"=>""}
+2012-11-19T00:50:49+00:00 app[web.1]: [1;32mDeface:[0m 2 overrides found for 'spree/layouts/admin'
+2012-11-19T00:50:49+00:00 app[web.1]: [1;32mDeface:[0m 'auth_admin_login_navigation_bar' matched 1 times with '[data-hook='admin_login_navigation_bar'], #admin_login_navigation_bar[data-hook]'
+2012-11-19T00:50:49+00:00 app[web.1]: [1;32mDeface:[0m 'promo_admin_tabs' matched 1 times with '[data-hook='admin_tabs'], #admin_tabs[data-hook]'
+2012-11-19T00:50:49+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_product_sub_menu.html.erb (3.9ms)
+2012-11-19T00:50:49+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/products/index.html.erb within spree/layouts/admin (102.8ms)
+2012-11-19T00:50:49+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_head.html.erb (81.2ms)
+2012-11-19T00:50:49+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_tabs.html.erb (3.9ms)
+2012-11-19T00:50:49+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/admin/shared/_alert.html.erb (0.0ms)
+2012-11-19T00:50:49+00:00 app[web.1]: Completed 200 OK in 397ms (Views: 179.1ms | ActiveRecord: 79.8ms)
+2012-11-19T00:50:49+00:00 app[web.1]: cache: [GET /admin/products?utf8=%E2%9C%93&q%5Bname_cont%5D=diana&q%5Bvariants_including_master_sku_cont%5D=&q%5Bdeleted_at_null%5D=1&button=] miss
+2012-11-19T00:50:49+00:00 heroku[router]: at=info method=GET path=/admin/products?utf8=%E2%9C%93&q%5Bname_cont%5D=diana&q%5Bvariants_including_master_sku_cont%5D=&q%5Bdeleted_at_null%5D=1&button= host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=3ms connect=5ms service=419ms status=200 bytes=6513
+2012-11-19T00:50:55+00:00 app[web.1]: 
+2012-11-19T00:50:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:50:55 +0000
+2012-11-19T00:50:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:50:55+00:00 app[web.1]: 
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.9ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.7ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.5ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.6ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T00:50:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T00:50:55+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 1.5ms)
+2012-11-19T00:50:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:50:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=42ms status=200 bytes=0
+2012-11-19T00:51:25+00:00 app[web.1]: 
+2012-11-19T00:51:25+00:00 app[web.1]: 
+2012-11-19T00:51:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:51:25 +0000
+2012-11-19T00:51:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.8ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.3ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (4.2ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (11.8ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.9ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (3.4ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (8.1ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (2.0ms)
+2012-11-19T00:51:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T00:51:25+00:00 app[web.1]: Completed 200 OK in 45ms (Views: 36.6ms | ActiveRecord: 1.5ms)
+2012-11-19T00:51:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:51:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:51:55 +0000
+2012-11-19T00:51:55+00:00 app[web.1]: 
+2012-11-19T00:51:55+00:00 app[web.1]: 
+2012-11-19T00:51:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (10.0ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:51:55+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 31.0ms | ActiveRecord: 1.4ms)
+2012-11-19T00:51:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T00:51:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:51:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=16ms connect=40ms service=60ms status=200 bytes=0
+2012-11-19T00:52:25+00:00 app[web.1]: 
+2012-11-19T00:52:25+00:00 app[web.1]: 
+2012-11-19T00:52:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:52:25 +0000
+2012-11-19T00:52:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.5ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.5ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.5ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.8ms)
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (75.5ms)
+2012-11-19T00:52:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:52:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=115ms status=200 bytes=0
+2012-11-19T00:52:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T00:52:25+00:00 app[web.1]: Completed 200 OK in 105ms (Views: 97.8ms | ActiveRecord: 1.5ms)
+2012-11-19T00:52:55+00:00 app[web.1]: 
+2012-11-19T00:52:55+00:00 app[web.1]: 
+2012-11-19T00:52:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:52:55 +0000
+2012-11-19T00:52:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.9ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.5ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T00:52:55+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 26.4ms | ActiveRecord: 1.5ms)
+2012-11-19T00:52:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:52:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T00:53:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:53:25 +0000
+2012-11-19T00:53:25+00:00 app[web.1]: 
+2012-11-19T00:53:25+00:00 app[web.1]: 
+2012-11-19T00:53:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (33.7ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (18.2ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (23.3ms)
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:53:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=13ms connect=19ms service=121ms status=200 bytes=0
+2012-11-19T00:53:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (7.1ms)
+2012-11-19T00:53:25+00:00 app[web.1]: Completed 200 OK in 104ms (Views: 87.5ms | ActiveRecord: 5.4ms)
+2012-11-19T00:53:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:53:55+00:00 app[web.1]: 
+2012-11-19T00:53:55+00:00 app[web.1]: 
+2012-11-19T00:53:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:53:55 +0000
+2012-11-19T00:53:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (2.1ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (3.0ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (55.3ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (19.2ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (27.6ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (41.2ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T00:53:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (18.2ms)
+2012-11-19T00:53:55+00:00 app[web.1]: Completed 200 OK in 221ms (Views: 170.4ms | ActiveRecord: 3.4ms)
+2012-11-19T00:53:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:53:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=296ms status=200 bytes=0
+2012-11-19T00:54:25+00:00 app[web.1]: 
+2012-11-19T00:54:25+00:00 app[web.1]: 
+2012-11-19T00:54:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:54:25 +0000
+2012-11-19T00:54:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.4ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.2ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.2ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:54:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T00:54:25+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 25.1ms | ActiveRecord: 1.3ms)
+2012-11-19T00:54:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:54:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=42ms status=200 bytes=0
+2012-11-19T00:54:55+00:00 app[web.1]: 
+2012-11-19T00:54:55+00:00 app[web.1]: 
+2012-11-19T00:54:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:54:55 +0000
+2012-11-19T00:54:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.3ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.9ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.7ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.5ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:54:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T00:54:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:54:55+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 23.3ms | ActiveRecord: 1.5ms)
+2012-11-19T00:54:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=46ms status=200 bytes=0
+2012-11-19T00:55:25+00:00 app[web.1]: 
+2012-11-19T00:55:25+00:00 app[web.1]: 
+2012-11-19T00:55:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:55:25 +0000
+2012-11-19T00:55:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.8ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.3ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.2ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.4ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.5ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:55:25+00:00 app[web.1]: Completed 200 OK in 37ms (Views: 28.3ms | ActiveRecord: 1.5ms)
+2012-11-19T00:55:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T00:55:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:55:40+00:00 app[web.1]: 
+2012-11-19T00:55:40+00:00 app[web.1]: 
+2012-11-19T00:55:40+00:00 app[web.1]: Started GET "/products/dianas-blend/edit" for 74.64.78.118 at 2012-11-19 00:55:40 +0000
+2012-11-19T00:55:40+00:00 app[web.1]:   Parameters: {"id"=>"dianas-blend"}
+2012-11-19T00:55:40+00:00 app[web.1]: Processing by Spree::ProductsController#edit as HTML
+2012-11-19T00:55:40+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_error_messages.html.erb (0.6ms)
+2012-11-19T00:55:40+00:00 app[web.1]:   Rendered spree/products/_tea_name_percentages.html.erb (77.9ms)
+2012-11-19T00:55:40+00:00 app[web.1]:   Rendered spree/products/_tea_selector.html.erb (0.6ms)
+2012-11-19T00:55:40+00:00 app[web.1]:   Rendered spree/products/_tea_percentages.html.erb (8.4ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/products/_file_form.html.erb (23.6ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/products/_tea_tin.html.erb (5.6ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/products/_tea_tin_script.html.erb (0.5ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/products/_form.html.erb (116.9ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/products/edit.html.erb within spree/layouts/spree_application (216.5ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.2ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:55:41+00:00 app[web.1]: Completed 200 OK in 370ms (Views: 205.8ms | ActiveRecord: 62.9ms)
+2012-11-19T00:55:41+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T00:55:41+00:00 app[web.1]: cache: [GET /products/dianas-blend/edit] miss
+2012-11-19T00:55:41+00:00 heroku[router]: at=info method=GET path=/products/dianas-blend/edit host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=7ms connect=2ms service=392ms status=200 bytes=22392
+2012-11-19T00:55:55+00:00 app[web.1]: 
+2012-11-19T00:55:55+00:00 app[web.1]: 
+2012-11-19T00:55:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:55:55 +0000
+2012-11-19T00:55:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.5ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.4ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (0.9ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.9ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:55:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.4ms)
+2012-11-19T00:55:55+00:00 app[web.1]: Completed 200 OK in 29ms (Views: 22.3ms | ActiveRecord: 1.2ms)
+2012-11-19T00:55:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:56:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:56:25 +0000
+2012-11-19T00:56:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:56:25+00:00 app[web.1]: 
+2012-11-19T00:56:25+00:00 app[web.1]: 
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.9ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.8ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:56:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T00:56:25+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 23.1ms | ActiveRecord: 1.7ms)
+2012-11-19T00:56:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:56:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=38ms status=200 bytes=0
+2012-11-19T00:56:55+00:00 app[web.1]: 
+2012-11-19T00:56:55+00:00 app[web.1]: 
+2012-11-19T00:56:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:56:55 +0000
+2012-11-19T00:56:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (18.8ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.3ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (9.0ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (14.7ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.1ms)
+2012-11-19T00:56:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (5.1ms)
+2012-11-19T00:56:55+00:00 app[web.1]: Completed 200 OK in 100ms (Views: 82.4ms | ActiveRecord: 1.6ms)
+2012-11-19T00:56:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:56:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=132ms status=200 bytes=0
+2012-11-19T00:57:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:57:25 +0000
+2012-11-19T00:57:25+00:00 app[web.1]: 
+2012-11-19T00:57:25+00:00 app[web.1]: 
+2012-11-19T00:57:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.9ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (2.4ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.0ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (9.4ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:57:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.3ms)
+2012-11-19T00:57:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:57:25+00:00 app[web.1]: Completed 200 OK in 44ms (Views: 34.0ms | ActiveRecord: 1.6ms)
+2012-11-19T00:57:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=56ms status=200 bytes=0
+2012-11-19T00:57:55+00:00 app[web.1]: 
+2012-11-19T00:57:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:57:55 +0000
+2012-11-19T00:57:55+00:00 app[web.1]: 
+2012-11-19T00:57:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.0ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.9ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.5ms)
+2012-11-19T00:57:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T00:57:55+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 23.4ms | ActiveRecord: 1.6ms)
+2012-11-19T00:57:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:57:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=40ms status=200 bytes=0
+2012-11-19T00:58:25+00:00 app[web.1]: 
+2012-11-19T00:58:25+00:00 app[web.1]: 
+2012-11-19T00:58:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:58:25 +0000
+2012-11-19T00:58:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.6ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T00:58:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=42ms status=200 bytes=0
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.5ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:58:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T00:58:25+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 22.7ms | ActiveRecord: 1.4ms)
+2012-11-19T00:58:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:58:55+00:00 app[web.1]: 
+2012-11-19T00:58:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:58:55 +0000
+2012-11-19T00:58:55+00:00 app[web.1]: 
+2012-11-19T00:58:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (3.2ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (13.7ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (6.1ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (15.6ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.1ms)
+2012-11-19T00:58:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T00:58:55+00:00 app[web.1]: Completed 200 OK in 65ms (Views: 51.4ms | ActiveRecord: 1.5ms)
+2012-11-19T00:58:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:59:25+00:00 app[web.1]: 
+2012-11-19T00:59:25+00:00 app[web.1]: 
+2012-11-19T00:59:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:59:25 +0000
+2012-11-19T00:59:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.2ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.9ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.5ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.1ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.2ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.9ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T00:59:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T00:59:25+00:00 app[web.1]: Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 1.6ms)
+2012-11-19T00:59:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T00:59:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=45ms status=200 bytes=0
+2012-11-19T00:59:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 00:59:55 +0000
+2012-11-19T00:59:55+00:00 app[web.1]: 
+2012-11-19T00:59:55+00:00 app[web.1]: 
+2012-11-19T00:59:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.6ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (3.4ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.1ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.8ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T00:59:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T00:59:55+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 25.1ms | ActiveRecord: 1.6ms)
+2012-11-19T00:59:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=44ms status=200 bytes=0
+2012-11-19T00:59:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:00:25+00:00 app[web.1]: 
+2012-11-19T01:00:25+00:00 app[web.1]: 
+2012-11-19T01:00:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:00:25 +0000
+2012-11-19T01:00:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.6ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.7ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.3ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.5ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:00:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:00:25+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 1.5ms)
+2012-11-19T01:00:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:00:55+00:00 app[web.1]: 
+2012-11-19T01:00:55+00:00 app[web.1]: 
+2012-11-19T01:00:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:00:55 +0000
+2012-11-19T01:00:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.0ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (6.0ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (116.7ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.6ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.8ms)
+2012-11-19T01:00:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (5.4ms)
+2012-11-19T01:00:55+00:00 app[web.1]: Completed 200 OK in 156ms (Views: 141.8ms | ActiveRecord: 1.5ms)
+2012-11-19T01:00:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=168ms status=200 bytes=0
+2012-11-19T01:00:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:01:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:01:25 +0000
+2012-11-19T01:01:25+00:00 app[web.1]: 
+2012-11-19T01:01:25+00:00 app[web.1]: 
+2012-11-19T01:01:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.4ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (10.5ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.2ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.4ms)
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:01:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:01:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:01:25+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 27.9ms | ActiveRecord: 1.6ms)
+2012-11-19T01:01:55+00:00 app[web.1]: 
+2012-11-19T01:01:55+00:00 app[web.1]: 
+2012-11-19T01:01:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:01:55 +0000
+2012-11-19T01:01:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.5ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.0ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:01:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:01:55+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 24.4ms | ActiveRecord: 1.4ms)
+2012-11-19T01:01:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:01:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T01:02:25+00:00 app[web.1]: 
+2012-11-19T01:02:25+00:00 app[web.1]: 
+2012-11-19T01:02:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:02:25 +0000
+2012-11-19T01:02:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.3ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (10.0ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.2ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:02:25+00:00 app[web.1]: Completed 200 OK in 46ms (Views: 31.3ms | ActiveRecord: 1.6ms)
+2012-11-19T01:02:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (2.3ms)
+2012-11-19T01:02:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.3ms)
+2012-11-19T01:02:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:02:55 +0000
+2012-11-19T01:02:55+00:00 app[web.1]: 
+2012-11-19T01:02:55+00:00 app[web.1]: 
+2012-11-19T01:02:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.9ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.2ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.7ms)
+2012-11-19T01:02:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.8ms)
+2012-11-19T01:02:55+00:00 app[web.1]: Completed 200 OK in 37ms (Views: 28.8ms | ActiveRecord: 1.5ms)
+2012-11-19T01:02:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:02:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=7ms service=49ms status=200 bytes=0
+2012-11-19T01:03:23+00:00 app[web.1]: 
+2012-11-19T01:03:23+00:00 app[web.1]: 
+2012-11-19T01:03:23+00:00 app[web.1]: Started GET "/" for 74.64.78.118 at 2012-11-19 01:03:23 +0000
+2012-11-19T01:03:23+00:00 app[web.1]: Processing by Spree::HomeController#index as HTML
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.4ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.6ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:03:23+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:03:23+00:00 app[web.1]: Completed 200 OK in 41ms (Views: 23.5ms | ActiveRecord: 6.8ms)
+2012-11-19T01:03:23+00:00 app[web.1]: cache: [GET /] miss
+2012-11-19T01:03:23+00:00 heroku[router]: at=info method=GET path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=51ms status=200 bytes=8216
+2012-11-19T01:03:25+00:00 app[web.1]: 
+2012-11-19T01:03:25+00:00 app[web.1]: 
+2012-11-19T01:03:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:03:25 +0000
+2012-11-19T01:03:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.3ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.5ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:03:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=38ms status=200 bytes=0
+2012-11-19T01:03:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:03:25+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 1.5ms)
+2012-11-19T01:03:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:03:55+00:00 app[web.1]: 
+2012-11-19T01:03:55+00:00 app[web.1]: 
+2012-11-19T01:03:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:03:55 +0000
+2012-11-19T01:03:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.3ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.5ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:03:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:03:55+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 23.0ms | ActiveRecord: 1.4ms)
+2012-11-19T01:03:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:03:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=42ms status=200 bytes=0
+2012-11-19T01:04:25+00:00 app[web.1]: 
+2012-11-19T01:04:25+00:00 app[web.1]: 
+2012-11-19T01:04:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:04:25 +0000
+2012-11-19T01:04:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.4ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.5ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.0ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.5ms)
+2012-11-19T01:04:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:04:25+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 24.2ms | ActiveRecord: 1.4ms)
+2012-11-19T01:04:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:04:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=43ms status=200 bytes=0
+2012-11-19T01:04:55+00:00 app[web.1]: 
+2012-11-19T01:04:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:04:55 +0000
+2012-11-19T01:04:55+00:00 app[web.1]: 
+2012-11-19T01:04:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.7ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.6ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:04:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (4.0ms)
+2012-11-19T01:04:55+00:00 app[web.1]: Completed 200 OK in 40ms (Views: 29.2ms | ActiveRecord: 1.5ms)
+2012-11-19T01:04:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:04:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=50ms status=200 bytes=0
+2012-11-19T01:05:25+00:00 app[web.1]: 
+2012-11-19T01:05:25+00:00 app[web.1]: 
+2012-11-19T01:05:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:05:25 +0000
+2012-11-19T01:05:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (7.6ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (10.3ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (21.9ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (42.8ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (80.4ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (73.7ms)
+2012-11-19T01:05:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (13.7ms)
+2012-11-19T01:05:25+00:00 app[web.1]: Completed 200 OK in 223ms (Views: 207.6ms | ActiveRecord: 3.5ms)
+2012-11-19T01:05:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:05:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=285ms status=200 bytes=0
+2012-11-19T01:05:55+00:00 app[web.1]: 
+2012-11-19T01:05:55+00:00 app[web.1]: 
+2012-11-19T01:05:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:05:55 +0000
+2012-11-19T01:05:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (87.6ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.2ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.8ms)
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:05:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=124ms status=200 bytes=0
+2012-11-19T01:05:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:05:55+00:00 app[web.1]: Completed 200 OK in 114ms (Views: 106.7ms | ActiveRecord: 1.6ms)
+2012-11-19T01:05:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:06:25+00:00 app[web.1]: 
+2012-11-19T01:06:25+00:00 app[web.1]: 
+2012-11-19T01:06:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:06:25 +0000
+2012-11-19T01:06:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.9ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.7ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:06:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:06:25+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 23.9ms | ActiveRecord: 1.6ms)
+2012-11-19T01:06:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:06:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T01:06:55+00:00 app[web.1]: 
+2012-11-19T01:06:55+00:00 app[web.1]: 
+2012-11-19T01:06:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:06:55 +0000
+2012-11-19T01:06:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.5ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.5ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (4.3ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (8.7ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (10.8ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:06:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:06:55+00:00 app[web.1]: Completed 200 OK in 43ms (Views: 34.1ms | ActiveRecord: 1.4ms)
+2012-11-19T01:06:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:06:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=53ms status=200 bytes=0
+2012-11-19T01:07:25+00:00 app[web.1]: 
+2012-11-19T01:07:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:07:25 +0000
+2012-11-19T01:07:25+00:00 app[web.1]: 
+2012-11-19T01:07:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.6ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.3ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:07:25+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 23.6ms | ActiveRecord: 1.4ms)
+2012-11-19T01:07:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:07:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:07:55+00:00 app[web.1]: 
+2012-11-19T01:07:55+00:00 app[web.1]: 
+2012-11-19T01:07:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:07:55 +0000
+2012-11-19T01:07:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.2ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (0.9ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.5ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:07:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.4ms)
+2012-11-19T01:07:55+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 1.6ms)
+2012-11-19T01:07:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:07:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=46ms status=200 bytes=0
+2012-11-19T01:08:25+00:00 app[web.1]: 
+2012-11-19T01:08:25+00:00 app[web.1]: 
+2012-11-19T01:08:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:08:25 +0000
+2012-11-19T01:08:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (3.1ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (3.6ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (4.2ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (8.8ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (6.4ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (8.9ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:08:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (5.1ms)
+2012-11-19T01:08:25+00:00 app[web.1]: Completed 200 OK in 49ms (Views: 39.1ms | ActiveRecord: 1.5ms)
+2012-11-19T01:08:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:08:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=64ms status=200 bytes=0
+2012-11-19T01:08:55+00:00 app[web.1]: 
+2012-11-19T01:08:55+00:00 app[web.1]: 
+2012-11-19T01:08:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:08:55 +0000
+2012-11-19T01:08:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.4ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.5ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.3ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.0ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:08:55+00:00 app[web.1]: Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 1.5ms)
+2012-11-19T01:08:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:08:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:08:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T01:09:11+00:00 app[web.1]: cache: [GET /assets/tin-and-cup.png] miss, store
+2012-11-19T01:09:25+00:00 app[web.1]: 
+2012-11-19T01:09:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:09:25 +0000
+2012-11-19T01:09:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:09:25+00:00 app[web.1]: 
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.4ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.7ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.3ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:09:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:09:25+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 22.0ms | ActiveRecord: 1.4ms)
+2012-11-19T01:09:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:09:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=38ms status=200 bytes=0
+2012-11-19T01:09:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:09:55+00:00 app[web.1]: 
+2012-11-19T01:09:55+00:00 app[web.1]: 
+2012-11-19T01:09:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:09:55 +0000
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.9ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.7ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.5ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.1ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.9ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.3ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:09:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=48ms status=200 bytes=0
+2012-11-19T01:09:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:09:55+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 1.5ms)
+2012-11-19T01:09:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.7ms)
+2012-11-19T01:10:25+00:00 app[web.1]: 
+2012-11-19T01:10:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:10:25 +0000
+2012-11-19T01:10:25+00:00 app[web.1]: 
+2012-11-19T01:10:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (9.2ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (20.3ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (9.2ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (17.1ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (2.7ms)
+2012-11-19T01:10:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:10:25+00:00 app[web.1]: Completed 200 OK in 313ms (Views: 277.0ms | ActiveRecord: 14.9ms)
+2012-11-19T01:10:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (16.6ms)
+2012-11-19T01:10:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=374ms status=200 bytes=0
+2012-11-19T01:10:55+00:00 app[web.1]: 
+2012-11-19T01:10:55+00:00 app[web.1]: 
+2012-11-19T01:10:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:10:55 +0000
+2012-11-19T01:10:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.1ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (13.7ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.7ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.9ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.2ms)
+2012-11-19T01:10:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (5.7ms)
+2012-11-19T01:10:55+00:00 app[web.1]: Completed 200 OK in 50ms (Views: 39.0ms | ActiveRecord: 3.9ms)
+2012-11-19T01:10:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:10:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=9ms service=90ms status=200 bytes=0
+2012-11-19T01:11:25+00:00 app[web.1]: 
+2012-11-19T01:11:25+00:00 app[web.1]: 
+2012-11-19T01:11:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:11:25 +0000
+2012-11-19T01:11:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.3ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (2.0ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.4ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.7ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.8ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.2ms)
+2012-11-19T01:11:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.2ms)
+2012-11-19T01:11:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:11:25+00:00 app[web.1]: Completed 200 OK in 50ms (Views: 34.6ms | ActiveRecord: 1.6ms)
+2012-11-19T01:11:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=5ms service=64ms status=200 bytes=0
+2012-11-19T01:11:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:11:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:11:55 +0000
+2012-11-19T01:11:55+00:00 app[web.1]: 
+2012-11-19T01:11:55+00:00 app[web.1]: 
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.6ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.4ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.3ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:11:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T01:11:55+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 25.4ms | ActiveRecord: 1.6ms)
+2012-11-19T01:11:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:12:25+00:00 app[web.1]: 
+2012-11-19T01:12:25+00:00 app[web.1]: 
+2012-11-19T01:12:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:12:25 +0000
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T01:12:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.5ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:12:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=59ms status=200 bytes=0
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (7.6ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (11.3ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:12:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.0ms)
+2012-11-19T01:12:25+00:00 app[web.1]: Completed 200 OK in 49ms (Views: 36.1ms | ActiveRecord: 1.5ms)
+2012-11-19T01:12:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:12:55+00:00 app[web.1]: 
+2012-11-19T01:12:55+00:00 app[web.1]: 
+2012-11-19T01:12:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:12:55 +0000
+2012-11-19T01:12:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.2ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (6.9ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (14.4ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.8ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T01:12:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.2ms)
+2012-11-19T01:12:55+00:00 app[web.1]: Completed 200 OK in 54ms (Views: 41.7ms | ActiveRecord: 1.7ms)
+2012-11-19T01:12:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:13:25+00:00 app[web.1]: 
+2012-11-19T01:13:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:13:25 +0000
+2012-11-19T01:13:25+00:00 app[web.1]: 
+2012-11-19T01:13:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.2ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (3.0ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (3.5ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (10.4ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (4.0ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.9ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:13:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:13:25+00:00 app[web.1]: Completed 200 OK in 47ms (Views: 33.4ms | ActiveRecord: 1.5ms)
+2012-11-19T01:13:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:13:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=58ms status=200 bytes=0
+2012-11-19T01:13:55+00:00 app[web.1]: 
+2012-11-19T01:13:55+00:00 app[web.1]: 
+2012-11-19T01:13:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:13:55 +0000
+2012-11-19T01:13:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.4ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (6.2ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:13:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.3ms)
+2012-11-19T01:13:55+00:00 app[web.1]: Completed 200 OK in 36ms (Views: 27.9ms | ActiveRecord: 1.5ms)
+2012-11-19T01:13:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:13:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=51ms status=200 bytes=0
+2012-11-19T01:14:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:14:25 +0000
+2012-11-19T01:14:25+00:00 app[web.1]: 
+2012-11-19T01:14:25+00:00 app[web.1]: 
+2012-11-19T01:14:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (9.1ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.7ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.6ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.5ms)
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:14:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:14:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:14:25+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 25.9ms | ActiveRecord: 1.4ms)
+2012-11-19T01:14:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=14ms service=51ms status=200 bytes=0
+2012-11-19T01:14:55+00:00 app[web.1]: 
+2012-11-19T01:14:55+00:00 app[web.1]: 
+2012-11-19T01:14:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:14:55 +0000
+2012-11-19T01:14:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.3ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.9ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:14:55+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 24.9ms | ActiveRecord: 1.6ms)
+2012-11-19T01:14:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (5.6ms)
+2012-11-19T01:14:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:14:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T01:15:25+00:00 app[web.1]: 
+2012-11-19T01:15:25+00:00 app[web.1]: 
+2012-11-19T01:15:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:15:25 +0000
+2012-11-19T01:15:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.5ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (5.9ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (0.9ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.7ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.4ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:15:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:15:25+00:00 app[web.1]: Completed 200 OK in 29ms (Views: 21.6ms | ActiveRecord: 1.5ms)
+2012-11-19T01:15:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:15:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=37ms status=200 bytes=0
+2012-11-19T01:15:55+00:00 app[web.1]: 
+2012-11-19T01:15:55+00:00 app[web.1]: 
+2012-11-19T01:15:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:15:55 +0000
+2012-11-19T01:15:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.6ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:15:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=11ms connect=25ms service=47ms status=200 bytes=0
+2012-11-19T01:15:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:15:55+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 24.9ms | ActiveRecord: 1.5ms)
+2012-11-19T01:15:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:16:25+00:00 app[web.1]: 
+2012-11-19T01:16:25+00:00 app[web.1]: 
+2012-11-19T01:16:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:16:25 +0000
+2012-11-19T01:16:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.4ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.5ms)
+2012-11-19T01:16:25+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 28.1ms | ActiveRecord: 1.5ms)
+2012-11-19T01:16:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (5.0ms)
+2012-11-19T01:16:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (7.0ms)
+2012-11-19T01:16:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=50ms status=200 bytes=0
+2012-11-19T01:16:55+00:00 app[web.1]: 
+2012-11-19T01:16:55+00:00 app[web.1]: 
+2012-11-19T01:16:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:16:55 +0000
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:16:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:16:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=3ms service=39ms status=200 bytes=0
+2012-11-19T01:16:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (5.9ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (0.9ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.9ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.7ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.2ms)
+2012-11-19T01:16:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.9ms)
+2012-11-19T01:16:55+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 22.8ms | ActiveRecord: 1.4ms)
+2012-11-19T01:17:25+00:00 app[web.1]: 
+2012-11-19T01:17:25+00:00 app[web.1]: 
+2012-11-19T01:17:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:17:25 +0000
+2012-11-19T01:17:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.9ms)
+2012-11-19T01:17:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=2ms service=123ms status=200 bytes=0
+2012-11-19T01:17:25+00:00 app[web.1]: Completed 200 OK in 114ms (Views: 106.0ms | ActiveRecord: 1.4ms)
+2012-11-19T01:17:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (85.8ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (88.0ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:17:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:17:55+00:00 app[web.1]: 
+2012-11-19T01:17:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:17:55+00:00 app[web.1]: 
+2012-11-19T01:17:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:17:55 +0000
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.2ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.8ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.6ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:17:55+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 23.1ms | ActiveRecord: 1.4ms)
+2012-11-19T01:17:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.7ms)
+2012-11-19T01:17:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:18:25+00:00 app[web.1]: 
+2012-11-19T01:18:25+00:00 app[web.1]: 
+2012-11-19T01:18:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:18:25 +0000
+2012-11-19T01:18:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.8ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.3ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.1ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T01:18:25+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 23.6ms | ActiveRecord: 1.5ms)
+2012-11-19T01:18:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.8ms)
+2012-11-19T01:18:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:18:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=43ms status=200 bytes=0
+2012-11-19T01:18:55+00:00 app[web.1]: 
+2012-11-19T01:18:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:18:55 +0000
+2012-11-19T01:18:55+00:00 app[web.1]: 
+2012-11-19T01:18:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.2ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (6.7ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (5.1ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.0ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (2.9ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.8ms)
+2012-11-19T01:18:55+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 23.3ms | ActiveRecord: 1.4ms)
+2012-11-19T01:18:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (2.6ms)
+2012-11-19T01:18:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:18:55+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=41ms status=200 bytes=0
+2012-11-19T01:19:25+00:00 app[web.1]: 
+2012-11-19T01:19:25+00:00 app[web.1]: 
+2012-11-19T01:19:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:19:25 +0000
+2012-11-19T01:19:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (1.2ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.7ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (7.9ms)
+2012-11-19T01:19:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=0ms connect=1ms service=142ms status=200 bytes=0
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (97.2ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (100.2ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (103.2ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:19:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.3ms)
+2012-11-19T01:19:25+00:00 app[web.1]: Completed 200 OK in 133ms (Views: 124.8ms | ActiveRecord: 1.4ms)
+2012-11-19T01:19:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:19:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:19:55 +0000
+2012-11-19T01:19:55+00:00 app[web.1]: 
+2012-11-19T01:19:55+00:00 app[web.1]: 
+2012-11-19T01:19:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.6ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.0ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (87.4ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (4.9ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (0.9ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (3.0ms)
+2012-11-19T01:19:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (4.9ms)
+2012-11-19T01:19:55+00:00 app[web.1]: Completed 200 OK in 116ms (Views: 106.5ms | ActiveRecord: 1.7ms)
+2012-11-19T01:19:55+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:20:25+00:00 app[web.1]: 
+2012-11-19T01:20:25+00:00 app[web.1]: 
+2012-11-19T01:20:25+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:20:25 +0000
+2012-11-19T01:20:25+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (2.5ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (1.0ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (6.0ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (29.9ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.1ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (11.1ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (18.3ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:20:25+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (3.2ms)
+2012-11-19T01:20:25+00:00 app[web.1]: Completed 200 OK in 100ms (Views: 79.7ms | ActiveRecord: 1.6ms)
+2012-11-19T01:20:25+00:00 app[web.1]: cache: [HEAD /] miss
+2012-11-19T01:20:25+00:00 heroku[router]: at=info method=HEAD path=/ host=www.uniqteas.com fwd= dyno=web.1 queue=0 wait=1ms connect=3ms service=128ms status=200 bytes=0
+2012-11-19T01:20:55+00:00 app[web.1]: Started GET "/" for 204.93.223.151 at 2012-11-19 01:20:55 +0000
+2012-11-19T01:20:55+00:00 app[web.1]: 
+2012-11-19T01:20:55+00:00 app[web.1]: 
+2012-11-19T01:20:55+00:00 app[web.1]: Processing by Spree::HomeController#index as */*
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_tea_selector.html.erb (0.1ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_instructions.html.erb (0.7ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/home/index.html.erb within spree/layouts/spree_application (1.3ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_head.html.erb (28.7ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_search.html.erb (1.2ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_main_nav_bar.html.erb (22.8ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_header_clean.html.erb (28.7ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered spree/shared/_ut_footer.html.erb (1.0ms)
+2012-11-19T01:20:55+00:00 app[web.1]:   Rendered vendor/bundle/ruby/1.9.1/gems/spree_core-1.1.3/app/views/spree/shared/_google_analytics.html.erb (11.5ms)
+2012-11-19T01:20:55+00:00 app[web.1]: Completed 200 OK in 129ms (Views: 92.6ms | ActiveRecord: 1.7ms)
+2012-11-19T01:20:55+00:00 app[web.1]: cache: [HEAD /] miss
