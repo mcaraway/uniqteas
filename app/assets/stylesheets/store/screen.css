@@ -302,6 +302,18 @@ a.button {
   vertical-align: bottom;
 }
 
+figure#logo {
+    width: 190px;
+    height: 70px;
+    float: left;
+    margin: 10px 20px 0px 20px;
+    background-color: transparent;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    text-align: center;
+}
+
 /*--------------------------------------*/
 /* Footer
 /*--------------------------------------*/
@@ -988,7 +1000,7 @@ table.order-summary tbody tr td:first-child a {
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   /* line 891, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
   .container {
-    width: 950px;
+    width: 758px;
     height: 2000px;
     background: none repeat scroll 0 0 #D4E5A5;
     background: -moz-linear-gradient(top,  #D4E5A5 40%, #FFFFFF 100%); /* FF3.6+ */

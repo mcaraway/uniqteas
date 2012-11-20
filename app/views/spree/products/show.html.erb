@@ -42,7 +42,7 @@
 
 		</div>
 		<% if @product.is_custom? %>
-		<%= render :partial => 'tea_tin' %>
+		<%= render :partial => 'tea_tin', :locals => { :show_teaball => false }%>
 		<% end %>
 	</div>
 
