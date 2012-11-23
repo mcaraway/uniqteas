@@ -61,7 +61,6 @@ Spree::ProductsController.class_eval do
 
     if @product.save
       @product.update_viewables
-      setup_volume_pricing
       flash[:success] = "Your draft blend is saved.  Now add some art and click Finalize to be able to order it."
       redirect_to proc { edit_product_url(@product) }
     else
