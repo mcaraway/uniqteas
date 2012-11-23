@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+	<!--<![endif]-->
+	<head data-hook="inside_head">
+		<%= render :partial => 'spree/shared/head' %>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header">
+				<h1 style="text-align: center;"><%= yield :heading %></h1>
+			</div>
+			<div data-role="content">
+				<%= yield %>
+			</div>
+		</div>
+		<%= render :partial => 'spree/shared/google_analytics' %>
+	</body>
+</html>

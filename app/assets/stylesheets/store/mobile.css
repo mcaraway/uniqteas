@@ -1,0 +1,126 @@
+h1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFF;
+}
+
+nav #main-nav-bar {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 10px;
+	padding-bottom: 3px;
+	font-size: 80%;
+	border: none;
+	color: #06C;
+}
+/* line 275, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li a {
+	font-size: 14px;
+	padding: 5px;
+}
+/* line 281, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li:first-child a {
+	padding-left: 0;
+}
+/* line 286, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li#link-to-cart {
+	float: right;
+	padding-left: 24px;
+	background: url("cart.png") no-repeat left center;
+}
+/* line 291, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li#link-to-cart:hover {
+	border-color: #00adee;
+}
+/* line 294, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li#link-to-cart:hover .amount {
+	border-color: #00adee;
+}
+nav #main-nav-bar li:hover {
+	color: #0C6;
+	text-decoration: underline;
+}
+/* line 299, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li#link-to-cart a {
+	font-weight: normal;
+	font-size: 16px;
+	color: #00adee;
+}
+/* line 304, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/spree_core-1.2.0/app/assets/stylesheets/store/screen.css.scss */
+nav #main-nav-bar li#link-to-cart a .amount {
+	font-size: 18px;
+	font-weight: bold;
+	border-left: 1px solid #d9d9db;
+	padding-left: 5px;
+	padding-bottom: 5px;
+}
+
+/* Instruction page */
+.tin-and-cup-m {
+	width: 50%;
+	float: right;
+}
+
+.dark-background-m {
+	padding: 5px;
+	margin: 5px;
+	background-color: #bbcad2;
+}
+
+.instructions-m {
+	width: 45%;
+	font-family: 'Abel', sans-serif;
+	color: black;
+	font-size: 10px;
+	margin-bottom: 1.8em;
+	line-height: normal;
+}
+
+.heading-m {
+	color: black;
+	font-size: 1.6em;
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+/* Tea Selector */
+td.tea-cup-list {
+	padding-left: 5px;
+	text-align: center;
+}
+
+.tea-list {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.tea-list li, .tea-list  li:hover, .tea-list  li.selected {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #BBCAD2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	height: 75px;
+}
+
+.tea-list  li:hover {
+	background-color: #f90;
+	border: 1px solid white;
+}
+
+.tea-list  li.selected {
+	background-color: #09f;
+	border: 1px solid white;
+	position: relative;
+}
+
+.tea-list  li.selected div {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	height: 18px;
+	width: 18px;
+}

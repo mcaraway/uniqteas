@@ -1,0 +1,138 @@
+<div data-role="fieldcontain">
+	<fieldset data-role="controlgroup">
+		<legend>
+			Choose up to three flavors for your blend.
+		</legend>
+
+		<label for="select-choice-first">First Tea</label>
+		<select name="select-choice-first" id="select-choice-first">
+			<option>First Tea</option>
+		</select>
+
+		<label for="select-choice-second">Second Tea</label>
+		<select name="select-choice-second" id="select-choice-second" disabled="disabled">
+			<option>Second Tea</option>
+		</select>
+
+		<label for="select-choice-third">Third Tea</label>
+		<select name="select-choice-third" id="select-choice-third" disabled="disabled">
+			<option>Third Tea</option>
+		</select>
+
+	</fieldset>
+</div>
+<div data-role="fieldcontain">
+	<label for="slider-first">First Tea %:</label>
+	<input type="range" name="slider-first" id="slider-first" value="100" min="0" max="100" step="5" data-theme="b" disabled="disabled"/>
+	<label for="slider-second">Second Tea %:</label>
+	<input type="range" name="slider-second" id="slider-second" value="0" min="0" max="100" step="5" data-theme="b" disabled="disabled"/>
+	<label for="slider-third">Third Tea %:</label>
+	<input type="range" name="slider-third" id="slider-third" value="0" min="0" max="100" step="5" data-theme="b" disabled="disabled"/>
+</div>
+<div data-role="fieldcontain">
+	<label for="basic">Name:</label>
+	<input type="text" name="name" id="basic" value=""  maxlength="25"/>
+</div>
+<div data-role="fieldcontain">
+	<label for="textarea-a">Description:</label>
+	<textarea name="textarea" id="textarea-a" maxlength="240" style="min-height: 100px;">
+	</textarea>	
+</div>
+
+<input type="submit" value="Continue" data-theme="b" />
+<script type="text/javascript">
+	function create_drop_down_mobile(id) {
+		var select = document.getElementById(id);
+		for ( j = 0; j < json.categories.length; j++) {
+			var category = json.categories[j].category;
+			var optgroup = document.createElement("optgroup");
+			optgroup.setAttribute("label", category.name);
+			select.appendChild(optgroup);
+
+			for (var tea = 0; tea < category.teas.length; tea++) {
+				var option = document.createElement("option");
+				option.setAttribute("value", category.teas[tea].tea_name);
+				option.innerHTML = category.teas[tea].tea_name;
+
+				optgroup.appendChild(option);
+			}
+		}
+	}
+
+	function update_enabled_states() {
+		update_selects_enabled_state();
+		update_sliders_enabled_state();
+	}
+
+	function update_selects_enabled_state() {
+		$("#select-choice-second").selectmenu($("#select-choice-first").val() != "First Tea" ? 'enable' : 'disable');
+		$("#select-choice-third").selectmenu($("#select-choice-second").val() != "Second Tea" ? 'enable' : 'disable');
+	}
+
+	function update_sliders_enabled_state() {
+		$('#slider-first').slider($("#select-choice-second").val() != "Second Tea" ? 'enable' : 'disable');
+		$('#slider-second').slider($("#select-choice-second").val() != "Second Tea" ? 'enable' : 'disable');
+		// $('#slider-third').slider($("#select-choice-third").val() != "Third Tea" ? 'enable' : 'disable');
+	}
+
+	function update_slider_states(slider_id) {
+		var selected_teas_count = $("#select-choice-third").val() != "Third Tea" ? 3 : $("#select-choice-second").val() != "Second Tea" ? 2 : 1;
+		var selected_teas_percentages = [$("#slider-first").val(), $("#slider-second").val(), $("#slider-third").val()];
+		if (selected_teas_count == 1) {
+			selected_teas_percentages[0] = 100;
+			selected_teas_percentages[1] = 0;
+			selected_teas_percentages[2] = 0;
+		} else if (selected_teas_count == 2) {
+			if (slider_id == "slider-first") {
+				selected_teas_percentages[1] = 100 - selected_teas_percentages[0];
+				selected_teas_percentages[2] = 0;
+			} else {
+				selected_teas_percentages[0] = 100 - selected_teas_percentages[1];
+				selected_teas_percentages[2] = 0;
+			}
+		} else if (selected_teas_count == 3) {
+			selected_teas_percentages[2] = 100 - selected_teas_percentages[0] - selected_teas_percentages[1];
+
+			if (selected_teas_percentages[2] < 0) {
+				if (slider_id == "slider-first") {
+					selected_teas_percentages[1] = 100 - selected_teas_percentages[0];
+				} else {
+					selected_teas_percentages[0] = 100 - selected_teas_percentages[1];
+				}
+				selected_teas_percentages[2] = 0;
+			}
+		}
+
+		$("#slider-first").val(selected_teas_percentages[0]);
+		$("#slider-second").val(selected_teas_percentages[1]);
+		$("#slider-third").val(selected_teas_percentages[2]);
+	}
+
+	create_drop_down_mobile("select-choice-first");
+	create_drop_down_mobile("select-choice-second");
+	create_drop_down_mobile("select-choice-third");
+
+	$("#select-choice-first").bind("change", function(event, ui) {
+		update_enabled_states();
+	});
+	$("#select-choice-second").bind("change", function(event, ui) {
+		update_enabled_states();
+	});
+	$("#select-choice-third").bind("change", function(event, ui) {
+		update_enabled_states();
+	});
+	$("#slider-first").live("change", function(event, ui) {
+		update_slider_states("slider-first");
+	});
+	$("#slider-first").live("slidestop", function(event) {
+		$("#slider-second").slider('refresh');
+		$("#slider-third").slider('refresh');
+	});
+	$("#slider-second").live("change", function(event, ui) {
+		update_slider_states("slider-second");
+	});
+	$("#slider-second").live("slidestop", function(event) {
+		$("#slider-first").slider('refresh');
+		$("#slider-third").slider('refresh');
+	}); 
+</script>

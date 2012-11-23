@@ -6,6 +6,7 @@ var process_category = function (category) {
 	var div = document.getElementById(category.name.replace(" ","_").toLowerCase()+"_cups");
 
 	var listElement = document.createElement("ul");
+	listElement.setAttribute("class", "tea-list");
 	for( var tea = 0; tea < category.teas.length; tea++) {
 		var listItem = create_listItem(category.teas[tea]);
 		listElement.appendChild(listItem);
