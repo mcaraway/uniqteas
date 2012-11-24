@@ -30,6 +30,7 @@
 			<% end %>
 			<% reset_cycle("classes") %>
 		</ul>
+		<br />
 		<%= paginate @myblends %>
 		<% end %>
 	</div>
@@ -72,16 +73,16 @@
 <script type="text/javascript">
 	$("li").hover(function() {
 		div = $(this).find("div:last");
-		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 200);
+		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 10);
 	}, function() {
 		div = $(this).find("div:last");
-		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 200);
+		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 10);
 	});
 
 	$("img.tool").hover(function() {
-		$(this).toggleClass("sizeUp", 100);
+		$(this).toggleClass("sizeUp", 10);
 	}, function() {
-		$(this).toggleClass("sizeUp", 100);
+		$(this).toggleClass("sizeUp", 10);
 	});
 
 </script>

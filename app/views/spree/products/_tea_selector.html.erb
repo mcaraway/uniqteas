@@ -5,7 +5,11 @@
 	<table class="tea_builder_divider" cellpadding="10">
 		<tbody>
 			<tr>
-				<td style="width:13%;">You can choose up to three flavors for your blend.  Click on the ones you want to add.</td>
+				<td style="width:13%;vertical-align: top;">
+					<% if @edit_blend == nil || @edit_blend == false %>
+						<img src="/assets/store/icons/1.png"  width="24" height="24" >&nbsp;
+					<% end %>
+					Just click on any one of these teas and you'll see your blend crafting right before your very eyes.</td>
 				<td style="width:17%;" class="tea-cup-list" id="black_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="fruit_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="herbal_tea_cups"></td>

@@ -51,10 +51,10 @@ end
 gem 'spree', '1.1.3'
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
-gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git", :branch => '1-1-stable'
-gem "spree_paypal_express", :git => "git://github.com/spree/spree_paypal_express.git", :branch => '1-1-stable'
-gem 'spree_print_invoice' , :git => 'git://github.com/spree/spree_print_invoice.git', :branch => '1-1-stable'
-gem 'spree_gateway', :git => 'git://github.com/spree/spree_gateway.git', :branch => '1-1-stable' # make sure to include after spree
+gem 'spree_address_book', '1.1.0'
+gem "spree_paypal_express", '1.1.0'
+gem 'spree_print_invoice' , '1.0.0' , :git => 'git://github.com/spree/spree_print_invoice.git', :branch => '1-1-stable'
+gem 'spree_gateway', '1.1.0', :git => 'git://github.com/spree/spree_gateway.git', :branch => '1-1-stable' # make sure to include after spree
 gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git", :branch => '1-1-stable'
 gem 'spree_contact_us', '~> 1.1.0'
 gem 'spree_variant_options', '0.4.1'

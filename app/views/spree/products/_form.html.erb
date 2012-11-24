@@ -1,4 +1,10 @@
 <div class="name_fields">
+	<% if @edit_blend == nil || @edit_blend == false %>
+		<div style="width:100%">
+		<img src="/assets/store/icons/3.png"  width="24" height="24" >&nbsp;
+		Now name and describe your blend.
+		</div>
+	<% end %>
 	<table style="width: 910px;">
 		<tbody>
 			<% if @product.id != nil then %>

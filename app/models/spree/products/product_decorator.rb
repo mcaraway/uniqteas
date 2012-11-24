@@ -99,7 +99,7 @@ Spree::Product.class_eval do
       if (property.property_name.index("name") != nil)
         prefix = property.property_name[0, 7]
         product_properties.each do |percent_property|
-          if (percent_property.property_name == prefix+"percent")
+          if (percent_property.property_name == prefix+"percent" and percent_property.value != "0")
             blend += percent_property.value + "% " +
             property.value + " / "
           end
