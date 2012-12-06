@@ -234,15 +234,15 @@ a.button {
 	font-family: 'Abel', sans-serif;
 	color: black;
 	font-size: 20px;
-	margin-bottom: 1.8em;
+	margin-bottom: 20px;
 	line-height: normal;
 }
 
 .heading {
 	color: black;
-	font-size: 60px;
+	font-size: 55px;
 	line-height: 62px;
-	margin-bottom: 1em;
+	margin-bottom: 20px;
 	font-weight: normal;
 	width: 450px;
 }
