@@ -22,6 +22,11 @@ Spree.config do |config|
   Spree::ActiveShipping::Config.set(:origin_city => "Marlboro")
   Spree::ActiveShipping::Config.set(:origin_state => "NY")
   Spree::ActiveShipping::Config.set(:origin_zip => "12542")
+  Spree::ActiveShipping::Config.set(:fedex_key => "Q2Bl8FsDtvptQw95")
+  Spree::ActiveShipping::Config.set(:fedex_password => "Z2TZ5PJdGeQRINKvADohwRbRN")
+  Spree::ActiveShipping::Config.set(:fedex_account => "315756936")
+  Spree::ActiveShipping::Config.set(:fedex_login => "104692510")
+  Spree::ActiveShipping::Config.set(:test_mode => false) # If the above is for a developer account
   Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
 
   # Ensure the agent is started using Unicorn
