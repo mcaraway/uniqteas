@@ -100,9 +100,8 @@ a.button {
 }
 
 .dark-background {
-	padding: 15px;
+	padding: 0px 20px 0px 20px;
 	background-color: #bbcad2;
-	height: 432px;
 }
 
 .instructions {

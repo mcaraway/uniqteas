@@ -1,0 +1,37 @@
+<%
+ paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+<% if products.empty? %>
+<%= t(:no_products_found) %>
+<% elsif params.key?(:keywords) %>
+<h6 class="search-results-title"><%= t(:search_results, :keywords => h(params[:keywords])) %></h6>
+<% end %>
+
+<% if products.any? %>
+	<% reset_cycle('default') %>
+	<% products.each do |product| %>
+	<% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
+	<div class="ui-grid-a <%= cycle("alpha", "beta", :name => "classes") %>">
+		<div class="ui-block-a">
+			<% if product.is_custom? %>
+				<%= link_to (product) do %>
+					<%= render :partial => "/spree/shared/tea_tin_small", :locals => { :product => product } %>
+				<% end %>
+			<% else %>
+				<%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+			<% end %>
+		</div>
+		<div class="ui-block-b">
+			<%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+			<%= truncate( product.description, :length => 150) %>
+		</div>
+	</div>
+	<% end %>
+	<% end %>
+	<% reset_cycle("classes") %>
+<% end %>
+
+<% if paginated_products.respond_to?(:num_pages) %>
+<%= paginate paginated_products %>
+<% end %>

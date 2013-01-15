@@ -7,10 +7,11 @@
 	</head>
 	<body>
 		<div data-role="page">
-			<div data-role="header">
-				<h1 style="text-align: center;"><%= yield :heading %></h1>
+			<div data-role="header" data-theme="b">
+				<%= render :partial => 'spree/shared/header_clean' %>
+				<%= render :partial => 'spree/shared/main_nav_bar' %>
 			</div>
-			<div data-role="content">
+			<div class="container" data-role="content">
 				<%= yield %>
 			</div>
 		</div>

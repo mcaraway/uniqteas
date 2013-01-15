@@ -107,6 +107,6 @@ Spree::BaseHelper.class_eval do
   end
 
   def mobile_logo(image_path=Spree::Config[:logo])
-    link_to image_tag(image_path, :size => '90x33'), root_path
+    link_to image_tag(image_path, :size => '54x20'), root_path
   end
 end

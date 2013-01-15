@@ -1,5 +1,11 @@
 <% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
 <%= form_tag products_path, :method => :get do %>
-  <%= search_field_tag :keywords, params[:keywords], :placeholder => t(:search), :style => "width: 150px;" %>
-  <%= submit_tag t(:search), :name => nil %>
+<div class="ui-grid-a my-break-80-20">
+	<div class="ui-block-a" >
+		<%= search_field_tag :keywords, params[:keywords], :placeholder => t(:search), :style => "width: 150px;" %>
+	</div>
+	<div class="ui-block-b" >
+		<%= submit_tag t(:search), :name => nil %>
+	</div>
+</div>
 <% end %>

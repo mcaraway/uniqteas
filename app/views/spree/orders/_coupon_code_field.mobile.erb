@@ -1,0 +1,11 @@
+<% if Spree::Promotion.count > 0 %>
+<div class="ui-grid-a my-break" data-hook="cart_buttons">
+	<%= order_form.label :coupon_code %>
+	<div class="ui-block-a">
+		<%= order_form.text_field :coupon_code, :size => 10 %>
+	</div>
+	<div class="ui-block-b">
+		<%= order_form.submit I18n.t(:apply) %>
+	</div>
+</div>
+<% end %>

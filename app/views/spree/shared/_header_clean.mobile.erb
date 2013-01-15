@@ -1,5 +1,15 @@
-<header id="header" class="row" style="margin-bottom: 10px;" data-hook>
-  <figure id="logo" class="logo" data-hook><%= mobile_logo %></figure>
+<a data-iconpos="notext" data-icon="home" data-inline="true"href="/" title="Home"></a>
+<h1><%= yield :heading %></h1>
+<a href="#popupSettings" data-rel="popup" data-iconpos="notext" data-inline="true" data-icon="gear">Tooltip</a>
 
-  <%= render :partial => 'spree/shared/main_nav_bar' %>
-</header>
+<div data-role="popup" id="popupSettings" data-theme="a">
+	<div data-role="controlgroup" style="margin: 0px;">
+		<%= link_to t(:account), spree.account_path, "data-role" => "button" %>
+		<a href="/search" data-role="button" data-icon="search">Search</a>
+		<% if current_user %>
+		<%= link_to t(:logout), spree.signout_path, "data-role" => "button" %>
+		<% else %>
+		<%= link_to t(:login), spree.login_path, "data-role" => "button" %>
+		<% end %>
+	</div>
+</div>
