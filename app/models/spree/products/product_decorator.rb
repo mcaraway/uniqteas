@@ -1,28 +1,30 @@
 Spree::Product.class_eval do
   belongs_to :user
+  has_and_belongs_to_many :blendable_taxons, :join_table => 'spree_blendable_products_taxons'
 
-  attr_accessible :public, :final 
-  
+  attr_accessible :public, :final
+
   validate :validate_minimum_image_size
   validate :must_have_blend
   validate :check_final_state
-  
   def validate_minimum_image_size
-    requiredTinImageWidth = 347
-    requiredTinImageHeight = 300
-    requiredTagImageWidth = 120
-    requiredTagImageHeight = 100
-    if (! @tin_image.nil?)
-      unless (@tin_image.attachment_width == requiredTinImageWidth && @tin_image.attachment_height == requiredTinImageHeight )
-        logger.debug "*** Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
-        errors.add :tin_image, "Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
+    if is_custom?
+      requiredTinImageWidth = 347
+      requiredTinImageHeight = 300
+      requiredTagImageWidth = 120
+      requiredTagImageHeight = 100
+      if (! @tin_image.nil?)
+        unless (@tin_image.attachment_width == requiredTinImageWidth && @tin_image.attachment_height == requiredTinImageHeight )
+          logger.debug "*** Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
+          errors.add :tin_image, "Naughty you... the tin image designs should be #{requiredTinImageWidth}px x #{requiredTinImageHeight}px."
+        end
       end
-    end
 
-    if (! @tag_image.nil?)
-      unless (@tag_image.attachment_width == requiredTagImageWidth && @tag_image.attachment_height == requiredTagImageHeight )
-        logger.debug "*** Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
-        errors.add :tag_image, "Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
+      if (! @tag_image.nil?)
+        unless (@tag_image.attachment_width == requiredTagImageWidth && @tag_image.attachment_height == requiredTagImageHeight )
+          logger.debug "*** Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
+          errors.add :tag_image, "Naughty you... the tag image designs should be #{requiredTagImageWidth}px x #{requiredTagImageHeight}px."
+        end
       end
     end
   end
@@ -30,28 +32,30 @@ Spree::Product.class_eval do
   def requiredTinImageWidth
     347
   end
-  
+
   def requiredTinImageHeight
     300
   end
-  
+
   def is_public?
     public
   end
 
   def check_final_state
-    if final 
-      if name == nil   
-        errors.add :name, "You blend can not be made final until it has a name."
-      end
-      if description == nil  
-        errors.add :description, "You blend can not be made final until it has a description."
-      end
-      if !(has_tin_image?)
-        errors.add :images, "You blend can not be made final until it has a tin image."
-      end
-      if !has_flavors?  
-        errors.add :blend, "You blend can not be made final until it has at least one flavor."
+    if is_custom?
+      if final
+        if name == nil
+          errors.add :name, "You blend can not be made final until it has a name."
+        end
+        if description == nil
+          errors.add :description, "You blend can not be made final until it has a description."
+        end
+        if !(has_tin_image?)
+          errors.add :images, "You blend can not be made final until it has a tin image."
+        end
+        if !has_flavors?
+          errors.add :blend, "You blend can not be made final until it has at least one flavor."
+        end
       end
     end
   end
@@ -69,19 +73,19 @@ Spree::Product.class_eval do
     end
     @has_flavors
   end
-  
+
   add_search_scope :ispublic do |value|
     logger.debug "****** :public search is #{value}"
     value = value == nil ? true : value
     where(:public => value)
   end
-  
+
   add_search_scope :isfinal do |value|
     logger.debug "****** :final search is #{value}"
     value = value == nil ? true : value
     where(:final => value)
   end
-  
+
   def is_custom?
     user_id == nil ? false: true
   end

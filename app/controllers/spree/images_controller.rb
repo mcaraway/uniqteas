@@ -1,5 +1,6 @@
 module Spree
-  class ImagesController < Spree::ResourceController
+  class ImagesController < Spree::ResourceController    
+    include Spree::Core::ControllerHelpers::Order
     before_filter :load_data
 
     create.before :set_viewable

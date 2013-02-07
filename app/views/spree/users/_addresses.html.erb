@@ -1,6 +1,6 @@
 <% if current_user.addresses.present? %>
 <h3><%= Spree::Address.model_name.human(:count => 2) %></h3>
-<table id="user_addresses">
+<table id="user_addresses" style="width:100%">
   <thead>
     <tr>
     	<th><%= t(:name)%></th>
@@ -14,8 +14,8 @@
     	<td><%= address.full_name %></td>
       <td><%= full_address(address) %></td>
       <td>
-        <%= link_to icon('edit') + ' ' +t(:edit), edit_address_path(address) %>&nbsp;
-        <%= link_to icon('delete') + ' ' +t(:remove), address_path(address), :method => :delete, :confirm => t(:are_you_sure) %>
+        <%= link_to content_tag(:i, '', :class => 'icon-edit') + ' ' +t(:edit), edit_address_path(address) %>&nbsp;
+        <%= link_to content_tag(:i, '', :class => 'icon-trash') + ' ' +t(:remove), address_path(address), :method => :delete, :confirm => t(:are_you_sure) %>
       </td>
     </tr>
   <% end %>

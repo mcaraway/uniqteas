@@ -2,7 +2,7 @@
   <meta name="title" content="Blend It">
 <% end -%>
 <h1><%=t(:make_your_own_blend)%></h1>
-<div style="min-height: 1200px;">
+<div style="min-height: 1660px;">
 <%=form_for @product do |f| %>
 <%= render 'spree/shared/error_messages', :target => f.object %>
 <!-- >
@@ -29,6 +29,8 @@
 <% end %>
 </div>
 
+	
 <script>
 	window.onload = setup('<%= @first_flavor %>');
 </script>
+

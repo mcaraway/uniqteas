@@ -1,9 +1,9 @@
 <div class="tea_cups_div" style="min-height: 235px;">
-	<table class="tea_builder_divider" cellpadding="10" style="height: 235px;">
+	<table class="tea_builder_divider" cellpadding="10" style="height: 245px;border: none">
 		<tbody>
-			<tr>
-				<td style="width:20%;">Your unique blend will taste like this.</td>
-				<td style="width:15%;"> <% flavor_count = 0
+			<tr style="border: none">
+				<td style="width:13%;">Your unique blend will taste like this.</td>
+				<td style="width:22%;"> <% flavor_count = 0
           sku_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
@@ -52,7 +52,7 @@
 				<td style="width:35%;height:100%;" class="tea-cup-list" id="flavor_profile_row">
 				</td>
 			</tr>
-			<tr>
+			<tr style="border: none">
 				<td colspan="5"> &nbsp; </td>
 			</tr>
 		</tbody>

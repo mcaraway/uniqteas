@@ -2,6 +2,10 @@ Spree::ProductsController.class_eval do
   before_filter :create_custom_product, :only => :create
   before_filter :load_product, :only => [:show, :edit, :update]
   before_filter :verify_login?, :only => [:new]
+  before_filter :load_blendables, :only => [:new, :edit]
+  
+  respond_to :html, :json, :js
+   
   def index
     params[:ispublic] = true
     logger.debug "****** Prototype is #{params}"
@@ -36,9 +40,6 @@ Spree::ProductsController.class_eval do
         render @product
       end
     end
-  end
-
-  def show
   end
 
   def create
@@ -84,6 +85,7 @@ Spree::ProductsController.class_eval do
     volume.amount = amount
     volume.position = position
     volume.variant_id = variant.id
+    volume.discount_type = "price"
     volume.save
   end
 
@@ -147,14 +149,23 @@ Spree::ProductsController.class_eval do
   end
 
   def load_product
-    @product = Spree::Product.active.find_by_permalink!(params[:id])
+    @product = Spree::Product.find_by_permalink!(params[:id])
   end
 
   def verify_login?
     if current_user == nil
       store_location
-      flash[:notice] = "Please create an account so we can save your blend."
+      flash[:notice] = "Please create an account so we can save your unique blend."
       redirect_to spree.login_path
     end
+  end
+  
+  def load_blendables
+    @blendables = Spree::BlendableTaxon.all
+    @black_teas = Spree::BlendableTaxon.find_by_name("Black Tea")
+    @fruit_teas = Spree::BlendableTaxon.find_by_name("Fruit Tea")
+    @herbal_teas = Spree::BlendableTaxon.find_by_name("Herbal Tea")
+    @green_teas = Spree::BlendableTaxon.find_by_name("Green Tea")
+    @white_teas = Spree::BlendableTaxon.find_by_name("White Tea")
   end
 end

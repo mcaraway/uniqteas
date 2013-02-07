@@ -1,4 +1,79 @@
 Spree::BaseHelper.class_eval do
+  def link_to_clone(resource, options={})
+    options[:data] = {:action => 'clone'}
+    link_to_with_icon('icon-copy', t(:clone), clone_admin_product_url(resource), options)
+  end
+
+  def link_to_new(resource)
+    options[:data] = {:action => 'new'}
+    link_to_with_icon('icon-plus', t(:new), edit_object_url(resource))
+  end
+
+  def link_to_edit(resource, options={})
+    options[:data] = {:action => 'edit'}
+    link_to_with_icon('icon-edit', t(:edit), edit_object_url(resource), options)
+  end
+
+  def link_to_edit_url(url, options={})
+    options[:data] = {:action => 'edit'}
+    link_to_with_icon('icon-edit', t(:edit), url, options)
+  end
+
+  def link_to_delete(resource, options={})
+    url = options[:url] || object_url(resource)
+    name = options[:name] || t(:delete)
+    options[:class] = "delete-resource"
+    options[:data] = { :confirm => t(:are_you_sure), :action => 'remove' }
+    link_to_with_icon 'icon-trash', name, url, options
+  end
+
+  def link_to_with_icon(icon_name, text, url, options = {})
+    options[:class] = (options[:class].to_s + " icon_link with-tip #{icon_name}").strip
+    options[:class] += ' no-text' if options[:no_text]
+    options[:title] = text if options[:no_text]
+    text = options[:no_text] ? '' : raw("<span class='text'>#{text}</span>")
+    options.delete(:no_text)
+    link_to(text, url, options)
+  end
+
+  def icon(icon_name)
+    icon_name ? content_tag(:i, '', :class => icon_name) : ''
+  end
+
+  def button(text, icon_name = nil, button_type = 'submit', options={})
+    button_tag(text, options.merge(:type => button_type, :class => "#{icon_name} button"))
+  end
+
+  def button_link_to(text, url, html_options = {})
+    if (html_options[:method] &&
+    html_options[:method].to_s.downcase != 'get' &&
+    !html_options[:remote])
+      form_tag(url, :method => html_options.delete(:method)) do
+        button(text, html_options.delete(:icon), nil, html_options)
+      end
+    else
+      if html_options['data-update'].nil? && html_options[:remote]
+        object_name, action = url.split('/')[-2..-1]
+        html_options['data-update'] = [action, object_name.singularize].join('_')
+      end
+
+      html_options.delete('data-update') unless html_options['data-update']
+
+      html_options[:class] = 'button'
+
+      if html_options[:icon]
+        html_options[:class] += " #{html_options[:icon]}"
+      end
+      link_to(text_for_button_link(text, html_options), url, html_options)
+    end
+  end
+
+  def text_for_button_link(text, html_options)
+    s = ''
+    s << text
+    raw(s)
+  end
+
   def full_address(address)
     full_address = address.address2 == nil ? address.address1 : address.address1 + ', ' + address.address2
     full_address += ', ' + address.city + ', ' + address.state_text + ', ' + address.zipcode
@@ -6,19 +81,44 @@ Spree::BaseHelper.class_eval do
     full_address
   end
 
-  def small_image(product, options={})
+  def product_image(product, options = {})
     if product.images.empty?
-      image_tag "/assets/TeaTinWithLabel.png", :size => "182x190", :alt => product.name
+      image_tag "noimage/no-tin-image.png", :size => "240x240", :alt => product.name
     else
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      options.reverse_merge! :size => "240x240"
+      image_tag product.images.first.attachment.url(:product), options
+    end
+  end
+
+  def mini_image(product, options = {})
+    if product.images.empty?
+      image_tag "noimage/no-tin-image.png", :size => "48x48", :alt => product.name
+    else
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      image_tag product.images.first.attachment.url(:mini), options
+    end
+  end
+
+  def small_image(product, options = {})
+    if product.images.empty?
+      image_tag "noimage/no-tin-image.png", :size => "100x100", :alt => product.name
+    else
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
       image_tag product.images.first.attachment.url(:small), options
     end
   end
 
-  def xmini_tea_tin_image (product)
+  def large_large(product, options = {})
     if product.images.empty?
-      image_tag "/assets/noimage/no-tin-image.png", :size => "71x54", :alt => product.name
+      image_tag "noimage/no-tin-image.png", :size => "600x600", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "71x54", :alt => product.name
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      image_tag product.images.first.attachment.url(:large), options
     end
   end
 
@@ -42,15 +142,18 @@ Spree::BaseHelper.class_eval do
     if product.images[1] == nil
       image_tag "/assets/TeaTagLabel.png", :size => "50x42"
     else
-      image_tag product.images[1].attachment.url(:small), :size => "50x42"
+      image_tag product.images.first.attachment.url(:small), :size => "50x42"
     end
   end
 
-  def xmini_tea_tag_image (product)
-    if product.images[1] == nil
-      image_tag "/assets/TeaTagLabel.png", :size => "37x31"
+  def xmini_tea_tag_image (product, options = {})
+    if product.images.empty?
+      image_tag "/assets/TeaTagLabel.png", :size => "37x31", :alt => product.name
     else
-      image_tag product.images[1].attachment.url(:small), :size => "37x31"
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      options.reverse_merge! :size => "37x31"
+      image_tag product.images.first.attachment.url(:small), options
     end
   end
 
@@ -109,4 +212,5 @@ Spree::BaseHelper.class_eval do
   def mobile_logo(image_path=Spree::Config[:logo])
     link_to image_tag(image_path, :size => '54x20'), root_path
   end
+
 end

@@ -5,7 +5,7 @@
 			<%= small_tea_tin_image(@product) %>
 		</div>
 		<div class="tea-menu-hidden">
-			<%= link_to image_tag("/assets/admin/icons/edit.png", :size=>"20x20", :class=>"tool"), edit_product_image_url(@product, @product.images[0]), :style => "display:inline;", :title => "Change Tin Image" %>
+			<%= link_to image_tag("/assets/edit.png", :size=>"20x20", :class=>"tool"), edit_product_image_url(@product, @product.images[0]), :style => "display:inline;", :title => "Change Tin Image" %>
 		</div>
 	</div>
 </div>
@@ -19,7 +19,7 @@
 <% else %>
 <%= f.fields_for "tin_image", :html => { :multipart => true } do |fi| %>
 <div class="field" style="float:left;width:100%;">
-	<%= link_to image_tag("/assets/admin/icons/add.png", :size=>"20x20", :class=>"tool") + ' ' + t(:add_tin_image), new_product_image_url(@product), :style => "display:inline;" %>
+	<%= button_link_to t(:add_tin_image),  new_product_image_url(@product), :icon => 'icon-plus' %>
 </div>
 <% end %>
 <% end %>

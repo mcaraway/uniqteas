@@ -66,12 +66,12 @@ var isSelectedTeasFull = function () {
 };
 
 var addSelectedTea = function(tea) {
-	if (selected_teas.length < 3) {
-		enableSlider(selected_teas.length);
-		selected_teas[selected_teas.length] = tea;
+	if (selected_teas_count < 3) {
+		enableSlider(selected_teas_count);
+		selected_teas[selected_teas_count] = tea;
 	}
 	else {
-		for (var i = 0; i < selected_teas.length; i++) {
+		for (var i = 0; i < selected_teas_count; i++) {
 			if (selected_teas[i] == null)
 			{
 				selected_teas[i] = tea;
@@ -143,6 +143,11 @@ var updateFlavorInputs = function() {
 		input.value = selected_teas[i] == null?"":selected_teas[i].tea_name;
 		sku_input.value = selected_teas[i] == null?"":selected_teas[i].sku;
 		div.innerHTML = selected_teas[i] == null?"Select Above":selected_teas[i].tea_name;
+		
+		if (selected_teas[i] != null)
+			div.className = "active_flavor";
+		else
+			div.className = "inactive_flavor";
 	}
 	update_blend_profile();
 };
@@ -215,7 +220,7 @@ var updateRangePercentages = function(ui) {
 function update_blend_profile() {
 	var profiles = new Object();
 
-	var keys = ["aroma","floral","fruity","nutty","spicy","sweetness","vegetal","woody","strength"];
+	var keys = ["Aroma","Floral","Fruity","Nutty","Spicy","Sweetness","Vegetal","Woody","Strength"];
 	for (var i = 0; i < keys.length; i++) {
 		profiles[keys[i]] = 0;
 	}
@@ -250,6 +255,7 @@ function update_blend_profile() {
 
 		if (profiles[keys[i]] != 0) {
 			var row = document.createElement('tr');
+			row.setAttribute('style','border:none');
 			var nameCell = document.createElement('td');
 			nameCell.setAttribute('style','width:20%;');
 			var valueCell = document.createElement('td');
@@ -258,7 +264,7 @@ function update_blend_profile() {
 			row.appendChild(valueCell);
 
 			nameCell.innerHTML = keys[i] + ": <br />";
-			valueCell.innerHTML =  "<img src = '/assets/store/star_" + (profiles[keys[i]]) + ".png' width='150px' height='22px'> <br />";
+			valueCell.innerHTML =  "<img src = '/assets/store/star_" + (profiles[keys[i]]) + ".png' width='133px' height='20px'> <br />";
 
 			tbody.appendChild(row);
 		}

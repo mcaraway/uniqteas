@@ -11,8 +11,10 @@
 //= require store/spree_auth
 //= require store/spree_promo
 
-//= require_tree .
 //= require store/spree_address_book
 //= require store/spree_social_products
 //= require store/product_variant_options
 //= require store/variant_options
+//= require store/spree_fancy
+
+//= require_tree .

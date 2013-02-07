@@ -1,80 +1,3 @@
-
-
-
-
-input[type="text"], input[type="file"] {
-	border: 1px solid #BBB;
-	background: white;
-	/* width: 300px; */
-	height: 30px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	font-size: 16px;
-}
-
-input[type="file"] {
-	width: 300px;
-	height: 23px;
-}
-
-textarea {
-	border: 1px solid #BBB;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	height: 190px;
-	font-size: 16px;
-}
-
-a.button {
-	font-size: 14px;
-	vertical-align: middle;
-	width: auto;
-	height: 20px;
-	background: #CCCC33;
-}
-
-#update-cart .coupon-code-field {
-	margin-top: -51px !important;
-	margin-left: -70px !important;
-}
-
-#empty-cart {
-	margin-top: -42px !important;
-}
-.product-listing {
-	list-style: none;
-	margin: 2em 0px 0px 0px;
-	padding: 0px;
-}
-
-.errorExplanation, .flash.success {
-    background: none repeat scroll 0 0 #bbcad2;
-    border: 2px solid #F15700;
-    margin-bottom: 1em;
-    padding: 1em;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
-
-.errorExplanation h2{
-    background: url("/assets/admin/icons/32x32/3.png") no-repeat scroll left center transparent;
-    font-size: 1.75em;
-    padding-left: 40px;
-}
-
-.flash.success h2 {
-    background: url("/assets/admin/icons/32x32/4.png") no-repeat scroll left center transparent;
-    font-size: 1.75em;
-    padding-left: 40px;
-}
-
-.flash.success {
-    border: 2px solid #8DBA53;
-}
-
 .motto {
 	margin-top: 55px;
 	margin-right: 300px;
@@ -151,24 +74,121 @@ a.button {
 	padding-right: 330px;
 }
 
-/* Round corners */
-.content {
-	background-color: #fff;
-	padding: 15px;
+div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
+	width: 260px;
+	margin-left: 50px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+div.flavor1_field, div.flavor1percent_field {
+	margin-left: 10px;
+}
+
+#flavor1div, #flavor2div, #flavor3div, #flavor1percentdiv, #flavor2percentdiv, #flavor3percentdiv {
+	margin-bottom: 10px;
+}
+
+#custom-product-description {
+	width: 600px;
+	padding: 5px;
+	margin: 0px 0px 50px 0px;
+}
+
+#custom-product-images {
+	width: 910px;
+	height: 350px;
+}
+
+#main-image {
+	height: 255px;
+}
+
+div.ui-slider-horizontal {
+	height: .6em;
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
+	height: 15px;
+	width: 15px;
+	top: -.1em;
+}
+
+.tea_cups_div, .tea_images_div {
+	width: 910px;
+	padding: 20px 0px 5px 0px;
+	border-top: 2px solid #f90;
+}
+
+.tea_images_div {
+	padding: 5px 0px 5px 0px;
+	position: relative;
+	float: right;
+	width: 435px;
+	border: none;
+}
+
+.tea_builder_divider {
+	margin-bottom: 20px;
+}
+
+td.tea-cup-list {
+	padding-left: 5px;
+	text-align: center;
+}
+
+td.tea-cup-list ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+td.tea-cup-list ul li, td.tea-cup-list ul li:hover, td.tea-cup-list ul li.selected {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #BBCAD2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	min-height: 48px;
+}
+
+td.tea-cup-list ul li:hover {
+	background-color: #f90;
+	border: 1px solid white;
+}
+
+td.tea-cup-list ul li.selected {
+	background-color: #09f;
+	border: 1px solid white;
 	position: relative;
 }
 
-.round {
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+td.tea-cup-list ul li.selected div {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	height: 18px;
+	width: 18px;
 }
 
-a.round {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+.inactive_flavor {
+	font-weight: normal;
 }
+
+.active_flavor {
+	color:#000080;
+	font-weight: bold;
+}
+
+#percent1div, #percent2div, #percent3div {
+	text-align: right;
+	padding-right: 10px;
+}
+
 #holder1, #holder2, #holder3 {
 	height: 310px;
 	width: 310px;
@@ -251,123 +271,9 @@ a.round {
 	margin: 10px 0px 5px 0px;
 }
 
-.label {
-	color: #0066CC;
-	font-size: 18px;
-}
-
-div.field, div.actions {
-	margin-bottom: 10px 0px 10px 0px;
-}
-
-div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
-	width: 260px;
-	margin-left: 50px;
-	float: left;
-	margin-bottom: 10px;
-}
-
-div.flavor1_field, div.flavor1percent_field {
-	margin-left: 10px;
-}
-
-#flavor1div, #flavor2div, #flavor3div, #flavor1percentdiv, #flavor2percentdiv, #flavor3percentdiv {
-	margin-bottom: 10px;
-}
-
-#custom-product-description {
-	width: 600px;
-	padding: 5px;
-	margin: 0px 0px 50px 0px;
-}
-
-#custom-product-images {
-	width: 910px;
-	height: 350px;
-}
-
-#main-image {
-	height: 255px;
-}
-
-div.ui-slider-horizontal {
-	height: .6em;
-	margin-top: 6px;
-	margin-bottom: 14px;
-}
-
-div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
-	height: 15px;
-	width: 15px;
-	top: -.1em;
-}
-
-.tea_cups_div, .tea_images_div {
-	width: 910px;
-	padding: 20px 0px 5px 0px;
-	border-top: 2px solid #f90;
-}
-
-.tea_images_div {
-	padding: 5px 0px 5px 0px;
-	position: relative;
-	float: right;
-	width: 435px;
-	border: none;
-}
-
-.tea_builder_divider {
-	margin-bottom: 20px;
-}
-
-td.tea-cup-list {
-	padding-left: 5px;
-	text-align: center;
-}
-
-td.tea-cup-list ul {
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-}
-
-td.tea-cup-list ul li, td.tea-cup-list ul li:hover, td.tea-cup-list ul li.selected {
-	background-color: #eee;
-	padding: 3px;
-	border: 1px solid #BBCAD2;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin-bottom: 2px;
-}
-
-td.tea-cup-list ul li:hover {
-	background-color: #f90;
-	border: 1px solid white;
-}
-
-td.tea-cup-list ul li.selected {
-	background-color: #09f;
-	border: 1px solid white;
-	position: relative;
-}
-
-td.tea-cup-list ul li.selected div {
-	position: absolute;
-	right: -5px;
-	top: -5px;
-	height: 18px;
-	width: 18px;
-}
-
-#percent1div, #percent2div, #percent3div {
-	text-align: right;
-	padding-right: 10px;
-}
-
 .tea-tin {
-	width: 250px;
-	height: 259px;
+	width: 150px;
+	height: 150px;
 	top: 0px;
 	right: -50px;
 	position: absolute;
@@ -390,6 +296,7 @@ td.tea-cup-list ul li.selected div {
 	top: 139px;
 	text-align: left;
 	font-size:5px;
+	line-height: normal;
 }
 
 .tea-tin-image, .tea-tin-template {

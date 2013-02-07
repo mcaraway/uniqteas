@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116032615) do
+ActiveRecord::Schema.define(:version => 20130207123152) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -86,6 +86,21 @@ ActiveRecord::Schema.define(:version => 20130116032615) do
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
 
+  create_table "spree_blendable_products_taxons", :id => false, :force => true do |t|
+    t.integer "product_id"
+    t.integer "blendable_taxon_id"
+  end
+
+  add_index "spree_blendable_products_taxons", ["blendable_taxon_id"], :name => "index_products_blendable_taxons_on_taxon_id"
+  add_index "spree_blendable_products_taxons", ["product_id"], :name => "index_products_blendable_taxons_on_product_id"
+
+  create_table "spree_blendable_taxons", :force => true do |t|
+    t.integer  "taxon_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
+
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
     t.integer  "calculable_id",   :null => false
@@ -139,6 +154,13 @@ ActiveRecord::Schema.define(:version => 20130116032615) do
     t.boolean  "test_mode",   :default => true
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+  end
+
+  create_table "spree_home_page_sliders", :force => true do |t|
+    t.string   "name"
+    t.string   "html"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_inventory_units", :force => true do |t|
@@ -330,7 +352,7 @@ ActiveRecord::Schema.define(:version => 20130116032615) do
     t.integer  "count_on_hand",        :default => 0
     t.integer  "user_id"
     t.boolean  "public",               :default => true
-    t.boolean  "final",                :default => false
+    t.boolean  "final",                :default => true
     t.boolean  "on_demand",            :default => false
   end
 
@@ -626,10 +648,11 @@ ActiveRecord::Schema.define(:version => 20130116032615) do
     t.integer  "variant_id"
     t.string   "name"
     t.string   "range"
-    t.decimal  "amount",     :precision => 8, :scale => 2
+    t.decimal  "amount",        :precision => 8, :scale => 2
     t.integer  "position"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+    t.string   "discount_type"
   end
 
   create_table "spree_zone_members", :force => true do |t|

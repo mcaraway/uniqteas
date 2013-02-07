@@ -20,7 +20,7 @@ Uniqteas::Application.routes.draw do
   match '/about', :to => 'spree/pages#about'
   match '/contact', :to => 'spree/pages#contact'
   match '/myblends', :to => 'spree/users#myblends'
-  
+
 # Sample of regular route:
 #   match 'products/:id' => 'catalog#view'
 # Keep in mind you can assign values other than :controller and :action
@@ -88,6 +88,7 @@ Spree::Core::Engine.routes.prepend do
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/myblends', :to => 'users#myblends'
+
   resources :products do
     resources :images do
       collection do
@@ -96,7 +97,29 @@ Spree::Core::Engine.routes.prepend do
     end
   end
 
+  namespace :admin do
+    resource :blendable_products_settings, :only => ['show', 'update', 'edit']
+
+    resources :home_page_sliders do
+      collection do
+        post :update_positions
+      end
+    end
+    
+    resources :blendable_taxons do
+      collection do
+        post :update_positions
+      end
+
+      member do
+        get :get_children
+      end
+      resources :products
+    end
+  end
+
   devise_scope :user do
     get '/signout' => 'user_sessions#destroy'
   end
+
 end

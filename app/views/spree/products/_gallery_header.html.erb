@@ -1,21 +1,14 @@
 <div class="content round" data-hook="product_gallery_header">
-	<div class="dark-background">
-		<div class="ui-grid-a my-break">
-			<div class="ui-block-a">
-				<h2>Check out some of the great blends others have already created!</h2>
-			</div>
-			<div class="ui-block-b" style="text-align: center">
-				<a id="blendit" data-theme="b" href="/blendit" data-inline="true" data-transition="slide" data-role="button" data-icon="star" ><%= t(:make_my_own_blend) %></a>
-				<br />
-				Try it out, you'll love it!
-			</div>
+	<div class="ui-grid-a my-break">
+		<div class="ui-block-a">
+			<h2>Check out some of the great blends others have already created!</h2>
+		</div>
+		<div class="ui-block-b" style="text-align: center">
+			<%= link_to blendit_url, :class => "button" do %>
+				<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:make_my_own_blend) %>
+			<% end %>
+			<br />
+			Try it out, you'll love it!
 		</div>
 	</div>
 </div>
-<script>
-	$(function() {
-		$("#blendit").button().click(function(event) {
-			window.location.href = "/blendit";
-		});
-	}); 
-</script>
