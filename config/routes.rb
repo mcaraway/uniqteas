@@ -75,7 +75,6 @@ Spree::Core::Engine.routes.prepend do
   match '/blendit', :to => 'products#new'
   match '/bighoop', :to => 'pages#bighoop'
   match '/about', :to => 'pages#about'
-  match '/contact', :to => 'pages#contact'
   match '/myblends', :to => 'users#myblends'
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')

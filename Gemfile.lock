@@ -10,14 +10,6 @@ GIT
       json (>= 1.5.1)
 
 GIT
-  remote: git://github.com/jdutil/spree_contact_us
-  revision: 2b351b7c8b4d58d37aed3c968134c7406dc7a0a4
-  branch: 1-2-stable
-  specs:
-    spree_contact_us (1.1.0)
-      spree_core (>= 1.1.0)
-
-GIT
   remote: git://github.com/joneslee85/spree-heroku.git
   revision: d0b80e7c2aaaf338d5e9d543f5a47133ba263ff4
   branch: 1-0-stable
@@ -41,6 +33,14 @@ GIT
   specs:
     spree_address_book (1.2.0)
       spree_auth_devise
+      spree_core (~> 1.2)
+
+GIT
+  remote: git://github.com/sbeam/spree_contact_us.git
+  revision: 67b6db930e62703eb1e1fe670c4ac35146ffef3d
+  specs:
+    spree_contact_us (1.1.1)
+      recaptcha
       spree_core (~> 1.2)
 
 GIT
@@ -235,6 +235,7 @@ GEM
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
     newrelic_rpm (3.5.6.46)
+    nokogiri (1.5.6)
     nokogiri (1.5.6-x86-mingw32)
     nori (2.0.3)
     ntlm-http (0.1.1)
@@ -281,6 +282,7 @@ GEM
       polyamorous (~> 0.5.0)
     rdoc (3.12.1)
       json (~> 1.4)
+    recaptcha (0.3.4)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
@@ -400,6 +402,7 @@ DEPENDENCIES
   newrelic_rpm
   pg
   rails (= 3.2.11)
+  recaptcha
   rspec-rails (= 2.11.0)
   sass-rails (~> 3.2.3)
   spree (= 1.3.1)

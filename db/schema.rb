@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207123152) do
+ActiveRecord::Schema.define(:version => 20130211182709) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -161,6 +161,20 @@ ActiveRecord::Schema.define(:version => 20130207123152) do
     t.string   "html"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "inquiry_type"
+    t.string   "order_no"
+    t.text     "message"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "phone_number"
+    t.string   "http_user_agent"
+    t.string   "http_remote_addr"
+    t.string   "client_viewport_size"
   end
 
   create_table "spree_inventory_units", :force => true do |t|
