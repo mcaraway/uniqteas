@@ -1,0 +1,11 @@
+<% if @home_page_sliders %>
+<div id="home-slider">
+	<ul>
+		<% @home_page_sliders.each do |slider| %>
+		<li>
+			<%= slider.html.html_safe %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>

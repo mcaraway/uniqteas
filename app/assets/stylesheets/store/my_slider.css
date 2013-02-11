@@ -1,0 +1,59 @@
+.slider-content {
+	min-height: 400px;
+	color: white;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+.slider-visible-all {
+	width: 640px;
+	float: left;
+}
+
+.slider-visible-wide {
+	width: 270px;
+	float: left;
+}
+
+.slider-normal {
+	color: white;
+	font-size: 1em;
+	line-height: normal;
+}
+
+.slider-heading {
+	color: white;
+	font-size: 2.5em;
+	line-height: 1.25em;
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+	.slider-content {
+		min-height: 320px;
+	}
+	
+	.slider-visible-all {
+		width: 400px;
+		float: left;
+	}
+
+	.slider-visible-wide {
+		display: none;
+	}
+	
+	.slider-normal {
+		color: white;
+		font-size: .78em;
+		line-height: normal;
+	}
+
+	.slider-heading {
+		color: white;
+		font-size: 1.5em;
+		line-height: normal;
+		margin-bottom: .3em;
+		font-weight: normal;
+	}
+}

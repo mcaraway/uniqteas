@@ -19,25 +19,20 @@
 .tin-and-cup {
 	position: absolute;
 	left: 245px;
-	top: 105px;
-}
-
-.dark-background {
-	padding: 0px 20px 0px 20px;
-	background-color: #bbcad2;
+	top: 45px;
 }
 
 .instructions {
 	font-family: 'Abel', sans-serif;
-	color: black;
+	color: white;
 	font-size: 20px;
 	margin-bottom: 1.8em;
 	line-height: normal;
 }
 
 .heading {
-	color: black;
-	font-size: 3em;
+	color: white;
+	font-size: 2.5em;
 	line-height: 62px;
 	margin-bottom: .5em;
 	font-weight: normal;
@@ -52,12 +47,11 @@
 }
 
 .instruction_bullets ul li {
-	font-family: 'Abel', sans-serif;
-	color: black;
+	color: white;
 	font-size: 20px;
 	padding: .8em 0em .8em 0em;
 	line-height: normal;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #333;
 }
 
 .step {
@@ -65,6 +59,10 @@
 	font-size: x-large;
 	font-weight: bold;
 	margin-right: 0.5em;
+}
+
+.center-align {
+	text-align: center;
 }
 
 .centered {

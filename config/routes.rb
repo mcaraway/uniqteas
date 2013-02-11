@@ -1,11 +1,5 @@
 Uniqteas::Application.routes.draw do
 
-  get "spree/pages/bighoop"
-
-  get "spree/pages/contact"
-
-  get "spree/pages/about"
-
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
@@ -14,12 +8,6 @@ Uniqteas::Application.routes.draw do
   mount Spree::Core::Engine, :at => '/'
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
-  match '/blendit', :to => 'spree/products#new'
-  match '/bighoop', :to => 'spree/pages#bighoop'
-  match '/about', :to => 'spree/pages#about'
-  match '/contact', :to => 'spree/pages#contact'
-  match '/myblends', :to => 'spree/users#myblends'
 
 # Sample of regular route:
 #   match 'products/:id' => 'catalog#view'
@@ -83,12 +71,16 @@ Spree::Core::Engine.routes.prepend do
   get "spree/pages/contact"
 
   get "spree/pages/about"
+  
   match '/blendit', :to => 'products#new'
   match '/bighoop', :to => 'pages#bighoop'
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/myblends', :to => 'users#myblends'
-
+  match '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
+  match '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
+  
+  resource :pages
   resources :products do
     resources :images do
       collection do

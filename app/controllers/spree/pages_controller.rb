@@ -1,4 +1,5 @@
-class Spree::PagesController < ApplicationController
+class Spree::PagesController < Spree::ResourceController
+  include Spree::Core::ControllerHelpers::Order
   def bighoop
   end
 

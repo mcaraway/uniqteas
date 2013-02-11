@@ -25,7 +25,7 @@ class Spree::Admin::BlendableTaxonsController < Spree::Admin::ResourceController
     if @blendable_taxon.created_at == @blendable_taxon.updated_at
       edit_admin_blendable_taxon_url(@blendable_taxon)
     else
-      admin_blendable_taxon_url
+      edit_admin_blendable_taxon_url(@blendable_taxon)
     end
   end
 
