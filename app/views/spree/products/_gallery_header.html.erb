@@ -1,14 +1,3 @@
-<div class="content round" data-hook="product_gallery_header">
-	<div class="ui-grid-a my-break">
-		<div class="ui-block-a">
-			<h2>Check out some of the great blends others have already created!</h2>
-		</div>
-		<div class="ui-block-b" style="text-align: center">
-			<%= link_to blendit_url, :class => "button" do %>
-				<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:make_my_own_blend) %>
-			<% end %>
-			<br />
-			Try it out, you'll love it!
-		</div>
-	</div>
-</div>
+<% if @taxon.name == "Custom Blends" %>
+	<h2>Check out some of the great blends others have already created!</h2>
+<% end %>

@@ -1,0 +1,95 @@
+<footer id="footer" class="sixteen columns" data-hook>
+	<div class="container">
+
+		<div class="four columns">
+			<%= image_tag "store/logo-white.png", :alt => "UniqTeas", :id => "footer-logo" %>
+			<br>
+			<br>
+			<div class="phone">
+				<a href="callto:012341234567">845-236-3645</a>
+			</div>
+			<br>
+			<div class="email">
+				<a href="mailto:admin@uniqteas.com">admin@uniqteas.com</a>
+			</div>
+			<br>
+			<div class="address">
+				UniqTeas
+				<br>
+				Marlboro NY, USA
+			</div>
+		</div>
+
+		<div class="four columns">
+			<h5>Information</h5>
+			<ul>
+				<li>
+					<%= link_to t(:contact), contact_path %>
+				</li>
+				<li>
+					<%= link_to t(:about), about_path %>
+				</li>
+				<li>
+					<%= link_to t(:privacy), privacy_path %>
+				</li>
+				<li>
+					<%= link_to t(:faqs), faqs_path %>
+				</li>
+			</ul>
+		</div>
+
+		<div class="four columns">
+			<h5>Affiliations</h5>
+			<ul>
+				<li>
+					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/BBBS.png", :size=>"40x38", :title =>"Big Brothers Big Sisters", :style=>"float: left; padding-right: 5px;"), "http://www.bbbs.org" %>
+					We support Big Brothers Big Sisters by donating 1% annually.
+				</li>
+				<li>
+					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/STI.gif", :size=>"40x40", :title =>"Specialty Tea Institute", :style=>"float: left; padding-right: 5px;"), "http://www.teausa.com/" %>
+					Member of the Specialty Tea Institute.
+				</li>
+				<li>
+					<%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"40x40", :style=>"float: left; padding-right: 5px;"), bighoop_path %>
+					Through the Big Hoop Foundation we share our profits with the people who produce these teas.
+				</li>
+			</ul>
+		</div>
+
+		<div class="four columns">
+			<h5>Get Special Offers</h5><!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup">
+				<form
+				action="http://carawaytea.us2.list-manage.com/subscribe/post?u=708077f62b33d764a9f841f97&amp;id=4bb28741a0"
+				method="post" id="mc-embedded-subscribe-form"
+				name="mc-embedded-subscribe-form" class="validate" target="_blank">
+					<span>Join our email list to receive exclusive Offers and
+						product updates!</span>
+					<div class="mc-field-group">
+						<label for="mce-EMAIL">Email Address</label>
+						<input type="email" size="33" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+					</div>
+					<div id="mce-responses" class="clear" style="margin-bottom:5px;">
+						<div class="response" id="mce-error-response"
+						style="display: none"></div>
+						<div class="response" id="mce-success-response"
+						style="display: none"></div>
+					</div>
+					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=www.uniqteas.com&amp;size=L&amp;lang=en"></script>
+</footer>
+<script type="text/javascript">
+var __lc = {};
+__lc.license = 2299771;
+
+(function() {
+	var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>

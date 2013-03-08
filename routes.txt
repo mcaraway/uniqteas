@@ -1,13 +1,23 @@
-spree  / Spree::Core::Engine
+    label_templates GET    /label_templates(.:format)          label_templates#index
+                    POST   /label_templates(.:format)          label_templates#create
+ new_label_template GET    /label_templates/new(.:format)      label_templates#new
+edit_label_template GET    /label_templates/:id/edit(.:format) label_templates#edit
+     label_template GET    /label_templates/:id(.:format)      label_templates#show
+                    PUT    /label_templates/:id(.:format)      label_templates#update
+                    DELETE /label_templates/:id(.:format)      label_templates#destroy
+              spree        /                                   Spree::Core::Engine
 
 Routes for Spree::Core::Engine:
                        spree_pages_bighoop GET      /spree/pages/bighoop(.:format)                                              spree/pages#bighoop
-                       spree_pages_contact GET      /spree/pages/contact(.:format)                                              spree/pages#contact
                          spree_pages_about GET      /spree/pages/about(.:format)                                                spree/pages#about
+                          spree_pages_faqs GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
+                       spree_pages_privacy GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                                   gallery          /gallery(.:format)                                                          :controller#:action
                                    blendit          /blendit(.:format)                                                          spree/products#new
                                    bighoop          /bighoop(.:format)                                                          spree/pages#bighoop
                                      about          /about(.:format)                                                            spree/pages#about
-                                   contact          /contact(.:format)                                                          spree/pages#contact
+                                      faqs          /faqs(.:format)                                                             spree/pages#faqs
+                                   privacy          /privacy(.:format)                                                          spree/pages#privacy
                                   myblends          /myblends(.:format)                                                         spree/users#myblends
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
@@ -17,6 +27,12 @@ Routes for Spree::Core::Engine:
                                            GET      /pages(.:format)                                                            spree/pages#show
                                            PUT      /pages(.:format)                                                            spree/pages#update
                                            DELETE   /pages(.:format)                                                            spree/pages#destroy
+                           label_templates POST     /label_templates(.:format)                                                  spree/label_templates#create
+                       new_label_templates GET      /label_templates/new(.:format)                                              spree/label_templates#new
+                      edit_label_templates GET      /label_templates/edit(.:format)                                             spree/label_templates#edit
+                                           GET      /label_templates(.:format)                                                  spree/label_templates#show
+                                           PUT      /label_templates(.:format)                                                  spree/label_templates#update
+                                           DELETE   /label_templates(.:format)                                                  spree/label_templates#destroy
            update_positions_product_images POST     /products/:product_id/images/update_positions(.:format)                     spree/images#update_positions
                             product_images GET      /products/:product_id/images(.:format)                                      spree/images#index
                                            POST     /products/:product_id/images(.:format)                                      spree/images#create
@@ -35,6 +51,14 @@ Routes for Spree::Core::Engine:
     edit_admin_blendable_products_settings GET      /admin/blendable_products_settings/edit(.:format)                           spree/admin/blendable_products_settings#edit
          admin_blendable_products_settings GET      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#show
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
+    update_positions_admin_label_templates POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
+                     admin_label_templates GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
+                                           POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
+                  new_admin_label_template GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new
+                 edit_admin_label_template GET      /admin/label_templates/:id/edit(.:format)                                   spree/admin/label_templates#edit
+                      admin_label_template GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
+                                           PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
+                                           DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
   update_positions_admin_home_page_sliders POST     /admin/home_page_sliders/update_positions(.:format)                         spree/admin/home_page_sliders#update_positions
                    admin_home_page_sliders GET      /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#index
                                            POST     /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#create
@@ -60,6 +84,27 @@ Routes for Spree::Core::Engine:
                                            PUT      /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#update
                                            DELETE   /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#destroy
                                    signout GET      /signout(.:format)                                                          spree/user_sessions#destroy
+                                 inquiries GET      /inquiries(.:format)                                                        spree/inquiries#index
+                                           POST     /inquiries(.:format)                                                        spree/inquiries#create
+                               new_inquiry GET      /inquiries/new(.:format)                                                    spree/inquiries#new
+                              edit_inquiry GET      /inquiries/:id/edit(.:format)                                               spree/inquiries#edit
+                                   inquiry GET      /inquiries/:id(.:format)                                                    spree/inquiries#show
+                                           PUT      /inquiries/:id(.:format)                                                    spree/inquiries#update
+                                           DELETE   /inquiries/:id(.:format)                                                    spree/inquiries#destroy
+                           admin_inquiries GET      /admin/inquiries(.:format)                                                  spree/admin/inquiries#index
+                                           POST     /admin/inquiries(.:format)                                                  spree/admin/inquiries#create
+                         new_admin_inquiry GET      /admin/inquiries/new(.:format)                                              spree/admin/inquiries#new
+                        edit_admin_inquiry GET      /admin/inquiries/:id/edit(.:format)                                         spree/admin/inquiries#edit
+                             admin_inquiry GET      /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#show
+                                           PUT      /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#update
+                                           DELETE   /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#destroy
+                    admin_inquiry_settings POST     /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#create
+                new_admin_inquiry_settings GET      /admin/inquiry_settings/new(.:format)                                       spree/admin/inquiry_settings#new
+               edit_admin_inquiry_settings GET      /admin/inquiry_settings/edit(.:format)                                      spree/admin/inquiry_settings#edit
+                                           GET      /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#show
+                                           PUT      /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#update
+                                           DELETE   /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#destroy
+                                   contact          /contact(.:format)                                                          spree/inquiries#new
                                  addresses GET      /addresses(.:format)                                                        spree/addresses#index
                                            POST     /addresses(.:format)                                                        spree/addresses#create
                                new_address GET      /addresses/new(.:format)                                                    spree/addresses#new
@@ -232,12 +277,15 @@ Routes for Spree::Core::Engine:
                         api_inventory_unit GET      /api/inventory_units/:id(.:format)                                          spree/api/inventory_units#show {:format=>"json"}
                                            PUT      /api/inventory_units/:id(.:format)                                          spree/api/inventory_units#update {:format=>"json"}
                                            GET      /spree/pages/bighoop(.:format)                                              spree/pages#bighoop
-                                           GET      /spree/pages/contact(.:format)                                              spree/pages#contact
                                            GET      /spree/pages/about(.:format)                                                spree/pages#about
+                                           GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
+                                           GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                                                    /gallery(.:format)                                                          :controller#:action
                                                     /blendit(.:format)                                                          spree/products#new
                                                     /bighoop(.:format)                                                          spree/pages#bighoop
                                                     /about(.:format)                                                            spree/pages#about
-                                                    /contact(.:format)                                                          spree/pages#contact
+                                                    /faqs(.:format)                                                             spree/pages#faqs
+                                                    /privacy(.:format)                                                          spree/pages#privacy
                                                     /myblends(.:format)                                                         spree/users#myblends
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
@@ -247,6 +295,12 @@ Routes for Spree::Core::Engine:
                                            GET      /pages(.:format)                                                            spree/pages#show
                                            PUT      /pages(.:format)                                                            spree/pages#update
                                            DELETE   /pages(.:format)                                                            spree/pages#destroy
+                                           POST     /label_templates(.:format)                                                  spree/label_templates#create
+                                           GET      /label_templates/new(.:format)                                              spree/label_templates#new
+                                           GET      /label_templates/edit(.:format)                                             spree/label_templates#edit
+                                           GET      /label_templates(.:format)                                                  spree/label_templates#show
+                                           PUT      /label_templates(.:format)                                                  spree/label_templates#update
+                                           DELETE   /label_templates(.:format)                                                  spree/label_templates#destroy
                                            POST     /products/:product_id/images/update_positions(.:format)                     spree/images#update_positions
                                            GET      /products/:product_id/images(.:format)                                      spree/images#index
                                            POST     /products/:product_id/images(.:format)                                      spree/images#create
@@ -265,6 +319,14 @@ Routes for Spree::Core::Engine:
                                            GET      /admin/blendable_products_settings/edit(.:format)                           spree/admin/blendable_products_settings#edit
                                            GET      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#show
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
+                                           POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
+                                           GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
+                                           POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
+                                           GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new
+                                           GET      /admin/label_templates/:id/edit(.:format)                                   spree/admin/label_templates#edit
+                                           GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
+                                           PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
+                                           DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
                                            POST     /admin/home_page_sliders/update_positions(.:format)                         spree/admin/home_page_sliders#update_positions
                                            GET      /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#index
                                            POST     /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#create
@@ -290,6 +352,27 @@ Routes for Spree::Core::Engine:
                                            PUT      /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#update
                                            DELETE   /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#destroy
                                            GET      /signout(.:format)                                                          spree/user_sessions#destroy
+                                           GET      /inquiries(.:format)                                                        spree/inquiries#index
+                                           POST     /inquiries(.:format)                                                        spree/inquiries#create
+                                           GET      /inquiries/new(.:format)                                                    spree/inquiries#new
+                                           GET      /inquiries/:id/edit(.:format)                                               spree/inquiries#edit
+                                           GET      /inquiries/:id(.:format)                                                    spree/inquiries#show
+                                           PUT      /inquiries/:id(.:format)                                                    spree/inquiries#update
+                                           DELETE   /inquiries/:id(.:format)                                                    spree/inquiries#destroy
+                                           GET      /admin/inquiries(.:format)                                                  spree/admin/inquiries#index
+                                           POST     /admin/inquiries(.:format)                                                  spree/admin/inquiries#create
+                                           GET      /admin/inquiries/new(.:format)                                              spree/admin/inquiries#new
+                                           GET      /admin/inquiries/:id/edit(.:format)                                         spree/admin/inquiries#edit
+                                           GET      /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#show
+                                           PUT      /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#update
+                                           DELETE   /admin/inquiries/:id(.:format)                                              spree/admin/inquiries#destroy
+                                           POST     /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#create
+                                           GET      /admin/inquiry_settings/new(.:format)                                       spree/admin/inquiry_settings#new
+                                           GET      /admin/inquiry_settings/edit(.:format)                                      spree/admin/inquiry_settings#edit
+                                           GET      /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#show
+                                           PUT      /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#update
+                                           DELETE   /admin/inquiry_settings(.:format)                                           spree/admin/inquiry_settings#destroy
+                                   contact          /contact(.:format)                                                          spree/inquiries#new
                                            GET      /addresses(.:format)                                                        spree/addresses#index
                                            POST     /addresses(.:format)                                                        spree/addresses#create
                                            GET      /addresses/new(.:format)                                                    spree/addresses#new
@@ -461,9 +544,6 @@ Routes for Spree::Core::Engine:
                                            DELETE   /api/taxonomies/:id(.:format)                                               spree/api/taxonomies#destroy {:format=>"json"}
                                            GET      /api/inventory_units/:id(.:format)                                          spree/api/inventory_units#show {:format=>"json"}
                                            PUT      /api/inventory_units/:id(.:format)                                          spree/api/inventory_units#update {:format=>"json"}
-                                  contacts POST     /contacts(.:format)                                                         spree/contact_us/contacts#create
-                               new_contact GET      /contacts/new(.:format)                                                     spree/contact_us/contacts#new
-                                contact_us          /contact-us(.:format)                                                       spree/contact_us/contacts#new
               skrill_cancel_order_checkout GET      /orders/:order_id/checkout/skrill_cancel(.:format)                          spree/checkout#skrill_cancel
               skrill_return_order_checkout GET      /orders/:order_id/checkout/skrill_return(.:format)                          spree/checkout#skrill_return
                             order_checkout POST     /orders/:order_id/checkout(.:format)                                        spree/checkout#create

@@ -1,13 +1,15 @@
 Uniqteas::Application.routes.draw do
 
+  resources :label_templates
+
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
   mount Spree::Core::Engine, :at => '/'
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
+# The priority is based upon order of creation:
+# first created -> highest priority.
 
 # Sample of regular route:
 #   match 'products/:id' => 'catalog#view'
@@ -67,19 +69,23 @@ end
 
 Spree::Core::Engine.routes.prepend do
   get "spree/pages/bighoop"
-
-  get "spree/pages/contact"
-
   get "spree/pages/about"
-  
+  get "spree/pages/faqs"
+  get "spree/pages/privacy"
+
+  match '/gallery', :to => redirect('/t/categories/custom-blend')
   match '/blendit', :to => 'products#new'
   match '/bighoop', :to => 'pages#bighoop'
   match '/about', :to => 'pages#about'
+  match '/faqs', :to => 'pages#faqs'
+  match '/privacy', :to => 'pages#privacy'
   match '/myblends', :to => 'users#myblends'
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
-  
+
   resource :pages
+  resource :label_templates
+
   resources :products do
     resources :images do
       collection do
@@ -91,12 +97,17 @@ Spree::Core::Engine.routes.prepend do
   namespace :admin do
     resource :blendable_products_settings, :only => ['show', 'update', 'edit']
 
+    resources :label_templates do
+      collection do
+        post :update_positions
+      end
+    end
     resources :home_page_sliders do
       collection do
         post :update_positions
       end
     end
-    
+
     resources :blendable_taxons do
       collection do
         post :update_positions

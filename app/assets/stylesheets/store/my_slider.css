@@ -57,3 +57,31 @@
 		font-weight: normal;
 	}
 }
+@media only screen and (max-width: 479px) {
+	.slider-content {
+		min-height: 320px;
+	}
+	
+	.slider-visible-all {
+		width: 360px;
+		float: left;
+	}
+
+	.slider-visible-wide {
+		display: none;
+	}
+	
+	.slider-normal {
+		color: white;
+		font-size: .78em;
+		line-height: normal;
+	}
+
+	.slider-heading {
+		color: white;
+		font-size: 1.5em;
+		line-height: normal;
+		margin-bottom: .3em;
+		font-weight: normal;
+	}
+}

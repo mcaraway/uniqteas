@@ -3,9 +3,12 @@ class Spree::PagesController < Spree::ResourceController
   def bighoop
   end
 
-  def contact
-  end
-
   def about
+  end
+  
+  def faqs
+  end
+  
+  def privacy
   end
 end

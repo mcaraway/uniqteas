@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211182709) do
+ActiveRecord::Schema.define(:version => 20130221183037) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -191,6 +191,19 @@ ActiveRecord::Schema.define(:version => 20130211182709) do
   add_index "spree_inventory_units", ["order_id"], :name => "index_inventory_units_on_order_id"
   add_index "spree_inventory_units", ["shipment_id"], :name => "index_inventory_units_on_shipment_id"
   add_index "spree_inventory_units", ["variant_id"], :name => "index_inventory_units_on_variant_id"
+
+  create_table "spree_label_templates", :force => true do |t|
+    t.string   "name"
+    t.string   "group"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "label_image_file_name"
+    t.string   "label_image_content_type"
+    t.integer  "label_image_width"
+    t.integer  "label_image_height"
+    t.integer  "label_image_size"
+    t.datetime "label_image_updated_at"
+  end
 
   create_table "spree_line_items", :force => true do |t|
     t.integer  "order_id"

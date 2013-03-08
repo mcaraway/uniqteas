@@ -60,6 +60,9 @@ Spree::ProductsController.class_eval do
     @product.meta_keywords = t(:custom_blend_meta_keywords)
     @product.meta_description = t(:custom_blend_meta_description)
 
+    @custom_tea_taxon = Spree::Taxon.find_by_name("Custom Blends");
+    @product.taxons = [@custom_tea_taxon] if @custom_tea_taxon
+    
     if @product.save
       @product.update_viewables
       setup_volume_pricing

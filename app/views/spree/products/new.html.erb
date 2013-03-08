@@ -1,7 +1,9 @@
+<% content_for :subheader do %>
+  <h1><%= t(:make_your_own_blend) %></h1>
+<% end %>
 <% content_for :head do -%>
   <meta name="title" content="Blend It">
 <% end -%>
-<h1><%=t(:make_your_own_blend)%></h1>
 <div style="min-height: 1660px;">
 <%=form_for @product do |f| %>
 <%= render 'spree/shared/error_messages', :target => f.object %>
