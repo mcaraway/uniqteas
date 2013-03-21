@@ -1,9 +1,9 @@
 Spree::Product.class_eval do
   belongs_to :user
   has_and_belongs_to_many :blendable_taxons, :join_table => 'spree_blendable_products_taxons'
-  has_one :label_template, :join_table => 'spree_products_label_templates'
+  has_one :product_label
   
-  attr_accessible :public, :final
+  attr_accessible :public, :final, :label_template_id
 
   validate :validate_minimum_image_size
   validate :must_have_blend
@@ -30,6 +30,23 @@ Spree::Product.class_eval do
     end
   end
 
+  def label_template_id=(params) 
+    label_template_id = params[:label_template_id]
+    label_template = Spree::LabelTemplate.find_by_id(label_template_id)
+    product_label = Spree::ProductLabel.new
+    
+    product_label.label_template = label_template
+    product_label.product = self
+    url = label_template.url(:label)
+    url=root_url + url[1,url.length-1]
+    logger.debug "************ url = " + url
+    product_label.label_template_template_remote_url = url
+  end
+  
+  def label_template_id
+    
+  end
+  
   def requiredTinImageWidth
     347
   end

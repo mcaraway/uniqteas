@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130221183037) do
+ActiveRecord::Schema.define(:version => 20130320101800) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20130221183037) do
     t.string   "type",                    :limit => 75
     t.datetime "attachment_updated_at"
     t.text     "alt"
+    t.string   "label_image_remote_url"
   end
 
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
@@ -346,6 +347,22 @@ ActiveRecord::Schema.define(:version => 20130221183037) do
     t.string  "currency"
   end
 
+  create_table "spree_product_labels", :force => true do |t|
+    t.string   "name"
+    t.string   "group"
+    t.integer  "label_template_id"
+    t.integer  "product_id"
+    t.string   "label_image_file_name"
+    t.string   "label_image_content_type"
+    t.string   "label_image_remote_url"
+    t.integer  "label_image_width"
+    t.integer  "label_image_height"
+    t.integer  "label_image_size"
+    t.datetime "label_image_updated_at"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
   create_table "spree_product_option_types", :force => true do |t|
     t.integer  "position"
     t.integer  "product_id"
@@ -381,6 +398,7 @@ ActiveRecord::Schema.define(:version => 20130221183037) do
     t.boolean  "public",               :default => true
     t.boolean  "final",                :default => true
     t.boolean  "on_demand",            :default => false
+    t.integer  "label_template"
   end
 
   add_index "spree_products", ["available_on"], :name => "index_products_on_available_on"

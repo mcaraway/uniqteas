@@ -1,5 +1,5 @@
 module Spree
-  class ImagesController < Spree::ResourceController    
+  class ImagesController < Spree::ResourceController
     include Spree::Core::ControllerHelpers::Order
     before_filter :load_data
 
@@ -28,10 +28,25 @@ module Spree
             [variant.options_text, variant.id]
           end
       @variants.insert(0, [I18n.t(:all), 'All'])
+
+      @current_category = params[:c]
+      @label_templates = Spree::LabelTemplate.all
+      @label_groups = Hash.new
+      @label_templates.each do |template|
+        group = @label_groups[template.group]
+        group = group == nil ? [] : group
+        group << template
+        @label_groups[template.group] = group
+      end
+
+      if (@current_category)
+        @label_templates = @label_groups[@current_category]
+      end
+      #@label_templates = Kaminari.paginate_array(@label_templates).page(params[:page]).per(Spree::Config.products_per_page)
     end
 
     def set_viewable
-      if params[:image].has_key? :viewable_id
+      if params[:label_template_id].empty? and params[:image].has_key? :viewable_id
         if params[:image][:viewable_id] == 'All'
         @image.viewable = @product.master
         else
@@ -39,7 +54,7 @@ module Spree
           @image.viewable_id = params[:image][:viewable_id]
         end
       else
-      @image.viewable = @product.master
+        @image.viewable = @product.master
       end
     end
 

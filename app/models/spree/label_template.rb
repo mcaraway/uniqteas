@@ -1,8 +1,34 @@
 class Spree::LabelTemplate < ActiveRecord::Base
   attr_accessible :group, :name, :label_image
-
+  has_many :product_label
   has_attached_file :label_image,
-                    :styles => { :label  => '600x800', :thumb => '75x100'},
+                    :processors => [:label_image_processor, :thumbnail],
+                    :styles => { 
+                      :label  => {
+                        :geometry =>'600x800',
+                        :format => :png,
+                        :name => "Tea Flavor",
+                        :description => "This is where you describe how wonderful your tea blend really is.",
+                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :generate_tin_image => false
+                      }, 
+                      :thumb => {
+                        :geometry =>'75x100',
+                        :format => :png,
+                        :name => "Tea Flavor",
+                        :description => "This is where you describe how wonderful your tea blend really is.",
+                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :generate_tin_image => false
+                      }, 
+                      :product => {
+                        :geometry =>'240x240',
+                        :format => :png,
+                        :name => "Tea Flavor",
+                        :description => "This is where you describe how wonderful your tea blend really is.",
+                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :generate_tin_image => true
+                      }
+                    },
                     :default_style => :label,
                     :url => "/spree/label_templates/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/spree/label_templates/:id/:style/:basename.:extension",
@@ -18,7 +44,6 @@ class Spree::LabelTemplate < ActiveRecord::Base
   # Spree::LabelTemplate.attachment_definitions[:label_image][:url] = "/spree/label_templates/:id/:style/:basename.:extension"
   # Spree::LabelTemplate.attachment_definitions[:label_image][:default_url] = "/spree/label_templates/:id/:style/:basename.:extension"
   # Spree::LabelTemplate.attachment_definitions[:label_image][:default_style] = "label"
-  
   def find_dimensions
     temporary = label_image.queued_for_write[:original]
     filename = temporary.path unless temporary.nil?

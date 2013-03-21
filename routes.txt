@@ -41,6 +41,12 @@ Routes for Spree::Core::Engine:
                              product_image GET      /products/:product_id/images/:id(.:format)                                  spree/images#show
                                            PUT      /products/:product_id/images/:id(.:format)                                  spree/images#update
                                            DELETE   /products/:product_id/images/:id(.:format)                                  spree/images#destroy
+                    product_product_labels POST     /products/:product_id/product_labels(.:format)                              spree/product_labels#create
+                new_product_product_labels GET      /products/:product_id/product_labels/new(.:format)                          spree/product_labels#new
+               edit_product_product_labels GET      /products/:product_id/product_labels/edit(.:format)                         spree/product_labels#edit
+                                           GET      /products/:product_id/product_labels(.:format)                              spree/product_labels#show
+                                           PUT      /products/:product_id/product_labels(.:format)                              spree/product_labels#update
+                                           DELETE   /products/:product_id/product_labels(.:format)                              spree/product_labels#destroy
                                   products GET      /products(.:format)                                                         spree/products#index
                                            POST     /products(.:format)                                                         spree/products#create
                                new_product GET      /products/new(.:format)                                                     spree/products#new
@@ -52,6 +58,7 @@ Routes for Spree::Core::Engine:
          admin_blendable_products_settings GET      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#show
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
     update_positions_admin_label_templates POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
+      refresh_labels_admin_label_templates POST     /admin/label_templates/refresh_labels(.:format)                             spree/admin/label_templates#refresh_labels
                      admin_label_templates GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
                                            POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
                   new_admin_label_template GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new
@@ -309,6 +316,12 @@ Routes for Spree::Core::Engine:
                                            GET      /products/:product_id/images/:id(.:format)                                  spree/images#show
                                            PUT      /products/:product_id/images/:id(.:format)                                  spree/images#update
                                            DELETE   /products/:product_id/images/:id(.:format)                                  spree/images#destroy
+                                           POST     /products/:product_id/product_labels(.:format)                              spree/product_labels#create
+                                           GET      /products/:product_id/product_labels/new(.:format)                          spree/product_labels#new
+                                           GET      /products/:product_id/product_labels/edit(.:format)                         spree/product_labels#edit
+                                           GET      /products/:product_id/product_labels(.:format)                              spree/product_labels#show
+                                           PUT      /products/:product_id/product_labels(.:format)                              spree/product_labels#update
+                                           DELETE   /products/:product_id/product_labels(.:format)                              spree/product_labels#destroy
                                            GET      /products(.:format)                                                         spree/products#index
                                            POST     /products(.:format)                                                         spree/products#create
                                            GET      /products/new(.:format)                                                     spree/products#new
@@ -320,6 +333,7 @@ Routes for Spree::Core::Engine:
                                            GET      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#show
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
                                            POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
+                                           POST     /admin/label_templates/refresh_labels(.:format)                             spree/admin/label_templates#refresh_labels
                                            GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
                                            POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
                                            GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new

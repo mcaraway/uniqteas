@@ -1,8 +1,10 @@
 <div data-hook="admin_image_form_fields">
-	<tr data-hook="file">
-		<td><%= t(:filename) %>:</td>
-		<td><%= f.file_field :attachment %></td>
-		<td><%= t(:tin_image_size_instructions)%>
-	</tr>
+	<h2><%= t(:choose_image_or_template_html)%></h2>	
+	<%= t(:filename) %>:
+	<%= f.file_field :attachment %>
+	<br />
+	<%= t(:tin_image_size_instructions)%>
 	<%= hidden_field_tag :product_id, @product.id %>
+	<%= hidden_field_tag :label_template_id, @product.label_template_id %>
+	<%= hidden_field_tag :label_image_remote_url, @image.label_image_remote_url %>
 </div>

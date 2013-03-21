@@ -138,6 +138,22 @@ Spree::BaseHelper.class_eval do
     end
   end
 
+  def small_product_label_image (product)
+    if product.product_label == nil
+      image_tag "/assets/CustomTeaLabel.png", :size => "225x300", :alt => product.name
+    else
+      image_tag product.product_label.label_image.url(:original), :size => "225x300", :alt => product.name
+    end
+  end
+
+  def product_label_image (product)
+    if product.product_label == nil
+      image_tag "/assets/CustomTeaLabel.png", :size => "240x240", :alt => product.name
+    else
+      image_tag product.product_label.label_image.url(:product), :size => "240x240", :alt => product.name
+    end
+  end
+    
   def small_tea_tag_image (product)
     if product.images[1] == nil
       image_tag "/assets/TeaTagLabel.png", :size => "50x42"
