@@ -1,14 +1,19 @@
+<% content_for :subheader do %>
+  <h1><%= t(:edit_image) %></h1>
+<% end %>
 <%= form_for [@product, @image], :html => { :multipart => true } do |f| %>
   <table class="basic-table" data-hook="edit_image">
     <tr data-hook="thumbnail">
       <td style="width: 15%;"><%= t(:thumbnail) %>:</td>
-      <td style="width: 45%;"><%= link_to image_tag(@image.attachment.url(:mini)), @image.attachment.url(:product) %></td>
-      <td></td>
+      <td style="width: 35%;"><%= link_to image_tag(@image.attachment.url(:product)), @image.attachment.url(:product), :id => "image_thumbnail" %></td>
+      <td><%= render :partial => 'form', :locals => { :f => f } %></td>
     </tr>
-    <%= render :partial => 'form', :locals => { :f => f } %>
+    
   </table>
   <p class="form-buttons" data-hook="buttons">
     <%= button t(:update) %>
     <%= t(:or) %> <%= link_to t(:cancel), edit_product_url(@product), :id => 'cancel_link' %>
   </p>
+  
+<%= render :partial => 'list', :locals => { :f => f } %>
 <% end %>

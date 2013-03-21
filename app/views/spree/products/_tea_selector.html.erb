@@ -1,22 +1,60 @@
-<% content_for :head do -%>
-<meta name="title" content="Edit My Blend">
+<% content_for :head do %>
+	<meta name="title" content="Edit My Blend">
+  <%= javascript_tag do -%>
+  	json={
+		"categories":
+		[
+		<% @blendables.each_with_index do |category,ccount| %>
+			{
+				"category":{
+					"name":"<%= category.name %>",
+					"backgroundcolor":"0",
+					"teas":
+						[
+						<% category.products.each_with_index do |product,prodcount| %>
+						{	
+							"tea_name":"<%= escape_javascript(raw(product.name)) %>",
+							"image":"",
+							"sku":"<%= escape_javascript(raw(product.master.sku)) %>",
+							"description":"<%= escape_javascript(raw(product.description)) %>",
+							"ingredients":"",
+							"flavor_profile":
+							{
+								<% product.product_properties.each_with_index do |property, pcount| %>
+								"<%=property.property.name %>":"<%= property.value %>" <%= ',' if pcount < (product.properties.size - 1) %>
+								<% end %>
+							}
+						}<%= ',' if prodcount < (category.products.size - 1) %>
+						<% end %>
+						]
+				}
+			}<%= ',' if ccount < (@blendables.size - 1) %>
+		<% end %>
+		]
+	};
+  <% end -%>
 <% end %>
 <div class="tea_cups_div" id="tea_cups_div">
-	<table class="tea_builder_divider" cellpadding="10">
+	<table class="tea_builder_divider" cellpadding="10" style="border: none">
 		<tbody>
+<<<<<<< HEAD
 			<tr>
 				<td style="width:13%;vertical-align: top;">
 					<% if @edit_blend == nil || @edit_blend == false %>
 						<img src="/assets/store/icons/1.png"  width="24" height="24" >&nbsp;
 					<% end %>
 					Just click on any one of these teas and you'll see your blend crafting right before your very eyes.</td>
+=======
+			<tr style="border: none">
+				<td style="width:13%;">You can choose up to three flavors for your blend.  Click on the ones you want to add.</td>
+>>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 				<td style="width:17%;" class="tea-cup-list" id="black_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="fruit_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="herbal_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="green_tea_cups"></td>
 				<td style="width:17%;" class="tea-cup-list" id="white_tea_cups"></td>
 			</tr>
-			<tr>
+			<tr style="border: none">
 				<td colspan="6"> &nbsp; </td>
 			</tr>
 		</tbody>

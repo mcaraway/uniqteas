@@ -1,4 +1,6 @@
-<h4><%= t(:new_image) %></h4>
+<% content_for :subheader do %>
+  <h1><%= t(:new_image) %></h1>
+<% end %>
 <%= form_for [@product, @image], :html => { :multipart => true } do |f| %>
   <table class="basic-table" data-hook="new_image">
     <%= render :partial => 'form', :locals => { :f => f } %>

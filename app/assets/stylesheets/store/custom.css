@@ -1,203 +1,6 @@
-body {
-	padding: 0px;
-	margin: 0px;
-	background: url('/assets/background-brown.png') repeat #562E09;
-	color: #222;
-	font-family: 'Abel', sans-serif;
-	font-size: 18px;
-	font: 18px 'Abel', Helmet, Freesans, sans-serif;
-}
-
-table tbody tr, table tfoot tr {
-	border: none;
-}
-table tbody tr td, table tfoot tr td {
-	padding: 5px 5px 5px 0px;
-}
-
-table thead tr th {
-	background-color:#9BC3FC;
-	border-left: 1px solid #D4E5A5;
-	border-right: 1px solid #D4E5A5;
-}
-
-h3 {
-	color: #754C24;
-	border-bottom: 1px solid #754C24;
-}
-
-nav #main-nav-bar li a {
-	font-size: 14px;
-}
-
-.header {
-	padding: 10px 0px 10px 0px;
-	width: 950px;
-	height: 60px;
-	margin-bottom: 10px;
-}
-
-.container {
-	width: 950px;
-	height: 2000px;
-	background: none repeat scroll 0 0 #D4E5A5;
-	background: -moz-linear-gradient(top,  #D4E5A5 40%, #FFFFFF 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(40%,#D4E5A5), color-stop(100%,#FFFFFF)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #D4E5A5 40%,#FFFFFF 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #D4E5A5 40%,#FFFFFF 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D4E5A5', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
-}
-
-nav #main-nav-bar {
-	text-transform: uppercase;
-	font-weight: bold;
-	margin-top: 20px;
-	padding-bottom: 6px;
-	font-size: 80%;
-	border: none;
-	color: #06C;
-}
-
-nav #main-nav-bar li:hover{
-	color: #0C6;
-	text-decoration: underline;
-}
-
-#wrapper {
-	padding: 20px;
-}
-
-#content {
-	width: 910px;
-}
-
-#logo {
-	width: 190px;
-	height: 70px;
-	float: left;
-	margin: 10px 20px 0px 20px;
-	background-color: transparent;
-	-moz-border-radius: 0px;
-	-webkit-border-radius: 0px;
-	border-radius: 0px;
-}
-
-footer#footer {
-	margin-top: 20px;
-	padding: 20px;
-	border-top: 1px solid #754C24;
-}
-
-#footer-left ul li {
-	display: inline-block;
-	padding-right: 15px;	
-}
-
-#footer-left ul li:hover {
-	display: inline-block;
-	padding-right: 15px;
-	text-decoration: underline;
-}
-
-#footer-right{
-	text-align: right;	
-}
-
-#user-info, #user_addresses, .order-summary {
-	border: none;
-	margin-top: 15px;
-}
-
-#user_addresses {
-	width: 100%;
-}
-
-ul#products li a.info{
-	border: none;
-	color: #444;
-	font-size: 13px;
-}
-
-#product-description .product-title {
-	border: none;
-}
-
-#existing-customer, #registration #new-customer {
-	width: 350px;
-	background-color: #eee;	
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	padding: 20px;
-	margin-left: 280px;
-	margin-top: 100px;
-	margin-bottom: 200px;
-}
-
-input[type="text"], input[type="file"] {
-	border: 1px solid #BBB;
-	background: white;
-	width: 300px;
-	height: 35px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	font-size: 16px;
-}
-
-input[type="file"] {
-	width: 300px;
-}
-
-textarea {
-	border: 1px solid #BBB;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	height: 190px;
-	font-size: 16px;
-}
-
-a.button {
-	font-size: 14px;
-	vertical-align: middle;
-	width: auto;
-	height: 20px;
-	background: #CCCC33;
-}
-
-.product-listing {
-	list-style: none;
-	margin: 2em 0px 0px 0px;
-	padding: 0px;
-}
-
-.errorExplanation, .flash.success {
-    background: none repeat scroll 0 0 #bbcad2;
-    border: 2px solid #F15700;
-    margin-bottom: 1em;
-    padding: 1em;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
-}
-
-.errorExplanation h2{
-    background: url("/assets/admin/icons/32x32/3.png") no-repeat scroll left center transparent;
-    font-size: 1.75em;
-    padding-left: 40px;
-}
-
-.flash.success h2 {
-    background: url("/assets/admin/icons/32x32/4.png") no-repeat scroll left center transparent;
-    font-size: 1.75em;
-    padding-left: 40px;
-}
-
-.flash.success {
-    border: 2px solid #8DBA53;
+#wrapper{
+  margin-top: 15px; 
+  padding: 0px;		
 }
 
 .motto {
@@ -220,29 +23,30 @@ a.button {
 
 .tin-and-cup {
 	position: absolute;
-	left: 340px;
-	top: 105px;
-}
-
-.dark-background {
-	padding: 15px;
-	background-color: #bbcad2;
-	height: 432px;
+	left: 245px;
+	top: 45px;
 }
 
 .instructions {
 	font-family: 'Abel', sans-serif;
-	color: black;
+	color: white;
 	font-size: 20px;
 	margin-bottom: 20px;
 	line-height: normal;
 }
 
 .heading {
+<<<<<<< HEAD
 	color: black;
 	font-size: 55px;
 	line-height: 62px;
 	margin-bottom: 20px;
+=======
+	color: white;
+	font-size: 2.5em;
+	line-height: 62px;
+	margin-bottom: .5em;
+>>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 	font-weight: normal;
 	width: 450px;
 }
@@ -255,12 +59,11 @@ a.button {
 }
 
 .instruction_bullets ul li {
-	font-family: 'Abel', sans-serif;
-	color: black;
+	color: white;
 	font-size: 20px;
 	padding: .8em 0em .8em 0em;
 	line-height: normal;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #333;
 }
 
 .step {
@@ -270,6 +73,10 @@ a.button {
 	margin-right: 0.5em;
 }
 
+.center-align {
+	text-align: center;
+}
+
 .centered {
 	text-align: center;
 	margin-top: 1em;
@@ -277,24 +84,121 @@ a.button {
 	padding-right: 330px;
 }
 
-/* Round corners */
-.content {
-	background-color: #fff;
-	padding: 15px;
+div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
+	width: 260px;
+	margin-left: 50px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+div.flavor1_field, div.flavor1percent_field {
+	margin-left: 10px;
+}
+
+#flavor1div, #flavor2div, #flavor3div, #flavor1percentdiv, #flavor2percentdiv, #flavor3percentdiv {
+	margin-bottom: 10px;
+}
+
+#custom-product-description {
+	width: 600px;
+	padding: 5px;
+	margin: 0px 0px 50px 0px;
+}
+
+#custom-product-images {
+	width: 910px;
+	height: 350px;
+}
+
+#main-image {
+	height: 255px;
+}
+
+div.ui-slider-horizontal {
+	height: .6em;
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
+	height: 15px;
+	width: 15px;
+	top: -.1em;
+}
+
+.tea_cups_div, .tea_images_div {
+	width: 910px;
+	padding: 20px 0px 5px 0px;
+	border-top: 2px solid #f90;
+}
+
+.tea_images_div {
+	padding: 5px 0px 5px 0px;
+	position: relative;
+	float: right;
+	width: 435px;
+	border: none;
+}
+
+.tea_builder_divider {
+	margin-bottom: 20px;
+}
+
+td.tea-cup-list {
+	padding-left: 5px;
+	text-align: center;
+}
+
+td.tea-cup-list ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+td.tea-cup-list ul li, td.tea-cup-list ul li:hover, td.tea-cup-list ul li.selected {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #BBCAD2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	min-height: 48px;
+}
+
+td.tea-cup-list ul li:hover {
+	background-color: #f90;
+	border: 1px solid white;
+}
+
+td.tea-cup-list ul li.selected {
+	background-color: #09f;
+	border: 1px solid white;
 	position: relative;
 }
 
-.round {
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	border-radius: 10px;
+td.tea-cup-list ul li.selected div {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	height: 18px;
+	width: 18px;
 }
 
-a.round {
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+.inactive_flavor {
+	font-weight: normal;
 }
+
+.active_flavor {
+	color:#000080;
+	font-weight: bold;
+}
+
+#percent1div, #percent2div, #percent3div {
+	text-align: right;
+	padding-right: 10px;
+}
+
 #holder1, #holder2, #holder3 {
 	height: 310px;
 	width: 310px;
@@ -377,123 +281,9 @@ a.round {
 	margin: 10px 0px 5px 0px;
 }
 
-.label {
-	color: #0066CC;
-	font-size: 18px;
-}
-
-div.field, div.actions {
-	margin-bottom: 10px 0px 10px 0px;
-}
-
-div.flavor1_field, div.flavor2_field, div.flavor3_field, div.flavor1percent_field, div.flavor2percent_field, div.flavor3percent_field {
-	width: 260px;
-	margin-left: 50px;
-	float: left;
-	margin-bottom: 10px;
-}
-
-div.flavor1_field, div.flavor1percent_field {
-	margin-left: 10px;
-}
-
-#flavor1div, #flavor2div, #flavor3div, #flavor1percentdiv, #flavor2percentdiv, #flavor3percentdiv {
-	margin-bottom: 10px;
-}
-
-#custom-product-description {
-	width: 600px;
-	padding: 5px;
-	margin: 0px 0px 50px 0px;
-}
-
-#custom-product-images {
-	width: 910px;
-	height: 350px;
-}
-
-#main-image {
-	height: 255px;
-}
-
-div.ui-slider-horizontal {
-	height: .6em;
-	margin-top: 6px;
-	margin-bottom: 14px;
-}
-
-div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
-	height: 15px;
-	width: 15px;
-	top: -.1em;
-}
-
-.tea_cups_div, .tea_images_div {
-	width: 910px;
-	padding: 20px 0px 5px 0px;
-	border-top: 2px solid #f90;
-}
-
-.tea_images_div {
-	padding: 5px 0px 5px 0px;
-	position: relative;
-	float: right;
-	width: 435px;
-	border: none;
-}
-
-.tea_builder_divider {
-	margin-bottom: 20px;
-}
-
-td.tea-cup-list {
-	padding-left: 5px;
-	text-align: center;
-}
-
-td.tea-cup-list ul {
-	list-style-type: none;
-	padding: 0px;
-	margin: 0px;
-}
-
-td.tea-cup-list ul li, td.tea-cup-list ul li:hover, td.tea-cup-list ul li.selected {
-	background-color: #eee;
-	padding: 3px;
-	border: 1px solid #BBCAD2;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin-bottom: 2px;
-}
-
-td.tea-cup-list ul li:hover {
-	background-color: #f90;
-	border: 1px solid white;
-}
-
-td.tea-cup-list ul li.selected {
-	background-color: #09f;
-	border: 1px solid white;
-	position: relative;
-}
-
-td.tea-cup-list ul li.selected div {
-	position: absolute;
-	right: -5px;
-	top: -5px;
-	height: 18px;
-	width: 18px;
-}
-
-#percent1div, #percent2div, #percent3div {
-	text-align: right;
-	padding-right: 10px;
-}
-
 .tea-tin {
-	width: 250px;
-	height: 259px;
+	width: 150px;
+	height: 150px;
 	top: 0px;
 	right: -50px;
 	position: absolute;
@@ -516,6 +306,7 @@ td.tea-cup-list ul li.selected div {
 	top: 139px;
 	text-align: left;
 	font-size:5px;
+	line-height: normal;
 }
 
 .tea-tin-image, .tea-tin-template {

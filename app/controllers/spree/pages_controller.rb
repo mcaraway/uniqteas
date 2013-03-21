@@ -1,10 +1,20 @@
-class Spree::PagesController < ApplicationController
+class Spree::PagesController < Spree::ResourceController
+  include Spree::Core::ControllerHelpers::Order
   def bighoop
   end
 
-  def contact
+  def about
   end
 
-  def about
+  def faqs
+  end
+
+  def privacy
+  end
+
+  def share
+  end
+
+  def cfupdate
   end
 end

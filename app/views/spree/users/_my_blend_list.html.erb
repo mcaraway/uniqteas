@@ -1,30 +1,24 @@
 <div data-hook="my_products" style="width:100%;min-height:280px;margin-bottom: 15px;">
 	<h3><%= t(:myblends) %></h3>
 	<div style="width:100%;float:left;">
-		<div style="width:150px;float:right;margin-top: 5px">
-			<%= link_to t(:add_a_blend), blendit_url %>
-		</div>
 		<% if @myblends.any? %>
+		<div style="width:100%;margin:5px 0px 15px 0px; text-align: right;">
+			<%= link_to blendit_url, :class => "button" do %>
+			<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:add_a_blend) %>
+			<% end %>
+		</div>
 		<ul id="products" class="inline product-listing" data-hook>
-			<% reset_cycle('default') %>
 			<% @myblends.each do |product| %>
-			<li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>"  style = "width:212px;height:220px;position:relative" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-				<!--
-				<div class="product-image" id="product_div<%= product.id %>">
-				<%= link_to small_image(product, :itemprop => "image"), product_url(product), :itemprop => 'url', :title => "Order " + product.name %>
-				</div> -->
-				<%= link_to (product) do %>
-				<div class="product-image" id="product_div<%= product.id %>">
-					<div style="position: relative; width: 190px; height: 200px;">
-						<%= render :partial => "/spree/shared/tea_tin_small", :locals => { :product => product } %>
-					</div>
+			<li id="product_<%= product.id %>" class="columns four <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>"  style = "position:relative" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+				<div class="product-image">
+					<%= link_to product_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
 				</div>
-				<% end %>
-				<%= link_to truncate(product.name, :length => 50), product_url(product), :class => 'info', :itemprop => "name", :title => "Order " + product.name %>
-				<br />
+				<%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => "Order " + product.name %>
 				<div class="tea-menu-hidden">
-					<%= link_to image_tag("/assets/admin/icons/edit.png", :size=>"14x14", :class => "tool"), edit_product_url(product), :style => "display:inline;width:26px;height:26px;", :title => "Edit " + product.name %>
-					<%= link_to image_tag("/assets/small-cart.png", :size=>"14x14", :class => "tool"), product_url(product), :style => "display:inline;width:26px;height:26px;", :title => "Order " + product.name %>
+					<%= link_to_edit_url edit_product_url(product), {:no_text => true, :style => "display:inline"} %>
+					<%= link_to product, :style => "display:inline;", :title => "Order " + product.name do %>
+					<%= content_tag(:i, '', :class => 'icon-basket') %>
+					<% end %>
 				</div>
 			</li>
 			<% end %>
@@ -32,25 +26,20 @@
 		</ul>
 		<br />
 		<%= paginate @myblends %>
+		<% else %>
+		<p style="text-align: center"><%= t(:you_have_no_blends_yet_why_not_create_one_now) %></p>
+		<div class="ui-block-b" style="text-align: center">
+			<%= link_to blendit_url, :class => "button" do %>
+			<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:make_my_own_blend) %>
+			<% end %>
+			<br />
+			Try it out, you'll love it!
+		</div>
 		<% end %>
 	</div>
 </div>
 
 <style>
-	.add-menu-hidden {
-		display: none;
-		width: 110px;
-		height: 110px;
-		vertical-align: middle;
-		text-align: center;
-	}
-	.add-menu {
-		display: inline;
-		position: absolute;
-		top: 5px;
-		left: 25px;
-		vertical-align: middle;
-	}
 	.tea-menu-hidden {
 		display: none;
 		width: 156px;
@@ -65,14 +54,11 @@
 		right: 4px;
 		vertical-align: middle;
 	}
-	.sizeUp {
-		width: 16px;
-		height: 16px;
-	}
 </style>
 <script type="text/javascript">
 	$("li").hover(function() {
 		div = $(this).find("div:last");
+<<<<<<< HEAD
 		div.toggleClass(div[0].id == "add-blend" ? "add-menu" : "tea-menu", 10);
 	}, function() {
 		div = $(this).find("div:last");
@@ -83,6 +69,12 @@
 		$(this).toggleClass("sizeUp", 10);
 	}, function() {
 		$(this).toggleClass("sizeUp", 10);
+=======
+		div.toggleClass("tea-menu", 200);
+	}, function() {
+		div = $(this).find("div:last");
+		div.toggleClass("tea-menu", 200);
+>>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 	});
 
 </script>

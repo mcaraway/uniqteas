@@ -1,0 +1,18 @@
+<div data-hook="admin_inside_slider_form" class="field">
+  <%= f.field_container :name do %>
+    <%= f.label :name, t(:name) %> <span class="required">*</span><br />
+    <%= error_message_on :home_page_slider, :name, :class => 'fullwidth title' %>
+    <%= text_field :home_page_slider, :name %>
+  <% end %>
+  <%= f.field_container :html do %>
+    <%= f.label :html, t(:html) %> <span class="required">*</span><br />
+    <%= error_message_on :home_page_slider, :html, :class => 'fullwidth title' %>
+    <%= text_area :home_page_slider, :html %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+      $("#home_page_slider_html").markItUp(mySettings);
+   });
+</script>
