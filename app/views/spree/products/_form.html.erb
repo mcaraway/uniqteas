@@ -1,21 +1,9 @@
 <div class="name_fields">
-<<<<<<< HEAD
-	<% if @edit_blend == nil || @edit_blend == false %>
-		<div style="width:100%">
-		<img src="/assets/store/icons/3.png"  width="24" height="24" >&nbsp;
-		Now name and describe your blend.
-		</div>
-	<% end %>
-	<table style="width: 910px;">
-=======
 	<table style="width: 910px;border: none">
->>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 		<tbody>
 			<% if @product.id != nil then %>
 			<tr style="border: none">
-				<td style="vertical-align: top;width:245px; text-align: right;padding-right: 10px;font-weight:bold;"><%= f.label "Artwork" %>:
-				<br />
-				<span style="font-size: 13px;font-weight: bold">(required size <%= @product.requiredTinImageWidth %>px x <%= @product.requiredTinImageHeight %>px)</span></td>
+				<td style="vertical-align: top;width:245px; text-align: right;padding-right: 10px;font-weight:bold;"><%= f.label "Artwork" %>:</td>
 				<td style="vertical-align: top;"><%= render :partial => 'file_form', :locals => { :f => f } %></td>
 				<td style="width:260px;vertical-align: top;" rowspan="5">
 				<div class="image_fields" style="margin-top: 40px;">

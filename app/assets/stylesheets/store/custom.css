@@ -1,6 +1,6 @@
-#wrapper{
-  margin-top: 15px; 
-  padding: 0px;		
+#wrapper {
+	margin-top: 15px;
+	padding: 0px;
 }
 
 .motto {
@@ -36,17 +36,10 @@
 }
 
 .heading {
-<<<<<<< HEAD
-	color: black;
-	font-size: 55px;
-	line-height: 62px;
-	margin-bottom: 20px;
-=======
 	color: white;
 	font-size: 2.5em;
 	line-height: 62px;
 	margin-bottom: .5em;
->>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 	font-weight: normal;
 	width: 450px;
 }
@@ -129,7 +122,7 @@ div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
 .tea_cups_div, .tea_images_div {
 	width: 910px;
 	padding: 20px 0px 5px 0px;
-	border-top: 2px solid #f90;
+	border-bottom: 2px solid #f90;
 }
 
 .tea_images_div {
@@ -190,7 +183,7 @@ td.tea-cup-list ul li.selected div {
 }
 
 .active_flavor {
-	color:#000080;
+	color: #000080;
 	font-weight: bold;
 }
 
@@ -213,8 +206,7 @@ td.tea-cup-list ul li.selected div {
 .flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields {
 	width: 910px;
 	padding: 20px 0px 20px 0px;
-	
-	border-top: 2px solid #f90;
+	/*border-top: 2px solid #f90; */
 }
 
 .image_fields {
@@ -228,10 +220,6 @@ td.tea-cup-list ul li.selected div {
 
 .order_fields {
 	margin: 0px 0px 50px 0px;
-}
-
-.name_fields {
-	height: 260px;
 }
 
 .flavor_profile {
@@ -295,17 +283,17 @@ td.tea-cup-list ul li.selected div {
 	width: 93px;
 	top: 43px;
 	right: 23.5px;
-	font-size:10.5px;
-	font-family:"Yanone Kaffeesatz";
+	font-size: 10.5px;
+	font-family: "Yanone Kaffeesatz";
 	text-align: center;
 }
 
 .tea-tin-description {
-	width:89px;
+	width: 89px;
 	padding: 2px 7px 5px 7px;
 	top: 139px;
 	text-align: left;
-	font-size:5px;
+	font-size: 5px;
 	line-height: normal;
 }
 
@@ -339,4 +327,17 @@ td.tea-cup-list ul li.selected div {
 	top: 203px;
 	right: 174px;
 	position: absolute;
+}
+
+#update-cart .my-coupon-code-field {
+	margin-top: -37px;
+	margin-bottom: 20px;
+	padding-left: 400px;
+}
+
+hr {
+	height: 0;
+	background-color: transparent;
+	color: transparent;
+	border: none;
 }

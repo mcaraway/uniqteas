@@ -22,16 +22,12 @@ Spree.config do |config|
   Spree::ActiveShipping::Config.set(:origin_city => "Marlboro")
   Spree::ActiveShipping::Config.set(:origin_state => "NY")
   Spree::ActiveShipping::Config.set(:origin_zip => "12542")
-<<<<<<< HEAD
   Spree::ActiveShipping::Config.set(:fedex_key => "Q2Bl8FsDtvptQw95")
   Spree::ActiveShipping::Config.set(:fedex_password => "Z2TZ5PJdGeQRINKvADohwRbRN")
   Spree::ActiveShipping::Config.set(:fedex_account => "315756936")
   Spree::ActiveShipping::Config.set(:fedex_login => "104692510")
   Spree::ActiveShipping::Config.set(:test_mode => false) # If the above is for a developer account
-  Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
-=======
   # Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
->>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
 
   # Ensure the agent is started using Unicorn
   # This is needed when using Unicorn and preload_app is not set to true.

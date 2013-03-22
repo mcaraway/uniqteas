@@ -4,7 +4,7 @@
 <% content_for :subheader do %>
   <h1><%= t(:make_your_own_blend) %></h1>
 <% end %>
-<div style="min-height: 1400px;">
+<div>
 	<%=form_for @product do |f| %>
 	<%= render 'spree/shared/error_messages', :target => f.object %>
 

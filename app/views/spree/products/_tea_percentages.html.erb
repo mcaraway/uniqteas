@@ -1,17 +1,10 @@
 <div class="tea_cups_div" style="min-height: 235px;">
 	<table class="tea_builder_divider" cellpadding="10" style="height: 245px;border: none">
 		<tbody>
-<<<<<<< HEAD
-			<tr>
-				<td style="width:20%;padding-right:15px;"> <% if @edit_blend == nil || @edit_blend == false %> <img src="/assets/store/icons/2.png" width="24" height="24" >&nbsp;
-				<% end %>
-				Now formulate your blend by adjusting the sliders.</td>
-				<td style="width:15%;"> <% flavor_count = 0
-=======
 			<tr style="border: none">
-				<td style="width:13%;">Your unique blend will taste like this.</td>
+				<td style="width:13%;"><% if @edit_blend == nil || @edit_blend == false %> <img src="/assets/store/icons/2.png" width="24" height="24" >&nbsp;
+				<% end %>Your unique blend will taste like this.</td>
 				<td style="width:22%;"> <% flavor_count = 0
->>>>>>> 7855cb0db6080e572c727b5d98d4e9d7dd90dada
           sku_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%

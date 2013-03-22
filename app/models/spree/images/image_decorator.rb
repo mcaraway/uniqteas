@@ -61,11 +61,12 @@ Spree::Image.class_eval do
   protected
 
   def label_image_url_provided?
+    logger.debug("********** checking label_image_remote_url (" + label_image_remote_url + ")")
     !label_image_remote_url.blank?
   end
       
   def download_remote_image
-    self.attachment = do_download_remote_image(label_image_remote_url)
+    self.attachment = do_download_remote_image
   end
 
   def do_download_remote_image

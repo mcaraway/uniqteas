@@ -1,9 +1,9 @@
 <div class="tea_cups_div" id="tea_name_percentages">
-	<table cellpadding="10" style="min-height: 235px; width: 100%;">
+	<table cellpadding="10" style="min-height: 235px; width: 100%; border: none">
 		<tbody>
-			<tr>
-				<td style="width:245px; text-align: right;padding-right: 10px;font-weight:bold;">Your Blend:</td>
-				<td style="width:25%;"> <% flavor_count = 0 %>
+			<tr style="border: none">
+				<td style="width:25%; text-align: right;padding-right: 10px;font-weight:bold; font-size: 1.5em; border: none">Your Blend:</td>
+				<td style="width:45%; font-size: 1.5em; border: none"> <% flavor_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
 				if p.object.property_name.index("name") != nil
@@ -17,7 +17,7 @@
 				end
 				%>
 				<% end %> </td>
-				<td style="width:15%;"> <% percent_count = 0 %>
+				<td style="width:15%; font-size: 1.5em; border: none"> <% percent_count = 0 %>
 				<%= f.fields_for :product_properties do |p| %>
 				<%
 				if p.object.property_name.index("percent") != nil && percent_count < flavor_count
@@ -30,15 +30,15 @@
 				end
 				%>
 				<% end %> </td>
-				<td class="tea-cup-list" style="text-align: left;"> <%= link_to_function t(:edit_blend), 'showEditPanel()' %> </td>
+				<td class="tea-cup-list" style="text-align: left; border: none"> <%= link_to_function t(:edit_blend), 'showEditPanel()', :class => 'icon with-tip icon-edit' %> </td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 <script type="text/javascript">
 	function showEditPanel() {
-		$("#tea_name_percentages").hide();
-		$("#tea_selector_div").show();
+		$("#tea_name_percentages").hide("Blind");
+		$("#tea_selector_div").show("Blind");
 		setupForEdit();
 	};
 </script>

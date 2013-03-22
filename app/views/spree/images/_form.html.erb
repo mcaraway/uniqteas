@@ -6,5 +6,5 @@
 	<%= t(:tin_image_size_instructions)%>
 	<%= hidden_field_tag :product_id, @product.id %>
 	<%= hidden_field_tag :label_template_id, @product.label_template_id %>
-	<%= hidden_field_tag :label_image_remote_url, @image.label_image_remote_url %>
+	<%= f.hidden_field :label_image_remote_url %>
 </div>
