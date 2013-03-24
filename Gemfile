@@ -49,7 +49,7 @@ end
 # To use debugger
 # gem 'debugger'
 gem 'jquery-rails', '2.1.4'
-gem 'spree', '1.3.1'
+gem 'spree', '~> 1.3.0'
 gem 'spree_fancy', :branch => "customize_to_uniqteas", :git => 'git://github.com/mcaraway/spree_fancy.git'
 gem 'spree_auth_devise', :branch => "1-3-stable", :git => 'git://github.com/spree/spree_auth_devise'
 gem 'spree_active_shipping', :branch => "1-3-stable", :git => "git://github.com/spree/spree_active_shipping"

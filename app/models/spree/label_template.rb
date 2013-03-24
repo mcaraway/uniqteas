@@ -1,6 +1,5 @@
 class Spree::LabelTemplate < ActiveRecord::Base
   attr_accessible :group, :name, :label_image
-  has_many :product_label
   has_attached_file :label_image,
                     :processors => [:label_image_processor, :thumbnail],
                     :styles => { 

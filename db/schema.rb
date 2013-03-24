@@ -371,6 +371,16 @@ ActiveRecord::Schema.define(:version => 20130320101800) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "spree_product_packages", :force => true do |t|
+    t.integer  "product_id",                :null => false
+    t.integer  "length",     :default => 0, :null => false
+    t.integer  "width",      :default => 0, :null => false
+    t.integer  "height",     :default => 0, :null => false
+    t.integer  "weight",     :default => 0, :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
   create_table "spree_product_properties", :force => true do |t|
     t.string   "value"
     t.integer  "product_id"

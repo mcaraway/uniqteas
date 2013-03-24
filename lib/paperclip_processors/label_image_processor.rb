@@ -5,9 +5,9 @@ module Paperclip
     def initialize file, options = {}, attachment = nil
       super
       geometry          = options[:geometry]
-      @file             = file
-      @target_geometry  = Geometry.parse geometry
-      @current_geometry = Geometry.from_file @file
+      @file             = file      
+      @target_geometry  = (options[:string_geometry_parser] || Geometry).parse(geometry)
+      @current_geometry = (options[:file_geometry_parser] || Geometry).from_file(@file)
       @whiny            = options[:whiny].nil? ? true : options[:whiny]
       @format           = options[:format]
       @current_format   = File.extname(@file.path)
@@ -48,16 +48,20 @@ module Paperclip
       
       command = "convert"
       params = "-background none -fill black -font Arial -pointsize 12 label:\"#{name}\" #{tofile(textImg)}"
-
+      begin
         success = Paperclip.run(command, params)
-
+      rescue Cocaine::CommandLineError => ex
+        raise PaperclipError, "There was an error creating the text image for Name" if @whiny
+      end
       
       # now composite text onto dst
       command = "composite"
       params = "-geometry 89x14!+76+43 #{tofile(textImg)} #{tofile(comp)} #{tofile(dst)}"
-
+      begin
         success = Paperclip.run(command, params)
-
+      rescue Cocaine::CommandLineError => ex
+        raise PaperclipError, "There was an error processing the final composite for #{@basename} with params #{params}" if @whiny
+      end
       
       dst
     end
