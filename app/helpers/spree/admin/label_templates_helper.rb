@@ -35,17 +35,6 @@ module Spree
           image_tag label_template.label_image.url(:label), options
         end
       end
-      
-      def large_label_image(product_label, options = {})
-        if product_label == nil or product_label.label_image == nil
-          image_tag "store/no-template.png", :size => "225x300"
-        else
-          image = product_label.label_image
-          options.reverse_merge! :alt => product_label.name
-          options.reverse_merge! :size => "225x300"
-          image_tag product_label.label_image.url, options
-        end
-      end
 
       def link_to_image_small(label_template)
         link_to small_label_image(label_template), label_template.label_image.url

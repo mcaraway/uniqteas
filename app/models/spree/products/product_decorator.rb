@@ -29,23 +29,6 @@ Spree::Product.class_eval do
     end
   end
 
-  def label_template_id=(params)
-    label_template_id = params[:label_template_id]
-    label_template = Spree::LabelTemplate.find_by_id(label_template_id)
-    product_label = Spree::ProductLabel.new
-
-    product_label.label_template = label_template
-    product_label.product = self
-    url = label_template.url(:label)
-    url=root_url + url[1,url.length-1]
-    logger.debug "************ url = " + url
-    product_label.label_template_template_remote_url = url
-  end
-
-  def label_template_id
-
-  end
-
   def requiredTinImageWidth
     347
   end
