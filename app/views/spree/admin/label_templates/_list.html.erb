@@ -1,9 +1,11 @@
 <table class="index sortable" id='listing_taxonomies' data-hook data-sortable-link="<%= update_positions_admin_label_templates_url %>">
   <colgroup>
-    <col style="width: 85%">
+    <col style="width: 20%">
+    <col style="width: 65%">
     <col style="width: 15%">
   <thead>
     <tr data-hook="home_page_slider_header">
+      <th><%= t(:thumbnail) %></th>
       <th><%= t(:name) %></th>
       <th class="actions"></th>
     </tr>
@@ -11,7 +13,7 @@
   <tbody>
     <% @label_groups.keys.sort.each do |key| %>
       <tr class="<%= cycle('odd', 'even')%>">
-        <td colspan="2">
+        <td colspan="3">
           <%= key %>
         </td>
      </tr>
@@ -19,8 +21,11 @@
      group = @label_groups[key]
      group.sort.each do |template| %>
 		<tr id="<%= spree_dom_id template %>" data-hook="template_row" class="<%= cycle('odd', 'even')%>">
-	        <td>
+			<td>
 	          <span class="handle"></span>
+	          <%= mini_label_image(template) %>
+			</td>
+	        <td>
 	          <%= template.name %>
 	        </td>
 	        <td class="actions">

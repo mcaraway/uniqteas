@@ -52,7 +52,7 @@ module Spree
       end
 
       def small_label_image(label_template, options = {})
-        if label_template.label_image == nil
+        if label_template.label_image == nil or label_template.label_image == nil
           image_tag "noimage/no-tin-image.png", :size => "100x133", :alt => label_template.name
         else
           image = label_template.label_image
@@ -61,6 +61,17 @@ module Spree
           image_tag label_template.label_image.url, options
         end
       end
+      
+      def mini_label_image(label_template, options = {})
+        if label_template.label_image == nil or label_template.label_image == nil
+          image_tag "noimage/no-tin-image.png", :size => "50x66", :alt => label_template.name
+        else
+          image = label_template.label_image
+          options.reverse_merge! :alt => label_template.name
+          options.reverse_merge! :size => "50x66"
+          image_tag label_template.label_image.url, options
+        end
+      end      
     end
   end
 end

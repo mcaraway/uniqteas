@@ -1,7 +1,7 @@
 module Paperclip
   class Composite < Processor
     # Handles compositing of images that are uploaded.
-    attr_accessor :current_geometry, :target_geometry, :format, :whiny, :template_path, :variant_id, :label_image_remote_url
+    attr_accessor :current_geometry, :target_geometry, :format, :whiny, :tin_path, :tin_fade_path, :label_template_path, :variant_id, :label_image_remote_url, :generate_tin_image
     def initialize file, options = {}, attachment = nil
       super
       geometry          = options[:geometry]
@@ -10,80 +10,96 @@ module Paperclip
       @current_geometry = Geometry.from_file @file
       @whiny            = options[:whiny].nil? ? true : options[:whiny]
       @format           = options[:format]
-      @template_path    = options[:template_path]
       @current_format   = File.extname(@file.path)
       @basename         = File.basename(@file.path, @current_format)
+      @tin_path         = options[:tin_path]
+      @label_template_path = options[:label_template_path]
       @variant_id      = options[:variant_id]
       @label_image_remote_url = options[:label_image_remote_url]
+      @generate_tin_image = options[:generate_tin_image]
+      @tin_fade_path = options[:tin_fade_path]
     end
-    
+
     # Performs the conversion of the +file+. Returns the Tempfile
     # that contains the new image.
     def make
       Paperclip.log("***********  Product is custom!  Compositing...")
-      dst = Tempfile.new([@basename, @format].compact.join("."))
-      dst.binmode
-      
-      if @label_image_remote_url != nil
-        dst = make_with_template(dst)
-      else
-        dst = make_with_image(dst)
-      end
-      
-      dst
-    end
-    
-    def make_with_template(dst)
-      Paperclip.log("***********  Make with template...")
-      # composite the image onto the template
-      comp = Tempfile.new(["comp",".png"])
-      comp.binmode
-      
-      command = "composite"
-      params = "-geometry 100x133!+70+40 #{fromfile} #{template_path} #{tofile(comp)}"
-      begin
-        success = Paperclip.run(command, params)
-      rescue Cocaine::CommandLineError => ex
-        raise PaperclipError, "There was an error processing the composite for #{@basename} with params #{params}" if @whiny
-      end
-      
-      # composite the name onto the destination image
-      # first create the text image
-      dst = compositeTextToFile(productName, comp, "89x14!+76+43")
-      
-      dst
-    end
-    
-    def make_with_image(dst)
-      Paperclip.log("***********  Make with image...")
-      comp = Tempfile.new(["comp",".png"])
-      comp.binmode
-      
-      # composite the image onto the template
-      command = "composite"
-      params = "-geometry 89x68!+76+63 #{fromfile} #{template_path} #{tofile(comp)}"
-      begin
-        success = Paperclip.run(command, params)
-      rescue Cocaine::CommandLineError => ex
-        raise PaperclipError, "There was an error processing the composite for #{@basename} with params #{params}" if @whiny
+      Paperclip.log("***********  label_image_remote_url = " + @label_image_remote_url)
+      nameImg = createText(productName, "72", "")
+
+      # next create the description text image
+      descImg = createText(productDescription, "36", "800x")
+
+      # next create the blend text image
+      blendImg = createText(productBlend, "72", "")
+
+      # now composite name text onto template
+      dst = compositeFiles(nameImg, label_image_remote_url.blank? ? label_template_path : file , "820x100!+40+40")
+
+      # now composite blend text onto comp
+      dst = compositeFiles(blendImg, dst, "810x50!+50+1050")
+
+      # now composite the description onto the dst
+      dst = compositeFiles(descImg, dst, "820x185+50+865")
+
+      # now composite the image onto the label
+      if label_image_remote_url.blank?
+        dst = compositeFiles(file, dst, "821x628!+42+193")
       end
 
-      # composite the name onto the destination image
-      # first create the text image
-      dst = compositeTextToFile(productName, comp, "89x14!+76+43")
-      
+      if generate_tin_image
+        dst = compositeFiles(dst, tin_path, "332x436!+234+139")
+        dst = compositeFiles(tin_fade_path, dst, "800x800!+0+0")
+      end
+
       dst
     end
-    
+
+    def compositeFiles(file1, file2, location)
+      dst = Tempfile.new(["text",".png"])
+      dst.binmode
+
+      command = "composite"
+      params = "-geometry #{location} #{tofile(file1)} #{tofile(file2)} #{tofile(dst)}"
+      begin
+        success = Paperclip.run(command, params)
+      rescue Cocaine::CommandLineError => ex
+        raise PaperclipError, "There was an error compositing two files with params #{params}" if @whiny
+      end
+
+      dst
+    end
+
+    def createText(text, pointsize, size_for_caption)
+      textImg = Tempfile.new(["text",".png"])
+      textImg.binmode
+
+      command = "convert"
+      params = ""
+      if size_for_caption.blank?
+        params = "-background none -fill black -font Constantia -pointsize #{pointsize} label:\"#{text}\" #{tofile(textImg)}"
+      else
+        params = "-background none -fill black -font Constantia -pointsize #{pointsize} -size #{size_for_caption} caption:\"#{text}\" #{tofile(textImg)}"
+      end
+
+      begin
+        success = Paperclip.run(command, params)
+      rescue Cocaine::CommandLineError => ex
+        raise PaperclipError, "There was an error creating the text img params #{params}" if @whiny
+      end
+
+      textImg
+    end
+
     def compositeTextToFile(text, file, location)
       dst = Tempfile.new(["tempDst",".png"])
       dst.binmode
-            
+
       # composite the name onto the destination image
       # first create the text image
       textImg = Tempfile.new(["text",".png"])
       textImg.binmode
-      
+
       command = "convert"
       params = "-background none -fill black -font Arial -pointsize 12 label:\"#{text}\" #{tofile(textImg)}"
       begin
@@ -91,7 +107,7 @@ module Paperclip
       rescue Cocaine::CommandLineError => ex
         raise PaperclipError, "There was an error creating the text img params #{params}" if @whiny
       end
-      
+
       # now composite text onto dst
       command = "composite"
       params = "-geometry " + location +" #{tofile(textImg)} #{tofile(file)} #{tofile(dst)}"
@@ -99,27 +115,33 @@ module Paperclip
         success = Paperclip.run(command, params)
       rescue Cocaine::CommandLineError => ex
         raise PaperclipError, "There was an error compositing the text onto the template with params #{params}" if @whiny
-      end      
-      
+      end
+
       dst
     end
-    
+
     def fromfile
       File.expand_path(@file.path)
     end
 
     def tofile(destination)
-      File.expand_path(destination.path)
+      destination.is_a?(String) ? destination : File.expand_path(destination.path)
     end
-    
+
     def productName
       variant = Spree::Variant.find_by_id(@variant_id)
       variant ? variant.name.strip : "Tea Name"
     end
-    
+
     def productDescription
       variant = Spree::Variant.find_by_id(@variant_id)
       variant ? variant.description.strip : "Tea Description"
+    end
+
+    def productBlend
+      variant = Spree::Variant.find_by_id(@variant_id)
+      product = Spree::Product.find(variant.product_id)
+      product ? product.blend.strip : "Tea Blend"
     end
   end
 end

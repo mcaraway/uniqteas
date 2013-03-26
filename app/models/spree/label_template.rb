@@ -1,15 +1,16 @@
 class Spree::LabelTemplate < ActiveRecord::Base
   attr_accessible :group, :name, :label_image
-  has_many :product_label
   has_attached_file :label_image,
-                    :processors => [:label_image_processor, :thumbnail],
+                    :processors => [:label_thumbnail, :thumbnail],
                     :styles => { 
                       :label  => {
                         :geometry =>'600x800',
                         :format => :png,
                         :name => "Tea Flavor",
                         :description => "This is where you describe how wonderful your tea blend really is.",
-                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :blend => "50% First Flavor / 25% Second Flavor / 25% Third Flavor",
+                        :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
+                        :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
                         :generate_tin_image => false
                       }, 
                       :thumb => {
@@ -17,7 +18,9 @@ class Spree::LabelTemplate < ActiveRecord::Base
                         :format => :png,
                         :name => "Tea Flavor",
                         :description => "This is where you describe how wonderful your tea blend really is.",
-                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :blend => "50% First Flavor / 25% Second Flavor / 25% Third Flavor",
+                        :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
+                        :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
                         :generate_tin_image => false
                       }, 
                       :product => {
@@ -25,7 +28,9 @@ class Spree::LabelTemplate < ActiveRecord::Base
                         :format => :png,
                         :name => "Tea Flavor",
                         :description => "This is where you describe how wonderful your tea blend really is.",
-                        :template_path => "#{Rails.root.to_s}/public/images/templates/template-white.png",
+                        :blend => "50% First Flavor / 25% Second Flavor / 25% Third Flavor",
+                        :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
+                        :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
                         :generate_tin_image => true
                       }
                     },

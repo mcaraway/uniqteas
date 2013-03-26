@@ -1,8 +1,7 @@
 Spree::Product.class_eval do
   belongs_to :user
   has_and_belongs_to_many :blendable_taxons, :join_table => 'spree_blendable_products_taxons'
-  has_one :product_label
-  
+
   attr_accessible :public, :final, :label_template_id
 
   validate :validate_minimum_image_size
@@ -30,11 +29,11 @@ Spree::Product.class_eval do
     end
   end
 
-  def label_template_id=(params) 
+  def label_template_id=(params)
     label_template_id = params[:label_template_id]
     label_template = Spree::LabelTemplate.find_by_id(label_template_id)
     product_label = Spree::ProductLabel.new
-    
+
     product_label.label_template = label_template
     product_label.product = self
     url = label_template.url(:label)
@@ -42,11 +41,11 @@ Spree::Product.class_eval do
     logger.debug "************ url = " + url
     product_label.label_template_template_remote_url = url
   end
-  
+
   def label_template_id
-    
+
   end
-  
+
   def requiredTinImageWidth
     347
   end
@@ -170,12 +169,20 @@ Spree::Product.class_eval do
   def update_viewables
     if @tin_image != nil
       @tin_image.viewable = master
-    @tin_image.save
+      @tin_image.save
     end
 
     if @tag_image != nil
       @tag_image.viewable = master
     @tag_image.save
+    end
+    
+    refresh_tin_image
+  end
+  
+  def refresh_tin_image
+    if images[0] != nil
+      images[0].attachment.reprocess!
     end
   end
   attr_accessible :tin_image, :tag_image, :blend
