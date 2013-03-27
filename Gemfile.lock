@@ -11,7 +11,8 @@ GIT
 
 GIT
   remote: git://github.com/joneslee85/spree-heroku.git
-  revision: 3a3aa2165202f55acf689dcccc4d44648262c6a7
+  revision: d0b80e7c2aaaf338d5e9d543f5a47133ba263ff4
+  branch: 1-0-stable
   specs:
     spree_heroku (1.0)
       aws-sdk (~> 1.3.4)
@@ -148,7 +149,6 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
-    bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.4)
     cancan (1.6.8)
@@ -235,7 +235,6 @@ GEM
     net-http-digest_auth (1.2.1)
     net-http-persistent (2.8)
     newrelic_rpm (3.6.0.78)
-    nokogiri (1.5.9)
     nokogiri (1.5.9-x86-mingw32)
     nori (2.0.4)
     ntlm-http (0.1.1)
@@ -360,7 +359,6 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.7)
     sqlite3 (1.3.7-x86-mingw32)
     state_machine (1.1.2)
     stringex (1.3.3)
@@ -375,7 +373,6 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     unf (0.1.1)
       unf_ext
-    unf_ext (0.0.6)
     unf_ext (0.0.6-x86-mingw32)
     uuidtools (2.1.3)
     versioncake (0.4.0)
