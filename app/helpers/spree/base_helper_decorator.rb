@@ -83,7 +83,9 @@ Spree::BaseHelper.class_eval do
 
   def product_image(product, options = {})
     if product.images.empty?
-      image_tag "noimage/no-tin-image.png", :size => "240x240", :alt => product.name
+      options.reverse_merge! :alt => product.name 
+      options.reverse_merge! :size => "240x240"
+      image_tag "noimage/no-tin-image.png", options
     else
       image = product.images.first
       options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
