@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130320101800) do
+ActiveRecord::Schema.define(:version => 20130327135454) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -538,6 +538,17 @@ ActiveRecord::Schema.define(:version => 20130320101800) do
     t.datetime "deleted_at"
   end
 
+  create_table "spree_skrill_transactions", :force => true do |t|
+    t.string   "email"
+    t.float    "amount"
+    t.string   "currency"
+    t.integer  "transaction_id"
+    t.integer  "customer_id"
+    t.string   "payment_type"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
   create_table "spree_slides", :force => true do |t|
     t.string   "title"
     t.string   "url"
@@ -674,7 +685,7 @@ ActiveRecord::Schema.define(:version => 20130320101800) do
     t.datetime "locked_at"
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
-    t.string   "api_key",                :limit => 48
+    t.string   "spree_api_key",          :limit => 48
   end
 
   add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true

@@ -37,11 +37,7 @@ module Spree
 
           image.download_image(url)
           image.alt = product.name
-          begin
-            success = image.save
-          rescue Paperclip::Error => ex
-            logger.debug("There was an error saving the image for " + product.name)
-          end
+          success = image.save
         end
 
         respond_to do |format|
