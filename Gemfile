@@ -15,6 +15,7 @@ group :production do
   end
   gem 'dalli'
   gem 'newrelic_rpm'
+  gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git'
 end
 
 group :development do
@@ -30,7 +31,6 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-  gem 'spree_heroku', :git => 'git://github.com/joneslee85/spree-heroku.git'
   gem 'uglifier', '>= 1.0.3'
 end
 
