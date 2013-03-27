@@ -257,6 +257,8 @@ application.css: application-006eaf86c4b26350e0875ca5704a02e4.css
 application/index.css: application-006eaf86c4b26350e0875ca5704a02e4.css
 store/all.css: store/all-5c6e54652889a4ba0a32a41987d30a89.css
 store/all/index.css: store/all-5c6e54652889a4ba0a32a41987d30a89.css
+store/print.css: store/print-7299b2b548ad771ce6eb79f22f5649ad.css
+store/print/index.css: store/print-7299b2b548ad771ce6eb79f22f5649ad.css
 TinTemplate.png: TinTemplate-a9d7428bd4f6cd787e085b5a9edb5329.png
 TinTemplate/index.png: TinTemplate-a9d7428bd4f6cd787e085b5a9edb5329.png
 fontawesome-webfont.eot: fontawesome-webfont-86a6da438b901860c3a54e21f9098bf8.eot
