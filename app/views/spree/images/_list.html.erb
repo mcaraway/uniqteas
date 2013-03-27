@@ -80,7 +80,7 @@
 		// update the selected image
 		var image_thumbnail = document.getElementById("image_thumbnail");
 		var src = ui.selected.childNodes[1].src
-		image_thumbnail.childNodes[0].src = src.replace("/label/", "/product/");
+		image_thumbnail.src = src.replace("/label/", "/product/");
 
 		clearFileInputField("uploadFile_div");
 	};
