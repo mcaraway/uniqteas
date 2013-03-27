@@ -77,6 +77,4 @@ Uniqteas::Application.configure do
   }
   
   config.static_cache_control = "public, max-age=2592000"
-  
-  config.assets.initialize_on_precompile = false
 end
