@@ -35,10 +35,8 @@ Spree.config do |config|
   ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
 
   Spree.user_class = "Spree::User"
-  Spree.config do |config|
   config.use_s3 = true
   config.s3_bucket = 'uniqteas'
   config.s3_access_key = "AKIAIINPHCX6H5RSXAIQ"
   config.s3_secret = "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"
-end
 end
