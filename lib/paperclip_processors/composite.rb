@@ -24,7 +24,6 @@ module Paperclip
     # that contains the new image.
     def make
       Paperclip.log("***********  Product is custom!  Compositing...")
-      Paperclip.log("***********  label_image_remote_url = " + @label_image_remote_url)
       nameImg = createText(productName, "72", "")
 
       # next create the description text image
