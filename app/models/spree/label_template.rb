@@ -2,7 +2,7 @@ class Spree::LabelTemplate < ActiveRecord::Base
   attr_accessible :group, :name, :label_image
   has_attached_file :label_image,
                     :processors => [:label_thumbnail, :thumbnail],
-                    :styles => { 
+                    :styles => {
                       :label  => {
                         :geometry =>'600x800',
                         :format => :png,
@@ -12,7 +12,7 @@ class Spree::LabelTemplate < ActiveRecord::Base
                         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
                         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
                         :generate_tin_image => false
-                      }, 
+                      },
                       :thumb => {
                         :geometry =>'75x100',
                         :format => :png,
@@ -22,7 +22,7 @@ class Spree::LabelTemplate < ActiveRecord::Base
                         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
                         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
                         :generate_tin_image => false
-                      }, 
+                      },
                       :product => {
                         :geometry =>'240x240',
                         :format => :png,
@@ -41,14 +41,17 @@ class Spree::LabelTemplate < ActiveRecord::Base
   # save the w,h of the original image (from which others can be calculated)
   # we need to look at the write-queue for images which have not been saved yet
 
-  include Spree::Core::S3Support
-  supports_s3 :label_image
+  if Rails.env.production?
+    include Spree::Core::S3Support
+    supports_s3 :label_image
 
-  # Spree::LabelTemplate.attachment_definitions[:label_image][:styles] = { :label  => '600x800', :thumb => '75x100' }
-  # Spree::LabelTemplate.attachment_definitions[:label_image][:path] = ":rails_root/public/spree/label_templates/:id/:style/:basename.:extension"
-  # Spree::LabelTemplate.attachment_definitions[:label_image][:url] = "/spree/label_templates/:id/:style/:basename.:extension"
-  # Spree::LabelTemplate.attachment_definitions[:label_image][:default_url] = "/spree/label_templates/:id/:style/:basename.:extension"
-  # Spree::LabelTemplate.attachment_definitions[:label_image][:default_style] = "label"
+    # Spree::LabelTemplate.attachment_definitions[:label_image][:styles] = { :label  => '600x800', :thumb => '75x100' }
+    # Spree::LabelTemplate.attachment_definitions[:label_image][:path] = ":rails_root/public/spree/label_templates/:id/:style/:basename.:extension"
+    # Spree::LabelTemplate.attachment_definitions[:label_image][:url] = "/spree/label_templates/:id/:style/:basename.:extension"
+    # Spree::LabelTemplate.attachment_definitions[:label_image][:default_url] = "/spree/label_templates/:id/:style/:basename.:extension"
+    # Spree::LabelTemplate.attachment_definitions[:label_image][:default_style] = "label"
+  end
+
   def find_dimensions
     temporary = label_image.queued_for_write[:original]
     filename = temporary.path unless temporary.nil?

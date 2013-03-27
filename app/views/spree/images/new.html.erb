@@ -2,9 +2,11 @@
 <% end %>
 <%= form_for [@product, @image], :html => { :multipart => true } do |f| %>
 <table class="basic-table" data-hook="new_image">
-	<td style="width: 15%;"><%= t(:thumbnail) %>:</td>
-	<td style="width: 35%;"><%= product_image(@product, :id => "image_thumbnail") %></td>
-	<td><%= render :partial => 'form', :locals => { :f => f } %></td>
+	<tr data-hook="thumbnail">
+		<td style="width: 15%;"><%= t(:thumbnail) %>:</td>
+		<td style="width: 35%;"><%= product_image(@product, :id => "image_thumbnail") %></td>
+		<td><%= render :partial => 'form', :locals => { :f => f } %></td>
+	</tr>
 </table>
 <p class="form-buttons" data-hook="buttons">
 	<%= button t(:update) %>

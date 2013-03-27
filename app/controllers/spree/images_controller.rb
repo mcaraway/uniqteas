@@ -19,6 +19,8 @@ module Spree
     def update
       logger.debug("**************** in Update")
       @Image = Spree::Image.find_by_id(params[:id])
+      #clear this first so that it is only set if the user is using a remote image right now
+      @Image.label_image_remote_url = ""
       
       if @Image.update_attributes(params[:image])
         respond_with(@Image) do |format|
@@ -61,7 +63,7 @@ module Spree
     end
 
     def set_viewable
-      if params[:label_template_id].empty? and params[:image].has_key? :viewable_id
+      if params[:label_image_remote_url].nil? and params[:image].has_key? :viewable_id
         if params[:image][:viewable_id] == 'All'
         @image.viewable = @product.master
         else
