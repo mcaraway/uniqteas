@@ -1,10 +1,18 @@
 <div data-hook="admin_image_form_fields">
-	<h2><%= t(:choose_image_or_template_html)%></h2>	
+	<h2><%= t(:choose_image_or_template_html)%></h2>
 	<%= t(:filename) %>:
-	<%= f.file_field :attachment %>
-	<br />
-	<%= t(:tin_image_size_instructions)%>
+	<div id="uploadFile_div">
+		<%= f.file_field :attachment %>
+	</div>
 	<%= hidden_field_tag :product_id, @product.id %>
-	<%= hidden_field_tag :label_template_id, @product.label_template_id %>
 	<%= f.hidden_field :label_image_remote_url %>
 </div>
+
+<script type="text/javascript">
+	$("input#image_attachment").change(function() {
+		// clear the remote url since the user choose a file
+		var remoteInput = document.getElementById("image_label_image_remote_url");
+
+		remoteInput.value = "";
+	});
+</script>

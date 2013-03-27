@@ -12,12 +12,16 @@ Routes for Spree::Core::Engine:
                          spree_pages_about GET      /spree/pages/about(.:format)                                                spree/pages#about
                           spree_pages_faqs GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
                        spree_pages_privacy GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                         spree_pages_share GET      /spree/pages/share(.:format)                                                spree/pages#share
+                      spree_pages_cfupdate GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
                                    gallery          /gallery(.:format)                                                          :controller#:action
                                    blendit          /blendit(.:format)                                                          spree/products#new
                                    bighoop          /bighoop(.:format)                                                          spree/pages#bighoop
                                      about          /about(.:format)                                                            spree/pages#about
                                       faqs          /faqs(.:format)                                                             spree/pages#faqs
                                    privacy          /privacy(.:format)                                                          spree/pages#privacy
+                                     share          /share(.:format)                                                            spree/pages#share
+                                  cfupdate          /cfupdate(.:format)                                                         spree/pages#cfupdate
                                   myblends          /myblends(.:format)                                                         spree/users#myblends
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
@@ -59,6 +63,7 @@ Routes for Spree::Core::Engine:
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
     update_positions_admin_label_templates POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
       refresh_labels_admin_label_templates POST     /admin/label_templates/refresh_labels(.:format)                             spree/admin/label_templates#refresh_labels
+    reprocess_images_admin_label_templates POST     /admin/label_templates/reprocess_images(.:format)                           spree/admin/label_templates#reprocess_images
                      admin_label_templates GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
                                            POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
                   new_admin_label_template GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new
@@ -287,12 +292,16 @@ Routes for Spree::Core::Engine:
                                            GET      /spree/pages/about(.:format)                                                spree/pages#about
                                            GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
                                            GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                                           GET      /spree/pages/share(.:format)                                                spree/pages#share
+                                           GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
                                                     /gallery(.:format)                                                          :controller#:action
                                                     /blendit(.:format)                                                          spree/products#new
                                                     /bighoop(.:format)                                                          spree/pages#bighoop
                                                     /about(.:format)                                                            spree/pages#about
                                                     /faqs(.:format)                                                             spree/pages#faqs
                                                     /privacy(.:format)                                                          spree/pages#privacy
+                                                    /share(.:format)                                                            spree/pages#share
+                                                    /cfupdate(.:format)                                                         spree/pages#cfupdate
                                                     /myblends(.:format)                                                         spree/users#myblends
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                     /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
@@ -334,6 +343,7 @@ Routes for Spree::Core::Engine:
                                            PUT      /admin/blendable_products_settings(.:format)                                spree/admin/blendable_products_settings#update
                                            POST     /admin/label_templates/update_positions(.:format)                           spree/admin/label_templates#update_positions
                                            POST     /admin/label_templates/refresh_labels(.:format)                             spree/admin/label_templates#refresh_labels
+                                           POST     /admin/label_templates/reprocess_images(.:format)                           spree/admin/label_templates#reprocess_images
                                            GET      /admin/label_templates(.:format)                                            spree/admin/label_templates#index
                                            POST     /admin/label_templates(.:format)                                            spree/admin/label_templates#create
                                            GET      /admin/label_templates/new(.:format)                                        spree/admin/label_templates#new

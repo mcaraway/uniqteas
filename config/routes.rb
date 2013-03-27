@@ -102,11 +102,12 @@ Spree::Core::Engine.routes.prepend do
 
   namespace :admin do
     resource :blendable_products_settings, :only => ['show', 'update', 'edit']
-
+    
     resources :label_templates do
       collection do
         post :update_positions
         post :refresh_labels
+        post :reprocess_images
       end
     end
     resources :home_page_sliders do

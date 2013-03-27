@@ -16,6 +16,21 @@ module Spree
       end
     end
 
+    def update
+      logger.debug("**************** in Update")
+      @Image = Spree::Image.find_by_id(params[:id])
+      
+      if @Image.update_attributes(params[:image])
+        respond_with(@Image) do |format|
+          format.html do
+            redirect_to edit_product_url(@product)
+          end
+        end
+      else
+        respond_with(@Image)
+      end
+    end
+
     private
 
     def location_after_save
@@ -42,7 +57,7 @@ module Spree
       if (@current_category)
         @label_templates = @label_groups[@current_category]
       end
-      #@label_templates = Kaminari.paginate_array(@label_templates).page(params[:page]).per(Spree::Config.products_per_page)
+    #@label_templates = Kaminari.paginate_array(@label_templates).page(params[:page]).per(Spree::Config.products_per_page)
     end
 
     def set_viewable
@@ -54,7 +69,7 @@ module Spree
           @image.viewable_id = params[:image][:viewable_id]
         end
       else
-        @image.viewable = @product.master
+      @image.viewable = @product.master
       end
     end
 
