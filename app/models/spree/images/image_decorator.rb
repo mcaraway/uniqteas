@@ -79,10 +79,20 @@ Spree::Image.class_eval do
       }
     }
   end
+
+  include Spree::Core::S3Support
+  supports_s3 :attachment
+
+  Spree::Image.attachment_definitions[:attachment][:styles] = ActiveSupport::JSON.decode(Spree::Config[:attachment_styles])
+  Spree::Image.attachment_definitions[:attachment][:path] = Spree::Config[:attachment_path]
+  Spree::Image.attachment_definitions[:attachment][:url] = Spree::Config[:attachment_url]
+  Spree::Image.attachment_definitions[:attachment][:default_url] = Spree::Config[:attachment_default_url]
+  Spree::Image.attachment_definitions[:attachment][:default_style] = Spree::Config[:attachment_default_style]
+
   def download_image(remote_url)
     self.attachment = do_download_remote_image(remote_url)
   end
-  
+
   def download_remote_image
     self.attachment = do_download_remote_image(label_image_remote_url)
   end
