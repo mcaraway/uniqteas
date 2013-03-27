@@ -3,9 +3,8 @@ Spree::ProductsController.class_eval do
   before_filter :load_product, :only => [:show, :edit, :update]
   before_filter :verify_login?, :only => [:new]
   before_filter :load_blendables, :only => [:new, :edit]
-  
+
   respond_to :html, :json, :js
-   
   def index
     params[:ispublic] = true
     logger.debug "****** Prototype is #{params}"
@@ -62,7 +61,7 @@ Spree::ProductsController.class_eval do
 
     @custom_tea_taxon = Spree::Taxon.find_by_name("Custom Blends");
     @product.taxons = [@custom_tea_taxon] if @custom_tea_taxon
-    
+
     if @product.save
       @product.update_viewables
       setup_volume_pricing
@@ -100,7 +99,7 @@ Spree::ProductsController.class_eval do
       if @product.final == false
         flash[:success] = "Your draft blend is saved."
       else
-        link = "<a href=\"#{url_for(@product)}\">order</a>"    
+        link = "<a href=\"#{url_for(@product)}\">order</a>"
         flash[:success] = "<h2>Your blend is good to go! Now go #{link} some.</h2>".html_safe
       end
       redirect_to proc { edit_product_url(@product) }
@@ -162,7 +161,7 @@ Spree::ProductsController.class_eval do
       redirect_to spree.login_path
     end
   end
-  
+
   def load_blendables
     @blendables = Spree::BlendableTaxon.all
     @black_teas = Spree::BlendableTaxon.find_by_name("Black Tea")

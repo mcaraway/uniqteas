@@ -79,21 +79,22 @@ Spree::Image.class_eval do
       }
     }
   end
-
+  def download_image(remote_url)
+    self.attachment = do_download_remote_image(remote_url)
+  end
+  
   def download_remote_image
-    self.attachment = do_download_remote_image
+    self.attachment = do_download_remote_image(label_image_remote_url)
   end
 
   protected
 
   def label_image_url_provided?
-    logger.debug("********** checking label_image_remote_url: " + label_image_remote_url)
     !label_image_remote_url.blank?
   end
 
-  def do_download_remote_image
-    logger.debug("********** downloading " + label_image_remote_url)
-    io = open(URI.parse(label_image_remote_url))
+  def do_download_remote_image(remote_url)
+    io = open(URI.parse(remote_url))
     def io.original_filename; base_uri.path.split('/').last; end
     io.original_filename.blank? ? nil : io
   #rescue # catch url errors with validations instead of exceptions (Errno::ENOENT, OpenURI::HTTPError, etc...)
