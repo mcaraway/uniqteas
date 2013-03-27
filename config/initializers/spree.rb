@@ -33,6 +33,10 @@ Spree.config do |config|
   # This is needed when using Unicorn and preload_app is not set to true.
   # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data
   ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
-  
+
   Spree.user_class = "Spree::User"
+  config.use_s3 = true
+  config.s3_bucket = ENV['S3_BUCKET_NAME']
+  config.s3_access_key = ENV['AWS_ACCESS_KEY']
+  config.s3_secret = EVN['AWS_SECRET_ACCESS_KEY']
 end
