@@ -36,7 +36,7 @@ Spree.config do |config|
 
   Spree.user_class = "Spree::User"
   config.use_s3 = true
-  config.s3_bucket = ENV['S3_BUCKET_NAME']
-  config.s3_access_key = ENV['AWS_ACCESS_KEY']
-  config.s3_secret = EVN['AWS_SECRET_ACCESS_KEY']
+  config.s3_bucket = "uniqteas"
+  config.s3_access_key = "AKIAIINPHCX6H5RSXAIQ"
+  config.s3_secret = "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"
 end
