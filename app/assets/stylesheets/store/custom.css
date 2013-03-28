@@ -342,7 +342,7 @@ hr {
 	border: none;
 }
 
-nav #categories ul li:hover {
+#categories ul li:hover {
 	color: #FF9900;
 	cursor: hand;
 }
