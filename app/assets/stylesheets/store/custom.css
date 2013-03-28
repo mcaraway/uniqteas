@@ -1,6 +1,6 @@
-#wrapper{
-  margin-top: 15px; 
-  padding: 20px 0px;	
+#wrapper {
+	margin-top: 15px;
+	padding: 20px 0px;
 }
 
 .motto {
@@ -345,4 +345,15 @@ hr {
 nav #categories ul li:hover {
 	color: #FF9900;
 	cursor: hand;
+}
+
+#main-image {
+	height: 345px;
+}
+#main-image img {
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
 }
