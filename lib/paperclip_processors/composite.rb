@@ -139,7 +139,7 @@ module Paperclip
 
     def productBlend
       variant = Spree::Variant.find_by_id(@variant_id)
-      product = Spree::Product.find(variant.product_id)
+      product = variant ? Spree::Product.find(variant.product_id) : nil
       product ? product.blend.strip : "Tea Blend"
     end
   end
