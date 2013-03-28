@@ -29,7 +29,6 @@ Spree::Image.class_eval do
     {
       :mini => {
         :geometry => '48x48>',
-        :format => :png,
         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
         :label_template_path => "#{Rails.root.to_s}/public/images/templates/LabelTemplate.png",
@@ -39,7 +38,6 @@ Spree::Image.class_eval do
       },
       :small => {
         :geometry => '100x100>',
-        :format => :png,
         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
         :label_template_path => "#{Rails.root.to_s}/public/images/templates/LabelTemplate.png",
@@ -49,7 +47,6 @@ Spree::Image.class_eval do
       },
       :product => {
         :geometry => '240x240>',
-        :format => :png,
         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
         :label_template_path => "#{Rails.root.to_s}/public/images/templates/LabelTemplate.png",
@@ -59,7 +56,6 @@ Spree::Image.class_eval do
       },
       :large => {
         :geometry => '600x600>',
-        :format => :png,
         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
         :label_template_path => "#{Rails.root.to_s}/public/images/templates/LabelTemplate.png",
@@ -69,7 +65,6 @@ Spree::Image.class_eval do
       },
       :label => {
         :geometry => '450x600>',
-        :format => :png,
         :tin_path => "#{Rails.root.to_s}/public/images/templates/TeaTin.png",
         :tin_fade_path => "#{Rails.root.to_s}/public/images/templates/TeaTinLabelFade.png",
         :label_template_path => "#{Rails.root.to_s}/public/images/templates/LabelTemplate.png",
