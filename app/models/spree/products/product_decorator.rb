@@ -45,16 +45,16 @@ Spree::Product.class_eval do
     if is_custom?
       if final
         if name == nil
-          errors.add :name, "You blend can not be made final until it has a name."
+          errors.add :name, "Your blend can not be made final until it has a name."
         end
         if description == nil
-          errors.add :description, "You blend can not be made final until it has a description."
+          errors.add :description, "Your blend can not be made final until it has a description."
         end
         if !(has_tin_image?)
-          errors.add :images, "You blend can not be made final until it has a tin image."
+          errors.add :images, "Your blend can not be made final until it has a tin image."
         end
         if !has_flavors?
-          errors.add :blend, "You blend can not be made final until it has at least one flavor."
+          errors.add :blend, "Your blend can not be made final until it has at least one flavor."
         end
       end
     end

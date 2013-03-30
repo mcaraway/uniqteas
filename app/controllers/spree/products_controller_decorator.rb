@@ -67,7 +67,8 @@ Spree::ProductsController.class_eval do
       flash[:success] = "Your draft blend is saved.  Now add some art and click Finalize to be able to order it."
       redirect_to proc { edit_product_url(@product) }
     else
-      render 'new'
+      load_blendables
+      render :new
     end
   end
 
@@ -103,6 +104,7 @@ Spree::ProductsController.class_eval do
       end
       redirect_to proc { edit_product_url(@product) }
     else
+      load_blendables
       @product.final = @product.final_was
       respond_with(@product)
     end
