@@ -15,6 +15,7 @@ Spree::Image.class_eval do
   # if this is a custom tea then use the composite processor as well
   def processors
     logger.debug("********** determining which image processors to use")
+    logger.debug("********** viewable_id = " + (viewable_id.blank? ? "nil" : viewable_id.to_s))
     variant = Spree::Variant.find_by_id(viewable_id)
     if variant and variant.is_custom?
       logger.debug("********** using composite and thumbnail")

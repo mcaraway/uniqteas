@@ -6,6 +6,7 @@ module Spree
     create.before :set_viewable
     update.before :set_viewable
     destroy.before :destroy_before
+
     def update_positions
       params[:positions].each do |id, index|
         Image.where(:id => id).update_all(:position => index)
@@ -18,18 +19,17 @@ module Spree
 
     def update
       logger.debug("**************** in Update")
-      @Image = Spree::Image.find_by_id(params[:id])
       #clear this first so that it is only set if the user is using a remote image right now
-      @Image.label_image_remote_url = ""
-      
-      if @Image.update_attributes(params[:image])
-        respond_with(@Image) do |format|
+      @object.label_image_remote_url = ""
+
+      if @object.update_attributes(params[:image])
+        respond_with(@object) do |format|
           format.html do
             redirect_to edit_product_url(@product)
           end
         end
       else
-        respond_with(@Image)
+        respond_with(@object)
       end
     end
 
@@ -63,15 +63,21 @@ module Spree
     end
 
     def set_viewable
+      logger.debug("****************  set_viewable")
       if params[:label_image_remote_url].nil? and params[:image].has_key? :viewable_id
         if params[:image][:viewable_id] == 'All'
-        @image.viewable = @product.master
+          @object.viewable = @product.master
+          @object.viewable_id = @product.master.id
+          logger.debug("********** 1 viewable_id = " + (@object.viewable_id.blank? ? "nil" : @object.viewable_id.to_s))
         else
-          @image.viewable_type = 'Spree::Variant'
-          @image.viewable_id = params[:image][:viewable_id]
+          @object.viewable_type = 'Spree::Variant'
+          @object.viewable_id = params[:image][:viewable_id]
+          logger.debug("********** 2 viewable_id = " + (@object.viewable_id.blank? ? "nil" : @object.viewable_id.to_s))
         end
       else
-      @image.viewable = @product.master
+        @object.viewable = @product.master
+        @object.viewable_id = @product.master.id
+        logger.debug("********** 3 viewable_id = " + (@object.viewable_id.blank? ? "nil" : @object.viewable_id.to_s))
       end
     end
 

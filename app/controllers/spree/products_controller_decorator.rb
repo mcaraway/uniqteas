@@ -18,7 +18,7 @@ Spree::ProductsController.class_eval do
     @first_flavor = params[:flavor1]
     @prototype = Spree::Prototype.find_by_name("CustomTea")
     @product = Spree::Product.new(:price => 14.95 )
-    @product.public = false
+    @product.public = true
     @flavor_count = 3
     logger.debug "****** Prototype is #{@prototype.properties}"
 
@@ -32,8 +32,6 @@ Spree::ProductsController.class_eval do
 
   def edit
     if @product.is_custom? then
-      logger.debug "****** current_user is #{current_user.email}"
-      logger.debug "****** owner is #{@product.user.email}"
       @edit_blend = true
       if current_user == nil or (current_user != nil and current_user.id != @product.user.id) then
         render @product
@@ -54,7 +52,7 @@ Spree::ProductsController.class_eval do
     @product.price = 12.95
     @product.available_on = Time.now.getutc
     @product.final = false
-    @product.public = true
+    @product.public = params[:product][:public]
     @product.on_hand = 999999
     @product.meta_keywords = t(:custom_blend_meta_keywords)
     @product.meta_description = t(:custom_blend_meta_description)
@@ -64,12 +62,24 @@ Spree::ProductsController.class_eval do
 
     if @product.save
       @product.update_viewables
+      create_default_image
       flash[:success] = "Your draft blend is saved.  Now add some art and click Finalize to be able to order it."
       redirect_to proc { edit_product_url(@product) }
     else
       load_blendables
       render :new
     end
+  end
+
+  def create_default_image
+    url = "#{Rails.root}/public/images/templates/your-image-here.jpg"
+    logger.debug("************** url = " + url)
+    image = Spree::Image.new
+    image.viewable_type = 'Spree::Variant'
+    image.alt = @product.name
+    image.viewable_id = @product.master.id
+    image.attachment = File.open(url)
+    image.save!
   end
 
   def setup_volume_pricing

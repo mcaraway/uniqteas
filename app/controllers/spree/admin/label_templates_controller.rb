@@ -29,15 +29,17 @@ module Spree
           end
           logger.debug("************ reprocessing " + product.name)
           url = generate_file_name(product)
-          
+
           if !validate_uri_existence_of(url)
-            next
+          next
           end
           image = product.images.blank? ? Spree::Image.new : product.images[0]
 
+          image.viewable_type = 'Spree::Variant'
           image.download_image(url)
           image.alt = product.name
-          success = image.save
+          image.viewable_id = product.master.id
+          success = image.save!
         end
 
         respond_to do |format|
@@ -97,7 +99,7 @@ module Spree
           else  false
           end
         rescue # Recover on DNS failures..
-          false
+        false
         end
       end
     end
