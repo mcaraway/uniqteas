@@ -13,7 +13,10 @@
 	$("input#image_attachment").change(function() {
 		// clear the remote url since the user choose a file
 		var remoteInput = document.getElementById("image_label_image_remote_url");
-
 		remoteInput.value = "";
+		
+		// update the selected image
+		var image_thumbnail = document.getElementById("image_thumbnail");
+		image_thumbnail.src = "/images/templates/default-tin.png";		
 	});
 </script>

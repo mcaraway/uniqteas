@@ -112,7 +112,11 @@ Spree::ProductsController.class_eval do
         link = "<a href=\"#{url_for(@product)}\">order</a>"
         flash[:success] = "<h2>Your blend is good to go! Now go #{link} some.</h2>".html_safe
       end
-      redirect_to proc { edit_product_url(@product) }
+      if @product.final
+        redirect_to proc { product_url(@product) }
+      else
+        redirect_to proc { edit_product_url(@product) }
+      end
     else
       load_blendables
       @product.final = @product.final_was
