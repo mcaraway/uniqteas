@@ -1,0 +1,19 @@
+<div class="columns six">
+	<img src="/assets/store/girl-drinking-cup.jpg" width="380" height="310">
+	<%= render :partial => 'customer_blend_list' %>
+</div>
+<div class="home-page-intro">
+	<div class="heading">
+		We help you create your unique
+		<br />
+		blend of teas, you help create
+		<br />
+		your own unique packaging.
+		<br />
+	</div>
+	<div style="margin: 10px 0px 0px 200px">
+		<%= link_to blendit_url, :class => "button" do %>
+		<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:try_it_free) %>
+		<% end %>
+	</div>
+</div>

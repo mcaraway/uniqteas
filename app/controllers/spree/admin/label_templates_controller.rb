@@ -24,9 +24,13 @@ module Spree
         @products = Spree::Product.all
 
         @products.each do |product|
-          if product.is_custom?
-          next
+          if !product.deleted_at.nil?
+            next
           end
+          if product.is_custom?
+            product.images[0].attachment.reprocess! unless product.images.empty?
+          end
+            next
           logger.debug("************ reprocessing " + product.name)
           url = generate_file_name(product)
 
@@ -36,9 +40,9 @@ module Spree
           image = product.images.blank? ? Spree::Image.new : product.images[0]
 
           image.viewable_type = 'Spree::Variant'
-          image.download_image(url)
-          image.alt = product.name
           image.viewable_id = product.master.id
+          image.alt = product.name
+          image.download_image(url)
           success = image.save!
         end
 

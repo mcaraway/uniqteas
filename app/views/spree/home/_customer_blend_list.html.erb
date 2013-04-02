@@ -1,0 +1,40 @@
+<% if @featured_products %>
+<div id="home-customer-slider">
+	Choose from one of our customer-designed blends.
+	<ul>
+		<% @featured_products.each do |product| %>
+		<li>
+			<div class="home-product-image center-align">
+				<%= link_to small_image(product), product_url(product) %>
+			</div>
+			<div class="home-product-title center-align">
+				<%= link_to product.name, product_url(product)%>
+			</div>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<script type="text/javascript">
+	$(function() {
+
+		// Hide flash messages after timeout
+		setTimeout('$(".flash").fadeOut(1000)', 5000);
+
+		// Home sliders
+		if ($('#home-customer-slider').length > 0) {
+			$('#home-customer-slider > ul').bxSlider({
+				infiniteLoop : false,
+				controls : true,
+				touchEnabled : true,
+				hideControlOnEnd : true,
+				minSlides : 1,
+				maxSlides : 4,
+				useCSS : true,
+				slideWidth : 80,
+				slideMargin : 5
+			});
+		}
+	}); 
+</script>

@@ -1,6 +1,21 @@
 #wrapper {
-	margin-top: 15px;
-	padding: 20px 0px;
+	margin-top: 5px;
+	padding: 5px 0px;
+	box-shadow: 0 0 0px #9BB3A1;
+}
+#header {
+	margin-bottom: 0px;
+}
+.home-page-intro {
+	background: url(/assets/store/home-page-background-1.jpg) no-repeat;
+	height: 460px;
+	width: 560px;
+	padding: 0px 0px 0px 20px;
+	float: left;
+}
+
+.add-to-cart input[type="number"] {
+	margin: 0px;
 }
 
 .motto {
@@ -29,16 +44,16 @@
 
 .instructions {
 	font-family: 'Abel', sans-serif;
-	color: white;
+	color: black;
 	font-size: 20px;
 	margin-bottom: 20px;
 	line-height: normal;
 }
 
 .heading {
-	color: white;
-	font-size: 2.5em;
-	line-height: 62px;
+	color: black;
+	font-size: 1.7em;
+	line-height: 1.1em;
 	margin-bottom: .5em;
 	font-weight: normal;
 	width: 450px;
@@ -357,3 +372,41 @@ hr {
 	-o-border-radius: 0px;
 	border-radius: 0px;
 }
+
+.bx-wrapper img {
+	width: 120px;
+	height: 120px;
+}
+
+#home-customer-slider {
+	ul {
+		list-style: none;
+		font-size: 14px !important;
+		li {
+			font-size: 7px;
+			line-height: 9px;
+		}
+	}
+}
+
+	
+.home-product-title {
+	color: white;
+	background-color: #929292;
+	margin-bottom: 0px;
+	font-size: 9px;
+}
+
+.home-product-title  a {
+	color: white;
+}
+
+.home-product-image {
+	overflow: hidden;
+	width: 80px;
+	height: 90px;
+}
+.home-product-image img {
+	margin-left: -20px;
+	margin-top: -15px;
+}	

@@ -1,26 +1,7 @@
 <footer id="footer" class="sixteen columns" data-hook>
 	<div class="container">
 
-		<div class="four columns">
-			<%= image_tag "store/logo-white.png", :alt => "UniqTeas", :id => "footer-logo" %>
-			<br>
-			<br>
-			<div class="phone">
-				<a href="callto:012341234567">845-236-3645</a>
-			</div>
-			<br>
-			<div class="email">
-				<a href="mailto:admin@uniqteas.com">admin@uniqteas.com</a>
-			</div>
-			<br>
-			<div class="address">
-				UniqTeas
-				<br>
-				Marlboro NY, USA
-			</div>
-		</div>
-
-		<div class="four columns">
+		<div class="two columns">
 			<h5>Information</h5>
 			<ul>
 				<li>
@@ -38,25 +19,25 @@
 			</ul>
 		</div>
 
-		<div class="four columns">
+		<div class="three columns">
 			<h5>Affiliations</h5>
 			<ul>
 				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/BBBS.png", :size=>"40x38", :title =>"Big Brothers Big Sisters", :style=>"float: left; padding-right: 5px;"), "http://www.bbbs.org" %>
-					We support Big Brothers Big Sisters by donating 1% annually.
+					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/BBBS.png", :size=>"16x16", :title =>"Big Brothers Big Sisters", :style=>"float: left; padding-right: 5px;"), "http://www.bbbs.org" %>
+					Big Brothers Big Sisters
 				</li>
 				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/STI.gif", :size=>"40x40", :title =>"Specialty Tea Institute", :style=>"float: left; padding-right: 5px;"), "http://www.teausa.com/" %>
-					Member of the Specialty Tea Institute.
+					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/STI.gif", :size=>"16x16", :title =>"Specialty Tea Institute", :style=>"float: left; padding-right: 5px;"), "http://www.teausa.com/" %>
+					Specialty Tea Institute.
 				</li>
 				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"40x40", :style=>"float: left; padding-right: 5px;"), bighoop_path %>
-					Through the Big Hoop Foundation we share our profits with the people who produce these teas.
+					<%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"16x16", :style=>"float: left; padding-right: 5px;"), bighoop_path %>
+					Big Hoop Foundation
 				</li>
 			</ul>
 		</div>
 
-		<div class="four columns">
+		<div class="seven columns">
 			<h5>Get Special Offers</h5><!-- Begin MailChimp Signup Form -->
 			<div id="mc_embed_signup">
 				<form
@@ -80,6 +61,10 @@
 			</div>
 		</div>
 
+		<div class="three columns">
+			<%= image_tag("/assets/store/organic.jpg", :size=>"60x60", :title =>"We use organic teas.", :style=>"float: left; padding-right: 5px;")%>
+			<%= image_tag("/assets/store/fair-trade.jpg", :size=>"55x60", :title =>"We use fair trade teas.", :style=>"float: left; padding-right: 5px;")%>
+		</div>
 	</div>
 	<script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=www.uniqteas.com&amp;size=L&amp;lang=en"></script>
 </footer>

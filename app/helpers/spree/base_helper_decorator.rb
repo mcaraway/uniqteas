@@ -1,4 +1,9 @@
 Spree::BaseHelper.class_eval do
+  def blend_img (sku)
+    src = "https://s3.amazonaws.com/uniqteas/product_images/" + sku  + ".jpg"
+    image_tag src, :size => "150x150"
+  end
+  
   def link_to_clone(resource, options={})
     options[:data] = {:action => 'clone'}
     link_to_with_icon('icon-copy', t(:clone), clone_admin_product_url(resource), options)
@@ -94,12 +99,25 @@ Spree::BaseHelper.class_eval do
     end
   end
 
+  def large_product_image(product, options = {})
+    if product.images.empty?
+      options.reverse_merge! :alt => product.name 
+      options.reverse_merge! :size => "400x400"
+      image_tag "noimage/no-tin-image.png", options
+    else
+      image = product.images.first
+      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      options.reverse_merge! :size => "400x400"
+      image_tag product.images.first.attachment.url(:large), options
+    end
+  end
   def mini_image(product, options = {})
     if product.images.empty?
       image_tag "noimage/no-tin-image.png", :size => "48x48", :alt => product.name
     else
       image = product.images.first
       options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
+      options.reverse_merge! :size => "48x48"
       image_tag product.images.first.attachment.url(:mini), options
     end
   end
