@@ -29,8 +29,8 @@ module Spree
           end
           if product.is_custom?
             product.images[0].attachment.reprocess! unless product.images.empty?
-          end
             next
+          end
           logger.debug("************ reprocessing " + product.name)
           url = generate_file_name(product)
 
