@@ -117,6 +117,16 @@ Spree::Product.class_eval do
     blend
   end
 
+  def flavors
+    flavors = Hash.new
+    product_properties.each do |property|
+      if (property.property_name.index("flavor") != nil)
+        flavors[property.property_name] = property.value
+      end
+    end
+    flavors
+  end
+  
   def has_tin_image?
     !(images.empty?)
   end

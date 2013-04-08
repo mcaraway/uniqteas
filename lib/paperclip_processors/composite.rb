@@ -24,31 +24,31 @@ module Paperclip
     # that contains the new image.
     def make
       Paperclip.log("***********  Product is custom!  Compositing...")
-      nameImg = createText(productName, "72", "")
+      nameImg = createText(productName, "36", "")
 
       # next create the description text image
-      descImg = createText(productDescription, "36", "800x")
+      descImg = createText(productDescription, "18", "400x")
 
       # next create the blend text image
-      blendImg = createText(productBlend, "72", "")
+      blendImg = createText(productBlend, "36", "")
 
       # now composite name text onto template
-      dst = compositeFiles(nameImg, label_image_remote_url.blank? ? label_template_path : file , "820x100!+40+40")
+      dst = compositeFiles(nameImg, label_image_remote_url.blank? ? label_template_path : file , "410x50!+20+20")
 
       # now composite blend text onto comp
-      dst = compositeFiles(blendImg, dst, "810x50!+50+1050")
+      dst = compositeFiles(blendImg, dst, "405x25!+25+525")
 
       # now composite the description onto the dst
-      dst = compositeFiles(descImg, dst, "820x185+50+865")
+      dst = compositeFiles(descImg, dst, "410x93+25+433")
 
       # now composite the image onto the label
       if label_image_remote_url.blank?
-        dst = compositeFiles(file, dst, "821x628!+42+193")
+        dst = compositeFiles(file, dst, "411x314!+21+86")
       end
 
       if generate_tin_image
-        dst = compositeFiles(dst, tin_path, "332x436!+234+139")
-        dst = compositeFiles(tin_fade_path, dst, "800x800!+0+0")
+        dst = compositeFiles(dst, tin_path, "249x327!+176+104")
+        dst = compositeFiles(tin_fade_path, dst, "600x600!+0+0")
       end
 
       dst
@@ -76,9 +76,9 @@ module Paperclip
       command = "convert"
       params = ""
       if size_for_caption.blank?
-        params = "-background none -fill black -font Constantia -pointsize #{pointsize} label:\"#{text}\" #{tofile(textImg)}"
+        params = "-background none -fill black -font Arial -pointsize #{pointsize} label:\"#{text}\" #{tofile(textImg)}"
       else
-        params = "-background none -fill black -font Constantia -pointsize #{pointsize} -size #{size_for_caption} caption:\"#{text}\" #{tofile(textImg)}"
+        params = "-background none -fill black -font Arial -pointsize #{pointsize} -size #{size_for_caption} caption:\"#{text}\" #{tofile(textImg)}"
       end
 
       begin

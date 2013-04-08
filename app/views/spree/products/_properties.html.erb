@@ -4,7 +4,7 @@
 <%= @product.blend.gsub("/", "<br />").html_safe %>
 <br />
 <% for product_property in @product_properties %>
-	<% if product_property.property.name.include? "sku" %>
+	<% if product_property.property.name.include? "sku" and !product_property.value.blank? %>
 	<%= blend_img (product_property.value) %>
 	<% end %>
 <% end %>
