@@ -39,7 +39,7 @@ module Paperclip
       dst = compositeFiles(blendImg, dst, "405x25!+25+525")
 
       # now composite the description onto the dst
-      dst = compositeFiles(descImg, dst, "410x93+25+433")
+      dst = compositeFiles(descImg, dst, "400x93!+25+433")
 
       # now composite the image onto the label
       if label_image_remote_url.blank?

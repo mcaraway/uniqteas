@@ -88,6 +88,39 @@ Spree::Image.class_eval do
   def download_remote_image
     self.attachment = do_download_remote_image(label_image_remote_url)
   end
+  
+ # cancel post-processing now, and set flag...
+  before_attachment_post_process do |image|
+    if image.attachment_changed?
+      image.processing = true
+      false # halts processing
+    end
+  end
+ 
+  # ...and perform after save in background
+  after_save do |image| 
+    if image.attachment_changed?
+      Delayed::Job.enqueue Spree::ImageJob.new(image.id)
+    end
+  end
+ 
+  # generate styles (downloads original first)
+  def regenerate_styles!
+    logger.debug("******** in regenerate")
+    self.attachment.reprocess! 
+    self.processing = false   
+    self.save(:validate=> false)
+  end
+ 
+  # detect if our attachment file has changed
+  def attachment_changed?
+    logger.debug("******** self.attachment_file_size_changed? = " + (self.attachment_file_size_changed?).to_s)
+    logger.debug("******** self.attachment_file_name_changed? = " + (self.attachment_file_name_changed?).to_s)
+    logger.debug("******** self.attachment_content_type_changed? = " + (self.attachment_content_type_changed?).to_s)
+    self.attachment_file_size_changed? || 
+    self.attachment_file_name_changed? ||
+    self.attachment_content_type_changed?
+  end  
 
   protected
 
