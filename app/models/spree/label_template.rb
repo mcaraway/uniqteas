@@ -70,4 +70,37 @@ class Spree::LabelTemplate < ActiveRecord::Base
     false
     end
   end
+  
+ # cancel post-processing now, and set flag...
+  before_label_image_post_process do |image|
+    if image.label_image_changed?
+      image.processing = true
+      false # halts processing
+    end
+  end
+ 
+  # ...and perform after save in background
+  after_save do |image| 
+    if image.label_image_changed?
+      Delayed::Job.enqueue Spree::ImageJob.new(image.id)
+    end
+  end
+ 
+  # generate styles (downloads original first)
+  def regenerate_styles!
+    logger.debug("******** in regenerate")
+    self.label_image.reprocess! 
+    self.processing = false   
+    self.save(:validate=> false)
+  end
+ 
+  # detect if our label_image file has changed
+  def label_image_changed?
+    logger.debug("******** self.label_image_file_size_changed? = " + (self.label_image_file_size_changed?).to_s)
+    logger.debug("******** self.label_image_file_name_changed? = " + (self.label_image_file_name_changed?).to_s)
+    logger.debug("******** self.label_image_content_type_changed? = " + (self.label_image_content_type_changed?).to_s)
+    self.label_image_file_size_changed? || 
+    self.label_image_file_name_changed? ||
+    self.label_image_content_type_changed?
+  end   
 end
