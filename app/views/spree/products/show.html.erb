@@ -1,12 +1,4 @@
 <% content_for :head do %>
-<meta content="Uniq Teas <%= @product.name %> | Uniq Teas" name="title">
-<meta content="INDEX, FOLLOW" name="robots">
-<meta content="Uniq Teas <%= @product.name %> | Uniq Teas" property="og:title">
-<meta content="drink" property="og:type">
-<meta content="<%= product_url @product %>" property="og:url">
-<% if !@product.images.empty? %>
-<meta content="<%= URI.join(request.url, @product.images[0].attachment.url) %>" property="og:image">
-<% end %>
 <meta content="UniqTeas.com" property="og:site_name">
 <% end %>
 <div data-hook="product_show" itemscope itemtype="http://schema.org/Product">

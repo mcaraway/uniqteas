@@ -92,7 +92,6 @@ Spree::Image.class_eval do
  # cancel post-processing now, and set flag...
   before_attachment_post_process do |image|
     if image.attachment_changed?
-      logger.info("******** push post processing to background delayed job")
       image.processing = true
       false # halts processing
     end
@@ -101,7 +100,6 @@ Spree::Image.class_eval do
   # ...and perform after save in background
   after_save do |image| 
     if image.attachment_changed?
-      logger.info("******** creating delayed job for image processing")
       Delayed::Job.enqueue Spree::ImageJob.new(image.id)
     end
   end
@@ -116,9 +114,9 @@ Spree::Image.class_eval do
  
   # detect if our attachment file has changed
   def attachment_changed?
-    logger.info("******** self.attachment_file_size_changed? = " + (self.attachment_file_size_changed?).to_s)
-    logger.info("******** self.attachment_file_name_changed? = " + (self.attachment_file_name_changed?).to_s)
-    logger.info("******** self.attachment_content_type_changed? = " + (self.attachment_content_type_changed?).to_s)
+    logger.debug("******** self.attachment_file_size_changed? = " + (self.attachment_file_size_changed?).to_s)
+    logger.debug("******** self.attachment_file_name_changed? = " + (self.attachment_file_name_changed?).to_s)
+    logger.debug("******** self.attachment_content_type_changed? = " + (self.attachment_content_type_changed?).to_s)
     self.attachment_file_size_changed? || 
     self.attachment_file_name_changed? ||
     self.attachment_content_type_changed?
