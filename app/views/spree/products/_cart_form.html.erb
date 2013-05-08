@@ -1,23 +1,6 @@
 <%= form_for :order, :url => populate_orders_url do |f| %>
 <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
-	<% if @product.has_variants? %>
-	<div id="product-variants" class="columns five alpha">
-		<h6 class="product-section-title"><%= t(:variants) %></h6>
-		<ul>
-			<% has_checked = false
-			@product.variants.active.each_with_index do |v,index|
-			next if v.option_values.empty? || (!v.in_stock && !Spree::Config[:show_zero_stock_products])
-			checked = !has_checked && (v.in_stock || Spree::Config[:allow_backorders])
-			has_checked = true if checked %>
-			<li>
-				<%= radio_button_tag "products[#{@product.id}]", v.id, checked, :disabled => !v.in_stock && !Spree::Config[:allow_backorders] %>
-				<label for="<%= ['products', @product.id, v.id].join('_') %>"> <span class="variant-description"> <%= variant_options v %> </span> <% if variant_price_diff v %> <span class="price diff"><%= variant_price_diff v %></span> <% end %> </label>
-			</li>
-			<% end%>
-		</ul>
-	</div>
-	<% end%>
+	<%= render :partial => 'spree/products/variants', :locals => { :product => @product } %>
 	<%= render :partial => 'spree/products/price', :locals => { :product => @product } %>
 </div>
 <% end %>

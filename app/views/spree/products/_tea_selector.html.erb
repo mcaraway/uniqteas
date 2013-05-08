@@ -13,7 +13,7 @@
 						[
 						<% category.products.each_with_index do |product,prodcount| %>
 						{	
-							"tea_name":"<%= escape_javascript(raw(product.name)) %>",
+							"tea_name":"<%= escape_javascript(raw(product.name.gsub(" Loose Leaf Tea",""))) %>",
 							"image":"",
 							"sku":"<%= escape_javascript(raw(product.master.sku)) %>",
 							"description":"<%= escape_javascript(raw(product.description)) %>",

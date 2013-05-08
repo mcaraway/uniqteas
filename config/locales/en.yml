@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  select_options_to_see_price: "Choose" 
   coupon_code: "Coupon"
   code: "Code"
   edit_blend: "Edit Blend"

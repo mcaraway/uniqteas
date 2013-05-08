@@ -1,6 +1,6 @@
 <nav class="columns alpha omega twelve">
   <ul id="main-nav-bar" class="inline" data-hook>
-  	<% if current_user %>
+  	<% if try_spree_current_user %>
     <li><%= link_to t(:myblends), spree.myblends_path %></li>
    	<% else %>
    	<li id="account-link" data-hook><%= link_to t(:login), spree.login_path %></li>

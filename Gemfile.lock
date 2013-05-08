@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/Shopify/active_shipping
-  revision: b73e5ec458653bd08d53e1bf3d31d8670e40131b
+  revision: 60304206259b7ecc287e3b8153f52b1f41fe2e3f
   specs:
     active_shipping (0.9.14)
       active_utils (>= 1.0.1)
@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/mcaraway/spree_fancy.git
-  revision: 62b5f0405dc3b29e2fbd862554ed9997778a0a72
+  revision: b6899dff74cc1782205743280cdd982ee132b236
   branch: customize_to_uniqteas
   specs:
     spree_fancy (1.3.0)
@@ -19,8 +19,16 @@ GIT
       spree_core (~> 1.3.1)
 
 GIT
+  remote: git://github.com/mcaraway/spree_print_invoice.git
+  revision: ae649ff7e5ba9a88201f7796bde44f32bb6341b8
+  specs:
+    spree_print_invoice (1.0.0)
+      prawn (= 0.8.4)
+      spree_core (~> 1.3.0)
+
+GIT
   remote: git://github.com/romul/spree_address_book.git
-  revision: 38cb290ca5b110e7e22be756eeac9479dfbab163
+  revision: 1e15645bbc74cd5542cec769a9d916b85f5746dc
   specs:
     spree_address_book (1.3.0)
       spree_auth_devise
@@ -45,7 +53,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_auth_devise
-  revision: 3e7350831cb0c0f17ea6ee8d3010c240fabcf962
+  revision: 3916a2b570b9ea76e330b0961f639feb777c3f46
   branch: 1-3-stable
   specs:
     spree_auth_devise (1.0.0)
@@ -56,7 +64,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_gateway.git
-  revision: ff292fe0b5ad29355c74e66619a1f8f9f2ae04f5
+  revision: b13d777aecf348eeffba1fa8e2df95298af1a1ea
   branch: 1-3-stable
   specs:
     spree_gateway (1.2.0.rc2)
@@ -65,7 +73,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_paypal_express.git
-  revision: b0173f73e750d016e0533bf7b3f4e2cf7fe68bb7
+  revision: d63b1c339bc75761ccd3026e233724bad260ca64
   branch: 1-3-stable
   specs:
     spree_paypal_express (1.2.0)
@@ -73,15 +81,15 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree_social_products.git
-  revision: 7b320185da2a9b5f8d3a0b156fd78c7de6418b55
-  branch: 1-2-stable
+  revision: 6c2c5edc19760ab7c0bd894e56aa0cfb869c4db2
   specs:
-    spree_social_products (1.2)
+    spree_social_products (1.3)
       spree_core (~> 1.2)
 
 GIT
   remote: git://github.com/spree/spree_volume_pricing.git
-  revision: c14a41ae625a6987d394fbf75d9400ba8af68b8e
+  revision: 471908c9c8bffaa5ebc05ad7c968daa6b6591591
+  branch: 1-3-stable
   specs:
     spree_volume_pricing (3.3.0)
       spree_core (~> 1.1)
@@ -146,6 +154,7 @@ GEM
     chunky_png (1.2.8)
     climate_control (0.0.3)
       activesupport (>= 3.0)
+    closure-compiler (1.1.8)
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
     coffee-rails (3.2.2)
@@ -184,7 +193,7 @@ GEM
     devise-encryptable (0.1.1)
       devise (>= 2.1.0.rc)
     diff-lcs (1.1.3)
-    domain_name (0.5.9)
+    domain_name (0.5.11)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -194,7 +203,7 @@ GEM
     gyoku (0.4.6)
       builder (>= 2.1.2)
     highline (1.6.11)
-    hike (1.2.1)
+    hike (1.2.2)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -222,7 +231,7 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
-    mime-types (1.22)
+    mime-types (1.23)
     money (5.0.0)
       i18n (~> 0.4)
       json
@@ -230,8 +239,7 @@ GEM
     multi_xml (0.5.3)
     net-http-digest_auth (1.3)
     net-http-persistent (2.8)
-    newrelic_rpm (3.6.0.78)
-    nokogiri (1.5.9)
+    newrelic_rpm (3.6.1.88)
     nokogiri (1.5.9-x86-mingw32)
     nori (1.1.5)
     ntlm-http (0.1.1)
@@ -241,10 +249,17 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    pg (0.15.0-x86-mingw32)
+    pg (0.15.1-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    prawn (0.8.4)
+      prawn-core (>= 0.8.4, < 0.9)
+      prawn-layout (>= 0.8.4, < 0.9)
+      prawn-security (>= 0.8.4, < 0.9)
+    prawn-core (0.8.4)
+    prawn-layout (0.8.4)
+    prawn-security (0.8.4)
     rabl (0.7.2)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
@@ -293,7 +308,7 @@ GEM
       rspec (~> 2.11.0)
     ruby-ole (1.2.11.6)
     rubyzip (0.9.9)
-    sass (3.2.7)
+    sass (3.2.8)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -309,7 +324,7 @@ GEM
     select2-rails (3.3.1)
       sass-rails (>= 3.2)
       thor (~> 0.14)
-    spreadsheet (0.8.3)
+    spreadsheet (0.8.5)
       ruby-ole (>= 1.0)
     spree (1.3.1)
       spree_api (= 1.3.1)
@@ -349,8 +364,6 @@ GEM
       spree_core (= 1.3.1)
     spree_sample (1.3.1)
       spree_core (= 1.3.1)
-    spree_variant_options (0.4.1)
-      spree_core (>= 1.0.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -361,19 +374,19 @@ GEM
     state_machine (1.1.2)
     stringex (1.3.3)
     thor (0.18.1)
-    tilt (1.3.6)
+    tilt (1.4.0)
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.37)
-    uglifier (1.3.0)
+    uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unf (0.1.1)
       unf_ext
     unf_ext (0.0.6)
     unf_ext (0.0.6-x86-mingw32)
-    uuidtools (2.1.3)
+    uuidtools (2.1.4)
     versioncake (0.4.0)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
@@ -390,10 +403,11 @@ PLATFORMS
 
 DEPENDENCIES
   active_shipping!
+  closure-compiler
   coffee-rails (~> 3.2.1)
   dalli
-  datashift
-  datashift_spree
+  datashift (~> 0.13.0)
+  datashift_spree (~> 0.5.0)
   delayed_job_active_record
   jquery-rails (= 2.1.4)
   newrelic_rpm
@@ -410,9 +424,9 @@ DEPENDENCIES
   spree_fancy!
   spree_gateway!
   spree_paypal_express!
+  spree_print_invoice!
   spree_social_products!
-  spree_variant_options (= 0.4.1)
   spree_volume_pricing!
   sqlite3
-  uglifier (>= 1.0.3)
+  uglifier (>= 1.0.4)
   unicorn

@@ -86,7 +86,7 @@ Uniqteas::Application.configure do
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
-  
+  config.assets.js_compressor = :closure
   #config.use_s3 = true
   #config.s3_bucket = 'uniqteas'
   #config.s3_access_key = "AKIAIINPHCX6H5RSXAIQ"

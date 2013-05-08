@@ -10,7 +10,6 @@
  *= require store/spree_fancy
  *= require store/spree_address_book
  *= require store/spree_social_products
- *= require store/variant_options
 
  *= require_self
  *= require_tree .

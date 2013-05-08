@@ -33,7 +33,7 @@ Spree::ProductsController.class_eval do
   def edit
     if @product.is_custom? then
       @edit_blend = true
-      if current_user == nil or (current_user != nil and current_user.id != @product.user.id) then
+      if try_spree_current_user == nil or (try_spree_current_user != nil and try_spree_current_user.id != @product.user.id) then
         render @product
       end
     end
@@ -41,7 +41,7 @@ Spree::ProductsController.class_eval do
 
   def create
     logger.debug "****** custom_product name is #{@product.name}"
-    @product.user = current_user
+    @product.user = try_spree_current_user
     @product.sku = get_custom_sku
     @product.shipping_category = Spree::ShippingCategory.find_by_name("Default Shipping")
     @product.tax_category= Spree::TaxCategory.find_by_name("Food")
@@ -170,7 +170,7 @@ Spree::ProductsController.class_eval do
   end
 
   def verify_login?
-    if current_user == nil
+    if try_spree_current_user == nil
       store_location
       flash[:notice] = "Please create an account so we can save your unique blend."
       redirect_to spree.login_path
