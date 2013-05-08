@@ -410,3 +410,12 @@ hr {
 	margin-left: -20px;
 	margin-top: -15px;
 }	
+
+#update-cart .ut-coupon-code-field {
+	margin-top: -60px !important;
+}
+
+#ut-empty-cart {
+	margin-top: -52px !important;
+	float: left !important;
+}

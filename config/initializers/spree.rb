@@ -27,8 +27,11 @@ Spree.config do |config|
   Spree::ActiveShipping::Config.set(:fedex_account => "315756936")
   Spree::ActiveShipping::Config.set(:fedex_login => "104692510")
   Spree::ActiveShipping::Config.set(:test_mode => false) # If the above is for a developer account
-  # Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
-
+  
+  # print invoice settings
+  Spree::PrintInvoice::Config.set(:print_invoice_logo_path => "logo.png")
+  Spree::PrintInvoice::Config.set(:print_buttons => "invoice,packaging_slip") #comma separated list
+  
   # Ensure the agent is started using Unicorn
   # This is needed when using Unicorn and preload_app is not set to true.
   # See http://support.newrelic.com/kb/troubleshooting/unicorn-no-data

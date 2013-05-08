@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: git://github.com/mcaraway/spree_print_invoice.git
-  revision: ae649ff7e5ba9a88201f7796bde44f32bb6341b8
+  revision: 1777efc0ee41015cadcfae75e4b46dc7acd8c871
   specs:
     spree_print_invoice (1.0.0)
       prawn (= 0.8.4)
@@ -235,7 +235,7 @@ GEM
     money (5.0.0)
       i18n (~> 0.4)
       json
-    multi_json (1.7.2)
+    multi_json (1.7.3)
     multi_xml (0.5.3)
     net-http-digest_auth (1.3)
     net-http-persistent (2.8)

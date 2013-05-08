@@ -1,0 +1,11 @@
+<div class="container">
+	<%= categories_tree(get_category_root, nil, 5) %>
+</div>
+<script>
+
+$(function() {	
+	// initialise supersubs before it gets hidden by tabs or superfish. Need to measure widths while visible.
+	$('#categories-menu').superfish();
+});
+
+</script>
