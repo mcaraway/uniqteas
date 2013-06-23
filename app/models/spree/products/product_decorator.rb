@@ -76,13 +76,15 @@ Spree::Product.class_eval do
 
   add_search_scope :iscustom do |value|
     logger.debug "****** :custom search is #{value}"
-    if value == nil or value == false
-      where(:user_id => nil)
+    if value == nil or value == "false"
+      logger.debug "****** :custom search is NULL"
+      where("spree_products.user_id IS NULL")
     else
-      where("user_id IS NOT NULL")
+      logger.debug "****** :custom search is NOT NULL"
+      where("spree_products.user_id IS NOT NULL")
     end
   end
-  
+
   add_search_scope :ispublic do |value|
     logger.debug "****** :public search is #{value}"
     value = value == nil ? true : value
@@ -130,12 +132,12 @@ Spree::Product.class_eval do
     flavors = Hash.new
     product_properties.each do |property|
       if (property.property_name.index("flavor") != nil)
-        flavors[property.property_name] = property.value
+      flavors[property.property_name] = property.value
       end
     end
     flavors
   end
-  
+
   def has_tin_image?
     !(images.empty?)
   end
@@ -171,17 +173,17 @@ Spree::Product.class_eval do
   def update_viewables
     if @tin_image != nil
       @tin_image.viewable = master
-      @tin_image.save
+    @tin_image.save
     end
 
     if @tag_image != nil
       @tag_image.viewable = master
     @tag_image.save
     end
-    
+
     refresh_tin_image
   end
-  
+
   def refresh_tin_image
     if images[0] != nil
       logger.info("******** creating delayed job for reprocessing image processing")
@@ -196,15 +198,15 @@ Spree::Product.class_eval do
       errors.add :blend, "You must have at least one flavor"
     end
   end
-  
-    def option_values
+
+  def option_values
     @_option_values ||= Spree::OptionValue.for_product(self).order(:position).sort_by {|ov| ov.option_type.position }
   end
 
   def grouped_option_values
     @_grouped_option_values ||= option_values.group_by(&:option_type)
   end
-  
+
   def variants_for_option_value(value)
     @_variant_option_values ||= variants.includes(:option_values).all
     @_variant_option_values.select { |i| i.option_value_ids.include?(value.id) }
