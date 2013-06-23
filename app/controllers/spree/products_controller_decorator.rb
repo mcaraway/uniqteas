@@ -5,6 +5,9 @@ Spree::ProductsController.class_eval do
   before_filter :load_blendables, :only => [:new, :edit]
 
   respond_to :html, :json, :js
+  def customize
+    
+  end
   def index
     params[:ispublic] = true
     logger.debug "****** Prototype is #{params}"

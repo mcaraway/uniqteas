@@ -71,6 +71,14 @@ Routes for Spree::Core::Engine:
                       admin_label_template GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
                                            PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
                                            DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
+                  rebuild_admin_taxonomies POST     /admin/taxonomies/rebuild(.:format)                                         spree/admin/taxonomies#rebuild
+                          admin_taxonomies GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
+                                           POST     /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#create
+                        new_admin_taxonomy GET      /admin/taxonomies/new(.:format)                                             spree/admin/taxonomies#new
+                       edit_admin_taxonomy GET      /admin/taxonomies/:id/edit(.:format)                                        spree/admin/taxonomies#edit
+                            admin_taxonomy GET      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#show
+                                           PUT      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#update
+                                           DELETE   /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#destroy
   update_positions_admin_home_page_sliders POST     /admin/home_page_sliders/update_positions(.:format)                         spree/admin/home_page_sliders#update_positions
                    admin_home_page_sliders GET      /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#index
                                            POST     /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#create
@@ -127,6 +135,7 @@ Routes for Spree::Core::Engine:
                                  edit_user GET      /users/:id/edit(.:format)                                                   spree/users#edit
                                       user PUT      /users/:id(.:format)                                                        spree/users#update
                                      login GET      /login(.:format)                                                            spree/user_sessions#new
+                                    logout GET      /logout(.:format)                                                           spree/user_sessions#destroy
                                     signup GET      /signup(.:format)                                                           spree/user_registrations#new
                      checkout_registration GET      /checkout/registration(.:format)                                            spree/checkout#registration
               update_checkout_registration PUT      /checkout/registration(.:format)                                            spree/checkout#update_registration
@@ -351,6 +360,14 @@ Routes for Spree::Core::Engine:
                                            GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
                                            PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
                                            DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
+                                           POST     /admin/taxonomies/rebuild(.:format)                                         spree/admin/taxonomies#rebuild
+                                           GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
+                                           POST     /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#create
+                                           GET      /admin/taxonomies/new(.:format)                                             spree/admin/taxonomies#new
+                                           GET      /admin/taxonomies/:id/edit(.:format)                                        spree/admin/taxonomies#edit
+                                           GET      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#show
+                                           PUT      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#update
+                                           DELETE   /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#destroy
                                            POST     /admin/home_page_sliders/update_positions(.:format)                         spree/admin/home_page_sliders#update_positions
                                            GET      /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#index
                                            POST     /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#create
@@ -407,6 +424,7 @@ Routes for Spree::Core::Engine:
                                            GET      /users/:id/edit(.:format)                                                   spree/users#edit
                                            PUT      /users/:id(.:format)                                                        spree/users#update
                                      login GET      /login(.:format)                                                            spree/user_sessions#new
+                                    logout GET      /logout(.:format)                                                           spree/user_sessions#destroy
                                     signup GET      /signup(.:format)                                                           spree/user_registrations#new
                      checkout_registration GET      /checkout/registration(.:format)                                            spree/checkout#registration
               update_checkout_registration PUT      /checkout/registration(.:format)                                            spree/checkout#update_registration
@@ -668,19 +686,19 @@ Routes for Spree::Core::Engine:
                              admin_product GET      /admin/products/:id(.:format)                                               spree/admin/products#show
                                            PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
                                            DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
-                          new_user_session GET      /user/sign_in(.:format)                                                     spree/user_sessions#new
-                              user_session POST     /user/sign_in(.:format)                                                     spree/user_sessions#create
-                      destroy_user_session GET      /user/logout(.:format)                                                      spree/user_sessions#destroy
-                             user_password POST     /user/password(.:format)                                                    spree/user_passwords#create
-                         new_user_password GET      /user/password/new(.:format)                                                spree/user_passwords#new
-                        edit_user_password GET      /user/password/edit(.:format)                                               spree/user_passwords#edit
-                                           PUT      /user/password(.:format)                                                    spree/user_passwords#update
-                  cancel_user_registration GET      /user/cancel(.:format)                                                      spree/user_registrations#cancel
-                         user_registration POST     /user(.:format)                                                             spree/user_registrations#create
-                     new_user_registration GET      /user/sign_up(.:format)                                                     spree/user_registrations#new
-                    edit_user_registration GET      /user/edit(.:format)                                                        spree/user_registrations#edit
-                                           PUT      /user(.:format)                                                             spree/user_registrations#update
-                                           DELETE   /user(.:format)                                                             spree/user_registrations#destroy
+                    new_spree_user_session GET      /spree_user/sign_in(.:format)                                               spree/user_sessions#new
+                        spree_user_session POST     /spree_user/sign_in(.:format)                                               spree/user_sessions#create
+                destroy_spree_user_session GET      /spree_user/logout(.:format)                                                spree/user_sessions#destroy
+                       spree_user_password POST     /spree_user/password(.:format)                                              spree/user_passwords#create
+                   new_spree_user_password GET      /spree_user/password/new(.:format)                                          spree/user_passwords#new
+                  edit_spree_user_password GET      /spree_user/password/edit(.:format)                                         spree/user_passwords#edit
+                                           PUT      /spree_user/password(.:format)                                              spree/user_passwords#update
+            cancel_spree_user_registration GET      /spree_user/cancel(.:format)                                                spree/user_registrations#cancel
+                   spree_user_registration POST     /spree_user(.:format)                                                       spree/user_registrations#create
+               new_spree_user_registration GET      /spree_user/sign_up(.:format)                                               spree/user_registrations#new
+              edit_spree_user_registration GET      /spree_user/edit(.:format)                                                  spree/user_registrations#edit
+                                           PUT      /spree_user(.:format)                                                       spree/user_registrations#update
+                                           DELETE   /spree_user(.:format)                                                       spree/user_registrations#destroy
                                       root          /                                                                           spree/home#index
                                            GET      /products(.:format)                                                         spree/products#index
                                            POST     /products(.:format)                                                         spree/products#create
@@ -909,11 +927,11 @@ update_values_positions_admin_option_types POST     /admin/option_types/update_v
                       admin_taxonomy_taxon GET      /admin/taxonomies/:taxonomy_id/taxons/:id(.:format)                         spree/admin/taxons#show
                                            PUT      /admin/taxonomies/:taxonomy_id/taxons/:id(.:format)                         spree/admin/taxons#update
                                            DELETE   /admin/taxonomies/:taxonomy_id/taxons/:id(.:format)                         spree/admin/taxons#destroy
-                          admin_taxonomies GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
+                                           GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
                                            POST     /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#create
-                        new_admin_taxonomy GET      /admin/taxonomies/new(.:format)                                             spree/admin/taxonomies#new
-                       edit_admin_taxonomy GET      /admin/taxonomies/:id/edit(.:format)                                        spree/admin/taxonomies#edit
-                            admin_taxonomy GET      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#show
+                                           GET      /admin/taxonomies/new(.:format)                                             spree/admin/taxonomies#new
+                                           GET      /admin/taxonomies/:id/edit(.:format)                                        spree/admin/taxonomies#edit
+                                           GET      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#show
                                            PUT      /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#update
                                            DELETE   /admin/taxonomies/:id(.:format)                                             spree/admin/taxonomies#destroy
                        search_admin_taxons GET      /admin/taxons/search(.:format)                                              spree/admin/taxons#search
@@ -981,14 +999,6 @@ update_values_positions_admin_option_types POST     /admin/option_types/update_v
                               unauthorized          /unauthorized(.:format)                                                     spree/home#unauthorized
                                        cvv          /content/cvv(.:format)                                                      spree/content#cvv
                                    content GET      /content/*path(.:format)                                                    spree/content#show
-      update_positions_admin_option_values POST     /admin/option_values/update_positions(.:format)                             spree/admin/option_values#update_positions
-                       admin_option_values GET      /admin/option_values(.:format)                                              spree/admin/option_values#index
-                                           POST     /admin/option_values(.:format)                                              spree/admin/option_values#create
-                    new_admin_option_value GET      /admin/option_values/new(.:format)                                          spree/admin/option_values#new
-                   edit_admin_option_value GET      /admin/option_values/:id/edit(.:format)                                     spree/admin/option_values#edit
-                                           GET      /admin/option_values/:id(.:format)                                          spree/admin/option_values#show
-                                           PUT      /admin/option_values/:id(.:format)                                          spree/admin/option_values#update
-                                           DELETE   /admin/option_values/:id(.:format)                                          spree/admin/option_values#destroy
                          edit_admin_social GET      /admin/social/edit(.:format)                                                spree/admin/social#edit
                               admin_social PUT      /admin/social(.:format)                                                     spree/admin/social#update
        volume_prices_admin_product_variant GET      /admin/products/:product_id/variants/:id/volume_prices(.:format)            spree/admin/variants#volume_prices
@@ -1007,14 +1017,6 @@ update_values_positions_admin_option_types POST     /admin/option_types/update_v
                                            PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
                                            DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
                         admin_volume_price DELETE   /admin/volume_prices/:id(.:format)                                          spree/admin/volume_prices#destroy
-                                           POST     /admin/option_values/update_positions(.:format)                             spree/admin/option_values#update_positions
-                                           GET      /admin/option_values(.:format)                                              spree/admin/option_values#index
-                                           POST     /admin/option_values(.:format)                                              spree/admin/option_values#create
-                                           GET      /admin/option_values/new(.:format)                                          spree/admin/option_values#new
-                                           GET      /admin/option_values/:id/edit(.:format)                                     spree/admin/option_values#edit
-                                           GET      /admin/option_values/:id(.:format)                                          spree/admin/option_values#show
-                                           PUT      /admin/option_values/:id(.:format)                                          spree/admin/option_values#update
-                                           DELETE   /admin/option_values/:id(.:format)                                          spree/admin/option_values#destroy
                                            GET      /admin/social/edit(.:format)                                                spree/admin/social#edit
                                            PUT      /admin/social(.:format)                                                     spree/admin/social#update
                                            GET      /admin/products/:product_id/variants/:id/volume_prices(.:format)            spree/admin/variants#volume_prices
@@ -1033,14 +1035,6 @@ update_values_positions_admin_option_types POST     /admin/option_types/update_v
                                            PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
                                            DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
                         admin_volume_price DELETE   /admin/volume_prices/:id(.:format)                                          spree/admin/volume_prices#destroy
-                                           POST     /admin/option_values/update_positions(.:format)                             spree/admin/option_values#update_positions
-                                           GET      /admin/option_values(.:format)                                              spree/admin/option_values#index
-                                           POST     /admin/option_values(.:format)                                              spree/admin/option_values#create
-                                           GET      /admin/option_values/new(.:format)                                          spree/admin/option_values#new
-                                           GET      /admin/option_values/:id/edit(.:format)                                     spree/admin/option_values#edit
-                                           GET      /admin/option_values/:id(.:format)                                          spree/admin/option_values#show
-                                           PUT      /admin/option_values/:id(.:format)                                          spree/admin/option_values#update
-                                           DELETE   /admin/option_values/:id(.:format)                                          spree/admin/option_values#destroy
                                            GET      /admin/social/edit(.:format)                                                spree/admin/social#edit
                                            PUT      /admin/social(.:format)                                                     spree/admin/social#update
                                            GET      /admin/products/:product_id/variants/:id/volume_prices(.:format)            spree/admin/variants#volume_prices

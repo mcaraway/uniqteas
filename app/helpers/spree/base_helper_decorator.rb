@@ -2,9 +2,9 @@ Spree::BaseHelper.class_eval do
   def get_category_root
     Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children).first.root
   end
-  
+
   def categories_tree(root_taxon, current_taxon, max_level, current_level = 1)
-    return '' if max_level < current_level || root_taxon.children.empty?
+    return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty?
     css_class = current_level == 1 ? 'sf-menu' : ''
     content_tag :ul, :class => css_class do
       root_taxon.children.map do |taxon|
@@ -21,7 +21,7 @@ Spree::BaseHelper.class_eval do
     src = "https://s3.amazonaws.com/uniqteas/product_images/" + sku  + ".jpg"
     image_tag src, :size => "150x150"
   end
-  
+
   def link_to_clone(resource, options={})
     options[:data] = {:action => 'clone'}
     link_to_with_icon('icon-copy', t(:clone), clone_admin_product_url(resource), options)
@@ -106,7 +106,7 @@ Spree::BaseHelper.class_eval do
 
   def product_image(product, options = {})
     if product.images.empty?
-      options.reverse_merge! :alt => product.name 
+      options.reverse_merge! :alt => product.name
       options.reverse_merge! :size => "240x240"
       image_tag "noimage/no-tin-image.png", options
     else
@@ -119,7 +119,7 @@ Spree::BaseHelper.class_eval do
 
   def large_product_image(product, options = {})
     if product.images.empty?
-      options.reverse_merge! :alt => product.name 
+      options.reverse_merge! :alt => product.name
       options.reverse_merge! :size => "400x400"
       image_tag "noimage/no-tin-image.png", options
     else
@@ -129,6 +129,7 @@ Spree::BaseHelper.class_eval do
       image_tag product.images.first.attachment.url(:large), options
     end
   end
+
   def mini_image(product, options = {})
     if product.images.empty?
       image_tag "noimage/no-tin-image.png", :size => "48x48", :alt => product.name
@@ -183,7 +184,7 @@ Spree::BaseHelper.class_eval do
       image_tag product.images.first.attachment.url(:label), :size => "225x300", :alt => product.name
     end
   end
-    
+
   def small_tea_tag_image (product)
     if product.images[1] == nil
       image_tag "/assets/TeaTagLabel.png", :size => "50x42"
@@ -216,7 +217,6 @@ Spree::BaseHelper.class_eval do
   end
 
   def breadcrumbs(taxon = nil, product = nil, sep = "&nbsp;&raquo;&nbsp;")
-    logger.debug "****** entered bradcrumbs taxon = #{taxon}"
     if String === product
       sep = product
       product = nil
@@ -229,6 +229,7 @@ Spree::BaseHelper.class_eval do
     crumbs = [content_tag(:li, link_to(t(:home) , root_path) + sep)]
 
     if taxon
+      logger.debug "****** taxon.ancestors.size = #{taxon.ancestors.size}"
       crumbs << taxon.ancestors.collect { |ancestor| content_tag(:li, link_to(ancestor.name , seo_url(ancestor)) + sep) } unless taxon.ancestors.empty?
       if product
         crumbs << content_tag(:li, link_to(taxon.name , seo_url(taxon)) + sep)

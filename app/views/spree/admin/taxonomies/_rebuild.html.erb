@@ -1,0 +1,5 @@
+<% content_for :page_actions do %>
+<li id='rebuild_taxonomies_link'>
+	<%= button_link_to t(:rebuild), spree.rebuild_admin_taxonomies_url, :method => :post, :icon => 'icon-refresh', :id => 'rebuild_admin_taxonomies_link' %>
+</li>
+<% end %>

@@ -16,7 +16,7 @@
 							"tea_name":"<%= escape_javascript(raw(product.name.gsub(" Loose Leaf Tea",""))) %>",
 							"image":"",
 							"sku":"<%= escape_javascript(raw(product.master.sku)) %>",
-							"description":"<%= escape_javascript(raw(product.description)) %>",
+							"description":"<%= escape_javascript(raw(product.description.gsub("<h3>Description</h3> <p>","").gsub("</p><h3>"," ").gsub("</h3> <p>",": ").gsub("</p>","").gsub("UniqTeas.com is a great place to shop for tea and buy tea and tea accessories. ",""))) %>",
 							"ingredients":"",
 							"flavor_profile":
 							{

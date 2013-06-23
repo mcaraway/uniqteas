@@ -110,6 +110,13 @@ Spree::Core::Engine.routes.prepend do
         post :reprocess_images
       end
     end
+    
+    resources :taxonomies do
+      collection do
+        post :rebuild
+      end
+    end
+    
     resources :home_page_sliders do
       collection do
         post :update_positions
