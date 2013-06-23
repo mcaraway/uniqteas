@@ -3,7 +3,7 @@ Spree::TaxonsController.class_eval do
     @taxon = Spree::Taxon.find_by_permalink!(params[:id])
     return unless @taxon
     params[:ispublic] = true
-    params[:iscustom] = params[:iscustom] == nil ? false : params[:iscustom]
+    params[:iscustom] = params[:iscustom] == nil ? "false" : params[:iscustom]
     params[:iscustom] = params[:id] == "categories/custom-blend" ? true : params[:iscustom]
     logger.debug "****** Prototype is #{params}"
 
