@@ -74,6 +74,15 @@ Spree::Product.class_eval do
     @has_flavors
   end
 
+  add_search_scope :iscustom do |value|
+    logger.debug "****** :custom search is #{value}"
+    if value == nil or value == false
+      where(:user_id => nil)
+    else
+      where("user_id IS NOT NULL")
+    end
+  end
+  
   add_search_scope :ispublic do |value|
     logger.debug "****** :public search is #{value}"
     value = value == nil ? true : value

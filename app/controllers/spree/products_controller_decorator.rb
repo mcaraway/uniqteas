@@ -10,6 +10,7 @@ Spree::ProductsController.class_eval do
   end
   def index
     params[:ispublic] = true
+    params[:iscustom] = params[:iscustom] == nil ? false : params[:iscustom]
     logger.debug "****** Prototype is #{params}"
     @searcher = Spree::Config.searcher_class.new(params)
     @products = @searcher.retrieve_products
