@@ -6,6 +6,15 @@
 #header {
 	margin-bottom: 0px;
 }
+
+#home-page-top-box-promo {
+	width: 350px;
+	height: 285px;
+}
+.home-page-promos {
+	margin-top: 30px;
+}
+
 .home-page-intro {
 	background: url(/assets/store/home-page-background-1.jpg) no-repeat;
 	height: 460px;

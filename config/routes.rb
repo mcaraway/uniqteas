@@ -72,6 +72,8 @@ Spree::Core::Engine.routes.prepend do
   get "spree/pages/about"
   get "spree/pages/faqs"
   get "spree/pages/privacy"
+  get "spree/pages/returns"
+  get "spree/pages/shipping"
   get "spree/pages/share"
   get "spree/pages/cfupdate"
 
@@ -81,6 +83,8 @@ Spree::Core::Engine.routes.prepend do
   match '/about', :to => 'pages#about'
   match '/faqs', :to => 'pages#faqs'
   match '/privacy', :to => 'pages#privacy'
+  match '/returns', :to => 'pages#returns'
+  match '/shipping', :to => 'pages#shipping'
   match '/share', :to => 'pages#share'
   match '/cfupdate', :to => 'pages#cfupdate'
   match '/myblends', :to => 'users#myblends'

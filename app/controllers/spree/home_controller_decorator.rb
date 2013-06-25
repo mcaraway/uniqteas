@@ -8,6 +8,8 @@ Spree::HomeController.class_eval do
 
     latest = Spree::Taxon.where(:name => 'Latest').first
     @latest_products = latest.products.active.limit(12) if latest
+    
+    @promotions = Spree::Promotion.advertised
   end
 
 end

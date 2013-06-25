@@ -15,6 +15,12 @@ class Spree::PagesController < Spree::ResourceController
   def share
   end
 
+  def returns
+  end
+  
+  def shipping
+  end
+  
   def cfupdate
   end
 end
