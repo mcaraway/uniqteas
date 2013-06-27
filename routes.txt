@@ -12,14 +12,20 @@ Routes for Spree::Core::Engine:
                          spree_pages_about GET      /spree/pages/about(.:format)                                                spree/pages#about
                           spree_pages_faqs GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
                        spree_pages_privacy GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                       spree_pages_returns GET      /spree/pages/returns(.:format)                                              spree/pages#returns
+                      spree_pages_shipping GET      /spree/pages/shipping(.:format)                                             spree/pages#shipping
                          spree_pages_share GET      /spree/pages/share(.:format)                                                spree/pages#share
                       spree_pages_cfupdate GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
+                    spree_pages_affiliates GET      /spree/pages/affiliates(.:format)                                           spree/pages#affiliates
                                    gallery          /gallery(.:format)                                                          :controller#:action
                                    blendit          /blendit(.:format)                                                          spree/products#new
                                    bighoop          /bighoop(.:format)                                                          spree/pages#bighoop
                                      about          /about(.:format)                                                            spree/pages#about
                                       faqs          /faqs(.:format)                                                             spree/pages#faqs
                                    privacy          /privacy(.:format)                                                          spree/pages#privacy
+                                   returns          /returns(.:format)                                                          spree/pages#returns
+                                  shipping          /shipping(.:format)                                                         spree/pages#shipping
+                                affiliates          /affiliates(.:format)                                                       spree/pages#affiliates
                                      share          /share(.:format)                                                            spree/pages#share
                                   cfupdate          /cfupdate(.:format)                                                         spree/pages#cfupdate
                                   myblends          /myblends(.:format)                                                         spree/users#myblends
@@ -71,6 +77,12 @@ Routes for Spree::Core::Engine:
                       admin_label_template GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
                                            PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
                                            DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
+              admin_free_shipping_settings POST     /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#create
+          new_admin_free_shipping_settings GET      /admin/free_shipping_settings/new(.:format)                                 spree/admin/free_shipping_settings#new
+         edit_admin_free_shipping_settings GET      /admin/free_shipping_settings/edit(.:format)                                spree/admin/free_shipping_settings#edit
+                                           GET      /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#show
+                                           PUT      /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#update
+                                           DELETE   /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#destroy
                   rebuild_admin_taxonomies POST     /admin/taxonomies/rebuild(.:format)                                         spree/admin/taxonomies#rebuild
                           admin_taxonomies GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
                                            POST     /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#create
@@ -132,10 +144,28 @@ Routes for Spree::Core::Engine:
                                    address GET      /addresses/:id(.:format)                                                    spree/addresses#show
                                            PUT      /addresses/:id(.:format)                                                    spree/addresses#update
                                            DELETE   /addresses/:id(.:format)                                                    spree/addresses#destroy
+       edit_admin_active_shipping_settings GET      /admin/active_shipping_settings/edit(.:format)                              spree/admin/active_shipping_settings#edit
+            admin_active_shipping_settings GET      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#show
+                                           PUT      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#update
+            admin_product_product_packages GET      /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#index
+                                           POST     /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#create
+         new_admin_product_product_package GET      /admin/products/:product_id/product_packages/new(.:format)                  spree/admin/product_packages#new
+        edit_admin_product_product_package GET      /admin/products/:product_id/product_packages/:id/edit(.:format)             spree/admin/product_packages#edit
+             admin_product_product_package GET      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#show
+                                           PUT      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#update
+                                           DELETE   /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#destroy
+                            admin_products GET      /admin/products(.:format)                                                   spree/admin/products#index
+                                           POST     /admin/products(.:format)                                                   spree/admin/products#create
+                         new_admin_product GET      /admin/products/new(.:format)                                               spree/admin/products#new
+                        edit_admin_product GET      /admin/products/:id/edit(.:format)                                          spree/admin/products#edit
+                             admin_product GET      /admin/products/:id(.:format)                                               spree/admin/products#show
+                                           PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
+                                           DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
                                  edit_user GET      /users/:id/edit(.:format)                                                   spree/users#edit
                                       user PUT      /users/:id(.:format)                                                        spree/users#update
                                      login GET      /login(.:format)                                                            spree/user_sessions#new
                                     logout GET      /logout(.:format)                                                           spree/user_sessions#destroy
+                      destroy_user_session GET      /logout(.:format)                                                           spree/user_sessions#destroy
                                     signup GET      /signup(.:format)                                                           spree/user_registrations#new
                      checkout_registration GET      /checkout/registration(.:format)                                            spree/checkout#registration
               update_checkout_registration PUT      /checkout/registration(.:format)                                            spree/checkout#update_registration
@@ -301,14 +331,20 @@ Routes for Spree::Core::Engine:
                                            GET      /spree/pages/about(.:format)                                                spree/pages#about
                                            GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
                                            GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
+                                           GET      /spree/pages/returns(.:format)                                              spree/pages#returns
+                                           GET      /spree/pages/shipping(.:format)                                             spree/pages#shipping
                                            GET      /spree/pages/share(.:format)                                                spree/pages#share
                                            GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
+                                           GET      /spree/pages/affiliates(.:format)                                           spree/pages#affiliates
                                                     /gallery(.:format)                                                          :controller#:action
                                                     /blendit(.:format)                                                          spree/products#new
                                                     /bighoop(.:format)                                                          spree/pages#bighoop
                                                     /about(.:format)                                                            spree/pages#about
                                                     /faqs(.:format)                                                             spree/pages#faqs
                                                     /privacy(.:format)                                                          spree/pages#privacy
+                                                    /returns(.:format)                                                          spree/pages#returns
+                                                    /shipping(.:format)                                                         spree/pages#shipping
+                                                    /affiliates(.:format)                                                       spree/pages#affiliates
                                                     /share(.:format)                                                            spree/pages#share
                                                     /cfupdate(.:format)                                                         spree/pages#cfupdate
                                                     /myblends(.:format)                                                         spree/users#myblends
@@ -360,6 +396,12 @@ Routes for Spree::Core::Engine:
                                            GET      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#show
                                            PUT      /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#update
                                            DELETE   /admin/label_templates/:id(.:format)                                        spree/admin/label_templates#destroy
+                                           POST     /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#create
+                                           GET      /admin/free_shipping_settings/new(.:format)                                 spree/admin/free_shipping_settings#new
+                                           GET      /admin/free_shipping_settings/edit(.:format)                                spree/admin/free_shipping_settings#edit
+                                           GET      /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#show
+                                           PUT      /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#update
+                                           DELETE   /admin/free_shipping_settings(.:format)                                     spree/admin/free_shipping_settings#destroy
                                            POST     /admin/taxonomies/rebuild(.:format)                                         spree/admin/taxonomies#rebuild
                                            GET      /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#index
                                            POST     /admin/taxonomies(.:format)                                                 spree/admin/taxonomies#create
@@ -421,10 +463,28 @@ Routes for Spree::Core::Engine:
                                            GET      /addresses/:id(.:format)                                                    spree/addresses#show
                                            PUT      /addresses/:id(.:format)                                                    spree/addresses#update
                                            DELETE   /addresses/:id(.:format)                                                    spree/addresses#destroy
+                                           GET      /admin/active_shipping_settings/edit(.:format)                              spree/admin/active_shipping_settings#edit
+                                           GET      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#show
+                                           PUT      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#update
+                                           GET      /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#index
+                                           POST     /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#create
+                                           GET      /admin/products/:product_id/product_packages/new(.:format)                  spree/admin/product_packages#new
+                                           GET      /admin/products/:product_id/product_packages/:id/edit(.:format)             spree/admin/product_packages#edit
+                                           GET      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#show
+                                           PUT      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#update
+                                           DELETE   /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#destroy
+                                           GET      /admin/products(.:format)                                                   spree/admin/products#index
+                                           POST     /admin/products(.:format)                                                   spree/admin/products#create
+                                           GET      /admin/products/new(.:format)                                               spree/admin/products#new
+                                           GET      /admin/products/:id/edit(.:format)                                          spree/admin/products#edit
+                                           GET      /admin/products/:id(.:format)                                               spree/admin/products#show
+                                           PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
+                                           DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
                                            GET      /users/:id/edit(.:format)                                                   spree/users#edit
                                            PUT      /users/:id(.:format)                                                        spree/users#update
                                      login GET      /login(.:format)                                                            spree/user_sessions#new
                                     logout GET      /logout(.:format)                                                           spree/user_sessions#destroy
+                      destroy_user_session GET      /logout(.:format)                                                           spree/user_sessions#destroy
                                     signup GET      /signup(.:format)                                                           spree/user_registrations#new
                      checkout_registration GET      /checkout/registration(.:format)                                            spree/checkout#registration
               update_checkout_registration PUT      /checkout/registration(.:format)                                            spree/checkout#update_registration
@@ -669,36 +729,19 @@ Routes for Spree::Core::Engine:
                                admin_order GET      /admin/orders/:id(.:format)                                                 spree/admin/orders#show
                                            PUT      /admin/orders/:id(.:format)                                                 spree/admin/orders#update
                                            DELETE   /admin/orders/:id(.:format)                                                 spree/admin/orders#destroy
-       edit_admin_active_shipping_settings GET      /admin/active_shipping_settings/edit(.:format)                              spree/admin/active_shipping_settings#edit
-            admin_active_shipping_settings GET      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#show
-                                           PUT      /admin/active_shipping_settings(.:format)                                   spree/admin/active_shipping_settings#update
-            admin_product_product_packages GET      /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#index
-                                           POST     /admin/products/:product_id/product_packages(.:format)                      spree/admin/product_packages#create
-         new_admin_product_product_package GET      /admin/products/:product_id/product_packages/new(.:format)                  spree/admin/product_packages#new
-        edit_admin_product_product_package GET      /admin/products/:product_id/product_packages/:id/edit(.:format)             spree/admin/product_packages#edit
-             admin_product_product_package GET      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#show
-                                           PUT      /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#update
-                                           DELETE   /admin/products/:product_id/product_packages/:id(.:format)                  spree/admin/product_packages#destroy
-                            admin_products GET      /admin/products(.:format)                                                   spree/admin/products#index
-                                           POST     /admin/products(.:format)                                                   spree/admin/products#create
-                         new_admin_product GET      /admin/products/new(.:format)                                               spree/admin/products#new
-                        edit_admin_product GET      /admin/products/:id/edit(.:format)                                          spree/admin/products#edit
-                             admin_product GET      /admin/products/:id(.:format)                                               spree/admin/products#show
-                                           PUT      /admin/products/:id(.:format)                                               spree/admin/products#update
-                                           DELETE   /admin/products/:id(.:format)                                               spree/admin/products#destroy
-                    new_spree_user_session GET      /spree_user/sign_in(.:format)                                               spree/user_sessions#new
-                        spree_user_session POST     /spree_user/sign_in(.:format)                                               spree/user_sessions#create
-                destroy_spree_user_session GET      /spree_user/logout(.:format)                                                spree/user_sessions#destroy
-                       spree_user_password POST     /spree_user/password(.:format)                                              spree/user_passwords#create
-                   new_spree_user_password GET      /spree_user/password/new(.:format)                                          spree/user_passwords#new
-                  edit_spree_user_password GET      /spree_user/password/edit(.:format)                                         spree/user_passwords#edit
-                                           PUT      /spree_user/password(.:format)                                              spree/user_passwords#update
-            cancel_spree_user_registration GET      /spree_user/cancel(.:format)                                                spree/user_registrations#cancel
-                   spree_user_registration POST     /spree_user(.:format)                                                       spree/user_registrations#create
-               new_spree_user_registration GET      /spree_user/sign_up(.:format)                                               spree/user_registrations#new
-              edit_spree_user_registration GET      /spree_user/edit(.:format)                                                  spree/user_registrations#edit
-                                           PUT      /spree_user(.:format)                                                       spree/user_registrations#update
-                                           DELETE   /spree_user(.:format)                                                       spree/user_registrations#destroy
+                    new_spree_user_session GET      /user/spree_user/sign_in(.:format)                                          spree/user_sessions#new
+                        spree_user_session POST     /user/spree_user/sign_in(.:format)                                          spree/user_sessions#create
+                destroy_spree_user_session GET      /user/spree_user/logout(.:format)                                           spree/user_sessions#destroy
+                       spree_user_password POST     /user/spree_user/password(.:format)                                         spree/user_passwords#create
+                   new_spree_user_password GET      /user/spree_user/password/new(.:format)                                     spree/user_passwords#new
+                  edit_spree_user_password GET      /user/spree_user/password/edit(.:format)                                    spree/user_passwords#edit
+                                           PUT      /user/spree_user/password(.:format)                                         spree/user_passwords#update
+            cancel_spree_user_registration GET      /user/spree_user/cancel(.:format)                                           spree/user_registrations#cancel
+                   spree_user_registration POST     /user/spree_user(.:format)                                                  spree/user_registrations#create
+               new_spree_user_registration GET      /user/spree_user/sign_up(.:format)                                          spree/user_registrations#new
+              edit_spree_user_registration GET      /user/spree_user/edit(.:format)                                             spree/user_registrations#edit
+                                           PUT      /user/spree_user(.:format)                                                  spree/user_registrations#update
+                                           DELETE   /user/spree_user(.:format)                                                  spree/user_registrations#destroy
                                       root          /                                                                           spree/home#index
                                            GET      /products(.:format)                                                         spree/products#index
                                            POST     /products(.:format)                                                         spree/products#create
