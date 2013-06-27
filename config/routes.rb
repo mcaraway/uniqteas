@@ -76,6 +76,7 @@ Spree::Core::Engine.routes.prepend do
   get "spree/pages/shipping"
   get "spree/pages/share"
   get "spree/pages/cfupdate"
+  get "spree/pages/affiliates"
 
   match '/gallery', :to => redirect('/t/categories/custom-blend')
   match '/blendit', :to => 'products#new'
@@ -85,6 +86,7 @@ Spree::Core::Engine.routes.prepend do
   match '/privacy', :to => 'pages#privacy'
   match '/returns', :to => 'pages#returns'
   match '/shipping', :to => 'pages#shipping'
+  match '/affiliates', :to => 'pages#affiliates'
   match '/share', :to => 'pages#share'
   match '/cfupdate', :to => 'pages#cfupdate'
   match '/myblends', :to => 'users#myblends'
