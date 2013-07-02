@@ -74,5 +74,9 @@ module Uniqteas
     
     config.assets.initialize_on_precompile = false
     config.assets.precompile += %w( store/print.css )
+    
+    initializer 'spree.register.calculators' do |app|
+      app.config.spree.calculators.shipping_methods << Spree::Calculator::FreeShipping
+    end
   end
 end

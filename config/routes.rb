@@ -116,7 +116,7 @@ Spree::Core::Engine.routes.prepend do
         post :reprocess_images
       end
     end
-    
+    resource  :free_shipping_settings
     resources :taxonomies do
       collection do
         post :rebuild

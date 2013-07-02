@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  free_shipping_settings: Free Shipping Settings
   details: "details"
   to_this_address: "to this address"
   add_other_address: "New address"
