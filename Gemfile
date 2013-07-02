@@ -23,8 +23,12 @@ group :development do
 end
 
 group :staging do
+  platforms :ruby do # linux
+    gem 'unicorn'
+  end  
   gem 'memcachier'
   gem 'dalli'
+  gem 'newrelic_rpm'
 end
 # Gems used only for assets and not required
 # in production environments by default.
