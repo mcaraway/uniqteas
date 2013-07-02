@@ -22,6 +22,10 @@ group :development do
   gem 'rspec-rails', '2.11.0'
 end
 
+group :staging do
+  gem 'memcachier'
+  gem 'dalli'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
