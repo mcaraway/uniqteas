@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  details: "details"
+  to_this_address: "to this address"
+  add_other_address: "New address"
   select_options_to_see_price: "Choose" 
   coupon_code: "Coupon"
   code: "Code"

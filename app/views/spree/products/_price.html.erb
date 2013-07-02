@@ -4,11 +4,7 @@
 	<div id="product-price">
 		<h6 class="product-section-title"><%= t(:price) %></h6>
 		<div>
-			<% if @product.has_variants? %>
-			<span class="price selling" itemprop="price"><%= t(:select_options_to_see_price) %></span>
-			<% else %>
 			<span class="price selling" itemprop="price"><%= number_to_currency @product.price %></span>
-			<% end %>
 		</div>
 	</div>
 

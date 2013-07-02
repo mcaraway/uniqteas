@@ -61,6 +61,8 @@ gem "spree_social_products", :git => "git://github.com/spree/spree_social_produc
 gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git"
 gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
 gem 'spree_contact_us', :git => 'git://github.com/sbeam/spree_contact_us.git'
+# gem 'spree_free_shipping', :path => '../spree_free_shipping'
+gem 'spree_free_shipping', :git => 'git://github.com/mcaraway/spree_free_shipping.git'
 gem "recaptcha", :require => "recaptcha/rails" # if you are using reCAPTCHA
 gem 'datashift', '~> 0.13.0'
 gem 'datashift_spree', '~>0.5.0'
