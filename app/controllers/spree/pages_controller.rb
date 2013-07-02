@@ -21,6 +21,9 @@ class Spree::PagesController < Spree::ResourceController
   def shipping
   end
   
+  def affiliates
+  end
+  
   def cfupdate
   end
 end

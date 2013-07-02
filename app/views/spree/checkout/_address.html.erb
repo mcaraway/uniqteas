@@ -1,0 +1,60 @@
+<% @addresses = spree_current_user ? spree_current_user.addresses : [] %>
+
+<% ['billing', 'shipping'].each do |address_type|
+  next if address_type == 'billing' && Spree::AddressBook::Config[:disable_bill_address]
+  address_name = "#{address_type[0...4]}_address" %>
+<div class="columns alpha six" data-hook="<%= address_type %>_fieldset_wrapper">
+<fieldset id="<%= address_type %>">
+  <legend><%= t(address_type + "_address")%></legend>
+  <% if address_type == 'shipping' && !Spree::AddressBook::Config[:disable_bill_address] %>
+    <p class="field checkbox" data-hook="use_billing">
+      <%= check_box_tag 'order[use_billing]', '1', (!(@order.bill_address.empty? && @order.ship_address.empty?) && @order.bill_address.same_as?(@order.ship_address)) %>
+      <%= label_tag :order_use_billing, t(:use_billing_address), :id => 'use_billing' %>
+    </p>
+  <% end %>
+  <% if @addresses.present? %>
+  <div class="select_address">
+    <p class="field">
+  <div id="<%=address_type %>-address-buttons">
+      <% @addresses.each_with_index do |address, idx| %>
+		<%= form.radio_button "#{address_name}_id", address.id, :checked => (idx == 0) %>
+		<label for="<%= ['order', address_name, 'id', address.id].join('_') %>" > <%= (address_type == "billing" ? "Bill " : "Ship ") + t(:to_this_address) %></label><br />
+		<div class="address">
+			<strong><%= address.full_name%></strong><br />
+			<%= address.address1 %> <br />
+			<%= address.address2.empty? ? ""  : address.address2 + "<br />"%> 
+			<%= address.city + ", " + (address.state_text) + " " + address.zipcode%> <br />
+			<%= address.country %> <br />
+		</div><br />
+      <% end %>
+		<%= form.radio_button "#{address_name}_id", 0 %>
+		<label for="<%= ['order', address_name, 'id', 0].join('_') %>" > <%= t(:add_other_address) %></label><br />
+  </div>
+  </p>
+  </div>
+  <% end %>
+  <%= form.fields_for address_name do |address_form| %>
+    <div class="inner" data-hook=<%="#{address_type}_inner" %>>
+      <%= render :partial => 'spree/addresses/form', :locals => {
+        :address_name => address_name,
+        :address_form => address_form,
+        :address_type => address_type,
+        :address => Spree::Address.default
+      } %>
+    </div>
+  <% end %>
+</fieldset>
+</div>
+<% end %>
+
+<hr class="clear" />
+<div class="form-buttons" data-hook="buttons">
+  <%= submit_tag t(:save_and_continue), :class => 'continue button primary' %>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $( "#billing-address-buttons" ).buttonset();
+  $( "#shipping-address-buttons" ).buttonset();
+});	
+</script>
