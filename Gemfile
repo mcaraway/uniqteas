@@ -56,9 +56,8 @@ end
 
 # To use debugger
 # gem 'debugger'
-gem 'jquery-rails', '2.1.4'
+gem 'jquery-rails', '2.2.0'
 gem 'spree', '~> 1.3.0'
-gem 'spree_fancy', :branch => "customize_to_uniqteas", :git => 'git://github.com/mcaraway/spree_fancy.git'
 gem 'spree_auth_devise', :branch => "1-3-stable", :git => 'git://github.com/spree/spree_auth_devise'
 gem 'spree_active_shipping', :branch => "1-3-stable", :git => "git://github.com/spree/spree_active_shipping"
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
@@ -70,5 +69,7 @@ gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git
 gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
 gem 'spree_contact_us', :git => 'git://github.com/sbeam/spree_contact_us.git'
 gem "recaptcha", :require => "recaptcha/rails" # if you are using reCAPTCHA
+#gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
+gem 'spree_uniqteas_theme', :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
 gem 'datashift', '~> 0.13.0'
 gem 'datashift_spree', '~>0.5.0'

@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+  require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
@@ -73,8 +73,7 @@ module Uniqteas
     config.assets.version = '1.0'
     
     config.assets.initialize_on_precompile = false
-    config.assets.precompile += %w( store/print.css )
-    
+    config.assets.precompile += %w( store/print.css *.png *.jpg *.jpeg *.gif )
     initializer 'spree.register.calculators' do |app|
       app.config.spree.calculators.shipping_methods << Spree::Calculator::FreeShipping
     end

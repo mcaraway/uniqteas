@@ -2,7 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  free_shipping_settings: Free Shipping Settings
+  free_teaball: "Free infuser on first order."
+  free_shipping: "Free shipping on orders over $50."
+  free_shipping_settings: "Free Shipping Settings"
   details: "details"
   to_this_address: "to this address"
   add_other_address: "New address"
@@ -21,7 +23,7 @@ en:
   make_my_own_blend: "Make Your Own Blend"
   try_it_free: "Try it free"
   about: "About Us"
-  contact: "Contact Us"
+  contact_us: "Contact Us"
   make_public: "Allow others to see and order my blend."
   make_private: "Keep my blend private."
   make_orderable: "I'm finished editing make it orderable."

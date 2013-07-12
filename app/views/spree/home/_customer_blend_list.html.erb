@@ -4,10 +4,10 @@
 	<ul>
 		<% @featured_products.each do |product| %>
 		<li>
-			<div class="home-product-image center-align">
+			<div class="home-product-image align-center">
 				<%= link_to small_image(product), product_url(product) %>
 			</div>
-			<div class="home-product-title center-align">
+			<div class="home-product-title align-center">
 				<%= link_to product.name, product_url(product)%>
 			</div>
 		</li>

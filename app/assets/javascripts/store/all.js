@@ -13,6 +13,6 @@
 
 //= require store/spree_address_book
 //= require store/spree_social_products
-//= require store/spree_fancy
 
 //= require_tree .
+//= require store/spree_uniqteas_theme

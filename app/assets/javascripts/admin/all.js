@@ -13,6 +13,6 @@
 //= require admin/spree_auth
 
 //= require admin/spree_social_products
-//= require admin/spree_fancy
 
 //= require_tree .
+//= require admin/spree_uniqteas_theme

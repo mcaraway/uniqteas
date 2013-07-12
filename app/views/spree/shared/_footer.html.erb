@@ -1,93 +1,97 @@
-<footer id="footer" class="sixteen columns" data-hook>
+<footer id="footer" class="row-fluid" data-hook>
 	<div class="container">
-
-		<div class="two columns">
-			<h5>Information</h5>
-			<ul>
-				<li>
-					<%= link_to t(:wholesale), "http://wholesale.uniqteas.com" %>
-				</li>
-				<li>
-					<%= link_to t(:contact), contact_path %>
-				</li>
-				<li>
-					<%= link_to t(:about), about_path %>
-				</li>
-				<li>
-					<%= link_to t(:privacy), privacy_path %>
-				</li>
-				<li>
-					<%= link_to t(:returns), returns_path %>
-				</li>
-				<li>
-					<%= link_to t(:shipping), shipping_path %>
-				</li>
-				<li>
-					<%= link_to t(:faqs), faqs_path %>
-				</li>
-			</ul>
-		</div>
-
-		<div class="three columns">
-			<h5>Affiliations</h5>
-			<ul>
-				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/BBBS.png", :size=>"16x16", :title =>"Big Brothers Big Sisters", :style=>"float: left; padding-right: 5px;"), "http://www.bbbs.org" %>
-					<%= link_to "Big Brothers Big Sisters", "http://www.bbbs.org" %> 
-				</li>
-				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/STI.gif", :size=>"16x16", :title =>"Specialty Tea Institute", :style=>"float: left; padding-right: 5px;"), "http://www.teausa.com/" %>
-					<%= link_to "Specialty Tea Institute.", "http://www.teausa.com/" %>
-				</li>
-				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/scaa.gif", :size=>"16x16", :title =>"Specialty Coffe Association of America", :style=>"float: left; padding-right: 5px;"), "http://www.scaa.org/" %>
-					<%= link_to "Specialty Coffee Association of America.", "http://www.scaa.org/" %>
-				</li>
-				<li>
-					<%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"16x16", :style=>"float: left; padding-right: 5px;"), bighoop_path %>
-					<%= link_to "Big Hoop Foundation", bighoop_path %>
-				</li>
-			</ul>
-		</div>
-
-		<div class="seven columns">
-			<h5>Get Special Offers</h5><!-- Begin MailChimp Signup Form -->
-			<div id="mc_embed_signup">
-				<form
-				action="http://carawaytea.us2.list-manage.com/subscribe/post?u=708077f62b33d764a9f841f97&amp;id=4bb28741a0"
-				method="post" id="mc-embedded-subscribe-form"
-				name="mc-embedded-subscribe-form" class="validate" target="_blank">
-					<span>Join our email list to receive exclusive Offers and
-						product updates!</span>
-					<div class="mc-field-group">
-						<label for="mce-EMAIL">Email Address</label>
-						<input type="email" size="33" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-					</div>
-					<div id="mce-responses" class="clear" style="margin-bottom:5px;">
-						<div class="response" id="mce-error-response"
-						style="display: none"></div>
-						<div class="response" id="mce-success-response"
-						style="display: none"></div>
-					</div>
-					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-				</form>
+		<div class="row">
+			<div class="span3">
+				<h5>Information</h5>
+				<ul class="unstyled">
+					<li>
+						<%= link_to t(:wholesale), "http://wholesale.uniqteas.com" %>
+					</li>
+					<li>
+						<%= link_to t(:contact), contact_path %>
+					</li>
+					<li>
+						<%= link_to t(:about), about_path %>
+					</li>
+					<li>
+						<%= link_to t(:privacy), privacy_path %>
+					</li>
+					<li>
+						<%= link_to t(:returns), returns_path %>
+					</li>
+					<li>
+						<%= link_to t(:shipping), shipping_path %>
+					</li>
+					<li>
+						<%= link_to t(:faqs), faqs_path %>
+					</li>
+				</ul>
 			</div>
-		</div>
 
-		<div class="three columns">
-			<%= image_tag("/assets/store/organic.jpg", :size=>"60x60", :title =>"We use organic teas.", :style=>"float: left; padding-right: 5px;")%>
-			<%= image_tag("/assets/store/fair-trade.jpg", :size=>"55x60", :title =>"We use fair trade teas.", :style=>"float: left; padding-right: 5px;")%>
+			<div class="span4">
+				<h5>Affiliations</h5>
+				<ul class="unstyled">
+					<li>
+						<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/BBBS.png", :size=>"16x16", :title =>"Big Brothers Big Sisters", :style=>"float: left; padding-right: 5px;"), "http://www.bbbs.org" %>
+						<%= link_to "Big Brothers Big Sisters", "http://www.bbbs.org" %>
+					</li>
+					<li>
+						<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/STI.gif", :size=>"16x16", :title =>"Specialty Tea Institute", :style=>"float: left; padding-right: 5px;"), "http://www.teausa.com/" %>
+						<%= link_to "Specialty Tea Institute.", "http://www.teausa.com/" %>
+					</li>
+					<li>
+						<%= link_to image_tag("https://s3.amazonaws.com/uniqteas/images/scaa.gif", :size=>"16x16", :title =>"Specialty Coffe Association of America", :style=>"float: left; padding-right: 5px;"), "http://www.scaa.org/" %>
+						<%= link_to "Specialty Coffee Association of America.", "http://www.scaa.org/" %>
+					</li>
+					<li>
+						<%= link_to image_tag("https://s3.amazonaws.com/bighoop/images/Big-Hoop-Logo-60-x-60.png", :size=>"16x16", :style=>"float: left; padding-right: 5px;"), bighoop_path %>
+						<%= link_to "Big Hoop Foundation", bighoop_path %>
+					</li>
+				</ul>
+			</div>
+
+			<div class="span6">
+				<h5>Get Special Offers</h5><!-- Begin MailChimp Signup Form -->
+				<div id="mc_embed_signup">
+					<form
+					action="http://carawaytea.us2.list-manage.com/subscribe/post?u=708077f62b33d764a9f841f97&amp;id=4bb28741a0"
+					method="post" id="mc-embedded-subscribe-form"
+					name="mc-embedded-subscribe-form" class="validate" target="_blank">
+						<span>Join our email list to receive exclusive Offers and
+							product updates!</span>
+						<div class="mc-field-group">
+							<label for="mce-EMAIL">Email Address</label>
+							<input type="email" size="33" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+						</div>
+						<div id="mce-responses" class="clear" style="margin-bottom:5px;">
+							<div class="response" id="mce-error-response"
+							style="display: none"></div>
+							<div class="response" id="mce-success-response"
+							style="display: none"></div>
+						</div>
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+					</form>
+				</div>
+			</div>
+
+			<div class="span3">
+				<%= image_tag("/assets/store/organic.png", :size=>"60x60", :title =>"We use organic teas.", :style=>"float: left; padding-right: 5px;")%>
+				<%= image_tag("/assets/store/fair-trade.png", :size=>"55x60", :title =>"We use fair trade teas.", :style=>"float: left; padding-right: 5px;")%>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="https://seal.thawte.com/getthawteseal?host_name=www.uniqteas.com&amp;size=L&amp;lang=en"></script>
 </footer>
 <script type="text/javascript">
-var __lc = {};
-__lc.license = 2299771;
+	var __lc = {};
+	__lc.license = 2299771;
 
-(function() {
-	var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-	lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-})();
+	(function() {
+		var lc = document.createElement('script');
+		lc.type = 'text/javascript';
+		lc.async = true;
+		lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(lc, s);
+	})(); 
 </script>

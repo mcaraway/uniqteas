@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509115302) do
+ActiveRecord::Schema.define(:version => 20130708195340) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "product_customization_types_products", :id => false, :force => true do |t|
+    t.integer "product_customization_type_id"
+    t.integer "product_id"
+  end
+
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
     t.datetime "expires_at"
@@ -43,6 +48,40 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string   "code"
     t.boolean  "advertise",    :default => false
     t.string   "path"
+  end
+
+  create_table "spree_ad_hoc_option_types", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "option_type_id"
+    t.string   "price_modifier_type"
+    t.boolean  "is_required",         :default => false
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+    t.integer  "position",            :default => 0
+  end
+
+  create_table "spree_ad_hoc_option_values", :force => true do |t|
+    t.integer  "ad_hoc_option_type_id"
+    t.integer  "option_value_id"
+    t.decimal  "price_modifier",        :precision => 8, :scale => 2, :default => 0.0, :null => false
+    t.datetime "created_at",                                                           :null => false
+    t.datetime "updated_at",                                                           :null => false
+    t.integer  "position"
+    t.boolean  "selected"
+    t.decimal  "cost_price_modifier",   :precision => 8, :scale => 2
+  end
+
+  create_table "spree_ad_hoc_option_values_line_items", :force => true do |t|
+    t.integer  "line_item_id"
+    t.integer  "ad_hoc_option_value_id"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  create_table "spree_ad_hoc_variant_exclusions", :force => true do |t|
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "spree_addresses", :force => true do |t|
@@ -162,6 +201,30 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string   "gateway_payment_profile_id"
   end
 
+  create_table "spree_customizable_product_options", :force => true do |t|
+    t.integer  "product_customization_type_id"
+    t.integer  "position"
+    t.string   "presentation",                  :null => false
+    t.string   "name",                          :null => false
+    t.string   "description"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  create_table "spree_customized_product_options", :force => true do |t|
+    t.integer  "product_customization_id"
+    t.integer  "customizable_product_option_id"
+    t.string   "value"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "customization_image"
+  end
+
+  create_table "spree_excluded_ad_hoc_option_values", :force => true do |t|
+    t.integer "ad_hoc_variant_exclusion_id"
+    t.integer "ad_hoc_option_value_id"
+  end
+
   create_table "spree_gateways", :force => true do |t|
     t.string   "type"
     t.string   "name"
@@ -176,9 +239,9 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
 
   create_table "spree_home_page_sliders", :force => true do |t|
     t.string   "name"
-    t.string   "html"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "html",       :limit => 2048
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   create_table "spree_inquiries", :force => true do |t|
@@ -318,6 +381,7 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.datetime "deleted_at"
+    t.string   "display_on"
   end
 
   create_table "spree_payments", :force => true do |t|
@@ -331,6 +395,7 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string   "state"
     t.string   "response_code"
     t.string   "avs_response"
+    t.string   "identifier"
   end
 
   create_table "spree_paypal_accounts", :force => true do |t|
@@ -349,7 +414,7 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
   add_index "spree_pending_promotions", ["user_id"], :name => "index_spree_pending_promotions_on_user_id"
 
   create_table "spree_preferences", :force => true do |t|
-    t.string   "value"
+    t.text     "value"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "key"
@@ -364,20 +429,19 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string  "currency"
   end
 
-  create_table "spree_product_labels", :force => true do |t|
+  create_table "spree_product_customization_types", :force => true do |t|
     t.string   "name"
-    t.string   "group"
-    t.integer  "label_template_id"
-    t.integer  "product_id"
-    t.string   "label_image_file_name"
-    t.string   "label_image_content_type"
-    t.string   "label_image_remote_url"
-    t.integer  "label_image_width"
-    t.integer  "label_image_height"
-    t.integer  "label_image_size"
-    t.datetime "label_image_updated_at"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.string   "presentation"
+    t.string   "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "spree_product_customizations", :force => true do |t|
+    t.integer  "line_item_id"
+    t.integer  "product_customization_type_id"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "spree_product_option_types", :force => true do |t|
@@ -402,8 +466,9 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string   "value"
     t.integer  "product_id"
     t.integer  "property_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "position",    :default => 0
   end
 
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
@@ -425,7 +490,6 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.boolean  "public",               :default => true
     t.boolean  "final",                :default => true
     t.boolean  "on_demand",            :default => false
-    t.integer  "label_template"
   end
 
   add_index "spree_products", ["available_on"], :name => "index_products_on_available_on"
@@ -566,34 +630,6 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.datetime "updated_at",     :null => false
   end
 
-  create_table "spree_slides", :force => true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.text     "content"
-    t.string   "attachment_content_type"
-    t.string   "attachment_file_name"
-    t.datetime "attachment_updated_at"
-    t.integer  "attachment_size"
-    t.integer  "position"
-    t.string   "type",                    :limit => 75
-    t.integer  "slideshow_type_id"
-    t.datetime "created_at",                            :null => false
-    t.datetime "updated_at",                            :null => false
-  end
-
-  create_table "spree_slideshow_types", :force => true do |t|
-    t.string   "category"
-    t.boolean  "enabled",           :default => false
-    t.integer  "slide_height",      :default => 400
-    t.integer  "slide_width",       :default => 900
-    t.integer  "slide_number",      :default => 4
-    t.boolean  "enable_navigation", :default => true
-    t.datetime "created_at",                           :null => false
-    t.datetime "updated_at",                           :null => false
-  end
-
-  add_index "spree_slideshow_types", ["category"], :name => "index_slideshow_types_on_category", :unique => true
-
   create_table "spree_state_changes", :force => true do |t|
     t.string   "name"
     t.string   "previous_state"
@@ -678,15 +714,15 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
   end
 
   create_table "spree_users", :force => true do |t|
-    t.string   "encrypted_password",     :limit => 128
-    t.string   "password_salt",          :limit => 128
+    t.string   "encrypted_password"
+    t.string   "password_salt"
     t.string   "email"
     t.string   "remember_token"
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",                         :default => 0, :null => false
-    t.integer  "failed_attempts",                       :default => 0, :null => false
+    t.integer  "sign_in_count",                        :default => 0, :null => false
+    t.integer  "failed_attempts",                      :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -695,8 +731,8 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.string   "login"
     t.integer  "ship_address_id"
     t.integer  "bill_address_id"
-    t.datetime "created_at",                                           :null => false
-    t.datetime "updated_at",                                           :null => false
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
     t.string   "authentication_token"
     t.string   "unlock_token"
     t.datetime "locked_at"
@@ -753,23 +789,6 @@ ActiveRecord::Schema.define(:version => 20130509115302) do
     t.datetime "updated_at",                            :null => false
     t.boolean  "default_tax",        :default => false
     t.integer  "zone_members_count", :default => 0
-  end
-
-  create_table "store_credits", :force => true do |t|
-    t.integer  "user_id"
-    t.decimal  "amount",           :precision => 8, :scale => 2, :default => 0.0, :null => false
-    t.decimal  "remaining_amount", :precision => 8, :scale => 2, :default => 0.0, :null => false
-    t.string   "reason"
-    t.datetime "created_at",                                                      :null => false
-    t.datetime "updated_at",                                                      :null => false
-  end
-
-  create_table "user_products", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "product_id"
-    t.datetime "create_date"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
 end

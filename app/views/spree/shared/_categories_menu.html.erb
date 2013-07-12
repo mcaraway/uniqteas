@@ -1,11 +1,11 @@
-<div class="container">
-	<%= categories_tree(get_category_root, nil, 5) %>
+<div class="navbar">
+	<div class="navbar-inner"  style="margin-top: 5px;">
+		<!-- Start: Primary navigation -->
+		<div class="nav-collapse">
+			<%= main_categories_tree(get_category_root, nil, 5) %>
+			<%= link_to blendit_url, :class => "btn btn-primary" do %>
+			<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:make_my_own_blend) %>
+			<% end %>
+		</div>
+	</div>
 </div>
-<script>
-
-$(function() {	
-	// initialise supersubs before it gets hidden by tabs or superfish. Need to measure widths while visible.
-	$('#categories-menu').superfish();
-});
-
-</script>

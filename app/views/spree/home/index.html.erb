@@ -1,33 +1,35 @@
-<div class="columns six">
-	<%= render :partial => 'promo_box' %>
-	<%= render :partial => 'customer_blend_list' %>
-</div>
-<div class="home-page-intro">
-	<div class="heading">
-		We help you create your unique
-		<br />
-		blend of teas, you help create
-		<br />
-		your own unique packaging.
-		<br />
+<!-- Start: MAIN CONTENT -->
+<div class="row">
+	<div class="span16 margin-top">
+		<hr />
+		<ul id="feed" class="unstyled"></ul>
 	</div>
-	<div style="margin: 10px 0px 0px 200px">
-		<%= link_to blendit_url, :class => "button" do %>
-		<%= content_tag(:i, '', :class => 'icon-plus') + " " + t(:try_it_free) %>
-		<% end %>
+	<hr />
+	<div class="span4 align-center">
+		<img src="/assets/store/free-shipping.png" />
 	</div>
-</div>
-<div class="home-page-promos columns sixteen">
-	<div class="columns four">
-	<img src="/assets/store/free-shipping.png" />
+	<div class="span4 align-center">
+		<img src="/assets/store/free-teaball.png" />
 	</div>
-	<div class="columns four">
-	<img src="/assets/store/free-teaball.png" />
-	</div>
-	<div class="columns three">
-	<img src="/assets/store/1x1.png" width="100" height="200" />
-	</div>
-	<div class="columns four">
-<map name="LNIWHW73YA"><area shape='rect' coords="38,58,260,78" href='http://panel2.feed.informer.com/go/LNIWHW73YA/0' target=_blank><area shape='rect' coords="38,82,260,102" href='http://panel2.feed.informer.com/go/LNIWHW73YA/1' target=_blank><area shape='rect' coords="38,106,260,126" href='http://panel2.feed.informer.com/go/LNIWHW73YA/2' target=_blank><area shape='rect' coords="38,130,260,150" href='http://panel2.feed.informer.com/go/LNIWHW73YA/3' target=_blank><area shape='rect' coords="38,154,260,174" href='http://panel2.feed.informer.com/go/LNIWHW73YA/4' target=_blank><area shape='rect' coords="38,178,260,198" href='http://panel2.feed.informer.com/go/LNIWHW73YA/5' target=_blank><area shape='rect' coords="38,202,260,222" href='http://panel2.feed.informer.com/go/LNIWHW73YA/6' target=_blank><area title="Supported by Feed Informer" shape='rect' coords="0,221,260,261" href="http://feed.informer.com" target=_blank></map><img src='http://media.feed.informer.com/L/LN/LNIWHW73YA.gif' style="border:none" usemap="#LNIWHW73YA"/>
+	<div class="span4 offset3 align-center">
+		<map name="LNIWHW73YA">
+			<area shape='rect' coords="38,58,260,78" href='http://panel2.feed.informer.com/go/LNIWHW73YA/0' target=_blank>
+			<area shape='rect' coords="38,82,260,102" href='http://panel2.feed.informer.com/go/LNIWHW73YA/1' target=_blank>
+			<area shape='rect' coords="38,106,260,126" href='http://panel2.feed.informer.com/go/LNIWHW73YA/2' target=_blank>
+			<area shape='rect' coords="38,130,260,150" href='http://panel2.feed.informer.com/go/LNIWHW73YA/3' target=_blank>
+			<area shape='rect' coords="38,154,260,174" href='http://panel2.feed.informer.com/go/LNIWHW73YA/4' target=_blank>
+			<area shape='rect' coords="38,178,260,198" href='http://panel2.feed.informer.com/go/LNIWHW73YA/5' target=_blank>
+			<area shape='rect' coords="38,202,260,222" href='http://panel2.feed.informer.com/go/LNIWHW73YA/6' target=_blank>
+			<area title="Supported by Feed Informer" shape='rect' coords="0,221,260,261" href="http://feed.informer.com" target=_blank>
+		</map><img src='http://media.feed.informer.com/L/LN/LNIWHW73YA.gif' style="border:none" usemap="#LNIWHW73YA"/>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#feed").PaRSS("http://www.teasherpa.net/apps/blog/entries/feed/rss", // rss feed url (required)
+		2, // number of items (optional)
+		"M jS g:i a", // date format (optional)
+		"content" // include descriptions? (optional)
+		);
+	}); 
+</script>

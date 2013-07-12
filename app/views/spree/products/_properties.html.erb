@@ -1,11 +1,11 @@
 <% if !@product.properties.empty? %>
 <% if @product.master.is_custom? %>
-<h4>Ingredients</h4>
+<h4>Blend</h4>
 <%= @product.blend.gsub("/", "<br />").html_safe %>
 <br />
 <% for product_property in @product_properties %>
 	<% if product_property.property.name.include? "sku" and !product_property.value.blank? %>
-	<%= blend_img (product_property.value) %>
+	<div class="align-center"><%= blend_img (product_property.value) %></div>
 	<% end %>
 <% end %>
 <% else %>
