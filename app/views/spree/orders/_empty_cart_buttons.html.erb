@@ -1,9 +1,0 @@
-<div id="ut-empty-cart" data-hook>
-	<%= form_tag empty_cart_path, :method => :put do %>
-	<p id="clear_cart_link" data-hook>
-		<%= submit_tag t(:empty_cart), :class => 'button gray' %>
-		<%= t(:or) %>
-		<%= link_to t(:continue_shopping), products_path, :class => 'continue button gray' %>
-	</p>
-	<% end %>
-</div>

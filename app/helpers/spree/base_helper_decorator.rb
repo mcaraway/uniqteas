@@ -2,30 +2,8 @@ Spree::BaseHelper.class_eval do
   def get_category_root
     Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children).first.root
   end
-  def get_category_tea
-    root_taxon =  Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children).first.root
-    tea = root_taxon.children.first
-    root_taxon.children.map do |taxon|
-      tea = taxon.name == 'Tea' ? taxon : tea
-    end
-    tea
-  end
   
-  def categories_tree(root_taxon, current_taxon, max_level, current_level = 1)
-    return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty?
-    css_class = current_level == 1 ? 'sf-menu' : ''
-    content_tag :ul, :class => css_class do
-      root_taxon.children.map do |taxon|
-        css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
-        content_tag :li, :class => css_class do
-          link_to(taxon.name, seo_url(taxon)) +
-          categories_tree(taxon, current_taxon, max_level, current_level + 1)
-        end
-      end.join("\n").html_safe
-    end
-  end
-  
-  def main_categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
+  def categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
     return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty?
     css_class = current_level == 1 ? 'nav pull-left' : ''
     css_class += isdropdown ? 'dropdown-menu' : ''
@@ -35,10 +13,10 @@ Spree::BaseHelper.class_eval do
         content_tag :li, :class => css_class do
           if css_class == 'dropdown'
             link_to(taxon.name, '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
-            main_categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
+            categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
           else
             link_to(taxon.name, seo_url(taxon))  +
-            main_categories_tree(taxon, current_taxon, max_level, current_level + 1)
+            categories_tree(taxon, current_taxon, max_level, current_level + 1)
           end
         end        
       end.join("\n").html_safe
