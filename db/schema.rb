@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130708195340) do
+ActiveRecord::Schema.define(:version => 20130717022643) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -239,9 +239,10 @@ ActiveRecord::Schema.define(:version => 20130708195340) do
 
   create_table "spree_home_page_sliders", :force => true do |t|
     t.string   "name"
-    t.string   "html",       :limit => 2048
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.text     "html"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "location"
   end
 
   create_table "spree_inquiries", :force => true do |t|
@@ -371,6 +372,18 @@ ActiveRecord::Schema.define(:version => 20130708195340) do
   end
 
   add_index "spree_orders", ["number"], :name => "index_orders_on_number"
+
+  create_table "spree_pages", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "html"
+    t.string   "page_title"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+    t.string   "search_keywords"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
 
   create_table "spree_payment_methods", :force => true do |t|
     t.string   "type"

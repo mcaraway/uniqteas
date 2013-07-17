@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/mcaraway/spree_uniqteas_theme.git
-  revision: 1c7c9ea5dcb93e325ff92a7c5a474075ca46a01d
+  revision: e988489d69861e284004ad70caa4249390fb9da7
   specs:
     spree_uniqteas_theme (1.3.2)
       bootstrap-sass (~> 2.3.2.0)
@@ -397,7 +397,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-    warden (1.2.2)
+    warden (1.2.3)
       rack (>= 1.0)
     wasabi (2.5.1)
       httpi (~> 1.0)
