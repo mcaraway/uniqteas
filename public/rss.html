@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>PArss Example</title>
+	<script type="text/javascript"
+	  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.parss.uncompressed.js"></script>
+
+	    <script type="text/javascript">
+	    <!--
+	      $(document).ready(function(){
+	        $("#feed").PaRSS(
+	          "http://smallacornsnz.blogspot.com/feeds/posts/default/-/upcycling?alt=rss",  // rss feed url (required)
+	          10,                                   // number of items (optional)
+	          "M jS g:i a",                        // date format (optional)
+	          "content"                                 // include descriptions? (optional)
+	        );
+	      });
+	    -->
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    		ul#feed {
+    			list-style-type: none;
+    		}
+	        .parss-title {
+	          background-image: url("http://www.smallacorns.co.nz/blogimages/titlebg.gif");
+	          font-size: 24px;
+	          font-family: Georgia;
+	          color: white;
+	          font-style: italic;
+              font-weight: normal;
+              background-repeat: no-repeat;    height: 44px;
+				line-height: 1.4em;
+				margin: 0;
+				padding-left: 15px;
+				padding-top: 4px;
+				width: 385px;
+
+	        }
+	        .parss-title a {
+				text-decoration: none;
+	          color: white;
+	        }
+	        .parss-date {
+				padding-top: 4px;
+	        	margin: 15px 0px 15px 15px;;
+	        }
+	        .parss-image {
+	          float: right;
+	        }
+	        .parss-image img {
+	          /* styles for the actual image element */
+	        }
+	        .parss-description {
+	          // text-align: left !important;
+	          margin-bottom: 15px;
+	        }
+	        .parss-description div {
+	          // text-align: left !important;
+	        }
+	        .parss-description a img {
+	          /* description style definitions here */
+	          text-align: right !important;
+	          margin: 40px 0px 40px 0px;
+	          width: 100%;
+	        }
+      </style>
+</head>
+<body>
+	<ul id="feed"></ul>
+</body>
+</html>
+
+
