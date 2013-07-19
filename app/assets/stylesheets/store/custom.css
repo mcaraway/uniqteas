@@ -1,3 +1,4 @@
+// rss feed styling
 .parss-title {
 	font-size: 2.5em;
 	font-family: 'Great Vibes', cursive;
@@ -27,4 +28,112 @@
 	float: right;
 	margin-left: 40px;
 	width: 370px;
+}
+
+// blendit page
+#slider1, #slider2, #slider3 {
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+div.ui-slider-horizontal {
+	height: .6em;
+	margin-top: 6px;
+	margin-bottom: 14px;
+}
+
+div.ui-slider-horizontal a.ui-slider-handle.ui-state-default.ui-corner-all {
+	height: 15px;
+	width: 15px;
+	top: -.2em;
+}
+
+.tea_cups_div, .tea_images_div {
+	border-bottom: 2px solid #f90;
+	padding: 20px 0px 20px 0px;
+}
+
+.tea_images_div {
+	padding: 5px 0px 5px 0px;
+	position: relative;
+	float: right;
+	width: 435px;
+	border: none;
+}
+
+.tea_builder_divider {
+	margin-bottom: 20px;
+}
+
+div.tea-cup-list {
+	padding-left: 5px;
+	text-align: center;
+}
+
+div.tea-cup-list ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+div.tea-cup-list ul li, div.tea-cup-list ul li:hover, div.tea-cup-list ul li.selected {
+	background-color: #eee;
+	padding: 3px;
+	border: 1px solid #BBCAD2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	min-height: 48px;
+}
+
+div.tea-cup-list ul li:hover {
+	background-color: #f90;
+	border: 1px solid white;
+}
+
+div.tea-cup-list ul li.selected {
+	background-color: #09f;
+	border: 1px solid white;
+	position: relative;
+}
+
+div.tea-cup-list ul li.selected div {
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	height: 18px;
+	width: 18px;
+}
+
+.inactive_flavor {
+	font-weight: normal;
+}
+
+.active_flavor {
+	color: #000080;
+	font-weight: bold;
+}
+
+#percent1div, #percent2div, #percent3div {
+	text-align: right;
+	padding-right: 10px;
+}
+
+#holder1, #holder2, #holder3 {
+	height: 310px;
+	width: 310px;
+	float: left;
+}
+#slider {
+	height: 120px;
+	width: 950px;
+	float: left;
+}
+
+.flavor_fields, .percent_fields, .name_fields, .image_fields, .order_fields, .help-me-fields {
+	padding: 20px 0px 20px 0px;
+	/*border-top: 2px solid #f90; */
+}
+.form-buttons {
+	padding: 20px;
 }

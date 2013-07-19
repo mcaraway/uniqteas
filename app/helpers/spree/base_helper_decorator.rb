@@ -1,8 +1,22 @@
 Spree::BaseHelper.class_eval do
+  def taxons_tree(root_taxon, current_taxon, max_level = 1)
+    logger.debug "***** taxon_tree root = " + root_taxon.name + "max_level = " + max_level.to_s
+    return '' if max_level < 1 || root_taxon.children.empty?
+    content_tag :ul, :class => 'taxons-list' do
+      root_taxon.children.map do |taxon|
+        css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
+        content_tag :li, :class => css_class do
+          link_to(taxon.name, seo_url(taxon)) +
+          taxons_tree(taxon, current_taxon, max_level - 1)
+        end
+      end.join("\n").html_safe
+    end
+  end
+
   def get_category_root
     Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children).first.root
   end
-  
+
   def categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
     return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty?
     css_class = current_level == 1 ? 'nav pull-left' : ''
@@ -12,13 +26,13 @@ Spree::BaseHelper.class_eval do
         css_class = taxon.children.empty? ? nil : 'dropdown'
         content_tag :li, :class => css_class do
           if css_class == 'dropdown'
-            link_to(taxon.name, '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
+            link_to(raw(taxon.name+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
             categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
           else
             link_to(taxon.name, seo_url(taxon))  +
             categories_tree(taxon, current_taxon, max_level, current_level + 1)
           end
-        end        
+        end
       end.join("\n").html_safe
     end
   end
@@ -57,10 +71,9 @@ Spree::BaseHelper.class_eval do
   end
 
   def link_to_with_icon(icon_name, text, url, options = {})
-    options[:class] = (options[:class].to_s + " icon_link with-tip #{icon_name}").strip
-    options[:class] += ' no-text' if options[:no_text]
     options[:title] = text if options[:no_text]
-    text = options[:no_text] ? '' : raw("<span class='text'>#{text}</span>")
+    icon = raw("<i class='#{icon_name}'></i> ")
+    text = icon + (options[:no_text] ? '' : raw("<span class='text'>#{text}</span>"))
     options.delete(:no_text)
     link_to(text, url, options)
   end
