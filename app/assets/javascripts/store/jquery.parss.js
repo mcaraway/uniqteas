@@ -26,12 +26,11 @@
 				if (g.date_format && g.date_format.length > 0) {
 					r += "<span class='parss-date'>" + k(t.publishedDate, g.date_format) + "</span>"
 				}
+				img = t.mediaGroups[0].contents[0].url;
+				img = "<span class='parss-image'><img src=\"" + img + "\" alt=\"" + t.title + "\" ></span>";
 				switch(g.show_descriptions) {
 					case"image":
-						var q = h(t.content);
-						if (q) {
-							r += "<span class='parss-image'>" + q + "</span>"
-						}
+						r += img;
 						r += "<span class='parss-description'>" + t.contentSnippet + "</span>";
 						break;
 					case"content":
@@ -188,10 +187,11 @@
 		}
 
 		function h(p) {
-			var o = p.match(/<img[^>+]*>/i);
+			var o = p.match(/<a[^>+]*.jpg/i);
 			if (o) {
-				var q = o[0].match(/src="[^"+]*"/i), r = o[0].match(/alt="[^"+]*"/i);
-				return "<img " + q + " " + r + " />"
+				var q = o[0].match(/href="[^"+]*"/i), r = o[0].match(/alt="[^"+]*"/i);
+				q = q.substring(4);
+				return "<img src=" + q + " " + r + " />"
 			}
 			return false
 		}
