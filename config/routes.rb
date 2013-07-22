@@ -68,32 +68,13 @@ Uniqteas::Application.routes.draw do
 end
 
 Spree::Core::Engine.routes.prepend do
-  get "spree/pages/bighoop"
-  get "spree/pages/about"
-  get "spree/pages/faqs"
-  get "spree/pages/privacy"
-  get "spree/pages/returns"
-  get "spree/pages/shipping"
-  get "spree/pages/share"
-  get "spree/pages/cfupdate"
-  get "spree/pages/affiliates"
 
   match '/gallery', :to => redirect('/t/categories/custom-blend')
   match '/blendit', :to => 'products#new'
-  match '/bighoop', :to => 'pages#bighoop'
-  match '/about', :to => 'pages#about'
-  match '/faqs', :to => 'pages#faqs'
-  match '/privacy', :to => 'pages#privacy'
-  match '/returns', :to => 'pages#returns'
-  match '/shipping', :to => 'pages#shipping'
-  match '/affiliates', :to => 'pages#affiliates'
-  match '/share', :to => 'pages#share'
-  match '/cfupdate', :to => 'pages#cfupdate'
   match '/myblends', :to => 'users#myblends'
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
   match '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
 
-  resource :pages
   resource :label_templates 
 
   resources :products do
