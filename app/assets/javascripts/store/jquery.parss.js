@@ -26,11 +26,12 @@
 				if (g.date_format && g.date_format.length > 0) {
 					r += "<span class='parss-date'>" + k(t.publishedDate, g.date_format) + "</span>"
 				}
-				img = t.mediaGroups[0].contents[0].url;
-				img = "<span class='parss-image'><img src=\"" + img + "\" alt=\"" + t.title + "\" ></span>";
 				switch(g.show_descriptions) {
 					case"image":
-						r += img;
+						var q = h(t.content);
+						if (q) {
+							r += "<span class='parss-image'>" + q + "</span>"
+						}
 						r += "<span class='parss-description'>" + t.contentSnippet + "</span>";
 						break;
 					case"content":
@@ -43,7 +44,6 @@
 					default:
 						break
 				}
-				r += "<hr />";
 				p += "<li>" + r + "</li>"
 			});
 			jQuery(i).empty().append(p);
@@ -187,11 +187,10 @@
 		}
 
 		function h(p) {
-			var o = p.match(/<a[^>+]*.jpg/i);
+			var o = p.match(/<img[^>+]*>/i);
 			if (o) {
-				var q = o[0].match(/href="[^"+]*"/i), r = o[0].match(/alt="[^"+]*"/i);
-				q = q.substring(4);
-				return "<img src=" + q + " " + r + " />"
+				var q = o[0].match(/src="[^"+]*"/i), r = o[0].match(/alt="[^"+]*"/i);
+				return "<img " + q + " " + r + " />"
 			}
 			return false
 		}
