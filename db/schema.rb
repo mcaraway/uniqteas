@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130717022643) do
+ActiveRecord::Schema.define(:version => 20130722235457) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -658,6 +658,27 @@ ActiveRecord::Schema.define(:version => 20130717022643) do
     t.string  "name"
     t.string  "abbr"
     t.integer "country_id"
+  end
+
+  create_table "spree_sweepstakes", :force => true do |t|
+    t.string   "name"
+    t.date     "starts_at"
+    t.date     "expires_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_sweepstakes_entries", :force => true do |t|
+    t.integer  "sweepstake_id"
+    t.string   "email"
+    t.string   "comment"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "spree_sweepstakes_products", :id => false, :force => true do |t|
+    t.integer "spree_sweepstakes_id"
+    t.integer "spree_products_id"
   end
 
   create_table "spree_tax_categories", :force => true do |t|

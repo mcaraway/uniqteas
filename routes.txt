@@ -8,35 +8,11 @@ edit_label_template GET    /label_templates/:id/edit(.:format) label_templates#e
               spree        /                                   Spree::Core::Engine
 
 Routes for Spree::Core::Engine:
-                              spree_pages_bighoop GET      /spree/pages/bighoop(.:format)                                              spree/pages#bighoop
-                                spree_pages_about GET      /spree/pages/about(.:format)                                                spree/pages#about
-                                 spree_pages_faqs GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
-                              spree_pages_privacy GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
-                              spree_pages_returns GET      /spree/pages/returns(.:format)                                              spree/pages#returns
-                             spree_pages_shipping GET      /spree/pages/shipping(.:format)                                             spree/pages#shipping
-                                spree_pages_share GET      /spree/pages/share(.:format)                                                spree/pages#share
-                             spree_pages_cfupdate GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
-                           spree_pages_affiliates GET      /spree/pages/affiliates(.:format)                                           spree/pages#affiliates
                                           gallery          /gallery(.:format)                                                          :controller#:action
                                           blendit          /blendit(.:format)                                                          spree/products#new
-                                          bighoop          /bighoop(.:format)                                                          spree/pages#bighoop
-                                            about          /about(.:format)                                                            spree/pages#about
-                                             faqs          /faqs(.:format)                                                             spree/pages#faqs
-                                          privacy          /privacy(.:format)                                                          spree/pages#privacy
-                                          returns          /returns(.:format)                                                          spree/pages#returns
-                                         shipping          /shipping(.:format)                                                         spree/pages#shipping
-                                       affiliates          /affiliates(.:format)                                                       spree/pages#affiliates
-                                            share          /share(.:format)                                                            spree/pages#share
-                                         cfupdate          /cfupdate(.:format)                                                         spree/pages#cfupdate
                                          myblends          /myblends(.:format)                                                         spree/users#myblends
                                                            /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                            /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
-                                            pages POST     /pages(.:format)                                                            spree/pages#create
-                                        new_pages GET      /pages/new(.:format)                                                        spree/pages#new
-                                       edit_pages GET      /pages/edit(.:format)                                                       spree/pages#edit
-                                                  GET      /pages(.:format)                                                            spree/pages#show
-                                                  PUT      /pages(.:format)                                                            spree/pages#update
-                                                  DELETE   /pages(.:format)                                                            spree/pages#destroy
                                   label_templates POST     /label_templates(.:format)                                                  spree/label_templates#create
                               new_label_templates GET      /label_templates/new(.:format)                                              spree/label_templates#new
                              edit_label_templates GET      /label_templates/edit(.:format)                                             spree/label_templates#edit
@@ -341,35 +317,11 @@ Routes for Spree::Core::Engine:
                                          api_user GET      /api/users/:id(.:format)                                                    spree/api/users#show {:format=>"json"}
                                                   PUT      /api/users/:id(.:format)                                                    spree/api/users#update {:format=>"json"}
                                                   DELETE   /api/users/:id(.:format)                                                    spree/api/users#destroy {:format=>"json"}
-                                                  GET      /spree/pages/bighoop(.:format)                                              spree/pages#bighoop
-                                                  GET      /spree/pages/about(.:format)                                                spree/pages#about
-                                                  GET      /spree/pages/faqs(.:format)                                                 spree/pages#faqs
-                                                  GET      /spree/pages/privacy(.:format)                                              spree/pages#privacy
-                                                  GET      /spree/pages/returns(.:format)                                              spree/pages#returns
-                                                  GET      /spree/pages/shipping(.:format)                                             spree/pages#shipping
-                                                  GET      /spree/pages/share(.:format)                                                spree/pages#share
-                                                  GET      /spree/pages/cfupdate(.:format)                                             spree/pages#cfupdate
-                                                  GET      /spree/pages/affiliates(.:format)                                           spree/pages#affiliates
                                                            /gallery(.:format)                                                          :controller#:action
                                                            /blendit(.:format)                                                          spree/products#new
-                                                           /bighoop(.:format)                                                          spree/pages#bighoop
-                                                           /about(.:format)                                                            spree/pages#about
-                                                           /faqs(.:format)                                                             spree/pages#faqs
-                                                           /privacy(.:format)                                                          spree/pages#privacy
-                                                           /returns(.:format)                                                          spree/pages#returns
-                                                           /shipping(.:format)                                                         spree/pages#shipping
-                                                           /affiliates(.:format)                                                       spree/pages#affiliates
-                                                           /share(.:format)                                                            spree/pages#share
-                                                           /cfupdate(.:format)                                                         spree/pages#cfupdate
                                                            /myblends(.:format)                                                         spree/users#myblends
                                                            /admin/home_page_sliders/:home_page_slider/templates/preview.html(.:format) :controller#:action
                                                            /admin/home_page_sliders/:home_page_slider/templates/preview.css(.:format)  :controller#:action
-                                                  POST     /pages(.:format)                                                            spree/pages#create
-                                                  GET      /pages/new(.:format)                                                        spree/pages#new
-                                                  GET      /pages/edit(.:format)                                                       spree/pages#edit
-                                                  GET      /pages(.:format)                                                            spree/pages#show
-                                                  PUT      /pages(.:format)                                                            spree/pages#update
-                                                  DELETE   /pages(.:format)                                                            spree/pages#destroy
                                                   POST     /label_templates(.:format)                                                  spree/label_templates#create
                                                   GET      /label_templates/new(.:format)                                              spree/label_templates#new
                                                   GET      /label_templates/edit(.:format)                                             spree/label_templates#edit
@@ -674,13 +626,27 @@ Routes for Spree::Core::Engine:
                                                   GET      /api/users/:id(.:format)                                                    spree/api/users#show {:format=>"json"}
                                                   PUT      /api/users/:id(.:format)                                                    spree/api/users#update {:format=>"json"}
                                                   DELETE   /api/users/:id(.:format)                                                    spree/api/users#destroy {:format=>"json"}
-                                                  GET      /pages(.:format)                                                            spree/pages#index
+                                            pages GET      /pages(.:format)                                                            spree/pages#index
                                                   POST     /pages(.:format)                                                            spree/pages#create
                                          new_page GET      /pages/new(.:format)                                                        spree/pages#new
                                         edit_page GET      /pages/:id/edit(.:format)                                                   spree/pages#edit
                                              page GET      /pages/:id(.:format)                                                        spree/pages#show
                                                   PUT      /pages/:id(.:format)                                                        spree/pages#update
                                                   DELETE   /pages/:id(.:format)                                                        spree/pages#destroy
+                                      sweepstakes GET      /sweepstakes(.:format)                                                      spree/sweepstakes#index
+                                                  POST     /sweepstakes(.:format)                                                      spree/sweepstakes#create
+                                   new_sweepstake GET      /sweepstakes/new(.:format)                                                  spree/sweepstakes#new
+                                  edit_sweepstake GET      /sweepstakes/:id/edit(.:format)                                             spree/sweepstakes#edit
+                                       sweepstake GET      /sweepstakes/:id(.:format)                                                  spree/sweepstakes#show
+                                                  PUT      /sweepstakes/:id(.:format)                                                  spree/sweepstakes#update
+                                                  DELETE   /sweepstakes/:id(.:format)                                                  spree/sweepstakes#destroy
+                                admin_sweepstakes GET      /admin/sweepstakes(.:format)                                                spree/admin/sweepstakes#index
+                                                  POST     /admin/sweepstakes(.:format)                                                spree/admin/sweepstakes#create
+                             new_admin_sweepstake GET      /admin/sweepstakes/new(.:format)                                            spree/admin/sweepstakes#new
+                            edit_admin_sweepstake GET      /admin/sweepstakes/:id/edit(.:format)                                       spree/admin/sweepstakes#edit
+                                 admin_sweepstake GET      /admin/sweepstakes/:id(.:format)                                            spree/admin/sweepstakes#show
+                                                  PUT      /admin/sweepstakes/:id(.:format)                                            spree/admin/sweepstakes#update
+                                                  DELETE   /admin/sweepstakes/:id(.:format)                                            spree/admin/sweepstakes#destroy
                                                   POST     /admin/home_page_sliders/update_positions(.:format)                         spree/admin/home_page_sliders#update_positions
                                                   GET      /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#index
                                                   POST     /admin/home_page_sliders(.:format)                                          spree/admin/home_page_sliders#create
@@ -696,13 +662,19 @@ Routes for Spree::Core::Engine:
                                        admin_page GET      /admin/pages/:id(.:format)                                                  spree/admin/pages#show
                                                   PUT      /admin/pages/:id(.:format)                                                  spree/admin/pages#update
                                                   DELETE   /admin/pages/:id(.:format)                                                  spree/admin/pages#destroy
-                          admin_web_content_index GET      /admin/web_content(.:format)                                                spree/admin/web_content#index
-                                                  POST     /admin/web_content(.:format)                                                spree/admin/web_content#create
-                            new_admin_web_content GET      /admin/web_content/new(.:format)                                            spree/admin/web_content#new
-                           edit_admin_web_content GET      /admin/web_content/:id/edit(.:format)                                       spree/admin/web_content#edit
-                                admin_web_content GET      /admin/web_content/:id(.:format)                                            spree/admin/web_content#show
-                                                  PUT      /admin/web_content/:id(.:format)                                            spree/admin/web_content#update
-                                                  DELETE   /admin/web_content/:id(.:format)                                            spree/admin/web_content#destroy
+                                admin_web_content POST     /admin/web_content(.:format)                                                spree/admin/web_contents#create
+                            new_admin_web_content GET      /admin/web_content/new(.:format)                                            spree/admin/web_contents#new
+                           edit_admin_web_content GET      /admin/web_content/edit(.:format)                                           spree/admin/web_contents#edit
+                                                  GET      /admin/web_content(.:format)                                                spree/admin/web_contents#show
+                                                  PUT      /admin/web_content(.:format)                                                spree/admin/web_contents#update
+                                                  DELETE   /admin/web_content(.:format)                                                spree/admin/web_contents#destroy
+                      api_sweepstakes_entry_index GET      /api/sweepstakes_entry(.:format)                                            spree/api/sweepstakes_entry#index {:format=>"json"}
+                                                  POST     /api/sweepstakes_entry(.:format)                                            spree/api/sweepstakes_entry#create {:format=>"json"}
+                        new_api_sweepstakes_entry GET      /api/sweepstakes_entry/new(.:format)                                        spree/api/sweepstakes_entry#new {:format=>"json"}
+                       edit_api_sweepstakes_entry GET      /api/sweepstakes_entry/:id/edit(.:format)                                   spree/api/sweepstakes_entry#edit {:format=>"json"}
+                            api_sweepstakes_entry GET      /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#show {:format=>"json"}
+                                                  PUT      /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#update {:format=>"json"}
+                                                  DELETE   /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#destroy {:format=>"json"}
                      skrill_cancel_order_checkout GET      /orders/:order_id/checkout/skrill_cancel(.:format)                          spree/checkout#skrill_cancel
                      skrill_return_order_checkout GET      /orders/:order_id/checkout/skrill_return(.:format)                          spree/checkout#skrill_return
                                    order_checkout POST     /orders/:order_id/checkout(.:format)                                        spree/checkout#create

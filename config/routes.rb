@@ -88,6 +88,7 @@ Spree::Core::Engine.routes.prepend do
   end
 
   namespace :admin do
+    
     resource :blendable_products_settings, :only => ['show', 'update', 'edit']
     
     resources :label_templates do

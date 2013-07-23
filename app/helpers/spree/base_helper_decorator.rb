@@ -1,4 +1,5 @@
 Spree::BaseHelper.class_eval do
+  
   def taxons_tree(root_taxon, current_taxon, max_level = 1)
     logger.debug "***** taxon_tree root = " + root_taxon.name + "max_level = " + max_level.to_s
     return '' if max_level < 1 || root_taxon.children.empty?
