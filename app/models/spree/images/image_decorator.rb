@@ -76,7 +76,7 @@ Spree::Image.class_eval do
     }
   end
 
-  if Rails.env.production?
+  if Rails.env.production? or Rails.env.staging?
     include Spree::Core::S3Support
     supports_s3 :attachment
   end
