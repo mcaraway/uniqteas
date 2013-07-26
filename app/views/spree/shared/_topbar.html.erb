@@ -1,6 +1,49 @@
 <div id="topbar" class="top-bar">
-	<div class="span6">
-		<%= t(:free_shipping)%>&nbsp;<%= link_to t(:details), shipping_path %>
+	<div class="container">
+		<div class="row">
+			<div class="span6 top-bar-left">
+				<%= link_to image_tag("/assets/store/icon-free-shipping.png", :height => "16"), '/pages/shipping' %><%= t(:free_shipping)%>
+			</div>
+			<div class="span4 top-bar-center">
+				<div class="dropdown">
+					<a href="#emailModal" role="button" data-toggle="modal"><img src="/assets/store/icon-email.png" width="25"></a><%= t(:email_sign_up)%>
+
+					<!-- Modal -->
+					<div id="emailModal" class="modal hide fade email-signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-header" style="border: none">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								×
+							</button>
+						</div>
+						<div id="emailModelBody" class="modal-body">
+							<form
+							action="http://carawaytea.us2.list-manage.com/subscribe/post?u=708077f62b33d764a9f841f97&amp;id=4bb28741a0"
+							method="post" id="mc-embedded-subscribe-form"
+							name="mc-embedded-subscribe-form" class="validate" target="_blank">
+								<div class="mc-field-group">
+									<input type="email" size="33" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="email">
+								</div>
+								<div id="mce-responses" class="clear" style="margin-bottom:5px;">
+									<div class="response" id="mce-error-response"
+									style="display: none"></div>
+									<div class="response" id="mce-success-response"
+									style="display: none"></div>
+								</div>
+								<input type="submit" value="$10 Off" name="subscribe" id="mc-embedded-subscribe" class="button">
+							</form>
+						</div>
+						<div class="modal-footer">
+							<a data-dismiss="modal" href="#" style="color:#721c05;">No thanks I prefer to pay more for my tea.</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="span6 top-bar-right">
+				
+				<%= link_to image_tag("/assets/store/icon-teaball.png", :height => "16"), '/pages/shipping' %>
+				<%= t(:free_teaball)%>
+			</div>
+		</div>
 	</div>
-	<div class="span6 offset4"><%= t(:free_teaball)%><%= link_to t(:details), shipping_path %></div>
 </div>

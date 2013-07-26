@@ -49,8 +49,7 @@
 		<script type="text/javascript">
 						function submit_final() {
 			document.getElementById("product_final").value = true;
-			document.forms["edit_product_<%= @product.id %>
-				"].submit();
+			document.forms['edit_product_' + <%= @product.id %>].submit();
 				}
 		</script> <% elsif @edit_blend %>
 		<%= f.submit t(:save_blend) %>

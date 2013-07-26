@@ -2,8 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  email_sign_up: "Signup to get $10 free."
   free_teaball: "Free infuser on first order."
   free_shipping: "Free shipping on orders over $50."
+  free_shipping_short: "Free over $50"
   free_shipping_settings: "Free Shipping Settings"
   details: "details"
   to_this_address: "to this address"

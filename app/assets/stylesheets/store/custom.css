@@ -18,6 +18,7 @@
 .parss-description {
 	/* description style definitions here */
 	font-size: 14px;
+	margin-bottom: 15px;
 }
 .parss-description  h3{
 	/* description style definitions here */
@@ -136,4 +137,8 @@ div.tea-cup-list ul li.selected div {
 }
 .form-buttons {
 	padding: 20px;
+}
+#tin_image img {
+	height: 100%;
+	
 }

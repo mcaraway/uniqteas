@@ -127,13 +127,12 @@ Spree::BaseHelper.class_eval do
   def product_image(product, options = {})
     if product.images.empty?
       options.reverse_merge! :alt => product.name
-      options.reverse_merge! :size => "240x240"
+      options.reverse_merge! :size => "600x600"
       image_tag "noimage/no-tin-image.png", options
     else
       image = product.images.first
       options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      options.reverse_merge! :size => "240x240"
-      image_tag product.images.first.attachment.url(:product), options
+      image_tag product.images.first.attachment.url(:large), options
     end
   end
 
@@ -171,7 +170,7 @@ Spree::BaseHelper.class_eval do
     end
   end
 
-  def large_large(product, options = {})
+  def large_image(product, options = {})
     if product.images.empty?
       image_tag "noimage/no-tin-image.png", :size => "600x600", :alt => product.name
     else
@@ -191,9 +190,9 @@ Spree::BaseHelper.class_eval do
 
   def small_tea_tin_image (product)
     if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "347x300", :alt => product.name
+      image_tag "/assets/CustomTeaLabel.png", :alt => product.name
     else
-      image_tag product.images.first.attachment.url(:original), :size => "347x300", :alt => product.name
+      image_tag product.images.first.attachment.url(:original), :alt => product.name
     end
   end
 
