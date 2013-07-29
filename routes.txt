@@ -92,6 +92,35 @@ Routes for Spree::Core::Engine:
                                                   PUT      /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#update
                                                   DELETE   /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#destroy
                                           signout GET      /signout(.:format)                                                          spree/user_sessions#destroy
+                             approve_admin_review GET      /admin/reviews/:id/approve(.:format)                                        spree/admin/reviews#approve
+                                    admin_reviews GET      /admin/reviews(.:format)                                                    spree/admin/reviews#index
+                                                  POST     /admin/reviews(.:format)                                                    spree/admin/reviews#create
+                                 new_admin_review GET      /admin/reviews/new(.:format)                                                spree/admin/reviews#new
+                                edit_admin_review GET      /admin/reviews/:id/edit(.:format)                                           spree/admin/reviews#edit
+                                     admin_review GET      /admin/reviews/:id(.:format)                                                spree/admin/reviews#show
+                                                  PUT      /admin/reviews/:id(.:format)                                                spree/admin/reviews#update
+                                                  DELETE   /admin/reviews/:id(.:format)                                                spree/admin/reviews#destroy
+                            admin_review_settings POST     /admin/review_settings(.:format)                                            spree/admin/review_settings#create
+                        new_admin_review_settings GET      /admin/review_settings/new(.:format)                                        spree/admin/review_settings#new
+                       edit_admin_review_settings GET      /admin/review_settings/edit(.:format)                                       spree/admin/review_settings#edit
+                                                  GET      /admin/review_settings(.:format)                                            spree/admin/review_settings#show
+                                                  PUT      /admin/review_settings(.:format)                                            spree/admin/review_settings#update
+                                                  DELETE   /admin/review_settings(.:format)                                            spree/admin/review_settings#destroy
+                                  product_reviews GET      /products/:product_id/reviews(.:format)                                     spree/reviews#index
+                                                  POST     /products/:product_id/reviews(.:format)                                     spree/reviews#create
+                               new_product_review GET      /products/:product_id/reviews/new(.:format)                                 spree/reviews#new
+                              edit_product_review GET      /products/:product_id/reviews/:id/edit(.:format)                            spree/reviews#edit
+                                   product_review GET      /products/:product_id/reviews/:id(.:format)                                 spree/reviews#show
+                                                  PUT      /products/:product_id/reviews/:id(.:format)                                 spree/reviews#update
+                                                  DELETE   /products/:product_id/reviews/:id(.:format)                                 spree/reviews#destroy
+                                                  GET      /products(.:format)                                                         spree/products#index
+                                                  POST     /products(.:format)                                                         spree/products#create
+                                                  GET      /products/new(.:format)                                                     spree/products#new
+                                                  GET      /products/:id/edit(.:format)                                                spree/products#edit
+                                                  GET      /products/:id(.:format)                                                     spree/products#show
+                                                  PUT      /products/:id(.:format)                                                     spree/products#update
+                                                  DELETE   /products/:id(.:format)                                                     spree/products#destroy
+                                      all_reviews          /reviews/all_list(.:format)                                                 spree/reviews#all_list
                                         inquiries GET      /inquiries(.:format)                                                        spree/inquiries#index
                                                   POST     /inquiries(.:format)                                                        spree/inquiries#create
                                       new_inquiry GET      /inquiries/new(.:format)                                                    spree/inquiries#new
@@ -401,6 +430,35 @@ Routes for Spree::Core::Engine:
                                                   PUT      /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#update
                                                   DELETE   /admin/blendable_taxons/:id(.:format)                                       spree/admin/blendable_taxons#destroy
                                                   GET      /signout(.:format)                                                          spree/user_sessions#destroy
+                                                  GET      /admin/reviews/:id/approve(.:format)                                        spree/admin/reviews#approve
+                                                  GET      /admin/reviews(.:format)                                                    spree/admin/reviews#index
+                                                  POST     /admin/reviews(.:format)                                                    spree/admin/reviews#create
+                                                  GET      /admin/reviews/new(.:format)                                                spree/admin/reviews#new
+                                                  GET      /admin/reviews/:id/edit(.:format)                                           spree/admin/reviews#edit
+                                                  GET      /admin/reviews/:id(.:format)                                                spree/admin/reviews#show
+                                                  PUT      /admin/reviews/:id(.:format)                                                spree/admin/reviews#update
+                                                  DELETE   /admin/reviews/:id(.:format)                                                spree/admin/reviews#destroy
+                                                  POST     /admin/review_settings(.:format)                                            spree/admin/review_settings#create
+                                                  GET      /admin/review_settings/new(.:format)                                        spree/admin/review_settings#new
+                                                  GET      /admin/review_settings/edit(.:format)                                       spree/admin/review_settings#edit
+                                                  GET      /admin/review_settings(.:format)                                            spree/admin/review_settings#show
+                                                  PUT      /admin/review_settings(.:format)                                            spree/admin/review_settings#update
+                                                  DELETE   /admin/review_settings(.:format)                                            spree/admin/review_settings#destroy
+                                                  GET      /products/:product_id/reviews(.:format)                                     spree/reviews#index
+                                                  POST     /products/:product_id/reviews(.:format)                                     spree/reviews#create
+                                                  GET      /products/:product_id/reviews/new(.:format)                                 spree/reviews#new
+                                                  GET      /products/:product_id/reviews/:id/edit(.:format)                            spree/reviews#edit
+                                                  GET      /products/:product_id/reviews/:id(.:format)                                 spree/reviews#show
+                                                  PUT      /products/:product_id/reviews/:id(.:format)                                 spree/reviews#update
+                                                  DELETE   /products/:product_id/reviews/:id(.:format)                                 spree/reviews#destroy
+                                                  GET      /products(.:format)                                                         spree/products#index
+                                                  POST     /products(.:format)                                                         spree/products#create
+                                                  GET      /products/new(.:format)                                                     spree/products#new
+                                                  GET      /products/:id/edit(.:format)                                                spree/products#edit
+                                                  GET      /products/:id(.:format)                                                     spree/products#show
+                                                  PUT      /products/:id(.:format)                                                     spree/products#update
+                                                  DELETE   /products/:id(.:format)                                                     spree/products#destroy
+                                      all_reviews          /reviews/all_list(.:format)                                                 spree/reviews#all_list
                                                   GET      /inquiries(.:format)                                                        spree/inquiries#index
                                                   POST     /inquiries(.:format)                                                        spree/inquiries#create
                                                   GET      /inquiries/new(.:format)                                                    spree/inquiries#new

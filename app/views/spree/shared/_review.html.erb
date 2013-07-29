@@ -1,0 +1,19 @@
+<div class="review" itemprop="reviews" itemscope itemtype="http://schema.org/Review">
+	<ul class="thumbnails">
+		<li class="span4">
+			<div class="thumbnail">
+				<h6><% if Spree::Config[:show_email] && review.user %>
+					<%= review.user.email %>
+					<% else %>
+					<%= raw review.name %>
+					<% end %>
+				</h6>
+				<%= render :partial => "spree/shared/single_rating", :locals => {:review => review} %>
+				<small itemprop="datePublished"><%= t('submitted_on') %> (<%= l review.created_at.to_date %>)</small>
+				<div itemprop="reviewBody">
+					<%= raw simple_format(review.review) %>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

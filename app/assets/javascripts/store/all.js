@@ -13,6 +13,9 @@
 
 //= require store/spree_address_book
 //= require store/spree_social_products
+// Added as part of the spree_reviews_rating install
+//= require store/review/index
+//= require store/review/new
 
 //= require_tree .
 //= require store/spree_uniqteas_theme

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130723233639) do
+ActiveRecord::Schema.define(:version => 20130726161504) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -487,7 +487,7 @@ ActiveRecord::Schema.define(:version => 20130723233639) do
   add_index "spree_product_properties", ["product_id"], :name => "index_product_properties_on_product_id"
 
   create_table "spree_products", :force => true do |t|
-    t.string   "name",                 :default => "",    :null => false
+    t.string   "name",                                               :default => "",    :null => false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -496,13 +496,15 @@ ActiveRecord::Schema.define(:version => 20130723233639) do
     t.string   "meta_keywords"
     t.integer  "tax_category_id"
     t.integer  "shipping_category_id"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
-    t.integer  "count_on_hand",        :default => 0
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
+    t.integer  "count_on_hand",                                      :default => 0
     t.integer  "user_id"
-    t.boolean  "public",               :default => true
-    t.boolean  "final",                :default => true
-    t.boolean  "on_demand",            :default => false
+    t.boolean  "public",                                             :default => true
+    t.boolean  "final",                                              :default => true
+    t.boolean  "on_demand",                                          :default => false
+    t.decimal  "avg_rating",           :precision => 7, :scale => 5, :default => 0.0,   :null => false
+    t.integer  "reviews_count",                                      :default => 0,     :null => false
   end
 
   add_index "spree_products", ["available_on"], :name => "index_products_on_available_on"
@@ -584,6 +586,18 @@ ActiveRecord::Schema.define(:version => 20130723233639) do
     t.text     "reason"
     t.datetime "created_at",                                                :null => false
     t.datetime "updated_at",                                                :null => false
+  end
+
+  create_table "spree_reviews", :force => true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.decimal  "rating"
+    t.text     "review"
+    t.boolean  "approved",   :default => false
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "spree_roles", :force => true do |t|

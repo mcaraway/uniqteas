@@ -1,0 +1,23 @@
+<%= form_for review, :url => product_reviews_path(product), :html => {:id => "new_review"}, :remote => true do |f| %>
+	<%= render :partial => "spree/shared/error_messages", :locals => {:target => review} %>
+
+	<div class="review_name_field">
+		<%= f.label :name, t("reviews_rating.name") %> <span class="required">*</span><br />
+		<%= f.text_field :name, :class=>'input-large' %>
+	</div>
+	<div class="review_review_field">
+		<%= f.label :review, t("reviews_rating.review") %> <span class="required">*</span><br />
+		<%= f.text_area :review, :wrap => "virtual", :rows => "8", :cols => "50", :class=>'span7' %>
+		<p class="s_legend">
+			<span style="color: #FF0000;"><%= t("reviews_rating.note_reviews") %></span> <%= t("reviews_rating.note_review_description") %></p>
+	</div>
+
+	<div class="review_rating_field">
+	    <%= f.label :rating, t("reviews_rating.rating") %> <span class="required">*</span><br />
+		<%= render :partial => "spree/reviews/stars" %>
+		<%= f.hidden_field :rating %>
+	</div>
+	<div class="text-right">
+		<%= link_to content_tag(:span, t("reviews_rating.continue"), :class => "s_text"), "javascript: void(0)", :class => "s_button_1 s_main_color_bgr review-submit button-submit" %>
+	</div>
+<% end %>
