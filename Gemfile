@@ -69,8 +69,8 @@ gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git
 gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
 gem 'spree_contact_us', :git => 'git://github.com/sbeam/spree_contact_us.git'
 gem "recaptcha", :require => "recaptcha/rails" # if you are using reCAPTCHA
-gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
-#gem 'spree_uniqteas_theme', :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
+#gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
+gem 'spree_uniqteas_theme', :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
 gem 'spree_reviews_rating', '~> 1.2.0'
 #gem 'dynamic_sitemaps', :path => '../spree_dynamic_sitemaps'
 #gem 'dynamic_sitemaps', :git => 'git://github.com/mcaraway/spree_dynamic_sitemaps.git'
