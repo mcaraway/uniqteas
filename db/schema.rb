@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726161504) do
+ActiveRecord::Schema.define(:version => 20130729203347) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -383,6 +383,7 @@ ActiveRecord::Schema.define(:version => 20130726161504) do
     t.string   "search_keywords"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.boolean  "visible"
   end
 
   create_table "spree_payment_methods", :force => true do |t|
