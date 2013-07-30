@@ -2,6 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  got_a_coupon_code: "Got a coupon code?"
   email_sign_up: "Signup to get $10 free."
   free_teaball: "Free infuser on first order."
   free_shipping: "Free shipping on orders over $50."

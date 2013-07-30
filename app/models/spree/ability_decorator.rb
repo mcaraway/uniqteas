@@ -1,5 +1,4 @@
 Spree::Ability.class_eval do
-
   def initialize(user)
     self.clear_aliased_actions
 
@@ -42,7 +41,12 @@ Spree::Ability.class_eval do
       #############################
       can :read, Spree::Taxon
       can :index, Spree::Taxon
-    #############################
+      #############################
+
+      can :create, Spree::Review do |review|
+        !user.anonymous? || !Spree::Config[:require_login]
+      end
+      can :read, Spree::Review
     end
 
     #include any abilities registered by extensions, etc.
