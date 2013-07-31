@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: git://github.com/mcaraway/spree_uniqteas_theme.git
-  revision: 3de3ab204406ff04b6d575b7d3e203bf78b7e6d7
+  revision: ed0a252545eb36a4df9522d044bbe67f229cbd32
   specs:
     spree_uniqteas_theme (1.3.2)
       bootstrap-sass (~> 2.3.2.0)
