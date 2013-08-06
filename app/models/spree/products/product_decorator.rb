@@ -191,7 +191,7 @@ Spree::Product.class_eval do
   def refresh_tin_image
     if images[0] != nil
       logger.info("******** creating delayed job for reprocessing image processing")
-      Delayed::Job.enqueue Spree::ReprocessImagesJob.new(images[0].id)
+      Delayed::Job.enqueue Spree::ReprocessImagesJob.new(id)
     end
   end
   attr_accessible :tin_image, :tag_image, :blend
