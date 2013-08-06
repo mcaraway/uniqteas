@@ -197,8 +197,8 @@ Spree::ProductsController.class_eval do
         session[:spree_user_signup] = true
         associate_user
       else
-        load_blendables
-        render :new
+        flash[:error] = "Unable to create guest account."
+        redirect_to :back
       end
     end
   end
