@@ -47,7 +47,7 @@
 		<% if @product.id == nil %>
 			<%= f.submit t(:continue) %>
 			<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
-		<% elsif try_spree_current_user.guest? %>
+		<% else %>
 			<span style="margin-left: 10px;"><%= button_tag t(:finalize), :class => "btn btn-primary", :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
 			<script type="text/javascript">
 							function submit_final() {
@@ -55,9 +55,6 @@
 				document.forms['edit_product_' + <%= @product.id %>].submit();
 					}
 			</script> 
-		<% else %>
-		<%= f.submit t(:save_blend) %>
-		<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
 		<% end %> 
 	</div>
 </div>
