@@ -125,7 +125,7 @@ Spree::ProductsController.class_eval do
       logger.debug "******* try_spree_current_user.guest? = " + try_spree_current_user.guest?.to_s
       if try_spree_current_user.guest?
         remember_guest_product
-        store_location(product_url(@product))
+        store_return_to(product_url(@product))
         redirect_to proc { signup_url }
       elsif @product.final 
         redirect_to proc { product_url(@product) }

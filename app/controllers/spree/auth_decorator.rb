@@ -12,11 +12,11 @@ Spree::Core::ControllerHelpers::Auth.class_eval do
 
     disallowed_urls.map!{ |url| url[/\/\w+$/] }
     unless disallowed_urls.include?(request.fullpath)
-      store_location(request.fullpath.gsub('//', '/'))
+      store_return_to(request.fullpath.gsub('//', '/'))
     end
   end
   
-  def store_location(location)
+  def store_return_to(location)
       session['spree_user_return_to'] = location
   end
   def redirect_back_or_default(default)
