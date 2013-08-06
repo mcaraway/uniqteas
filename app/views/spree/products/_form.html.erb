@@ -48,13 +48,17 @@
 			<%= f.submit t(:continue) %>
 			<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
 		<% else %>
-			<span style="margin-left: 10px;"><%= button_tag t(:finalize), :class => "btn btn-primary", :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
-			<script type="text/javascript">
-							function submit_final() {
-				document.getElementById("product_final").value = true;
-				document.forms['edit_product_' + <%= @product.id %>].submit();
-					}
-			</script> 
+			<% if !@product.final %>
+				<span style="margin-left: 10px;"><%= button_tag t(:finalize), :class => "btn btn-primary", :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
+				<script type="text/javascript">
+								function submit_final() {
+					document.getElementById("product_final").value = true;
+					document.forms['edit_product_' + <%= @product.id %>].submit();
+						}
+				</script> 
+			<% end %>
+			<%= f.submit t(:save_blend) %>
+			<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
 		<% end %> 
 	</div>
 </div>
