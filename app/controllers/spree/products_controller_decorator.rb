@@ -6,8 +6,9 @@ Spree::ProductsController.class_eval do
 
   respond_to :html, :json, :js
   def customize
-    
+
   end
+
   def index
     params[:ispublic] = true
     params[:iscustom] = params[:iscustom] == nil ? "false" : params[:iscustom]
@@ -110,13 +111,19 @@ Spree::ProductsController.class_eval do
     if @product.update_attributes(params[:product])
       @product.update_viewables
 
-      if @product.final == false
+      if try_spree_current_user.guest?
+        flash[:success] = "Your blend is ready.  Just create an account so we can order your unique blend."
+      elsif @product.final == false
         flash[:success] = "Your draft blend is saved."
       else
         link = "<a href=\"#{url_for(@product)}\">order</a>"
         flash[:success] = "<h2>Your blend is good to go! Now go #{link} some.</h2>".html_safe
       end
-      if @product.final
+      logger.debug "******* try_spree_current_user.guest? = " + try_spree_current_user.guest?.to_s
+      if try_spree_current_user.guest?
+        remember_guest
+        redirect_to proc { login_url }
+      elsif @product.final 
         redirect_to proc { product_url(@product) }
       else
         redirect_to proc { edit_product_url(@product) }
@@ -127,7 +134,16 @@ Spree::ProductsController.class_eval do
       respond_with(@product)
     end
   end
-
+  
+  def remember_guest
+    if try_spree_current_user.guest?
+      logger.debug "******* in remember_guest try_spree_current_user.guest? = " + try_spree_current_user.guest?.to_s
+      session['guest_user'] = try_spree_current_user.id.to_s
+      sign_out(try_spree_current_user)
+      flash[:warning] = "If you cancel now you will lose your blend."
+    end
+  end
+  
   def show
     return unless @product
 
@@ -175,9 +191,15 @@ Spree::ProductsController.class_eval do
 
   def verify_login?
     if try_spree_current_user == nil
-      store_location
-      flash[:notice] = "Please create an account so we can save your unique blend."
-      redirect_to spree.login_path
+      @user = Spree::User.create_guest_user
+      if @user.save
+        sign_in(:spree_user, @user)
+        session[:spree_user_signup] = true
+        associate_user
+      else
+        load_blendables
+        render :new
+      end
     end
   end
 

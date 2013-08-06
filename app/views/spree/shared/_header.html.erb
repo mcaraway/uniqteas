@@ -7,7 +7,7 @@
 				<!-- Start: Primary navigation -->
 				<div class="nav-collapse">
 					<ul class="nav pull-left" style="margin-top: 25px;">
-						<% if try_spree_current_user %>
+						<% if try_spree_current_user and !try_spree_current_user.guest? %>
 						<li>
 							<%= link_to t(:my_account), spree.account_path %>
 						</li>

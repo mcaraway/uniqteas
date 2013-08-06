@@ -13,7 +13,7 @@
 			<%= paginate @product.reviews.approved.page(params[:page]).per(Spree::Config[:preview_size]) %>
 		</div>
 	</div>
-	<% if try_spree_current_user %>
+	<% if try_spree_current_user and !try_spree_current_user.guest? %>
 	<% if !Spree::Config[:form_show] %>
 	<a href="#reviewModal" role="button" class="btn btn-primary" data-toggle="modal"><%= t('write_your_own_review')%></a>
 

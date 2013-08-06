@@ -44,17 +44,17 @@
 	</div>
 
 	<div class="span6 offset5">
-		<% if @product.final == false && @edit_blend %>
-		<%= f.submit t(:save_draft_blend) %> <span style="margin-left: 10px;"><%= button_tag t(:finalize), :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
-		<script type="text/javascript">
-						function submit_final() {
-			document.getElementById("product_final").value = true;
-			document.forms['edit_product_' + <%= @product.id %>].submit();
-				}
-		</script> <% elsif @edit_blend %>
-		<%= f.submit t(:save_blend) %>
+		<% if try_spree_current_user.guest? %>
+			<span style="margin-left: 10px;"><%= button_tag t(:finalize), :onclick => "submit_final()" %></span> <%= f.hidden_field :final %>
+			<script type="text/javascript">
+							function submit_final() {
+				document.getElementById("product_final").value = true;
+				document.forms['edit_product_' + <%= @product.id %>].submit();
+					}
+			</script> 
 		<% else %>
-		<%= f.submit t(:continue) %>
-		<% end %> <span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
+		<%= f.submit t(:save_blend) %>
+		<span style="margin-left: 10px;"><%= link_to t(:cancel), spree.myblends_path %></span>
+		<% end %> 
 	</div>
 </div>

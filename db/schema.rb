@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729203347) do
+ActiveRecord::Schema.define(:version => 20130806005224) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -789,6 +789,7 @@ ActiveRecord::Schema.define(:version => 20130729203347) do
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
     t.string   "spree_api_key",          :limit => 48
+    t.boolean  "guest"
   end
 
   add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
