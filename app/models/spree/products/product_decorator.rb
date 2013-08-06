@@ -37,6 +37,10 @@ Spree::Product.class_eval do
     300
   end
 
+  def move_to(user)
+    self.update(user_id: user.id)
+  end
+
   def is_public?
     public
   end

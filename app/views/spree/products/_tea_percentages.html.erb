@@ -16,6 +16,7 @@
 			<%= p.object.value == nil || p.object.value == "" ? "Select Above": p.object.value %>
 		</div> <%= p.hidden_field :value, :id => cid %>
 		<%= p.hidden_field :property_name  %>
+		<%= p.hidden_field :position  %>
 		<%
 		end
 		%>
@@ -28,6 +29,7 @@
 		%>
 		<%= p.hidden_field :value, :id => cid %>
 		<%= p.hidden_field :property_name  %>
+		<%= p.hidden_field :position  %>
 		<%
 		end
 		%>
@@ -50,6 +52,7 @@
 			<%= p.object.value == nil ? "0%": p.object.value + "%" %>
 		</div> <%= p.hidden_field :value, :style => "width:45px", :id => cid, :readonly => disabled %>
 		<%= p.hidden_field :property_name %>
+		<%= p.hidden_field :position  %>
 		<%
 		end
 		%>

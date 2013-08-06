@@ -20,10 +20,6 @@ Spree::User.class_eval do
       u.password_confirmation = u.password }
   end
   
-  def move_to(user)
-    products.update_all(user_id: user.id)
-  end
-  
   private
   
   def self.get_guest_email

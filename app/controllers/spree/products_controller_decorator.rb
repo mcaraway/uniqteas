@@ -27,9 +27,12 @@ Spree::ProductsController.class_eval do
     @flavor_count = 3
     logger.debug "****** Prototype is #{@prototype.properties}"
 
+    positions = Hash["flavor1name" => 0, "flavor2name" => 1, "flavor3name" => 2, 
+      "flavor1percent" => 3, "flavor2percent" => 4, "flavor3percent" => 5,
+      "flavor1sku" => 6, "flavor2sku" => 7, "flavor3sku" => 8]
     @prototype.properties.each do |property|
       logger.debug "****** setting property  #{property}"
-      @product.product_properties.build( :property_name => property.name )
+      @product.product_properties.build( :property_name => property.name, :position => positions[property.name] )
     end
 
     logger.debug "****** custom_product properties are now #{@product.product_properties}"
@@ -121,8 +124,9 @@ Spree::ProductsController.class_eval do
       end
       logger.debug "******* try_spree_current_user.guest? = " + try_spree_current_user.guest?.to_s
       if try_spree_current_user.guest?
-        remember_guest
-        redirect_to proc { login_url }
+        remember_guest_product
+        store_location(product_url(@product))
+        redirect_to proc { signup_url }
       elsif @product.final 
         redirect_to proc { product_url(@product) }
       else
@@ -135,10 +139,9 @@ Spree::ProductsController.class_eval do
     end
   end
   
-  def remember_guest
+  def remember_guest_product
     if try_spree_current_user.guest?
-      logger.debug "******* in remember_guest try_spree_current_user.guest? = " + try_spree_current_user.guest?.to_s
-      session['guest_user'] = try_spree_current_user.id.to_s
+      session['guest_product'] = @product.id.to_s
       sign_out(try_spree_current_user)
       flash[:warning] = "If you cancel now you will lose your blend."
     end

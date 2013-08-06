@@ -3,36 +3,8 @@
 		<div class="span3 text-center">
 			<strong>Your Blend:</strong>
 		</div>
-		<div class="span6">
-			<% flavor_count = 0 %>
-			<%= f.fields_for :product_properties do |p| %>
-			<%
-			if p.object.property_name.index("name") != nil
-			flavor_count += (p.object.value == nil || p.object.value == "" ? 0 : 1)
-			%>
-			<div id="<%= p.object.property_name %>editdiv">
-				<%= p.object.value == nil || p.object.value == "" ? "": p.object.value %>
-			</div>
-
-			<%
-			end
-			%>
-			<% end %>
-		</div>
-		<div class="span2">
-			<% percent_count = 0 %>
-			<%= f.fields_for :product_properties do |p| %>
-			<%
-			if p.object.property_name.index("percent") != nil && percent_count < flavor_count
-			percent_count += 1
-			%>
-			<div id="<%= p.object.property_name %>editdiv">
-				<%= p.object.value == nil ? "": p.object.value %>%
-			</div>
-			<%
-			end
-			%>
-			<% end %>
+		<div class="span8 text-center">
+			<strong><%= @product.blend.html_safe %></strong>
 		</div>
 		<div class="span4">
 			<i class="icon-edit"></i> <%= link_to_function t(:edit_blend), 'showEditPanel()' %>
