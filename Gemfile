@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.0'
 gem 'pg'
 
 # Bundle edge Rails instead:
@@ -19,7 +19,7 @@ end
 
 group :development do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.11.0'
+  gem 'rspec-rails', '2.14.0'
 end
 
 group :staging do
@@ -33,8 +33,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails', '~> 4.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -56,23 +56,34 @@ end
 
 # To use debugger
 # gem 'debugger'
-gem 'jquery-rails', '2.2.0'
-gem 'spree', '~> 1.3.0'
-gem 'spree_auth_devise', :branch => "1-3-stable", :git => 'git://github.com/spree/spree_auth_devise'
-gem 'spree_active_shipping', :branch => "1-3-stable", :git => "git://github.com/mcaraway/spree_active_shipping"
+gem 'jquery-rails', '3.0.0'
+gem 'spree', '~> 2.1.0'
+gem 'spree_auth_devise', :branch => "2-1-stable", :git => 'git://github.com/spree/spree_auth_devise'
+gem 'spree_active_shipping', :branch => "2-1-stable", :git => "git://github.com/spree/spree_active_shipping"
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
-gem "spree_paypal_express", :branch => "1-3-stable", :git => "git://github.com/spree/spree_paypal_express.git"
-gem 'spree_gateway', :branch => "1-3-stable", :git => 'git://github.com/spree/spree_gateway.git' # make sure to include after spree
-gem 'spree_volume_pricing', :branch => "1-3-stable", :git => 'git://github.com/spree/spree_volume_pricing.git'
-gem "spree_social_products", :git => "git://github.com/spree/spree_social_products.git"
-gem 'spree_address_book', :git => "git://github.com/romul/spree_address_book.git"
-gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
-gem 'spree_contact_us', :git => 'git://github.com/sbeam/spree_contact_us.git'
+gem 'spree_gateway', :branch => "2-1-stable", :git => 'git://github.com/spree/spree_gateway.git' # make sure to include after spree
+gem 'spree_volume_pricing', :branch => "2-1-stable", :git => 'git://github.com/spree/spree_volume_pricing.git'
+gem "spree_social_products", :branch => "2-1-stable", :git => "git://github.com/spree/spree_social_products.git"
 gem "recaptcha", :require => "recaptcha/rails" # if you are using reCAPTCHA
-#gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
-gem 'spree_uniqteas_theme', :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
-gem 'spree_reviews_rating', '~> 1.2.0'
+
+# my custom code
+gem 'spree_address_book', :path => '../spree_address_book'
+#gem 'spree_address_book', :branch => "2-0-stable", :git => "git://github.com/mcaraway/spree_address_book.git"
+gem 'spree_email_invoices', :path => '../spree_email_invoices'
+#gem 'spree_contact_us', :git => 'git://github.com/sbeam/spree_contact_us.git'
+gem 'spree_contact_us', :path => '../spree_contact_us'
+#gem "spree_paypal_express", :branch => "2-1-stable", :git => "git://github.com/mcaraway/better_spree_paypal_express.git"
+gem 'spree_paypal_express', :path => '../better_spree_paypal_express'
+#gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
+gem 'spree_print_invoice', :path => '../spree_print_invoice'
+#gem 'spree_custom_products', :git => 'git://github.com/mcaraway/spree_custom_products.git'
+gem 'spree_custom_products', :path => '../spree_custom_products'
+gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
+#gem 'spree_uniqteas_theme', :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
+gem 'spree_reviews_rating', :path => '../spree_reviews_rating'
 #gem 'dynamic_sitemaps', :path => '../spree_dynamic_sitemaps'
 #gem 'dynamic_sitemaps', :git => 'git://github.com/mcaraway/spree_dynamic_sitemaps.git'
+gem 'spree_shipworks', :path => '../spree_shipworks'
+#gem 'spree_shipworks', :git => 'git://github.com/railsdog/spree_shipworks.git'
 gem 'datashift', '~> 0.13.0'
 gem 'datashift_spree', '~>0.5.0'

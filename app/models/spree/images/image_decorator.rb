@@ -1,7 +1,7 @@
 Spree::Image.class_eval do
   before_validation :download_remote_image, :if => :label_image_url_provided?
 
-  attr_accessible :label_image_remote_url
+  #attr_accessible :label_image_remote_url
 
   has_attached_file(
     :attachment,

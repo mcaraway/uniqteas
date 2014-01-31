@@ -7,9 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require store/spree_core
+//= require store/spree_frontend
 //= require store/spree_auth
-//= require store/spree_promo
 
 //= require store/spree_address_book
 //= require store/spree_social_products

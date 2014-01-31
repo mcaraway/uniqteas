@@ -1,5 +1,4 @@
 Spree::BaseHelper.class_eval do
-  
   def taxons_tree(root_taxon, current_taxon, max_level = 1)
     logger.debug "***** taxon_tree root = " + root_taxon.name + "max_level = " + max_level.to_s
     return '' if max_level < 1 || root_taxon.children.empty?
@@ -38,36 +37,78 @@ Spree::BaseHelper.class_eval do
     end
   end
 
-  def blend_img (sku)
-    src = "https://s3.amazonaws.com/uniqteas/product_images/" + sku  + ".jpg"
-    image_tag src, :size => "150x150"
+  def categories_tree_short(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
+    content_tag :ul, :class => 'nav pull-left' do
+      css_class = 'dropdown'
+      # hot tea
+      html = content_tag :li, :class => css_class do
+        link_to(raw('Hot Tea'+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
+        categories_tree_short2(root_taxon, current_taxon, max_level, current_level + 1, current_level == 1, 'Tea')
+      end 
+      css_class = ''
+      # iced tea
+      html += content_tag :li, :class => css_class do
+        link_to('Iced Tea', '/t/categories/iced-tea')
+      end
+      # teaware
+      html += content_tag :li, :class => css_class do
+        link_to('Teaware', '/t/categories/accessories')
+      end
+      # gallery
+      html += content_tag :li, :class => css_class do
+        link_to('User Gallery', '/t/categories/custom-blend')
+      end
+
+      html
+    end
+  end   
+    
+  def categories_tree_short2(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false, includes)
+    return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty? || (current_taxon != nil and !current_taxon.name.includes(includes))
+
+    css_class = current_level == 1 ? 'nav pull-left ' : ''
+    css_class += isdropdown ? 'dropdown-menu' : ''
+    content_tag :ul, :class => css_class do
+      root_taxon.children.map do |taxon|
+        css_class = taxon.children.empty? ? nil : 'dropdown'
+        content_tag :li, :class => css_class do
+          if css_class == 'dropdown'
+            link_to(raw(taxon.name+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
+            categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
+          else
+            link_to(taxon.name, seo_url(taxon))  +
+            categories_tree(taxon, current_taxon, max_level, current_level + 1)
+          end
+        end
+      end.join("\n").html_safe
+    end
   end
 
   def link_to_clone(resource, options={})
     options[:data] = {:action => 'clone'}
-    link_to_with_icon('icon-copy', t(:clone), clone_admin_product_url(resource), options)
+    link_to_with_icon('icon-copy', Spree.t(:clone), clone_admin_product_url(resource), options)
   end
 
   def link_to_new(resource)
     options[:data] = {:action => 'new'}
-    link_to_with_icon('icon-plus', t(:new), edit_object_url(resource))
+    link_to_with_icon('icon-plus', Spree.t(:new), edit_object_url(resource))
   end
 
   def link_to_edit(resource, options={})
     options[:data] = {:action => 'edit'}
-    link_to_with_icon('icon-edit', t(:edit), edit_object_url(resource), options)
+    link_to_with_icon('icon-edit', Spree.t(:edit), edit_object_url(resource), options)
   end
 
   def link_to_edit_url(url, options={})
     options[:data] = {:action => 'edit'}
-    link_to_with_icon('icon-edit', t(:edit), url, options)
+    link_to_with_icon('icon-edit', Spree.t(:edit), url, options)
   end
 
   def link_to_delete(resource, options={})
     url = options[:url] || object_url(resource)
-    name = options[:name] || t(:delete)
+    name = options[:name] || Spree.t(:delete)
     options[:class] = "delete-resource"
-    options[:data] = { :confirm => t(:are_you_sure), :action => 'remove' }
+    options[:data] = { :confirm => Spree.t(:are_you_sure), :action => 'remove' }
     link_to_with_icon 'icon-trash', name, url, options
   end
 
@@ -122,105 +163,6 @@ Spree::BaseHelper.class_eval do
     full_address += ', ' + address.city + ', ' + address.state_text + ', ' + address.zipcode
 
     full_address
-  end
-
-  def product_image(product, options = {})
-    if product.images.empty?
-      options.reverse_merge! :alt => product.name
-      options.reverse_merge! :size => "600x600"
-      image_tag "noimage/no-tin-image.png", options
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      image_tag product.images.first.attachment.url(:large), options
-    end
-  end
-
-  def large_product_image(product, options = {})
-    if product.images.empty?
-      options.reverse_merge! :alt => product.name
-      options.reverse_merge! :size => "400x400"
-      image_tag "noimage/no-tin-image.png", options
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      options.reverse_merge! :size => "400x400"
-      image_tag product.images.first.attachment.url(:large), options
-    end
-  end
-
-  def mini_image(product, options = {})
-    if product.images.empty?
-      image_tag "noimage/no-tin-image.png", :size => "48x48", :alt => product.name
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      options.reverse_merge! :size => "48x48"
-      image_tag product.images.first.attachment.url(:mini), options
-    end
-  end
-
-  def small_image(product, options = {})
-    if product.images.empty?
-      image_tag "noimage/no-tin-image.png", :size => "100x100", :alt => product.name
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      image_tag product.images.first.attachment.url(:small), options
-    end
-  end
-
-  def large_image(product, options = {})
-    if product.images.empty?
-      image_tag "noimage/no-tin-image.png", :size => "600x600", :alt => product.name
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      image_tag product.images.first.attachment.url(:large), options
-    end
-  end
-
-  def mini_tea_tin_image (product)
-    if product.images.empty?
-      image_tag "/assets/noimage/no-tin-image.png", :size => "94x71", :alt => product.name
-    else
-      image_tag product.images.first.attachment.url(:original), :size => "94x71", :alt => product.name
-    end
-  end
-
-  def small_tea_tin_image (product)
-    if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :alt => product.name
-    else
-      image_tag product.images.first.attachment.url(:original), :alt => product.name
-    end
-  end
-
-  def small_product_label_image (product)
-    if product.images.empty?
-      image_tag "/assets/CustomTeaLabel.png", :size => "225x300", :alt => product.name
-    else
-      image_tag product.images.first.attachment.url(:label), :size => "225x300", :alt => product.name
-    end
-  end
-
-  def small_tea_tag_image (product)
-    if product.images[1] == nil
-      image_tag "/assets/TeaTagLabel.png", :size => "50x42"
-    else
-      image_tag product.images.first.attachment.url(:small), :size => "50x42"
-    end
-  end
-
-  def xmini_tea_tag_image (product, options = {})
-    if product.images.empty?
-      image_tag "/assets/TeaTagLabel.png", :size => "37x31", :alt => product.name
-    else
-      image = product.images.first
-      options.reverse_merge! :alt => image.alt.blank? ? product.name : image.alt
-      options.reverse_merge! :size => "37x31"
-      image_tag product.images.first.attachment.url(:small), options
-    end
   end
 
   def button(text, icon_name = nil, button_type = 'submit', options={})

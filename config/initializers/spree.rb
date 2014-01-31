@@ -39,6 +39,7 @@ Spree.config do |config|
   ::NewRelic::Agent.after_fork(:force_reconnect => true) if defined? Unicorn
 
   Spree.user_class = "Spree::User"
-  Spree::Config.set(:address_requires_state, true)
+  Spree::Config.set(:address_requires_state => true)
+  Spree::Config.set(:track_inventory_levels => false)
   
 end

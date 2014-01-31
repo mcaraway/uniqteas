@@ -69,35 +69,13 @@ end
 
 Spree::Core::Engine.routes.prepend do
 
-  match '/gallery', :to => redirect('/t/categories/custom-blend')
-  match '/blendit', :to => 'products#new'
-  match '/myblends', :to => 'users#myblends'
-  match '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
-  match '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
 
-  resource :label_templates 
+  get '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
+  get '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
 
-  resources :products do
-    resources :images do
-      collection do
-        post :update_positions
-      end
-    end
-    
-    resource :product_labels
-  end
 
   namespace :admin do
-    
-    resource :blendable_products_settings, :only => ['show', 'update', 'edit']
-    
-    resources :label_templates do
-      collection do
-        post :update_positions
-        post :refresh_labels
-        post :reprocess_images
-      end
-    end
+
     resource  :free_shipping_settings
     resources :taxonomies do
       collection do
@@ -111,16 +89,6 @@ Spree::Core::Engine.routes.prepend do
       end
     end
 
-    resources :blendable_taxons do
-      collection do
-        post :update_positions
-      end
-
-      member do
-        get :get_children
-      end
-      resources :products
-    end
   end
 
   devise_scope :user do
