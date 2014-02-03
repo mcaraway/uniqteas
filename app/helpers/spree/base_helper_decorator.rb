@@ -1,6 +1,7 @@
 Spree::BaseHelper.class_eval do
+  
   def taxons_tree(root_taxon, current_taxon, max_level = 1)
-    logger.debug "***** taxon_tree root = " + root_taxon.name + "max_level = " + max_level.to_s
+    logger.debug "************ taxon_tree root = " + root_taxon.name + "max_level = " + max_level.to_s
     return '' if max_level < 1 || root_taxon.children.empty?
     content_tag :ul, :class => 'taxons-list' do
       root_taxon.children.map do |taxon|
@@ -14,7 +15,9 @@ Spree::BaseHelper.class_eval do
   end
 
   def get_category_root
-    Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children).first.root
+    (current_store.present? ? 
+      Spree::Taxonomy.where(["store_id = ? and name = 'Categories'", current_store.id]).includes(:root => :children): 
+      Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children)).first.root
   end
 
   def categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
@@ -22,53 +25,7 @@ Spree::BaseHelper.class_eval do
     css_class = current_level == 1 ? 'nav pull-left' : ''
     css_class += isdropdown ? 'dropdown-menu' : ''
     content_tag :ul, :class => css_class do
-      root_taxon.children.map do |taxon|
-        css_class = taxon.children.empty? ? nil : 'dropdown'
-        content_tag :li, :class => css_class do
-          if css_class == 'dropdown'
-            link_to(raw(taxon.name+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
-            categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
-          else
-            link_to(taxon.name, seo_url(taxon))  +
-            categories_tree(taxon, current_taxon, max_level, current_level + 1)
-          end
-        end
-      end.join("\n").html_safe
-    end
-  end
-
-  def categories_tree_short(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
-    content_tag :ul, :class => 'nav pull-left' do
-      css_class = 'dropdown'
-      # hot tea
-      html = content_tag :li, :class => css_class do
-        link_to(raw('Hot Tea'+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
-        categories_tree_short2(root_taxon, current_taxon, max_level, current_level + 1, current_level == 1, 'Tea')
-      end 
-      css_class = ''
-      # iced tea
-      html += content_tag :li, :class => css_class do
-        link_to('Iced Tea', '/t/categories/iced-tea')
-      end
-      # teaware
-      html += content_tag :li, :class => css_class do
-        link_to('Teaware', '/t/categories/accessories')
-      end
-      # gallery
-      html += content_tag :li, :class => css_class do
-        link_to('User Gallery', '/t/categories/custom-blend')
-      end
-
-      html
-    end
-  end   
-    
-  def categories_tree_short2(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false, includes)
-    return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty? || (current_taxon != nil and !current_taxon.name.includes(includes))
-
-    css_class = current_level == 1 ? 'nav pull-left ' : ''
-    css_class += isdropdown ? 'dropdown-menu' : ''
-    content_tag :ul, :class => css_class do
+      # root_taxon.children.sort! { |a,b| a.position <=> b.position }
       root_taxon.children.map do |taxon|
         css_class = taxon.children.empty? ? nil : 'dropdown'
         content_tag :li, :class => css_class do
@@ -190,7 +147,6 @@ Spree::BaseHelper.class_eval do
     crumbs = [content_tag(:li, link_to(t(:home) , root_path) + sep)]
 
     if taxon
-      logger.debug "****** taxon.ancestors.size = #{taxon.ancestors.size}"
       crumbs << taxon.ancestors.collect { |ancestor| content_tag(:li, link_to(ancestor.name , seo_url(ancestor)) + sep) } unless taxon.ancestors.empty?
       if product
         crumbs << content_tag(:li, link_to(taxon.name , seo_url(taxon)) + sep)

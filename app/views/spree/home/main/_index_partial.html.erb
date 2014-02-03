@@ -1,0 +1,32 @@
+<!-- Start: MAIN CONTENT -->
+<div class="row">
+	<div class="span16 margin-top">
+		<hr />
+		<ul id="feed" class="unstyled"></ul>
+	</div>
+	<hr />
+	<div class="span4 align-center">
+		<img src="/assets/store/free-shipping.png" />
+	</div>
+	<div class="span4 align-center">
+		<img src="/assets/store/free-teaball.png" />
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#feed").PaRSS("http://teasherpa.wordpress.com/feed/", // rss feed url (required)
+		2, // number of items (optional)
+		"M jS g:i a", // date format (optional)
+		"content" // include descriptions? (optional)
+		);
+	}); 
+	$(document).ready(function($) {
+		function show_modal() {
+			$('#emailModal').modal();
+		}
+
+
+		window.setTimeout(show_modal, 5000);
+		// your 5 seconds delay before it calls the modal function
+	}); 
+</script>

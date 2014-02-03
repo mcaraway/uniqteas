@@ -1,0 +1,24 @@
+<% if @top_promo != nil and @top_promo.any? %>
+<div style="width: 100%; height: 72.5em; max-height: 800px;position: relative;">
+	<% if @top_promo != nil and @top_promo.any? %>
+		<div id="home-slider" class="carousel ut2-top-promo-slider">
+			<div class="ut2-carousel-inner">
+				<% @top_promo.each_with_index do |slider, i| %>
+				<div class="<%= i == 0 ? 'active' : '' %> item">
+					<%= slider.html.html_safe %>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	<% end %>	
+	<div style="position: absolute; left:12%; top: 5%;"><img style="width: 22em; height: auto;" src="/assets/store/uniqteas-transparent.png" alt="Uniq Teas"></div>
+	<% if @bottom_promo != nil and @bottom_promo.any? %>
+	<div style="width: 100%;height:40%;">
+		<% @bottom_promo.each do |promo| %>
+			<%= promo.html.html_safe %>
+		<% end %>
+	</div>
+	<% end %>
+</div>
+<%= render :partial=> 'spree/sweepstakes/home_div' %>
+<% end %>

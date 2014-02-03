@@ -1,23 +1,5 @@
-<!-- Start: MAIN CONTENT -->
-<div class="row">
-	<div class="span16 margin-top">
-		<hr />
-		<ul id="feed" class="unstyled"></ul>
-	</div>
-	<hr />
-	<div class="span4 align-center">
-		<img src="/assets/store/free-shipping.png" />
-	</div>
-	<div class="span4 align-center">
-		<img src="/assets/store/free-teaball.png" />
-	</div>
-</div>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$("#feed").PaRSS("http://teasherpa.wordpress.com/feed/", // rss feed url (required)
-		2, // number of items (optional)
-		"M jS g:i a", // date format (optional)
-		"content" // include descriptions? (optional)
-		);
-	}); 
-</script>
+<% if @current_store == nil %>
+<%= render :partial => 'spree/home/main/index_partial' %>
+<% else %>
+<%= render :partial => 'spree/home/'+@current_store.code+'/index_partial' %>
+<% end %>

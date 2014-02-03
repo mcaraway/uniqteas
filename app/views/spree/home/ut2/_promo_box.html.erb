@@ -1,0 +1,17 @@
+<div id="home-page-top-box-promo">
+	<img src="/assets/store/girl-drinking-cup.jpg" width="350" height="285">
+	<img src="/assets/store/july-4th.png" width="350" height="285">
+</div>
+
+<script type="text/javascript">
+	$(function() {
+
+		// Hide flash messages after timeout
+		setTimeout('$(".flash").fadeOut(1000)', 8000);
+
+		// Home sliders
+		if ($('#home-page-top-box-promo').length > 0) {
+			$('#home-page-top-box-promo').cycle({delay: 8000});
+		}
+	}); 
+</script>

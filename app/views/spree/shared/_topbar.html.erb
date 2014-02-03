@@ -1,5 +1,17 @@
-<% if params[:alt] == nil or params[:alt] == "1" %>
-	<%= render :partial => 'spree/shared/topbar1' %>
-<% else %>
-	<%= render :partial => 'spree/shared/topbar2' %>
-<% end %>
+<div id="topbar" class="top-bar">
+	<div class="container">
+		<div class="row">
+			<div class="span6 top-bar-left">
+				<%= link_to '/pages/shipping' do %>
+				<%= image_tag("/assets/store/icon-free-shipping.png", :height => "16")  %>
+				<%= t(:free_shipping) %>
+				<% end %>	
+			</div>
+			<div class="span4 top-bar-center">
+				<%= render :partial => 'spree/shared/email_promo_panel' %>	</div>
+			<div class="span6 top-bar-right">
+				<%= t(:need_help) %>
+			</div>
+		</div>
+	</div>
+</div>
