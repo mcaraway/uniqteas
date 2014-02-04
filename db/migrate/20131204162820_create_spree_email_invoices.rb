@@ -3,6 +3,7 @@ class CreateSpreeEmailInvoices < ActiveRecord::Migration
     create_table :spree_email_invoices do |t|
       t.string :order_number
       t.string :shipping_state
+      t.string :tracking_number
       t.string :customer
       t.string :shipping_method
       t.string :subject

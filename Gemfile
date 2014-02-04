@@ -73,7 +73,7 @@ gem "spree_paypal_express", :branch => "2-1-stable", :git => "git://github.com/r
 # my custom code
 #gem 'spree_address_book', :path => '../spree_address_book'
 #gem 'spree_address_book', :branch => "2-0-stable", :git => "git://github.com/mcaraway/spree_address_book.git"
-gem 'spree_email_invoices', :branch => "2-1-stable", :git => "git://github.com/mcaraway/spree_email_invoices.git"
+gem 'spree_email_invoices', :branch => "2-1-stable", :git =>  "git://github.com/mcaraway/spree_email_invoices.git"
 # gem 'spree_email_invoices', :path => '../spree_email_invoices'
 gem 'spree_contact_us', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_contact_us.git'
 # gem 'spree_contact_us', :path => '../spree_contact_us'
@@ -91,6 +91,5 @@ gem 'spree_reviews_rating', :branch => "2-1-stable", :git => 'git://github.com/m
 #gem 'dynamic_sitemaps', :git => 'git://github.com/mcaraway/spree_dynamic_sitemaps.git'
 gem 'spree_shipworks', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_shipworks.git'
 # gem 'spree_shipworks', :path => '../spree_shipworks'
-#gem 'spree_shipworks', :git => 'git://github.com/railsdog/spree_shipworks.git'
 gem 'datashift', '~> 0.13.0'
 gem 'datashift_spree', '~>0.5.0'
