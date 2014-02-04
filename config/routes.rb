@@ -67,7 +67,7 @@ Uniqteas::Application.routes.draw do
 
 end
 
-Spree::Core::Engine.routes.prepend do
+Spree::Core::Engine.add_routes do
 
 
   get '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')

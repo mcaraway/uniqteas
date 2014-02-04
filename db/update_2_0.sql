@@ -23,3 +23,7 @@ update spree_calculators as sc set type = updated.type
 from (
 select id, concat('Spree::Calculator::Shipping', substring(type, 18, 99)) as type from spree_calculators where calculable_type = 'Spree::ShippingMethod') as updated
 where sc.id = updated.id;
+
+-- might need to delete free shipping calculator
+delete from spree_calculators where id = 574015691;
+delete from spree_shipping_methods where id not in (select distinct calculable_id from spree_calculators where calculable_type = 'Spree::ShippingMethod'); 

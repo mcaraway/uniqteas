@@ -11,7 +11,7 @@ end
 
 module Uniqteas
   class Application < Rails::Application
-    
+    I18n.enforce_available_locales = false    
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
@@ -75,7 +75,7 @@ module Uniqteas
     config.assets.initialize_on_precompile = false
     config.assets.precompile += %w( store/print.css *.png *.jpg *.jpeg *.gif )
     initializer 'spree.register.calculators' do |app|
-      app.config.spree.calculators.shipping_methods << Spree::Calculator::FreeShipping
+      app.config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::FreeShipping
     end
   end
 end
