@@ -30,7 +30,7 @@ Spree::BaseHelper.class_eval do
         css_class = taxon.children.empty? ? nil : 'dropdown'
         content_tag :li, :class => css_class do
           if css_class == 'dropdown'
-            link_to(raw(taxon.name+content_tag("strong", "", :class=>"caret")), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
+            link_to(raw(taxon.name+content_tag("strong", "", :class=> (current_level == max_level ? "" :"caret"))), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
             categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
           else
             link_to(taxon.name, seo_url(taxon))  +

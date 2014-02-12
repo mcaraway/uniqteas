@@ -8,11 +8,11 @@
 //= require jquery
 //= require jquery_ujs
 
-//= require admin/spree_backend
 //= require admin/spree_auth
 
 //= require admin/spree_social_products
 //= require admin/spree_uniqteas_theme
+//= require admin/spree_multi_domain
+//= require admin/spree_backend
 
 //= require_tree .
-//= require admin/spree_multi_domain
