@@ -130,8 +130,8 @@ Routes for Spree::Core::Engine:
                                                   PATCH  /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#update {:format=>"json"}
                                                   PUT    /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#update {:format=>"json"}
                                                   DELETE /api/sweepstakes_entry/:id(.:format)                                        spree/api/sweepstakes_entry#destroy {:format=>"json"}
-                                          gallery GET    /gallery(.:format)                                                          redirect(301, /t/categories/custom-blend)
-                                          blendit GET    /blendit(.:format)                                                          spree/products#new
+                                          gallery GET    /gallery(.:format)                                                          spree/custom_products#index
+                                          blendit GET    /blendit(.:format)                                                          spree/custom_products/build#pick_flavors
                                          myblends GET    /myblends(.:format)                                                         spree/users#myblends
                                   label_templates POST   /label_templates(.:format)                                                  spree/label_templates#create
                               new_label_templates GET    /label_templates/new(.:format)                                              spree/label_templates#new
@@ -140,6 +140,29 @@ Routes for Spree::Core::Engine:
                                                   PATCH  /label_templates(.:format)                                                  spree/label_templates#update
                                                   PUT    /label_templates(.:format)                                                  spree/label_templates#update
                                                   DELETE /label_templates(.:format)                                                  spree/label_templates#destroy
+                       custom_product_build_index GET    /custom_products/:custom_product_id/build(.:format)                         spree/custom_products/build#index
+                                                  POST   /custom_products/:custom_product_id/build(.:format)                         spree/custom_products/build#create
+                         new_custom_product_build GET    /custom_products/:custom_product_id/build/new(.:format)                     spree/custom_products/build#new
+                        edit_custom_product_build GET    /custom_products/:custom_product_id/build/:id/edit(.:format)                spree/custom_products/build#edit
+                             custom_product_build GET    /custom_products/:custom_product_id/build/:id(.:format)                     spree/custom_products/build#show
+                                                  PATCH  /custom_products/:custom_product_id/build/:id(.:format)                     spree/custom_products/build#update
+                                                  PUT    /custom_products/:custom_product_id/build/:id(.:format)                     spree/custom_products/build#update
+                                                  DELETE /custom_products/:custom_product_id/build/:id(.:format)                     spree/custom_products/build#destroy
+                             custom_product_image POST   /custom_products/:custom_product_id/image(.:format)                         spree/images#create
+                         new_custom_product_image GET    /custom_products/:custom_product_id/image/new(.:format)                     spree/images#new
+                        edit_custom_product_image GET    /custom_products/:custom_product_id/image/edit(.:format)                    spree/images#edit
+                                                  GET    /custom_products/:custom_product_id/image(.:format)                         spree/images#show
+                                                  PATCH  /custom_products/:custom_product_id/image(.:format)                         spree/images#update
+                                                  PUT    /custom_products/:custom_product_id/image(.:format)                         spree/images#update
+                                                  DELETE /custom_products/:custom_product_id/image(.:format)                         spree/images#destroy
+                                  custom_products GET    /custom_products(.:format)                                                  spree/custom_products#index
+                                                  POST   /custom_products(.:format)                                                  spree/custom_products#create
+                               new_custom_product GET    /custom_products/new(.:format)                                              spree/custom_products#new
+                              edit_custom_product GET    /custom_products/:id/edit(.:format)                                         spree/custom_products#edit
+                                   custom_product GET    /custom_products/:id(.:format)                                              spree/custom_products#show
+                                                  PATCH  /custom_products/:id(.:format)                                              spree/custom_products#update
+                                                  PUT    /custom_products/:id(.:format)                                              spree/custom_products#update
+                                                  DELETE /custom_products/:id(.:format)                                              spree/custom_products#destroy
                   update_positions_product_images POST   /products/:product_id/images/update_positions(.:format)                     spree/images#update_positions
                                    product_images GET    /products/:product_id/images(.:format)                                      spree/images#index
                                                   POST   /products/:product_id/images(.:format)                                      spree/images#create
@@ -250,6 +273,14 @@ Routes for Spree::Core::Engine:
                                     notify_paypal GET    /paypal/notify(.:format)                                                    spree/paypal#notify
                 paypal_refund_admin_order_payment GET    /admin/orders/:order_id/payments/:id/paypal_refund(.:format)                spree/admin/payments#paypal_refund
                                                   POST   /admin/orders/:order_id/payments/:id/paypal_refund(.:format)                spree/admin/payments#paypal_refund
+                                        addresses GET    /addresses(.:format)                                                        spree/addresses#index
+                                                  POST   /addresses(.:format)                                                        spree/addresses#create
+                                      new_address GET    /addresses/new(.:format)                                                    spree/addresses#new
+                                     edit_address GET    /addresses/:id/edit(.:format)                                               spree/addresses#edit
+                                          address GET    /addresses/:id(.:format)                                                    spree/addresses#show
+                                                  PATCH  /addresses/:id(.:format)                                                    spree/addresses#update
+                                                  PUT    /addresses/:id(.:format)                                                    spree/addresses#update
+                                                  DELETE /addresses/:id(.:format)                                                    spree/addresses#destroy
               volume_prices_admin_product_variant GET    /admin/products/:product_id/variants/:id/volume_prices(.:format)            spree/admin/variants#volume_prices
                            admin_product_variants GET    /admin/products/:product_id/variants(.:format)                              spree/admin/variants#index
                                                   POST   /admin/products/:product_id/variants(.:format)                              spree/admin/variants#create

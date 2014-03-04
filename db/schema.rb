@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203211220) do
+ActiveRecord::Schema.define(version: 20140304123725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -209,6 +209,35 @@ ActiveRecord::Schema.define(version: 20140203211220) do
     t.string   "gateway_payment_profile_id"
   end
 
+  create_table "spree_custom_products", force: true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.string   "description"
+    t.string   "flavor_1_name"
+    t.string   "flavor_2_name"
+    t.string   "flavor_3_name"
+    t.integer  "flavor_1_percentage"
+    t.integer  "flavor_2_percentage"
+    t.integer  "flavor_3_percentage"
+    t.string   "flavor_1_sku"
+    t.string   "flavor_2_sku"
+    t.string   "flavor_3_sku"
+    t.float    "sweetness"
+    t.float    "fruity"
+    t.float    "nutty"
+    t.float    "vegetal"
+    t.float    "woody"
+    t.float    "aroma"
+    t.float    "spicy"
+    t.float    "floral"
+    t.float    "strength"
+    t.integer  "user_id"
+    t.boolean  "public"
+    t.boolean  "final"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "spree_customizable_product_options", force: true do |t|
     t.integer  "product_customization_type_id"
     t.integer  "position"
@@ -329,13 +358,14 @@ ActiveRecord::Schema.define(version: 20140203211220) do
   create_table "spree_line_items", force: true do |t|
     t.integer  "order_id"
     t.integer  "variant_id"
-    t.integer  "quantity",                                null: false
-    t.decimal  "price",           precision: 8, scale: 2, null: false
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.integer  "quantity",                                  null: false
+    t.decimal  "price",             precision: 8, scale: 2, null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "currency"
-    t.decimal  "cost_price",      precision: 8, scale: 2
+    t.decimal  "cost_price",        precision: 8, scale: 2
     t.integer  "tax_category_id"
+    t.integer  "custom_product_id"
   end
 
   add_index "spree_line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree

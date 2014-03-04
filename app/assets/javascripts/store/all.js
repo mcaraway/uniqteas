@@ -13,6 +13,7 @@
 //= require store/spree_address_book
 //= require store/spree_social_products
 //= require store/review/index
+//= require store/spree_uniqteas_theme
+//= require store/spree_custom_products
 
 //= require_tree .
-//= require store/spree_uniqteas_theme

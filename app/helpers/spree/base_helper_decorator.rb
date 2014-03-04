@@ -130,10 +130,6 @@ Spree::BaseHelper.class_eval do
     icon_name ? image_tag("admin/icons/#{icon_name}.png") : ''
   end
 
-  def link_to_add_fields(name, target)
-    link_to icon('add') + name, 'javascript:', :data => { :target => target }, :class => "add_fields"
-  end
-
   def breadcrumbs(taxon = nil, product = nil, sep = "&nbsp;&raquo;&nbsp;")
     if String === product
       sep = product

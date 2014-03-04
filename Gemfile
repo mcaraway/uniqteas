@@ -57,6 +57,7 @@ end
 # To use debugger
 # gem 'debugger'
 gem 'jquery-rails', '3.0.0'
+gem 'wicked'
 gem 'spree', '~> 2.1.0'
 gem 'spree_auth_devise', :branch => "2-1-stable", :git => 'git://github.com/spree/spree_auth_devise'
 gem 'spree_active_shipping', :branch => "2-1-stable", :git => "git://github.com/spree/spree_active_shipping"
@@ -81,8 +82,8 @@ gem 'spree_contact_us', :branch => "2-1-stable", :git => 'git://github.com/mcara
 # gem 'spree_paypal_express', :path => '../better_spree_paypal_express'
 #gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
 # gem 'spree_print_invoice', :path => '../spree_print_invoice'
-gem 'spree_custom_products', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_custom_products.git'
-# gem 'spree_custom_products', :path => '../spree_custom_products'
+# gem 'spree_custom_products', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_custom_products.git'
+gem 'spree_custom_products', :path => '../spree_custom_products'
 gem 'spree_uniqteas_theme', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
 # gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
 gem 'spree_reviews_rating', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_reviews_rating.git'
