@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304123725) do
+ActiveRecord::Schema.define(version: 20140311190612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -236,6 +236,7 @@ ActiveRecord::Schema.define(version: 20140304123725) do
     t.boolean  "final"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "step"
   end
 
   create_table "spree_customizable_product_options", force: true do |t|

@@ -19,10 +19,15 @@
 		"M jS g:i a", // date format (optional)
 		"content" // include descriptions? (optional)
 		);
-	}); 
+	});
 	$(document).ready(function($) {
 		function show_modal() {
-			$('#emailModal').modal();
+			if ($.cookie('shownDialog') != 'true') {
+				$('#emailModal').modal();
+				$.cookie('shownDialog', 'true', {
+					expires : 7
+				});
+			}
 		}
 
 

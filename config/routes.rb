@@ -72,7 +72,7 @@ Spree::Core::Engine.add_routes do
 
   get '/admin/home_page_sliders/:home_page_slider/templates/preview.html', :to => redirect('/templates/preview.html')
   get '/admin/home_page_sliders/:home_page_slider/templates/preview.css', :to => redirect('/templates/preview.css')
-
+  get '/t/categories/custom-blend', :to => redirect('/custom_products')
 
   namespace :admin do
 
