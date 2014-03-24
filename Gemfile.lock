@@ -59,15 +59,14 @@ GIT
 
 GIT
   remote: git://github.com/mcaraway/spree_uniqteas_theme.git
-  revision: 4bc225856b5502bc4e66e4b463e2f73cf44f6265
+  revision: af52cc5a397f5753f497a6861819cffa7ab3b140
   branch: 2-1-stable
   specs:
     spree_uniqteas_theme (2.1.0)
       bootstrap-sass (~> 3.1.1)
       compass-rails
-      sass-rails (>= 3.2)
+      sass-rails (>= 4.0.2)
       spree_core (~> 2.1.0)
-      sprockets (<= 2.11.0)
 
 GIT
   remote: git://github.com/radar/better_spree_paypal_express.git
@@ -450,7 +449,6 @@ GEM
       json (>= 1.8.0)
     unf (0.1.3)
       unf_ext
-    unf_ext (0.0.6)
     unf_ext (0.0.6-x86-mingw32)
     uuidtools (2.1.4)
     versioncake (1.2.0)
