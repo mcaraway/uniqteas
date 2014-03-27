@@ -20,27 +20,31 @@ Spree::BaseHelper.class_eval do
       Spree::Taxonomy.where(:name => 'Categories').includes(:root => :children)).first.root
   end
 
-  def categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false)
+  def categories_tree(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false, use_dropdowns = true)
     return '' if max_level < current_level || root_taxon == nil || root_taxon.children.empty?
     css_class = current_level == 1 ? 'nav pull-left' : ''
-    css_class += isdropdown ? 'dropdown-menu' : ''
+    css_class += (isdropdown && use_dropdowns) ? 'dropdown-menu' : ''
     content_tag :ul, :class => css_class do
       # root_taxon.children.sort! { |a,b| a.position <=> b.position }
-      root_taxon.children.map do |taxon|
-        css_class = taxon.children.empty? ? nil : 'dropdown'
+      categories_tree_inner(root_taxon, current_taxon, max_level, current_level, isdropdown, use_dropdowns)
+    end
+  end
+  
+  def categories_tree_inner(root_taxon, current_taxon, max_level, current_level = 1, isdropdown = false, use_dropdowns = true)
+    root_taxon.children.map do |taxon|
+        css_class = (!taxon.children.empty? && use_dropdowns) ? 'dropdown' : nil 
         content_tag :li, :class => css_class do
           if css_class == 'dropdown'
             link_to(raw(taxon.name+content_tag("strong", "", :class=> (current_level == max_level ? "" :"caret"))), '#', :class => 'dropdown-toggle', 'data-toggle' => 'dropdown') +
-            categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1)
+            categories_tree(taxon, current_taxon, max_level, current_level + 1, current_level == 1, use_dropdowns)
           else
             link_to(taxon.name, seo_url(taxon))  +
-            categories_tree(taxon, current_taxon, max_level, current_level + 1)
+            categories_tree(taxon, current_taxon, max_level, current_level + 1, false, use_dropdowns)
           end
         end
-      end.join("\n").html_safe
-    end
+      end.join("\n").html_safe    
   end
-
+  
   def link_to_clone(resource, options={})
     options[:data] = {:action => 'clone'}
     link_to_with_icon('icon-copy', Spree.t(:clone), clone_admin_product_url(resource), options)

@@ -1,40 +1,42 @@
-<div class="navbar">
+<div class="navbar navbar-inverse">
 	<div class="navbar-inner">
-
-		<!-- Start: Primary navigation -->
-		<div class="nav-collapse">
-			<ul class="nav pull-right left-topbar-login">
-				<li><%= link_to t(:our_story), '/pages/about'%></li>
-				<li><%= link_to t(:blog), 'http://teasherpa.wordpress.com/'%></li>
-				<% if try_spree_current_user and !try_spree_current_user.guest? %>
-				<li>
-					<%= link_to t(:my_account), spree.account_path %>
-				</li>
-				<li>
-					<%= link_to t(:logout), spree.logout_path %>
-				</li>
-				<% else %>
-				<li class="dropdown">
-					<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= t(:login) %><strong class="caret"></strong></a>
-					<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-						<%= form_for Spree::User.new, :as => :spree_user, :url => spree.spree_user_session_path do |f| %>
-						<%= f.email_field :email, :class => 'title', :tabindex => 1, "placeholder" => "email" %>
-						<%= f.password_field :password, :class => 'title', :tabindex => 2, "placeholder" => "password" %>
-						<%= f.check_box :remember_me, :style => "float: left; margin-right: 10px;" %>
-						<label class="string optional" for="user_remember_me"><%= t(:remember_me)%></label>
-						<%= f.submit t(:login), :class => 'btn btn-primary btn-block', :tabindex => 3 %>
-						<% end %>
-					</div>
-				</li>
-				<li id="account-link" data-hook>
-					<%= link_to t(:sign_up), spree.signup_path %>
-				</li>
-				<% end %>
-				<li id="link-to-cart" data-hook>
-					<%= link_to_cart %>
-				</li>
-			</ul>
-		</div>
+		Menu
 	</div>
+
+	<ul class="nav-collapse nav-stacked">
+		<li>
+			<%= link_to t(:our_story), '/pages/about'%>
+		</li>
+		<li>
+			<%= link_to t(:blog), 'http://teasherpa.wordpress.com/'%>
+		</li>
+		<% if try_spree_current_user and !try_spree_current_user.guest? %>
+		<li>
+			<%= link_to t(:my_account), spree.account_path %>
+		</li>
+		<li>
+			<%= link_to t(:logout), spree.logout_path %>
+		</li>
+		<% else %>
+		<li class="dropdown">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= t(:login) %><strong class="caret"></strong></a>
+			<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+				<%= form_for Spree::User.new, :as => :spree_user, :url => spree.spree_user_session_path do |f| %>
+				<%= f.email_field :email, :class => 'title', :tabindex => 1, "placeholder" => "email" %>
+				<%= f.password_field :password, :class => 'title', :tabindex => 2, "placeholder" => "password" %>
+				<%= f.check_box :remember_me, :style => "float: left; margin-right: 10px;" %>
+				<label class="string optional" for="user_remember_me"><%= t(:remember_me)%></label>
+				<%= f.submit t(:login), :class => 'btn btn-primary btn-block', :tabindex => 3 %>
+				<% end %>
+			</div>
+		</li>
+		<li id="account-link" data-hook>
+			<%= link_to t(:sign_up), spree.signup_path %>
+		</li>
+		<% end %>
+		<li id="link-to-cart" data-hook>
+			<%= link_to_cart %>
+		</li>
+	</ul>
 	<!-- End: Navigation wrapper -->
 </div>

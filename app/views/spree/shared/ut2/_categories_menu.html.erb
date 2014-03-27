@@ -1,11 +1,23 @@
 <div class="navbar">
 	<div class="navbar-inner">
+		<a class="ut2-logo-navbar" href="/"><img src="/assets/store/icon-47x47-transparent.png" alt="Uniq Teas" title="Uniq Teas"\></a>
+		<div class="signup-collapsed"><%= render :partial => 'spree/shared/email_promo_panel' %></div>
 		<!-- Below button used for responsive navigation -->
-		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-
+		<a id="sidemenu-toggle" class="btn btn-navbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 		<!-- Start: Primary navigation -->
 		<div class="nav-collapse" style="color: black;">
 			<%= categories_tree(get_category_root, nil, 2) %>
 		</div>
+		<div class="signup"><%= render :partial => 'spree/shared/email_promo_panel' %></div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function() {
+    // handle the #toggle click event
+    $("#sidemenu-toggle").on("click", function() {
+      // apply/remove the active class to the row-offcanvas element
+      $(".row-offcanvas").toggleClass("active");
+    });
+  });
+</script>

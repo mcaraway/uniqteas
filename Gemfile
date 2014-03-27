@@ -83,7 +83,7 @@ gem 'spree_contact_us', :branch => "2-1-stable", :git => 'git://github.com/mcara
 #gem 'spree_print_invoice', :git => 'git://github.com/mcaraway/spree_print_invoice.git'
 # gem 'spree_print_invoice', :path => '../spree_print_invoice'
 gem 'spree_custom_products', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_custom_products.git'
-# gem 'spree_custom_products', :path => '../spree_custom_products'
+#gem 'spree_custom_products', :path => '../spree_custom_products'
 gem 'spree_uniqteas_theme', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_uniqteas_theme.git'
 #gem 'spree_uniqteas_theme', :path => '../spree_uniqteas_theme'
 gem 'spree_reviews_rating', :branch => "2-1-stable", :git => 'git://github.com/mcaraway/spree_reviews_rating.git'

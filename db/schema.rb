@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140311190612) do
+ActiveRecord::Schema.define(version: 20140324194750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -212,7 +212,7 @@ ActiveRecord::Schema.define(version: 20140311190612) do
   create_table "spree_custom_products", force: true do |t|
     t.string   "name"
     t.string   "permalink"
-    t.string   "description"
+    t.text     "description"
     t.string   "flavor_1_name"
     t.string   "flavor_2_name"
     t.string   "flavor_3_name"
@@ -237,6 +237,13 @@ ActiveRecord::Schema.define(version: 20140311190612) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "step"
+    t.string   "label_image_file_name"
+    t.string   "label_image_content_type"
+    t.integer  "label_image_width"
+    t.integer  "label_image_height"
+    t.integer  "label_image_size"
+    t.datetime "label_image_updated_at"
+    t.boolean  "processing"
   end
 
   create_table "spree_customizable_product_options", force: true do |t|

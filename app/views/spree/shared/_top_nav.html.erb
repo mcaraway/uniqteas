@@ -1,0 +1,71 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class = "container">
+		<div class="navbar-inner">
+			<div class="logo-collapsed">
+				<a class="ut2-logo-navbar" href="/"><img src="/assets/store/icon-47x47-transparent.png" alt="Uniq Teas" title="Uniq Teas"\></a>
+			</div>
+			<div class="signup-collapsed">
+				<%= render :partial => 'spree/shared/email_promo_panel' %>
+			</div>
+			<div class="sidemenu-div">
+				<div style="padding-top: 5px;float:left;"><%= link_to_cart %></div>
+				<a id="sidemenu-toggle" class="btn btn-navbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+			</div>
+			<!-- Start: Primary navigation -->
+			<div class="nav-collapse span6">
+				<%= categories_tree(get_category_root, nil, 2) %>
+			</div>
+			<div class="signup span2">
+				<%= render :partial => 'spree/shared/email_promo_panel' %>
+			</div>
+			<!-- Start: Primary navigation -->
+			<div class="nav-collapse span7">
+				<ul class="nav pull-right right-topbar-login">
+					<li>
+						<%= link_to t(:our_story), '/pages/about'%>
+					</li>
+					<li>
+						<%= link_to t(:blog), 'http://teasherpa.wordpress.com/'%>
+					</li>
+					<% if try_spree_current_user and !try_spree_current_user.guest? %>
+					<li>
+						<%= link_to t(:my_account), spree.account_path %>
+					</li>
+					<li>
+						<%= link_to t(:logout), spree.logout_path %>
+					</li>
+					<% else %>
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><%= t(:login) %><strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+							<%= form_for Spree::User.new, :as => :spree_user, :url => spree.spree_user_session_path do |f| %>
+							<%= f.email_field :email, :class => 'title', :tabindex => 1, "placeholder" => "email" %>
+							<%= f.password_field :password, :class => 'title', :tabindex => 2, "placeholder" => "password" %>
+							<%= f.check_box :remember_me, :style => "float: left; margin-right: 10px;" %>
+							<label class="string optional" for="user_remember_me"><%= t(:remember_me)%></label>
+							<%= f.submit t(:login), :class => 'btn btn-primary btn-block', :tabindex => 3 %>
+							<% end %>
+						</div>
+					</li>
+					<li id="account-link" data-hook>
+						<%= link_to t(:sign_up), spree.signup_path %>
+					</li>
+					<% end %>
+					<li id="link-to-cart" data-hook>
+						<%= link_to_cart %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(document).ready(function() {
+		// handle the #toggle click event
+		$("#sidemenu-toggle").on("click", function() {
+			// apply/remove the active class to the row-offcanvas element
+			$(".sidemenu-offcanvas").toggleClass("active");
+		});
+	}); 
+</script>
