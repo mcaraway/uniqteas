@@ -10,6 +10,8 @@
 		<%= render :partial => 'spree/shared/head' %>
 	</head>
 	<body class="<%= body_class %> body-class" id="<%= @body_id || 'default' %>" data-hook="body">
+		
+		<%= render :partial => 'spree/shared/ut2/email_promo_panel' %>
 		<%= render :partial => 'spree/shared/top_nav' %>
 
 		<div style="position: relative; overflow: hidden; z-index: 999">
@@ -20,8 +22,8 @@
 		<div class="row row-offcanvas row-offcanvas-right">
 			<div>
 				<%= render :partial => 'spree/home/ut2/top_promo' %>
-				<div class="container">
 					<%= render :partial=>'spree/shared/ut2/subheader'%>
+				<div class="container">
 					<div id="wrapper" class="row" data-hook>
 
 						<div class="span16">

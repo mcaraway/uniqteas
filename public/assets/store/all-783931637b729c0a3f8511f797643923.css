@@ -10786,26 +10786,22 @@ label.error {
   margin-top: 2px;
 }
 
-/* line 312, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModal {
+/* line 311, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.email-signup {
   width: 800px;
   height: 500px;
   left: auto;
-}
-
-/* line 317, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-.email-signup {
   background: url(email-signup.png) center center no-repeat;
   background-size: 800px 500px;
 }
 
-/* line 322, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModelBody {
+/* line 319, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.modal-body {
   overflow-y: hidden;
 }
 
-/* line 326, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModelBody .mc-field-group {
+/* line 323, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.modal-body .mc-field-group {
   position: absolute;
   top: 84%;
   left: 10%;
@@ -10814,16 +10810,16 @@ label.error {
   height: 12%;
 }
 
-/* line 334, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModelBody .mc-field-group input {
+/* line 331, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.modal-body .mc-field-group input {
   border: none;
   width: 100%;
   height: 100%;
   font-size: 1.2em;
 }
 
-/* line 341, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModelBody #mc-embedded-subscribe {
+/* line 338, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.modal-body #mc-embedded-subscribe {
   position: absolute;
   left: 76%;
   top: 85%;
@@ -10833,48 +10829,48 @@ label.error {
   font-size: 1.8em;
 }
 
-/* line 350, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModal .modal-header, #emailModal .modal-body {
+/* line 347, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.email-signup .modal-header, .email-signup .modal-body {
   background: none;
   border: none;
   box-shadow: none;
 }
 
-/* line 355, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModal .modal-footer {
+/* line 352, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.email-signup .modal-footer {
   background: none;
   border: none;
   text-align: center;
   box-shadow: none;
 }
 
-/* line 361, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-#emailModelBody {
+/* line 358, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+.modal-body {
   position: relative;
   height: 80%;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 366, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModal {
+  /* line 363, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .email-signup {
     width: 750px;
     height: 469px;
   }
 
-  /* line 370, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  /* line 367, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
   .email-signup {
     background: url(email-signup.png) center center no-repeat;
     background-size: 750px 469px;
   }
 
-  /* line 374, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody {
+  /* line 371, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body {
     position: relative;
     height: 80%;
   }
 
-  /* line 378, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group {
+  /* line 375, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group {
     position: absolute;
     top: 84%;
     left: 10%;
@@ -10883,16 +10879,16 @@ label.error {
     height: 11%;
   }
 
-  /* line 386, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group input {
+  /* line 383, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group input {
     border: none;
     width: 100%;
     height: 100%;
     font-size: 1.2em;
   }
 
-  /* line 393, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody #mc-embedded-subscribe {
+  /* line 390, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body #mc-embedded-subscribe {
     position: absolute;
     left: 76%;
     top: 85%;
@@ -10903,26 +10899,26 @@ label.error {
   }
 }
 @media (min-width: 481px) and (max-width: 767px) {
-  /* line 405, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModal {
+  /* line 402, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .email-signup {
     width: 450px;
     height: 281px;
   }
 
-  /* line 409, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  /* line 406, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
   .email-signup {
     background: url(email-signup.png) center center no-repeat;
     background-size: 450px 281px;
   }
 
-  /* line 413, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody {
+  /* line 410, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body {
     position: relative;
     height: 80%;
   }
 
-  /* line 417, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group {
+  /* line 414, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group {
     position: absolute;
     top: 76%;
     left: 10%;
@@ -10931,16 +10927,16 @@ label.error {
     height: 11%;
   }
 
-  /* line 425, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group input {
+  /* line 422, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group input {
     border: none;
     width: 100%;
     height: 100%;
     font-size: 1em;
   }
 
-  /* line 432, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody #mc-embedded-subscribe {
+  /* line 429, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body #mc-embedded-subscribe {
     position: absolute;
     left: 75%;
     top: 78%;
@@ -10951,26 +10947,26 @@ label.error {
   }
 }
 @media (max-width: 480px) {
-  /* line 443, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModal {
+  /* line 440, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .email-signup {
     width: 450px;
     height: 281px;
   }
 
-  /* line 447, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  /* line 444, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
   .email-signup {
     background: url(email-signup.png) center center no-repeat;
     background-size: 450px 281px;
   }
 
-  /* line 451, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody {
+  /* line 448, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body {
     position: relative;
     height: 80%;
   }
 
-  /* line 455, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group {
+  /* line 452, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group {
     position: absolute;
     top: 76%;
     left: 10%;
@@ -10979,16 +10975,16 @@ label.error {
     height: 11%;
   }
 
-  /* line 463, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody .mc-field-group input {
+  /* line 460, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body .mc-field-group input {
     border: none;
     width: 100%;
     height: 100%;
     font-size: 1em;
   }
 
-  /* line 469, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
-  #emailModelBody #mc-embedded-subscribe {
+  /* line 466, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom.css.scss */
+  .modal-body #mc-embedded-subscribe {
     position: absolute;
     left: 75%;
     top: 78%;
@@ -11001,14 +10997,16 @@ label.error {
 /* line 1, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .body-class {
   background-color: #fff;
+  width: 100%;
+  height: 100%;
 }
 
-/* line 5, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 7, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .navbar-inner {
   background: transparent;
 }
 
-/* line 9, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 11, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .top-bar2 {
   padding: 18px 0px 0px 0px;
   color: white;
@@ -11017,23 +11015,28 @@ label.error {
   min-height: 40px;
 }
 
-/* line 24, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 26, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 #topbar .dropdown-menu a {
   color: black;
 }
 
-/* line 28, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 30, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 #topbar .left-topbar-login a {
   color: #999;
 }
 
-/* line 32, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 34, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 #topbar .navbar .nav > li > a {
   font-weight: normal;
 }
 
+/* line 38, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+#sidebar {
+  display: block;
+}
+
 @media (min-width: 1400px) {
-  /* line 36, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  /* line 43, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
   .ut2-top-promo {
     width: 100%;
     height: 1015px;
@@ -11041,7 +11044,7 @@ label.error {
   }
 }
 @media (min-width: 980px) and (max-width: 1399px) {
-  /* line 44, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  /* line 51, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
   .ut2-top-promo {
     width: 100%;
     height: 700px;
@@ -11049,22 +11052,52 @@ label.error {
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 52, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  /* line 59, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
   .ut2-top-promo {
     width: 100%;
     height: 550px;
     position: relative;
   }
+
+  /* line 64, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  #sidebar {
+    display: none;
+  }
+
+  /* line 67, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  #content {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
-  /* line 59, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  /* line 72, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  body {
+    padding: 0px;
+  }
+
+  /* line 75, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
   .ut2-top-promo {
     width: 100%;
     height: 400px;
     position: relative;
   }
+
+  /* line 80, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  #content {
+    width: 100%;
+  }
+
+  /* line 83, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  #sidebar {
+    display: none;
+  }
+
+  /* line 86, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  #wrapper, #footer {
+    padding: 5px;
+  }
 }
-/* line 65, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 90, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .ut2-top-promo-slider {
   background-color: white;
   width: 100%;
@@ -11073,7 +11106,7 @@ label.error {
   margin: 0px;
 }
 
-/* line 72, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 97, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .ut2-carousel-inner {
   border-top-left-radius: 0em;
   border-top-right-radius: 0em;
@@ -11083,13 +11116,13 @@ label.error {
   height: 100%;
 }
 
-/* line 81, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 106, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .item {
   width: 100%;
   height: 100%;
 }
 
-/* line 86, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 111, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .ut2-carousel-item-image {
   text-align: center;
   vertical-align: middle;
@@ -11099,10 +11132,192 @@ label.error {
   background-size: 100% auto;
 }
 
-/* line 95, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+/* line 120, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
 .ut2-category-header {
   margin: 0px 0px 10px 0px;
   overflow: hidden;
+}
+
+/* line 125, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+.ut2-logo-navbar {
+  width: 45px;
+  height: 45px;
+  display: block;
+  float: left;
+}
+
+/* line 132, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+.ut2-signup-navbar {
+  display: none;
+  float: left;
+  margin-left: 20px;
+}
+
+@media (max-width: 979px) {
+  /* line 138, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  .ut2-logo-navbar {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* line 142, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  .ut2-signup-navbar {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  /* line 147, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  .ut2-logo-navbar {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* line 151, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-custom2.css.scss */
+  .ut2-signup-navbar {
+    display: block;
+  }
+}
+/* line 1, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.body-class {
+  margin-top: 50px;
+}
+
+/* line 4, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.navbar-fixed-top {
+  margin: 0px;
+  padding: 10px;
+  position: fixed;
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  border-color: #252525;
+}
+
+/* line 18, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.row-offcanvas {
+  position: relative;
+  -webkit-transition: all .25s ease-out;
+  -moz-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+
+/* line 24, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.row-offcanvas-right .sidemenu-offcanvas {
+  right: -70%;
+}
+
+/* line 28, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.sidemenu-offcanvas {
+  position: absolute;
+  top: 50;
+  right: -70%;
+  width: 70%;
+  height: 100%;
+}
+
+/* line 36, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.sidemenu-inner {
+  height: auto;
+  margin: 0px;
+  padding: 20px 0px 0px 10px;
+  background-color: #1b1b1b;
+  background-image: -moz-linear-gradient(top, #222222, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+  background-image: -webkit-linear-gradient(top, #222222, #111111);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #222222, #111111);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+  border-color: #252525;
+}
+
+@media screen and (max-width: 979px) {
+  /* line 52, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .sidemenu-offcanvas {
+    position: fixed;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+  }
+
+  /* line 58, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .sidemenu-offcanvas.active {
+    position: fixed;
+    top: 50px;
+    width: 70%;
+    right: 0;
+    overflow: scroll;
+  }
+}
+/* line 67, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.signup, .signup-collapsed {
+  display: block;
+  text-align: center;
+  float: left;
+}
+
+/* line 73, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.signup-collapsed {
+  display: none;
+  width: 40%;
+}
+
+/* line 78, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.logo-collapsed {
+  display: block;
+}
+
+/* line 82, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.sidemenu-div {
+  display: none;
+}
+
+@media (max-width: 979px) {
+  /* line 87, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .signup {
+    display: none;
+  }
+
+  /* line 91, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .signup-collapsed {
+    text-align: left;
+    padding: 5px 0px 0px 20px;
+    display: block;
+  }
+
+  /* line 97, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .logo-collapsed {
+    display: block;
+    width: 20%;
+  }
+
+  /* line 102, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+  .sidemenu-div {
+    width: 20%;
+    float: right;
+    display: block;
+  }
+}
+/* line 108, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.nav-pills > li > ul > li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* line 116, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/bootstrap-mobile-nav.css.scss */
+.nav-pills > li > ul > li:hover {
+  background-color: #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 /* line 1, C:/dev/ruby/spree_uniqteas_theme/app/assets/stylesheets/store/wizard.css.scss */
