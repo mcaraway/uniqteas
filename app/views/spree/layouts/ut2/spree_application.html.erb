@@ -15,11 +15,12 @@
 		<%= render :partial => 'spree/shared/top_nav' %>
 
 		<div style="position: relative; overflow: hidden; z-index: 999">
-			<div id="sidemenu" class="span3 sidemenu sidemenu-offcanvas" role="navigation">
-				<%= render :partial => 'spree/shared/mobile_nav' %>
-			</div>
+
 		</div>
 		<div class="row row-offcanvas row-offcanvas-right">
+			<div id="sidemenu" class="span3 sidemenu sidemenu-offcanvas" role="navigation">
+				<%= render :partial => 'spree/shared/mobile_nav' %>
+			</div>			
 			<div>
 				<%= render :partial => 'spree/home/ut2/top_promo' %>
 					<%= render :partial=>'spree/shared/ut2/subheader'%>

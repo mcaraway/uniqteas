@@ -57,6 +57,7 @@ end
 # To use debugger
 # gem 'debugger'
 gem 'jquery-rails', '3.0.0'
+gem 'money', '6.0.1'
 gem 'wicked'
 gem 'spree', '~> 2.1.0'
 gem 'spree_auth_devise', :branch => "2-1-stable", :git => 'git://github.com/spree/spree_auth_devise'
